@@ -1,3 +1,4 @@
+# execute this script in the blender text editor
 keyconfig_version = (3, 5, 10)
 keyconfig_data = \
     [("Window",

@@ -1,7 +1,5 @@
 # Binary Tree Layer Print
 
-#二叉树  #cpp #层序遍历  #用于leetcode本地调试
-
 ```c++
 void layer_print_tree(TreeNode *root) {
   std::queue<TreeNode *> tq;

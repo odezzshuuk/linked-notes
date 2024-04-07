@@ -18,9 +18,7 @@
 
 [Unity Script Develop Convention](unity-script-development-convention.md)
 
-## Search
+## API
 
-[randon number](unity-script-random.md)
-
-[class and method](unity-class-and-method.md)
+[Class And Method](unity-class-and-method.md)
 

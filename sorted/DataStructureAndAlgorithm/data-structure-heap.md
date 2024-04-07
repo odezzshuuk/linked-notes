@@ -2,55 +2,57 @@
 
 ## What It Is
 
-- can be look as a [complete tree]()
-- 大顶堆: 每个节点的值都**大于或等于**其左右子节点
-- 小顶堆: 每个节点的值都**小于或等于**其左右子节点
+- Can be look as a [complete tree]()
+- Max Heap: the value of each node is **greater than or equal to** its left and right child nodes
+- Min Heap: the value of each node is **less than or equal to** its left and right child nodes
 
-## 堆的算法
+## Heap Algorithm
 
-- 两个重要基础方法
-    - `swim()`自下而上使堆有序化
+2 basic methods
 
-    ```c++
-    /// 以大顶堆为例
-    std::vector<int> nums;
-    void swim(std::vector<int> nums, int i) {
-      while (i > 1 && (i << 1) + 1 < nums.size()) {
-        if (nums[i] > nums[i/2]) {
-          std::swap(nums[i], nums[i/2]);
-        }
-      }
+- `swim()`: bottom-up to make the heap ordered
+
+```c++
+/// this is a max heap
+std::vector<int> nums;
+void swim(std::vector<int> nums, int i) {
+  while (i > 1 && (i << 1) + 1 < nums.size()) {
+    if (nums[i] > nums[i/2]) {
+      std::swap(nums[i], nums[i/2]);
     }
-    ```
-    
-    - `sink()` 在某节点自下而上移动时，上层节点被替换至下层
-    
-  ```c++
-  void sink(std::vector<int> &nums, int i) {
-    int j = 2 * i + 1;  // i为非叶子结点
-    if (j < nums.size() - 1 && nums[j] < nums[j + 1]) j++;
-    if (a[i] < a[j]) {
-      std::swap(nums[i], nums[j]);
-      i = j;
-    }
-    sink(nums, i);
   }
-  ```
-- 由基础方法构成的API应用    
-    - 插入元素：新元素加到数组末尾, 即最后一个叶子结点, 逐渐`swim()`到合适位置
-    - 删除最大元素：数组首元素与尾元素互换位置，新顶点逐渐`sink()`到合适位置
-    -  数组排序：重复调用`sink()`的过程
+}
+```
+    
+- `sink()`: When moving nodes from top to bottom, the upper nodes are replaced by the lower nodes 
+    
+```c++
+void sink(std::vector<int> &nums, int i) {
+  int j = 2 * i + 1;  // i is a non-leaf node
+  if (j < nums.size() - 1 && nums[j] < nums[j + 1]) j++;
+  if (a[i] < a[j]) {
+    std::swap(nums[i], nums[j]);
+    i = j;
+  }
+  sink(nums, i);
+}
+```
+
+Method build from basic methods
+
+- insert element: add new element to the end of array, which is the last leaf node, and `swim()` to the right position
+- delete max element: swap the first element with the last element, and the new top node `sink()` to the right position
+- array sort: repeat the process of calling `sink()`
 
 
-## 二叉堆
+## Binary Heap
 
-- 二叉堆是完全[树](data-structure-tree.md)
-- 在数组中按层序存储时,  表示堆的数组是无序的
-  参考[[层序输出二叉树]]
-- 对于$k$结点，父结点为$k/2$取整 , 子结点为$2k, 2k+1$ 
-- 对于大顶堆, 数组中的元素满足`nums[k/2] >= nums[k] >= nums[2k] & nums[2k + 1]`
-- 所有非叶子结点的坐标范围是$1,2,.......[n/2]$
-- 叶子节点坐标$[n/2] + 1, [n/2]  + 2.......,n$
+- Binary Heap is a complete [tree](data-structure-tree.md)
+- when heap is saved as an array, this array is not ordered, take a look at [Binary Tree Layer Print](binary-tree-layer-print.md)
+- for $k$ node, parent node is $k/2$, child nodes are $2k, 2k+1$
+- for max heap, element in the array satisfies `nums[k/2] >= nums[k] >= nums[2k] & nums[2k + 1]`
+- for non-leaf node, the range of coordinates is $1,2,.......[n/2]$
+- leaf node index is $[n/2] + 1, [n/2] + 2, ...., n$
 
-[[堆排序]]
+[Heap Sort](heap-sort.md)
 

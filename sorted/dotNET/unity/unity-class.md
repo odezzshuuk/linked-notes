@@ -12,10 +12,6 @@
 
 [Handles](unity-static-class-handles.md)
 
-[Selection]
-
-[Undo](unity-class-undo.md)
-
 [Input](unity-static-class-input.md)
 
 [SceneManager](unity-static-class-scenemanager.md)
@@ -24,7 +20,7 @@
 
 [GameObject](unity-class-gameobject.md): Base class for all entities in Unity scenes.
   
-[Editor](unity-class-editor.md)
+Editor
 
 - OnSceneGUI
 - OnEnable
@@ -32,7 +28,7 @@
 - Property
   - target: object
 
-[EditorWindow](unity-base-class-editorwindow.md)
+EditorWindow
 
 ## TextAsset
 

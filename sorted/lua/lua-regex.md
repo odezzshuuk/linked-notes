@@ -2,14 +2,12 @@
 
 > unlike other script language, lua does not use [posix regex](regex.md)
 
-
 ## Unique Magic Character `%`
 
 - `%` works as an escape `\` for magic characters
 - for example `%%` is `%` itself
 
 ## Other Magic Characters
-
 
 - `()`: capture
 - `.`

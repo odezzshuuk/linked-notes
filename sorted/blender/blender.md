@@ -1,12 +1,28 @@
-# blender
+# Blender
 
-[operate](blender-operate.md)
+[Operation](blender-operation.md)
+
+[Tricks](blender-tricks.md)
+
+[Best Practices](blender-best-practices.md)
+
+[Mode](blender-mode.md)
+
+[Glossary](blender-glossary.md)
 
 [sculpt](blender-sculpt.md)
 
-[keymap](blender-keymap.py): run this script in blender can set keymap
+[Armature](blender-armature.md)
 
-[armature](blender-armature.md)
+[Posing](blender-posing.md)
 
-[animation](blender-animation.md)
+[Animation](blender-animation.md)
 
+[Parenting](blender-parenting.md)
+
+[Keymap](blender-keymap.py): run this script in blender can set keymap
+
+## TODO
+
+- reverse bones controller
+- symmetrizes posing
