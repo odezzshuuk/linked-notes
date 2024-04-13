@@ -2,7 +2,7 @@
 
 ## What It Is
 
-- takes the objects in a scene and displays them on-screen
+- Takes the objects in a scene and displays them on-screen
 
 ## Render Pipeline Steps
 

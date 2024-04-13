@@ -1,8 +1,7 @@
 # Unity - Blog
 
-1. Microsoft Visual C# Compiler Errors
+## Why Materials display pink
 
-- 原因: Uninstalling Anaconda and Python can result in such issues because of remaining artifacts in the Windows registry.
-- 解决方法: 删除注册表项
+## Microsoft Visual C# Compiler Errors
 
 > `Computer\HKEY_CURRENT_USER\Software\Microsoft\Command Processor\AutoRun`

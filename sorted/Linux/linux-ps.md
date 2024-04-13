@@ -1,5 +1,9 @@
 # Linux - ps
 
+* [What It Is](#what-it-is)
+* [Syntax](#syntax)
+* [Practical Use](#practical-use)
+
 ## What It Is
 
 - display information of the active process

@@ -26,6 +26,13 @@ The Process Of Publishing Your Assets
 4. distribute: publish project to cloud service like app store for other users download
 5. load
 
+## Preset
+
+- save and apply property settings of
+  - [components](unity-component.md)
+  - assets
+  - project settings
+  - ...
 
 ## Plugins
 

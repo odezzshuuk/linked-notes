@@ -2,9 +2,9 @@
 
 ## What's For
 
-> irreversible conversion
-
 - convert assets built-in Render pipeline to URP or HDRP
+
+> the conversion is irreversible 
 
 ## 5 types converters
 

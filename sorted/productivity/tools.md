@@ -8,8 +8,10 @@
 
 [Useful website](tools-website.md)
 
-[powerline fonts](powerline-fonts.md)
+[Powerline fonts](powerline-fonts.md)
 
-[picture processing](tools-picture-processing.md)
+[Picture processing](tools-picture-processing.md)
 
 [GIMP](tools-gimp.md)
+
+[Pirated App](tools-pirated-app.md)

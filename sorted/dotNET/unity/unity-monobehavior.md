@@ -1,10 +1,14 @@
 # MonoBehavior
 
-- 所有Unity script的基类
+## What It Is
 
-## 两个方法
+- Base class for all unity script
 
-- `void Start()`
-  - 第一帧开始之前调用
-- `void Update()`
-  - 每帧调用一次
+## Method
+
+`void Start()`
+
+- called on the frame when a script is enabled just before any of the update methods are called first time
+- called once in the lifetime
+
+`void Update()`

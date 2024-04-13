@@ -8,6 +8,12 @@
 
 [kill](linux-kill.md)
 
+## Jobs 
+
+[jobs](linux-jobs.md)
+
+> `crtl + z`: suspend process
+
 ## pstree
 
 options
@@ -83,9 +89,6 @@ meaning of each field following the system information
   - k: [kill](linux-kill.md)
   - r: [renice]() process
 
-## related command
+## fg
 
-- `crtl + z`
-- `jobs`
-- `fg`
-- `bg`
+## bg

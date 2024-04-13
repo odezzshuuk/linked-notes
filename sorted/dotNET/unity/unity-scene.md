@@ -4,7 +4,7 @@
 
 ## What Is Scene Unity
 
-- A Scene may be set of [GameObjects], [Prefab](unity-prefab.md), ... 
+- A Scene may be a Collection of [GameObjects], [Prefab](unity-prefab.md), ... 
 - you can build a simple game with a single scene
 - you can build a complex game with multiple scenes
 - When you create a new project and first open it, you will see a scene only with a camera and a light

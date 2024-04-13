@@ -64,7 +64,10 @@ cd ~2
 
 ## Running Command In Background
 
-- add `&` after command, it will run in background, you can continue use bash
+add `&` after command, it will run in background, you can continue use bash
 
 VS [&&](linux-shell-operators.md#logic-operator)
+
+## Hang up a process
+
 
