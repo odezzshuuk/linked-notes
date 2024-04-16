@@ -12,6 +12,14 @@ this factor can be created outside of unity
 
 [Prefab](unity-prefab.md)
 
+## Rendering Factors
+
+[Rendering](unity-rendering.md)
+
+[Material](unity-material.md)
+
+[Shader](unity-shader.md)
+
 [Render Pipeline](unity-render-pipeline.md)
 
 [Universal Render Pipeline](unity-universal-render-pipeline.md)

@@ -44,16 +44,18 @@ z = z'/w
 - GL Shader Language
 - strictly typed like C/C++
 
-a pair of functions
+A pair of functions
 
-- 1. Vertex shader
-  - compute the position of each vertex
-- 2. fragment shader
-  - compute color of each pixel
+1. Vertex shader
+2. fragment shader
 
 ## vertex
 
+- Compute the position of each vertex
+
 ## fragment
+
+- Compute color of each pixel
 
 ## clip space
 

@@ -2,9 +2,13 @@
 
 ## What's For
 
-- convert assets built-in Render pipeline to URP or HDRP
-
 > the conversion is irreversible 
+
+- Convert assets built-in Render pipeline to URP or HDRP
+
+Converter will convert all related, Convert selected materials
+
+- Edit > Rendering > Materials > Convert Selected Built-in Materials to URP.
 
 ## 5 types converters
 

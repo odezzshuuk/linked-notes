@@ -4,7 +4,7 @@
 
 [editor tools](unity-editortools.md)
 
-[Unity Scene](unity-scene.md)
+[Scene](unity-editor-scene.md)
 
 [Project Window](unity-editor-project-window.md)
 

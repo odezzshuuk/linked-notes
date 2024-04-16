@@ -2,7 +2,7 @@
 
 ## What It Is
 
-- Takes the objects in a scene and displays them on-screen
+- ...
 
 ## Render Pipeline Steps
 
@@ -54,5 +54,6 @@ Built-in Render Pipeline
 ## Render Pipeline Converter
 
 [Render Pipeline Converter](unity-render-pipeline-converter.md)
+
 
 

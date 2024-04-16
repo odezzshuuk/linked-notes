@@ -71,7 +71,6 @@ const fsSource = `
 
 ## webgl shader code
 
-
 ```html
 <!DOCTYPE html>
 <html>
