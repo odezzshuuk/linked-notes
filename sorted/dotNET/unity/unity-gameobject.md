@@ -6,3 +6,6 @@
 - which can be create unity editor press `+` in the hierarchy window
 - Base Game Object object, only one `Transform` component, execute translation, rotation, and scaling.
 
+## What Can Be Attached To GameObject
+
+

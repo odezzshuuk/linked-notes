@@ -1,6 +1,6 @@
 # Unity - Operation Scene
 
-## alignment
+## Alignment
 
 Align surface
 

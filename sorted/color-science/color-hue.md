@@ -1,4 +1,4 @@
-# Color Science - hue
+# Color Science - Hue
 
 ## What It Is
 

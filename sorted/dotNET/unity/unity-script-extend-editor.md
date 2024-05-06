@@ -14,7 +14,7 @@
 
 [Extending Mainmenu](unity-script-mainmenu-extention.md)
 
-[Extending EditortTools](unity-script-editortools-extention.md)
+[Extending EditorTools](unity-script-editortools-extention.md)
 
 [Extending Preview Extension](unity-script-preveiw-extention.md)
 

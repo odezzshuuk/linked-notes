@@ -30,6 +30,8 @@ this factor can be created outside of unity
 
 [Component](unity-component.md)
 
+[Transform]
+
 [Script](unity-script.md)
 
 

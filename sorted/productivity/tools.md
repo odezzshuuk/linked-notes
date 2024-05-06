@@ -12,6 +12,9 @@
 
 [Picture processing](tools-picture-processing.md)
 
+[Photoshop](tools-photoshop.md)
+
 [GIMP](tools-gimp.md)
 
 [Pirated App](tools-pirated-app.md)
+

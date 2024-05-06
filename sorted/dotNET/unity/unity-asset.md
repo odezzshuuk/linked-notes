@@ -16,6 +16,12 @@
   - Text
   - Data
 
+## Features
+
+- suffix with `.asset`
+
+## How to Create Unity Asset
+
 ## Workflow With Assets
 
 The Process Of Publishing Your Assets

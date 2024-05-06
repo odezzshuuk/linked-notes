@@ -92,4 +92,7 @@ sort all process by parent process
 
 ```sh
 ps -eo pid,ppid,command | sort -k 2
+# PID PPID(parent Id) COMMAND
 ```
+
+

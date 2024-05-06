@@ -3,7 +3,7 @@
 ## What It IS
 
 - Act as state machine
-- Have multiple animation clips
+- Including multiple animation clips
 
 ## Animation States
 

@@ -1,4 +1,4 @@
-# Unity - Debug
+# Unity - Script Debug
 
 ## Debug.Log
 

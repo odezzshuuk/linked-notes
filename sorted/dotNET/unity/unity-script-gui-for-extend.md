@@ -1,8 +1,8 @@
-# 为扩展创建GUI
+# Unity - Extending Inspector GUI
 
 - `OnInspectorGUI()`: 
 
 GUI:
 
-- Toggle: 勾选框
+- Toggle: 
 - Toolbar:

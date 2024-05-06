@@ -9,7 +9,6 @@
 
 [env command](linux-env.md)
 
-
 ## uname
 
 - print system information
@@ -30,7 +29,6 @@ export [-fnp] [name]=[value]
 ```
 
 ## systemctl
-
 
 query service status
 

@@ -15,3 +15,4 @@ color
 - default is white
 
 > object apperence color is the **combination** of emissive color and metarial color
+

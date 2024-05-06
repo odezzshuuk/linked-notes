@@ -20,7 +20,7 @@ Provide numerous features for handling **humanoid characters**
 ## 5 Key Parts of Unity Animation System
 
 1. [Animator](#animator)
-2. [Controller](#controller)
+2. [Controller](unity-animation-controller.md)
 3. [Animation Clips](#animation-clips)
 4. [Avatar](#avatar)
 5. [Script(Optional)]()
@@ -44,7 +44,6 @@ Relationship between these 5 parts
 
 [Animation Controller](unity-animation-controller.md)
 
-
 ## Animation Clips
 
 - Essentially series properties of GameObject transformed on timeline
@@ -64,7 +63,7 @@ Relationship between these 5 parts
 
 **Step 2:** Create [Animator](#Animator), there are 2 ways to create an Animator:
 
-- Directly [Create Animation On Object](), which will automatically create an Animator
+- Directly [Create Animation On Object](), which will automatically attach an animator to the GameObject
 - Add Animator [Component]() to GameObject. specify controller manually 
 
 **Step 3:** Create Animation Clips, also 2 ways
@@ -74,8 +73,8 @@ Relationship between these 5 parts
 
 **Step 4:** Edit Animation Controller. also 2 ways
 
-- use unity controller editor, which edit a `.controller` file visually
-- create your own [state machine](javascript-design-pattern-state.md) in code
+- Using unity controller editor, which edit a `.controller` file visually
+- Create your own [state machine](javascript-design-pattern-state.md) in code
 
 **Step 5:** Create script to interact with the controller, simple example:
 
@@ -113,12 +112,12 @@ public class Cube : MonoBehaviour
 
 ## Importing Model File
 
+[importing model](unity-importing-model.md)
+
 Imported model file should be carefully prepared before importing to unity
 
 - define the rig type and create the avatar
 - verify the avatar's mapping
 
 ## Reuseable Humanoid Animation
-
-
 

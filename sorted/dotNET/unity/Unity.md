@@ -14,6 +14,12 @@
 
 [Game UI](unity-game-ui.md)
 
+[Lighting](unity-lighting.md)
+
+[NavMesh](unity-navmesh.md)
+
+[Project Setting](unity-project-settings.md)
+
 [AssetBundles](unity-assetbundles.md)
 
 ## Blog

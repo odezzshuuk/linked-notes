@@ -5,6 +5,8 @@
 - switch between object mode and edit mode: `tab`
 - toggle top-right axis thing: `show gizmo`
 - switch editor type: top-left corner dropdown menu
+- g, s, r, x, f: grab, scale, rotate, remove, fill/connect
+- Shift + S
 
 | Key | Description                                                   |
 | :-: | ------------------------------------------------------------- |

@@ -1,6 +1,15 @@
 # Blender - Animation
 
-## Introduction
+* [Keyframes](#keyframes)
+* [Bones](#bones)
+* [Rigging](#rigging)
+* [Normal Character Animation Workflow](#normal-character-animation-workflow)
+* [Object Constraints](#object-constraints)
+* [Bone Constraints](#bone-constraints)
+
+## Actions
+
+- Animation data container
 
 ## Keyframes
 
@@ -66,4 +75,14 @@ options in this steps
 - Constraint include: copy, limit, track, etc.
 
 ## Bone Constraints
+
+
+## Animation Related Editors
+
+- Timeline Editor
+- Dope Sheet: Edit multiple [actions](#actions), those actions may coincide in time line
+  - Action Editor: switch between actions
+- Graph Editor: Edit Curves
+- NLA Editor: non-linear animation editor, transition between actions
+- Drivers
 

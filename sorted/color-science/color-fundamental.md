@@ -14,6 +14,13 @@ Spectral Sentivity
 
 ![Spectral Sentivity](normalized-spectral-sensitivity-of-cones.svg)
 
+Human eye doesn't have a linear response to light intensity
+
+> we see some brightness of light more easily that others
+
+- Linear color space: color calculation is done in linear space
+- Gamma color space: result should be presented in gamma space
+
 ## Cone Cells
 
 - responsible for color vision

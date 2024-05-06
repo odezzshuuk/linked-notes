@@ -16,16 +16,18 @@
 
 [SceneManager](unity-static-class-scenemanager.md)
 
+[Physics](unity-static-class-physics.md)
+
 ## Base Class
 
 [GameObject](unity-class-gameobject.md): Base class for all entities in Unity scenes.
   
 Editor
 
-- OnSceneGUI
-- OnEnable
-- OnInspectorGUI
-- Property
+- `OnSceneGUI`
+- `OnEnable`
+- `OnInspectorGUI`
+- `Property`
   - target: object
 
 EditorWindow

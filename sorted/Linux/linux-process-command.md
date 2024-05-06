@@ -81,13 +81,18 @@ meaning of each field following the system information
 | TIME+   | process use CPU time total, unit is 1/100 second                                  |
 | COMMAND | process name                                                                      |
 
-- shortcut for `top` UI
-  - 1: show multi-core CPU usage
-  - p: order by CPU usage
-  - m: order by memory usage
-  - n: order by PID
-  - k: [kill](linux-kill.md)
-  - r: [renice]() process
+For Linux, shortcut for `top` UI
+
+- 1: show multi-core CPU usage
+- p: order by CPU usage
+- m: order by memory usage
+- n: order by PID
+- k: [kill](linux-kill.md)
+- r: [renice]() process
+
+For MacOS
+
+- `top -o key`: order by key 
 
 ## fg
 
