@@ -6,7 +6,5 @@
 
 ## What's For
 
-- Minimize the impact on network and system resources by allowing customers to download and install only the parts they need.
-- Allows customser to download and install only the parts they need.
-- Can used to update or add to content post-release, like DLC.
+- memory management, avoid loading all assets at once
 

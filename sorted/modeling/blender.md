@@ -4,13 +4,13 @@
 
 [Tricks](blender-tricks.md)
 
-[Best Practices](blender-best-practices.md)
+[Best Practices](blender-life-saver.md)
 
 [Mode](blender-mode.md)
 
 [Glossary](blender-glossary.md)
 
-[sculpt](blender-sculpt.md)
+[sculpt]()
 
 [Armature](blender-armature.md)
 

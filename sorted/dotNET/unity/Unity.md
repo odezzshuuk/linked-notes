@@ -20,9 +20,17 @@
 
 [Project Setting](unity-project-settings.md)
 
+[tags and layers](unity-tags-and-layers.md)
+
 [AssetBundles](unity-assetbundles.md)
+
+[Assembly Definition](unity-assembly-definition.md)
 
 ## Blog
 
-[Unity blog](unity-blog.md)
+[Object-Oriented Design]
+
+[Optimization](unity-optimization.md)
+
+[blog](unity-blog.md)
 

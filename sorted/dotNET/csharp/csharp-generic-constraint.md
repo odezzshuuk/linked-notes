@@ -2,10 +2,20 @@
 
 ## use `where` to constraint type and order
 
-Constraint Statement： `where TypeParam : type1, type2,...`
+Constraint Statement
+
+`where TypeParam : type1, type2,...`
+
+class
 
 ```cs
 public void PrintData<S, T>(S p, T t) where S: Person
+```
+
+method
+
+```c
+void Foo<T>() where T : type1, type2 { }
 ```
 
 `where T : <base_class_name>`

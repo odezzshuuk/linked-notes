@@ -14,8 +14,8 @@ Reference type variable initialization
 ## Value
 
 - Value Type stored in stack, only need one memory
-- They Are Value Type: sbyte, byte, float, short, float, short, ushort, double, int, uint, char, long, ulong, decimal, bool
-- Value Defined By User：struct, enum
+- They Are Value Type: `sbyte`, `byte`, `float`, `short`, `float`, `short`, `ushort`, `double`, `int`, `uint`, `char`, `long`, `ulong`, `decimal`, `bool`
+- Value Defined By User：[`struct`](csharp-struct.md), [`enum`](csharp-enum.md)
 
 ## Reference
 

@@ -11,40 +11,53 @@
 
 > Delegate can be seen as a type-safe, object-oriented [function pointer](c++-function-pointer.md).
 
+- A Delegate is a **type**
+- Keyword `delegate` has the same usage level as `class` or `struct`
 - A Delegate can be thought of as a type-safe, object-oriented function pointer.
 
-## Delegate Declaration
+## Declaring A Delegate
 
 ```c#
-delegate void Mydel(int x);
+delegate void FooFunc(int x);
 ```
 
-## Create Delegate Instance
+## How To Use
 
 ```c
-del1 = new MyDel(myInstObj.MyM1)
+public class Point 
+{
+    public int X { get; set; }
+    public int Y { get; set; }
+    public void MoveOnX(int x)
+    {
+        X += x;
+    }
+
+    public void MoveOnY(int y)
+    {
+        Y += y;
+    }
+}
+Point p = new Point();
+FooFunc func = new FooFunc(p.MoveOnX);  // "func" is a delegate instance
+func(5);
 ```
 
-- `myInstObj.MyM1` is the method to be delegated
+- `p.MoveOnX` is a instance method
+- Instance method can be called by delegate instance `func`
 
 ## Group Delegate
 
 ```c
-MyDel delA = myInstObj.MyM1;
-MyDel delB = SClass.OthreM2;
+FooFunc fa = pointA.MoveOnX;
+FooFunc fb = pointB.MoveOnY;
 
-delA += delB;  // Add Method
-MyDel delC = delA + delB; // Group Delegate
-delC -= delA;  // Remove Method
+fa += fb;  // Add Method
+FooFunc fc = fa + fb; // Group Delegate
+fc -= fa;  // Remove Method
 ```
 
 - The order added is the order invoked.
-
-## Invoke Delegate
-
-```c
-MyDel(5);
-```
 
 ## Delegate Return Value
 
@@ -52,27 +65,25 @@ MyDel(5);
 
 ## Anonymous Delegate
 
-```c
-delegate int MyDel(int InParam);  // Declare delegate type
+- Lambda Expression
+- Or `delegate(float f) { return f * 2;}`
 
-MyDel del = delegate(int x) {return x};  // Create delegate instance
+```c
+delegate int IntFunc(int InParam);  // Declare delegate type
+
+IntFunc itfun = delegate(int x) {return x};  // Anonymous Delegate 1
+itfun += (int x) => { return x };  // Anonymous Delegate 2
 
 del(5);
 ```
 
-Lambda Expression
-
-```c
-MyDel del = (int x) => { return x };  
-```
-
 ## Predefined Delegate
 
-Returnless Predefined Delegate 
+[`Action`](#Action): Returnless Predefined Delegate 
 
 - `Action`, `Action<T>`, `Action<T1, T2, ...>`
 
-Returned Predefined Delegate
+[`Func`](#Func): Returned Predefined Delegate
 
 - `Func<TResult>`, `Func<T, TResult>`, `Func<T1, T2, ..., TResult>`
 

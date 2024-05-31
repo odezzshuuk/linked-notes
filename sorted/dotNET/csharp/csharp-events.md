@@ -83,6 +83,10 @@ class Program
 }
 ```
 
+## Standard Events
+
+[Standard Events](csharp-events-eventshandles.md)
+
 ## Event Accessor
 
 ```c#
@@ -98,10 +102,6 @@ public event EventHandler CountADozen
     }
 }
 ```
-
-## Standard Events
-
-[Standard Events](csharp-events-eventshandles.md)
 
 ## Sample Code
 

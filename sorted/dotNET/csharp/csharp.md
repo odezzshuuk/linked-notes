@@ -12,6 +12,8 @@
 
 [Class](csharp-class.md)
 
+[Struct](csharp-struct.md)
+
 [Conversion](csharp-conversion.md)
 
 [Interface](csharp-interface.md)
@@ -41,6 +43,10 @@
 [LINQ](csharp-linq.md)
 
 [Variance](csharp-variance.md)
+
+[IObservable](csharp-observer-design-pattern.md)
+
+[Extension Method](csharp-extension-method.md)
 
 [Expression Tree](csharp-expression-tree.md)
 

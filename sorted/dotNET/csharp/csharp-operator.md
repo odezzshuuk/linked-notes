@@ -6,3 +6,9 @@
 
 ## new operator
 
+
+## logical operator
+
+??, &&, ||
+
+- ??: null-coalescing operator, return left if not null, otherwise return right

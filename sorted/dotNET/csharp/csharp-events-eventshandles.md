@@ -1,16 +1,18 @@
-# Standard Event
+# CSharp - Standard Event
 
 [code](csharp-standard-event-code.md)
 
-`public delegate void EvnetHandler(object sender, EventArgs e);`
+## EventHandler
 
-- 在System命名空间声明的EventHandler委托类型, 专门用于系统事件
-- `EventArgs`类声明在System命名空间
-- 两个参数
-  - sender: object类型，事件的发布者
-  - e:  保存状态信息, 例如用于传递发布者信息
+`public delegate void EventHandler(object sender, EventArgs e);`
 
-```c#
+- parameters
+  - sender: object, event publisher
+  - e: store information about the event
+
+```c
+using System;
+
 class Program
 {
     static void Main()
@@ -26,8 +28,6 @@ class Program
 
 ## Passing Data
 
-- 声明一个类IncrementerEvnetArgs，派生自EvenetsArgs
-- 事件发布者使用这个类实例化泛型委托`EventHandler<IncrementerEvnetArgs>`
 
 ```c#
 public class IncrementerEventArgs: EvnetArgs

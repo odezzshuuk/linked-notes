@@ -5,7 +5,7 @@
 * [print merges commit log](#print-merges-commit-log)
 * [Check Commit Log](#check-commit-log)
 * [Undo commit](#undo-commit)
-* [remove file from stage](#remove-file-from-stage)
+* [Remove File From Stage](#remove-file-from-stage)
 * [Discard All Local Changes](#discard-all-local-changes)
 * [check staged files](#check-staged-files)
 * [Set HEAD to specified status](#set-head-to-specified-status)
@@ -17,6 +17,7 @@
 * [A way to make the lastest commit as the initial commit](#a-way-to-make-the-lastest-commit-as-the-initial-commit)
 * [Copy Files Or Directory From Another Commit](#copy-files-or-directory-from-another-commit)
 * [Check Ignored Files](#check-ignored-files)
+* [Filter Commit History By Specified File](#filter-commit-history-by-specified-file)
 
 ## Output Git Log In Stdout
 
@@ -69,7 +70,7 @@ git reset [--soft | --mixed [-N] | --hard |--merge | --keep] [-q] <commitid>
 | --mixed | yes         | yes            | no                   | yes                |
 | --hard  | yes         | yes            | yes                  | no                 |
 
-## remove file from stage
+## Remove File From Stage
 
 ```sh
 git rm --cached [<file>...]

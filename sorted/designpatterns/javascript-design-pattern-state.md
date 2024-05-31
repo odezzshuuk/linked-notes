@@ -1,4 +1,4 @@
-# Javascript Design Patterns - State
+# TypeScript Design Patterns - State
 
 * [Feature](#feature)
 * [What Problem To Solve](#what-problem-to-solve)
@@ -16,8 +16,8 @@
 
 ## What Problem To Solve
 
-- more and more state make the code hard to maintain
-- most method will contain monstrous conditions
+- More and more state make the code hard to maintain
+- Most method will contain monstrous conditions
 
 ## Class Consist of State Pattern
 
@@ -27,8 +27,8 @@
 
 ## Context
 
-1. hold a fields reference to the [state object](#concrete-states)
-2. one or more methods that change the state
+1. Holding a fields reference to the [state object](#concrete-states)
+2. One or more methods that change the state
 
 ```js
 class Context {
@@ -41,7 +41,7 @@ class Context {
 }
 ```
 
-## state interface
+## State Interface
 
 - declare all the methods that the context can call to change state
 
@@ -52,16 +52,16 @@ interface State {
 }
 ```
 
-## concrete states
+## Concrete States
 
-- provide their own implementations for the state-specific method
+- Providing their own implementations for the state-specific method
 
 > may provide intermediate abstract class for duplicate code
 
-- state object store a backreference to the [context object]()
-- for fetch required info from [context object](#context)
+- State object store a backreference to the [context object](#context)
+- For fetch required info from [context object](#context)
 
-## code
+## Code
 
 state interface
 

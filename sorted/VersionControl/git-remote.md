@@ -9,7 +9,7 @@
 * [Access Control](#access-control)
 * [Contribute to Project](#contribute-to-project)
 
-## set remote repository url
+## Set Remote repository url
 
 ```sh
 git remote add origin <REMOTE_URL>
@@ -30,7 +30,7 @@ this command will add following to `.git/config` file
 
 ## push to remote repository
 
-`git push -u origin master`: push master branch to remote repository
+`git push -u origin master/main`: push master branch to remote repository
 
 - `-u`: set default remote repository and branch
 - `origin`: remote repository **alias**

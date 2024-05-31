@@ -9,5 +9,11 @@
 
 - [unity shader](unity-shader-object.md#error-shader)
 
+## Why Unity Re-compile Is Extremely Slow
+
+- By Default, all assemblies in your project created with [assembly definitions](unity-assembly-definition.md) automatically reference all precompiled assemblies
+- Unity must recompile all your assembiles when you update any single line of the precompiled assemblies
+
 ## Microsoft Visual C# Compiler Errors
+
 

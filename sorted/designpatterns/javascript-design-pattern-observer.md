@@ -3,7 +3,7 @@
 * [Feature](#feature)
 * [VS Mediator](#vs-mediator)
 * [Components For This Pattern](#components-for-this-pattern)
-* [Publisher](#publisher)
+* [Publisher/Observable](#publisher/observable)
 * [Subscriber Interface](#subscriber-interface)
 * [Concrete Subscriber](#concrete-subscriber)
 * [Code](#code)
@@ -15,7 +15,7 @@
 - many is called observers
 - one is called subject
 - when publisher changes, all observer will be notified
-- the subscribe operation is done by [publisher](#publisher)
+- the subscribe operation is done by [publisher/observable](#publisher/observable)
 
 ## VS Mediator
 
@@ -32,9 +32,9 @@ VS [Mediator](javascript-design-pattern-mediator.md#vs-observer)
 
 - [publisher](#publisher), also called subject, event **emitter**, event **manager**
 - [subscriber interface](#subscriber-interface), also **observer**, **listener**
-- [concrete subscriber](#concrete-subscriber)
+- [concrete subscriber/observer](#concrete-subscriber)
 
-## Publisher
+## Publisher/Observable
 
 - have a method like `notify()` to notify all [subscriber](#subscriber-interface)
   - execute when publisher state changes
@@ -58,7 +58,7 @@ interface subscriber {
 }
 ```
 
-## Concrete Subscriber
+## Concrete Subscriber/Observer
 
 - implement `update()` method to perform a action when notified by [publisher](#publisher)
 

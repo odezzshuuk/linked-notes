@@ -15,6 +15,7 @@
   - [Animation masks]()
   - Text
   - Data
+- [Scripts](unity-script.md) are not in assets concept
 
 ## Features
 
