@@ -4,15 +4,16 @@
 
 [IEnumerator](csharp-ienumerator-interface.md)
 
-> [IEnumerable](#IEnumerable) call its GetEnumerator method return instance of [IEnumerator interface](#IEnumerator)
+has 3 method: Current, MoveNext, Reset
+
+- Current
+- MoveNext
+- Reset
 
 ## IEnumerable
 
 - used in `foreach(Type VarName in EnumerableObject)`, `EnumerableObject` must be an instance of a class that implements `IEnumerable` interface
-
-## Iterator
-
-[Iterator](csharp-iterator.md)
+- [IEnumerable](#IEnumerable) call its GetEnumerator method return instance of [IEnumerator interface](#IEnumerator)
 
 ## Generic Iteratable
 
@@ -133,5 +134,33 @@ public class App
  * Jim Johnson
  * Sue Rabon
  */
+
 ```
+
+Method `GetEnumerator()` 
+
+- return a [`IEnumerator<T>`](#ienumerable) instance
+- There are two ways to create `IEnumerator<T>` instance
+  - Define a new class `PeopleEnumerator` which implements `IEnumerator<T>` interface
+  - Or use [`yield`](#csharp-yield.md) keyword
+
+Alternative of `class PeopleEnumerator`: yield ienumerator
+
+```c
+public IEnumerator<Person> GetEnumerator()
+{
+    foreach (Person p in _people)
+    {
+        yield return p;
+    }
+}
+```
+
+
+## Iterator
+
+[Iterator](csharp-iterator.md)
+
+- Iterator: A method return [`IEnumrator<T>`](csharp-ienumerator-interface.md) interface
+- [yield](csharp-yield.md)
 

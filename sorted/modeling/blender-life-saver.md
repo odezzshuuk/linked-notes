@@ -36,3 +36,5 @@
 - Press `A` to select all
 - Then `Merge By Distance`
 
+## Delete Vertex Split Two Edges 
+

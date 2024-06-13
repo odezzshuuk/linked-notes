@@ -35,10 +35,12 @@
 
 ## Caretaker
 
-- is optional, this task can be replace by client code
+
 - hold a list or stack of memento objects, managing [memento](#memento) object
 - hold a reference to the [originator](#originator) object
 - provide methods for storing and retrieving object
+
+> ~~Is optional, this task can be replace by client code~~
 
 ## Code
 

@@ -6,7 +6,7 @@
 
 [Best Practices](blender-life-saver.md)
 
-[Mode](blender-mode.md)
+[Model](blender-mode.md)
 
 [Glossary](blender-glossary.md)
 

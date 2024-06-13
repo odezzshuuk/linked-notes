@@ -113,4 +113,3 @@ del(5);
 - With One parameter of type `T`
 
 
-

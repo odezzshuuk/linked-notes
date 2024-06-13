@@ -45,3 +45,9 @@ print(key, value)  -- name Anna
 
 - wrap in `[[ ]]` to avoid escape sequences
 
+> '\' will be ignored
+
+```lua
+
+```
+
