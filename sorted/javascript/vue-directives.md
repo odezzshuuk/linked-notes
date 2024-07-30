@@ -1,4 +1,4 @@
-# 指令
+# Vue - Directive
 
 ## v-if
 

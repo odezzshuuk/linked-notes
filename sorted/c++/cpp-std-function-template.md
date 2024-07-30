@@ -1,4 +1,4 @@
-# 标准库function类模板
+# C++ - Std Function Template
 
 ```c++
 template<class R, class ... Args>
@@ -35,22 +35,19 @@ template <class Alloc>
   function (allocator_arg_t aa, const Alloc& alloc, function&& x);
 ```
 
-- 参数
+- parameter
   - x : 用于初始化`*this`的函数
   - Fn: [[cpp-callable-type]]对象
-  - alloc: 内存分配器参数
+  - alloc:
 - `std::function<T> f;`： 用来存储可调用对象的空function
 - `std::function<T> f(nullptr);`: 显式构造一个空function
 - `std::function<T> f(obj);` :  f中存储可调用对象obj的副本
 - `f(args)`: 调用f中的对象, 参数args
 - 不能将重载函数的名字存入function对象，使用[函数指针](c++-function-pointer.md)解决二义性问题 
 
-## 成员类型
+## Member
 
-[[dependent_name(依赖类型名)]]
-
-- function的成员类型
-  - result_type
-  - argument_type
-  - first_argument_type
-  - second_argument_type
+- result_type
+- argument_type
+- first_argument_type
+- second_argument_type

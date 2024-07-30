@@ -13,3 +13,10 @@
 [show up hide tools](unity-editor-scene.md#show-up-hide-tools-in-scene)
 
 ## Show Up Hide Window
+
+## Searching By Filter
+
+- `t:`: Type Filter, `t:Enemy` Search asset with [type name]() contain `Enemy`
+
+
+

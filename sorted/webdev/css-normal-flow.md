@@ -1,15 +1,15 @@
-# Normal Flow
+# CSS - Normal Flow
 
-## Normal Flow中元素是如何布局的
+## How elements are laid out in Normal Flow
 
-1. 元素周围加上盒子模型
-2. [块级元素](html-element-sort.md#块级元素)垂直布局, [行内元素](html-element-sort.md#行内元素)出现在同一行知道空间不足以容纳元素
-3. 两个垂直布局的相邻元素都有margin, 则较大的margin保留(仅限垂直方向)
+1. Add a [box model](css-box-model.md) around each element
+2. [Block level element](html-element-sort.md) vertical layout, [Inline Element](html-element-sort.md)
+3. two vertical adjacent elements with margin, the larger margin is reserved
 
 ## In Flow and Out of Flow
 
-- 脱离Normal Flow的元素
+- Elements that out of normal flow
   - floated items
-  - [position](): absolute或fix
-  - html根元素
-- 脱离Normal Flow会创建一个新的[BFC](css-block-formatting-context.md)
+  - [position](): absolute, fix
+  - `<html>` element
+- Get rid of Normal Flow will create a new [BFC](css-block-formatting-context.md)

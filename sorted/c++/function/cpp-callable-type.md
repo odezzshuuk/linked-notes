@@ -1,31 +1,31 @@
 #  C++ Callbale Type
 
-[函数指针](c++-function-pointer.md)
+[function pointer](c++-function-pointer.md)
 
-[数据成员指针](cpp-data-member-pointer.md), 可以作为参数，尽管不发生调用
+[data member pointer](cpp-data-member-pointer.md): can be used as a parameter, although it is not called
 
-[lambda表达式](c++-lambda.md)
+[lambda expression](c++-lambda.md)
 
-[重载调用运算符的类](cpp-overload-call-operator.md)
+[overload call operator](cpp-overload-call-operator.md)
 
-[标准库的function模板](cpp-std-function-template.md)
+[std function template](cpp-std-function-template.md)
 
-[标准库定义的可调用对象](cpp-std-define-callable-object.md)
+[std built-in callable object](cpp-std-define-callable-object.md)
 
-- 包含各种可调用对象的map
+- A map of various callable objects
 
 ```c++
 map<string, function<int(int, int)>>binops = {
-  {"+", add},                                  // 函数指针
-  {"-", std::minus<int>()},                    // 标准库函数对象
-  {"/", divide()},                             // 用户定义的函数对象
-  {"*", [](int i, int j) {return i * j;}},     // 未命名lambda对象
-  {"%", mod}                                   // 命名lambda
+  {"+", add},                                  // function pointer
+  {"-", std::minus<int>()},                    // std built-in callable object
+  {"/", divide()},                             // user-defined callable object
+  {"*", [](int i, int j) {return i * j;}},     // unnamed lambda
+  {"%", mod}                                   // named lambda
 };
 ```
 
-## 相关标准库
+## Std Library Of Callable Object
 
-[std::result_of](std-result-of模板.md)
+[std::result_of](c++-std-result-of.md)
 
 [std::bind](标准库bind函数.md)

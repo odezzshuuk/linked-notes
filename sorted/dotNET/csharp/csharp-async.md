@@ -1,9 +1,5 @@
 # CSharp - Async
 
-## Async Method
-
-[Async Method](csharp-async-method.md)
-
 ## Async Programming
 
 What's For?
@@ -16,4 +12,12 @@ Typical Cases
 - Working with Files
 - Working with images
 - ...
+
+## Async Method
+
+[Async Method](csharp-async-method.md)
+
+## Task
+
+[Task](csharp-task.md)
 

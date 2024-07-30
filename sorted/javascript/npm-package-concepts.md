@@ -5,13 +5,13 @@
 ## package
 
 ~~~
-- a) 包含由文件描述的程序的package.json文件夹。
-- b) 包含 (a) 的压缩 tarball。
-- c) 解析为 (b) 的 URL。
-- d) `<name>@<version>`与 (c) 一起在注册表上发布
-- e) `<name>@<tag>`指向 (d)
-- f) `<name>`具有latest满足 (e) 的标签
-- g) 一个git url，在克隆时会得到 (a)。
+- a) folder include package.json。
+- b) Compressed tarball include (a)
+- c) URL parsed as (b)。
+- d) `<name>@<version>` and (c) both published to the registry
+- e) `<name>@<tag>` Point to (d)
+- f) `<name>` with latest tag satisfying (e)
+- g) A git url，get (a) when git clone 
 ~~~
 
 git url format:

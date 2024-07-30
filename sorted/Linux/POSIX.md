@@ -1,3 +1,4 @@
-# 可移植操作系统接口
+# POSIX
 
-- IEEE为在UNIX上运行软件，定义API的一系列互相关联的标准总称
+- POSIX: Portable Operating System Interface of UNIX
+

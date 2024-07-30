@@ -43,9 +43,9 @@ value
 
 ## align-content
 
-- describe the distribution of **all child elements as a whole** in the available space
-- in flex box, describe the **main axis** distribution
-- in grid container, describe the **distribution** when used area is **smaller** than the grid container
+- Describe the distribution of **all child elements as a whole** in the available space
+- In flex box, describe the **main axis** distribution
+- In grid container, describe the **distribution** when used area is **smaller** than the grid container
 
 > if want attribute `align-content` take effect in grid container, requires grid container size is **larger than all content size**
 

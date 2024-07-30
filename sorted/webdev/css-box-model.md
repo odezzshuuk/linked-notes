@@ -15,10 +15,10 @@
 
 layer relationship
 
-> margin: 用**空白区域**扩展边框
->> border: 扩展自padding
->>> padding: 扩展自内容边界
->>>> content area: 内容区域, 用来限制内容区域(content area)
+> margin: extending the border with **blank area**
+>> border: extension from padding
+>>> padding: extending from content area
+>>>> content area: restrict content area
 
 ```css
 .box {
@@ -62,7 +62,7 @@ layer relationship
 - width = border + padding + content width
 - height = border + padding + content height
 
-put this code at the beginning of css file is a common practice
+Put this code at the beginning of css file is a common practice
 
 ```css
 *, ::before, ::after {

@@ -1,16 +1,16 @@
-# 边界重叠
+# CSS - Mastering Margin Collapsing
 
-> 仅发生在[block-level](css-box-model-sorted.md)元素
+> Only happens in [block-level](css-box-model-sorted.md) elements
 
-## scene 1: 上下元素重叠
+## scene 1: 2 vertical adjacent elements
 
-- 只会留下最大margin
+- only keep the largest margin
 
-## scene 2: 父元素与第一个或最后一个子元素
+## scene 2: Parent and first/last child
 
-条件
+Conditions:
 
-1. 第一个元素与父元素上边界, 或最后一个元素与父元素下边界
+1. parent element's margin-top and first child, or parent element's margin-bottom and last child
 2. 没有分开父元素与后代元素的margin-top
   - 没有创建[BFC](css-block-formatting-context.md)或没有[clear]()
   - 父元素没有border, padding, 没有inline内容,
@@ -18,6 +18,6 @@
   - 父元素没有border, padding, 没有inline内容,
   - 没有设置height, min-height, max-height
 
-## scene 3: 空元素
+## scene 3: Empty Element
 
 - 空元素没有设置border, padding, height, min-height, max-height, inline内容, 或clear-fix, 将不同block的margin-top和margin-bottom分开

@@ -9,7 +9,7 @@
 * [Create Gap](#create-gap)
 * [remaining space](#remaining-space)
 
-## what is this
+## What Is This
 
 - element set `display: flex` performance for outside like [**block box**](css-box-model-sorted.md#block-box)
 - a kind of layout that arranges elements in a single dimension

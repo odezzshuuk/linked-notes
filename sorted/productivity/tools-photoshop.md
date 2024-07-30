@@ -10,6 +10,14 @@ Linked Layer
 
 - Transformation will be applied to all linked layers
 
+## Zoom In/Out Shortcut
+
+- Press `z` then drag mouse to zoom in/out
+
+## Pan Move Shortcut
+
+- Hold `Space` then drag mouse to move
+
 ## Adjustment
 
 - Remove any flaws such as dust spots, blemishes, and scratches from the image **BEFORE** making color and tonal adjustments.
@@ -34,6 +42,15 @@ Linked Layer
 
 - Main menu: Filter -> Other -> Minimum
 
-## Duplicate Selection Without Create New Layer
+## Duplicate Selection
+
+1. Right Click -> Layer via copy
+2. Apply copied layer
+
+## Patch Tool
+
+Clone Stamp Tool
+
+Healing Brush Tool
 
 

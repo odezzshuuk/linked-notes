@@ -16,7 +16,7 @@
 
 ## Element Selector
 
-- select Html element
+- select html element
 
 ```css
 element {
@@ -218,3 +218,4 @@ body :not(div):not(span) {
 ## Pure Css Selector
 
 - contain at least one local **class or id**
+

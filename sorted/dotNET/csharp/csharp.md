@@ -14,6 +14,8 @@
 
 [Struct](csharp-struct.md)
 
+[Record](csharp-record.md)
+
 [Conversion](csharp-conversion.md)
 
 [Interface](csharp-interface.md)
@@ -44,7 +46,9 @@
 
 [Variance](csharp-variance.md)
 
-[IObservable](csharp-observer-design-pattern.md)
+[CSharp Observer Pattern](csharp-observer-design-pattern.md)
+
+[Reactive](csharp-reactive.md)
 
 [Extension Method](csharp-extension-method.md)
 

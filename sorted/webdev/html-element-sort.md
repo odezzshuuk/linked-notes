@@ -1,16 +1,16 @@
-# 元素分类
+# Html - Element Category
 
-## 块级元素
+## Block Level Element
 
-- 占据父元素的整个水平空间
-- 垂直空间等于器高度内容
+- Occupies the entire horizontal space of the parent element
+- Vertical space equals to its content height
 
-> 浏览器通常在块级元素前后另起一行
+> Browser usually start a new line before and after block level element
 
-- 只能出现在`<body>`元素内
-- 元素列表, `<div>`, `<p>`, `<ul>`, `<table>`
+- Only exists in the `<body>` of the HTML document
+- like `<div>`, `<p>`, `<ul>`, `<table>`
 
-## 行内元素
+## Inline Element
 
-- 只占据对应标签边框所包含的空间
-- 元素列表, `<span>`, `<button>`, `<input>`, `<label>`, `<b>`, `<img>`
+- only occupy the space contained by the corresponding tag border
+- like `<span>`, `<button>`, `<input>`, `<label>`, `<b>`, `<img>`

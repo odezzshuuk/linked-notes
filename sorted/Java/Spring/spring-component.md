@@ -1,12 +1,11 @@
-# 组件
+# Spring - Components
 
 - [Introduction](#introduction)
 - [Component created by Spring](#component-created-by-spring)
-- [对象的作用域](#对象的作用域)
 
 ## Introduction
 
-- spring管理的对象默认是单例的
+- Component default scope is singleton
 - 配置类上添加`@ComponentScan`注解用于扫描组件所在的package, 多个package用逗号分隔
 
 ```java
@@ -49,7 +48,7 @@ public class BeanFactory {
 }
 ```
 
-## 对象的作用域
+## Component Scope
 
-- spring支持的作用域: singleton, prototype, request, session, global session
+- Scope supported by Spring: singleton, prototype, request, session, global session
 

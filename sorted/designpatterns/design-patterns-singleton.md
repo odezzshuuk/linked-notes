@@ -29,8 +29,8 @@ public class Singleton {
 }
 ```
 
-- 最简单的单例模式, 也是饿汉模式: 类加载时创建
-- 懒加载: 类加载时不创建, 调用时创建
+- Most simple singleton pattern, also called **Eager Loading**: Create when class **loading**
+- **Lazy Loading**: Class loading time does not create, create when **called**
 
 ```java
 public class Singleton {

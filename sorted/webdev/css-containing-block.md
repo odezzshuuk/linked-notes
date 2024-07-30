@@ -1,6 +1,6 @@
 # CSS Containing Block
 
-- 包含块大多数时候是ancester(祖先)中最近的**block-level元素**, ~~并不总是父元素~~
+- Containing block mostly is the nearest **block-level** element in the ancestor, ~~not always parent element~~
 
 ## How to determine containing block
 
@@ -9,11 +9,11 @@
 
 ## Description in MDN
 
-如何确定包含块, 完全依赖于元素的[position](css-positioning.md)属性
+how to determine the containing block depends on the element's [position](css-positioning.md) property
 
-> **确定包含块的意义**: 元素的尺寸和位置常常受到包含块的影响, 如width, height, padding, margin, position的top, right, bottom, left
+> **meaning of containing block**: the size and position of an element are often affected by its containing block, such as width, height, padding, margin, and the position properties top, right, bottom, and left
 
-如果position属性为`static, relative, sticky`
+if `position` value is `static, relative, sticky`
 
 - 其包含块可能由最近的**ancester block**的内容区边缘组成
 - 可能是一个block container

@@ -79,6 +79,7 @@ use 2 $\times$ 2 to describe a linear transformation
 - `x, y` are the coordinates of the point
 - `a, b, c, d` are the transformation parameters
 
+```tex
 $$
 \begin{pmatrix}
 a & c \\
@@ -93,9 +94,11 @@ ax + cy \\
 bx + dy
 \end{pmatrix}
 $$
+```
 
 apply several transformation
 
+```
 $$
 \begin{pmatrix}
 a_1 & c_1 \\
@@ -111,6 +114,7 @@ a_1a_2 + c_1b_2 & a_1c_2 + c_1d_2 \\
 b_1a_2 + d_1b_2 & b_1c_2 + d_1d_2
 \end{pmatrix}
 $$
+```
 
 with this, it is posible to describe most common transformations: rotations, scaling or skewing
 

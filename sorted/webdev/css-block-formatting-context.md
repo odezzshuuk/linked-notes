@@ -1,11 +1,11 @@
-# BFC
+# CSS - BFC
 
-- Block formatting context 块格式化上下文
+- BFC: Block formatting context
 
-## 创建BFC的情况
+## When BFC is created
 
-- [x] 文档根元素`<html>`, root element of document
-- [x] 浮动元素, float elements(float属性不等于none)
+- [x] `<html>`, root element of document
+- [x] float elements(float value is not `none`)
 - [x] Absolutely positioned elements, `position: absolute or fixed`
 - [x] Inline-block(display: inline-block)
 - [ ] Table cells
@@ -19,16 +19,20 @@
 - [ ] 多列容器值不为auto
 - [ ] column-span值为all的元素始终会创建一个新的BFC, 即使该元素包裹在一个多列容器中
 
-## 为了定位或清除浮动创建新的BFC
+## Create BFC For Positioning or Clearing Floats
 
-### 1. 包含内部浮动, contain internal floats
+### 1. contain internal floats
 
-设置父元素属性为:
+Set parent element property to:
 
-- overflow: auto
-- display: flow-root
+```
+{
+    overflow: auto
+    display: flow-root
+}
+```
 
-> 即, 创建新的BFC, 使父元素脱离Normal Flow
+> which means create a new BFC, make parent element out of Normal Flow
 
 ```html
 <style>

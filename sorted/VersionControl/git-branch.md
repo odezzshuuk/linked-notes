@@ -22,7 +22,6 @@ what happen when `git branch`
 
 > new branch $\rightarrow$ current commit
 
-
 ## Switch Branch
 
 `git switch <branch>`
@@ -33,8 +32,8 @@ what happen when `git branch`
 
 - **checkout can perform a switch**, even if working directory or staging area have uncommitted changes
 - this command does two things
-  - move `HEAD` to the specified `branch`
-  - restore the file status to the specified branch
+  - move `HEAD` to the specified `<branch>`
+  - carry current modifications to the specified `<branch>`
 
 > git log will not show all branch
 
