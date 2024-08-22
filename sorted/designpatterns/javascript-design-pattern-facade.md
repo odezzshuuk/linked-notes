@@ -12,8 +12,8 @@
 
 ## What problem to solve
 
-- when a subsystem is complex, it is hard to use
-- managing complex subsystems by providing a simple and unified interface
+- When a subsystem is complex, it is hard to use
+- Managing complex subsystems by providing a simple and unified interface
 
 ## Real Case Of Facade Use Case
 

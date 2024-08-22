@@ -16,9 +16,9 @@ promise();
 template< class Alloc >  
 promise(std::allocator_arg_t, const Alloc& alloc);
 
-promise( promise&& other ) noexcept;  // 移动构造
+promise( promise&& other ) noexcept;  // move constructor
 
-promise( const promise& other ) = delete;  // 拷贝构造不可用
+promise( const promise& other ) = delete;  // copy constructor unavailable
 ```
 
 - parameters

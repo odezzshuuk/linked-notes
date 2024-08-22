@@ -1,5 +1,6 @@
 # dword
 
-- meaning 1：全称double word，每个word为2个字节的长度
-- meaning 2：nasm汇编中的一个关键字，为每个初始值分配一个double word
-  - `DWORD 操作数` 表示操作数为double word
+- meaning 1: full name double word, each word is 2 bytes long
+- meaning 2: a keyword in [nasm]() assembly, allocate a double word for each initial value
+  - `DWORD 0x12345678` represent that `0x12345678` is a double word
+

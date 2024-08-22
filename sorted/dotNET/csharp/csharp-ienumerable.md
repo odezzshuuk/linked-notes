@@ -1,6 +1,10 @@
 # CSharp - IEnumerable Interface
 
-- only one member `GetEnumerator`, a method that returns an [IEnumerator interface](csharp-ienumerator-interface.md) is called an enumerator
+## Features
+
+One member `GetEnumerator`; 
+
+- A method that returns an [IEnumerator](csharp-ienumerator.md)
 
 ## `IEnumerable<T>` And `IDisosable`
 

@@ -54,7 +54,6 @@ class Program
 ```
 
 - if `a` is a `Reptile` definitely, this conversion is Ok both in runtime and compile time
-
 - [`is`](#operator-is) operator enable to check whether a conversion is OK at runtime
 
 ## Implicit Conversion
@@ -93,13 +92,15 @@ checked
 E as T
 ```
 
+vs (T)E
+
 - Unable to convert, return null
 - Only consider reference, boxing, unboxing conversion
 - Never throw an exception
 
 ## Operator is
 
-- is
+- used to check whether an **object** is is of a **particular type** or inherits from a class or interface
 
 ## Boxing
 

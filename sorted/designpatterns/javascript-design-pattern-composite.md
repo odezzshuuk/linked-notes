@@ -17,11 +17,11 @@
 ## Component
 
 - Common **interface** or **abstract class** for **[Leaf](#leaf) and [Composite](#composite)**
-- define the behavior that **BOTH [leaf](#leaf) AND [composite](#composite)** should implement
+- Define the behavior that **BOTH [leaf](#leaf) AND [composite](#composite)** should implement
 
 ## Leaf
 
-- Object in composite design pattern represent a individual object
+- Object represent an individual object
 - Do not have any child
 
 ## Composite

@@ -1,8 +1,8 @@
 # CSharp - Observer Design Pattern
 
 * [Essential Elements](#essential-elements)
-* [Provider](#provider)
-* [Observer/Listener/Subscriber](#observer/listener/subscriber)
+* [Observable/Provider](#observable/provider)
+* [Observer](#observer)
 * [Subscribe() Method](#subscribe()-method)
 * [IDisposable Object](#idisposable-object)
 * [Data](#data)
@@ -15,7 +15,7 @@
 4. [IDisposable Object](#idisposable-object)
 5. [Data](#data)
 
-## Provider
+## Observable/Provider
 
 > Also Provider/Subject/Event Publisher
 

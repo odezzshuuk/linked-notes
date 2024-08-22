@@ -1,15 +1,21 @@
-# Catch block
+# Java - Catch block
 
-- 捕获exception类异常
-- 每个catch块都是一个异常捕获程序
-- 可以执行打印错误消息，暂停程序，错误恢复，提示用户做决定
+- Captured `Exception`
+- Every catch block is an exception handler
 
-## 捕获多个异常
+## Catch Multiple Exceptions
 
-- 不存在继承关系的异常类可以用多个catch block
-- 捕获有继承关系`catch(FileNotFoundException | UnknownHostException e)`
+- Exception with inheritance relationship can be caught: `catch(IOException | SQLException e)`
 
-## 再次抛出异常
+```java
+catch (FileNotFoundException | UnknownHostException e) {
+    logger.log(Level.WARNING, "File not found or unknown host", e);
+}
+```
+
+- Exception with no inheritance relationship can be caught in multiple catch blocks
+
+## Rethrow Exception
 
 ```java
 catch(SQLException e) 
@@ -18,9 +24,9 @@ catch(SQLException e)
 }
 ```
 
-## 链式异常
+## Chained Exception
 
-- 和其他异常一起抛出
+-
 
 ```java
 public class ChainedExceptionDemo {
@@ -44,7 +50,7 @@ public class ChainedExceptionDemo {
 }
 ```
 
-## 将异常设置为新异常的原因
+## Set the original exception as the cause of the new exception
 
 ```java
 catch {
@@ -54,13 +60,13 @@ catch {
 }
 ```
 
-使用getCause()得到原始异常
+use `getCause()` to get the original exception
 
 ```java
 Throwable e = se.getCause();
 ```
 
-## 记录异常
+## Logging Exception
 
 ```java
 catch {

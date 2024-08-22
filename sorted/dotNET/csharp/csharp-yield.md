@@ -1,19 +1,61 @@
-# yield
+# CSharp - Keyword yield
 
-可通过使用 foreach 语句或 [LINQ](csharp-linq.md) 查询来使用从迭代器方法返回的序列。 `foreach` 循环的每次迭代都会调用[迭代器](csharp-iterator.md)方法。
+## What's For
 
-- yield的语句出现的**方法**, **运算符**或**get访问器**是[迭代器](csharp-iterator.md)
+- Make a method [Iterator](csharp-iterator.md)
+- Most common way to create an [Iterator](csharp-iterator.md)
 
-## 解释
+## Features
 
-- 迭代器方法运行到 `yield return` 语句时，会返回一个 `expression`，并保留当前在代码中的位置。 下次调用迭代器函数时，将从该位置重新开始执行。
-- yield return表示这是当前枚举器产生的下一个元素
+- C# compiler will transform the method into a class that implements [`IEnumerator`](csharp-ienumerator.md) interface
 
-```csharp
-public IEnumerable<int> GetNumbers()
-{
-    yield return 1;
-    yield return 2;
-    yield return 3;
+## Execution
+
+```c
+public class Program {
+    public static void Main()
+    {
+        IEnumerable<int> numbers = GetNumbers();
+        var enumerator = GetNumbers().GetEnumerator();
+        Console.WriteLine("GetNumbers() called");
+
+        enumerator.MoveNext();
+        int value2 = enumerator.Current;
+        Console.WriteLine(value2);
+
+        enumerator.MoveNext();
+        int value3 = enumerator.Current;
+        Console.WriteLine(value3);
+
+        enumerator.MoveNext();
+        int value4 = enumerator.Current;
+        Console.WriteLine(value4);
+    }
+
+    public static IEnumerable<int> GetNumbers()
+    {
+        Console.WriteLine("GetNumbers() Executed");
+        yield return 1;
+        yield return 2;
+        yield return 3;
+    }
 }
 ```
+
+Output:
+
+```c
+GetNumbers() called
+GetNumbers() Executed
+1
+2
+3
+```
+
+Explanation:
+
+1. when the iterator method is first called, it doesn't execute any code
+2. When iterate with `foreach`, the method will execute until it reaches a `yield` statement and return the value
+3. When `MoveNext()` is called, the method will start from where it left off(just after yield return), until it reaches another `yield` statement
+4. End of the collection, `MoveNext()` return false
+

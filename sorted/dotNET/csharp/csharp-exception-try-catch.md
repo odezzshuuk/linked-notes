@@ -2,7 +2,7 @@
 
 ## One Word
 
-- try block includes code that is protected from exceptions
+- Try block includes code that is protected from exceptions
 - catch statement
   - handle the exception
   - can have multiple catch blocks
@@ -33,7 +33,6 @@ catch(Exception e)
     Statements
 }
 ```
-
 
 ## finally
 

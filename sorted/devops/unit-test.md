@@ -5,7 +5,23 @@
 - usually test  a class or a function
 - usually written by single developer
 
+## Terms
+
+[Terms](unit-test-terms.md)
+
 ## Best Practice
+
+[Best Practice](unit-test-best-practice.md)
+
+## Fake, Mock, Stub
+
+[Fake, Mock, Stub](unit-test-fake-mock-stub.md)
+
+## Code Coverage
+
+[Code Coverage](unit-test-code-coverage.md)
+
+## Best Principle
 
 - Follow Arrange/Act/Assert Pattern
   - Arrange: setup the test, such as create object, preparing input data
@@ -31,15 +47,6 @@ def test_foo():
 - use [test fixtures](#test-fixtures)
 - test normal cases, condition edge cases, boundary cases(min, max, empty, etc)
 - avoid logic in test, like if, switch, while, for
-- use proper assertion
-  - `assertEqual(a, b)`
-  - `assertTrue(x)`
-  - `assertFalse(x)`
-  - `assertIs(a, b)`
-  - `assertIsNone(x)`
-  - `assertIn(a, b)`
-  - `assertIsInstance(a, b)`
-  - `assertRaises(exc, fun, *args, **kwds)`
 
 ## test fixtures
 
@@ -78,8 +85,4 @@ public class TestJunit {
 ```
 
 - javascript
-
-```js
-
-```
 

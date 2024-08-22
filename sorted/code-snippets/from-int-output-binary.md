@@ -1,8 +1,6 @@
 # code
 
-## 方法一
-
-#递归 
+## Method 1
 
 ```c++
 void BR(size_t n) {  

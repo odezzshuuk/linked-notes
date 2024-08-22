@@ -14,6 +14,8 @@
 
 [Game UI](unity-game-ui.md)
 
+[Input System](unity-input-system.md)
+
 [Lighting](unity-lighting.md)
 
 [NavMesh](unity-navmesh.md)

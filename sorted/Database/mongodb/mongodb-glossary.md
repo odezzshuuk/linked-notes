@@ -11,7 +11,7 @@
 
 ## document
 
-- composed of field and value
+- Composed of field and value
 
 ```json
 {
