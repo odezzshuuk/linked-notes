@@ -50,36 +50,21 @@
 
 [STL](c++-stl.md)
 
-[[c++手册]]
+## C
 
-# IIII
+[Memory Layout](linux-c-program-memory-layout.md)
 
-[其他特性](c++-iiii.md)
+[array](c-array.md)
 
-[c++程序设计](c++-programm-design.md)
+[string](c-string.md)
 
-## C语言
+[struct](c-structure.md)
 
-[C程序的存储空间布局](linux-c-program-memory-layout.md)
+[Preprocessor](c-preprocessor.md)
 
-[数组](c-array.md)
-
-[字符串](c-string.md)
-
-[结构体](c-structure.md)
-
-[C预处理器](c-preprocessor.md)
-
-## 框架
-
-[Qt](qt.md)
 
 ## Bug
 
 [Learn From Bug](c++-learn-from-bug.md)
 
-## Ⅲ
 
-[RTTI机制](c++-rtti机制.md)
-
-[RAII](c++-raii机制.md)

@@ -2,6 +2,15 @@
 
 > here is the [webgl shader](webgl-shader.md)
 
+* [What's For](#what's-for)
+* [Features](#features)
+* [When Talking About Shader](#when-talking-about-shader)
+* [ShaderLab](#shaderlab)
+* [Workflow](#workflow)
+* [Shader Types](#shader-types)
+* [Shader Object](#shader-object)
+* [Shader Variant](#shader-variant)
+
 ## What's For
 
 - Use shader object with materials to determine the appearance of scene
@@ -13,22 +22,33 @@ Explaination of how shader effect what material looks
 
 ## Features
 
-- Which Shader would be used depend on [render pipeline](unity-render-pipeline.md) 
+- There are multiple [subshader]() in [shader object](), which Shader would be used depend on [render pipeline](unity-render-pipeline.md) 
 
-## Terminology When Talking About Shader
+## HLSL Language
+
+[HLSL Language](unity-hlsl-language.md)
+
+## When Talking About Shader
 
 [Terminology](unity-shader-terminology.md)
 
-## 3 Categories Of Shader In Unity
+[Compilation](unity-shader-compilation.md)
 
-- Shader as a part of [graphics pipeline]()
-- Compute Shader: outside of the [graphics pipeline]
-- Ray Tracing Shader
+## ShaderLab
+
+[ShaderLab](unity-shaderlab.md)
+
+## Workflow
+
+## Shader Types
+
+- shader graph: visual shader editor
+- Unlit shader: do not interact with light
+- Image Effect Shader: [post processing](unity-post-processing.md) effect
+- Compute Shaders
 
 ## Shader Object
 
 [Shader Object](unity-shader-object.md)
 
-
-
-
+## Shader Variant

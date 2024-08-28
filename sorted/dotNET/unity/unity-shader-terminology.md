@@ -3,10 +3,14 @@
 * [Shader Program](#shader-program)
 * [Shader Class](#shader-class)
 * [Shader Object](#shader-object)
-* [Shader Lab](#shader-lab)
+* [ShaderLab](#shaderlab)
 * [Shader Graph](#shader-graph)
 * [Shader Asset](#shader-asset)
 * [Shader Graph Asset](#shader-graph-asset)
+* [Shader Variant](#shader-variant)
+* [Shader Variant Collection](#shader-variant-collection)
+* [Shader Keywords](#shader-keywords)
+* [Shader Stage](#shader-stage)
 
 ## Shader Program
 
@@ -38,7 +42,9 @@ what's inside
 - write shader code with .shader extension
 - use [Shader Graph](#shader-graph)
 
-## Shader Lab
+## ShaderLab
+
+- A declarative language for writing structure shaders
 
 ## Shader Graph
 
@@ -51,6 +57,56 @@ A file with the .shader extension
 ## Shader Graph Asset
 
 A file define a shader object
+
+## Shader Variant
+
+- One shader source file compiled into One Shader Program
+- One shader program can have multiple variants for different conditions
+- Which variant is used at runtime is configured by [shader keywords](#shader-keywords)
+
+For example there are keywords sets, Set One
+
+- `COLOR_RED`
+- `COLOR_GREEN`
+- `COLOR_BLUE`
+
+Set Two
+
+- `QUALITY_LOW`
+- `QUALITY_MEDIUM`
+- `QUALITY_HIGH`
+- `QUALITY_ULTRA`
+
+Then there are 12 variants
+
+## Shader Variant Collection
+
+- To ensure [shader variants](#shader-variant) that are required at runtime but not referenced in a scene are not excluded from the **build**
+
+## Shader Keywords
+
+- Use [conditional behavior]() to organize shader code
+
+## Shader Stage
+
+- specific step in the graphics rendering pipeline
+
+Common Stages
+
+1. [Vertex Shader](#vertex-shader)
+2. Tesselation Shader(Hull and Domain Shaders)
+3. Geometry Shader
+4. Fragment Shader
+5. Compute Shader
+
+## Vertex Shader
+
+- Must output vertex position in homogeneous clip space
+- Optional to output other data, such as vertex color, vertex lightning, texture coordinates, etc.
+
+```c
+
+```
 
 
 

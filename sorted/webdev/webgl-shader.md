@@ -7,8 +7,8 @@
 
 ## what it is
 
-- Is a program
-- written using the [GLSL](webgl.md#glsl)
+- A program
+- Written using the [GLSL](webgl-fundamentals.md)
 - containing the information about
   - vertices that make up a shape
   - generate the data needed to render the pixels on the screen
@@ -62,7 +62,6 @@ const fsSource = `
 - this just drawing a white square
 
 ## Instance Method
-
 
 `gl.createShader(type)`
 

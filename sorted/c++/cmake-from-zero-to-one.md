@@ -18,3 +18,16 @@ cmake -S . -B build
 
 - this command will use `CMakeLists.txt` in current directory to generate build system, and place it in `build` directory
 
+To execute executable file
+
+```sh
+cmake --build build
+```
+
+- or use [`make`](makefile.md)
+
+```sh
+cd build
+make
+```
+

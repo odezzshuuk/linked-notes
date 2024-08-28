@@ -26,6 +26,24 @@ this factor can be created outside of unity
 
 [Universal Render Pipeline](unity-universal-render-pipeline.md)
 
+[Post Processing](unity-post-processing.md)
+
+## Animation
+
+[Animation](unity-animation.md)
+
+## UI
+
+[Game UI](unity-game-ui.md)
+
+[UGUI]
+
+[UI Toolkit](unity-script-ui-toolkit.md)
+
+[IMGUI]
+
+[Input System](unity-input-system.md)
+
 ## Programming Factors
 
 [GameObject](unity-gameobject.md)

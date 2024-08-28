@@ -2,31 +2,25 @@
 
 [Best Practices](unity-best-practices.md)
 
-[Factors](unity-develop-factor.md)
+[Development Factors](unity-develop-factor.md)
 
 [Build](unity-build.md)
 
 [Editor](unity-editor.md)
 
-[Script](unity-script.md)
-
-[Animation](unity-animation.md)
-
-[Game UI](unity-game-ui.md)
-
-[Input System](unity-input-system.md)
-
 [Lighting](unity-lighting.md)
-
-[NavMesh](unity-navmesh.md)
 
 [Project Setting](unity-project-settings.md)
 
 [tags and layers](unity-tags-and-layers.md)
 
+[Assembly Definition](unity-assembly-definition.md)
+
 [AssetBundles](unity-assetbundles.md)
 
-[Assembly Definition](unity-assembly-definition.md)
+## Component
+
+[NavMesh](unity-navmesh.md)
 
 ## Blog
 

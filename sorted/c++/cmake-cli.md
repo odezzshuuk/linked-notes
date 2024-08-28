@@ -19,8 +19,6 @@ Open a project
 
 Run Script
 
-Run a Command-Line Tool
-
 Run a Workflow Preset
 
 View Help
@@ -50,5 +48,4 @@ cmake -S src -B build
 ```
 
 - this command will use `src/CMakeLists.txt` as the entry point And generate [build system](cmake-glossary.md#build-tree) files in `build` directory
-
 

@@ -27,7 +27,7 @@
 
 [Block(Scope)](cmake-block.md)
 
-[CLI Tools](cmake-command-line-tools.md)
+[CLI](cmake-cli.md)
 
 [Find Package](cmake-command-find-package.md)
 

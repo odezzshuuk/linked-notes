@@ -46,8 +46,8 @@ z = z'/w
 
 A pair of functions
 
-1. Vertex shader
-2. fragment shader
+1. [Vertex shader](#vertex)
+2. [fragment shader](#fragment)
 
 ## vertex
 
