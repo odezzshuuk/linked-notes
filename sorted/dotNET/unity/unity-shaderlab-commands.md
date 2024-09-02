@@ -1,6 +1,6 @@
 # Unity - ShaderLab Commands
 
-## What's ShaderLab Commands For 
+## What's ShaderLab Commands For
 
 3 purposes
 
@@ -31,45 +31,8 @@ Pass Commands
 
 ## Blend
 
-Blend Equation
+[Blend](unity-shaderlab-commands-blend.md)
 
-`finalValue = sourceFactor * sourceValue operation destinationFactor * destinationValue`
-
-Command syntax
-
-- `Blend [render target] state`
-  - `Blend Off`: disable blending
-- `Blend [render target] SrcFactor DstFactor` 
-- `Blend [render target] SrcFactor DstFactor, SrcFactorA DstFactorA`: separate blend factors for color and alpha channels
-  - `SrcFactorA` and `DstFactorA` is factor that separate alpha from RGBA
-
-Instruction
-
-- `state`: Off, 
-- `render target`: from 0 to 7
-- `***Factor`
-  - One
-  - Zero
-  - SrcColor
-  - SrcAlpha
-  - SrcAlphaSaturate
-  - DstColor
-  - DstAlpha
-  - OneMinusSrcColor: (1 - srcColor)
-  - OneMinusSrcAlpha: (1 - srcAlpha)
-  - OneMinusDstColor: (1 - dstColor)
-  - OneMinusDstAlpha: (1 - dstAlpha)
-
-Most Common Blend Combination
-
-```sh
-Blend SrcAlpha OneMinusSrcAlpha # Traditional transparency
-Blend One OneMinusSrcAlpha # Premultiplied transparency
-Blend One One # Additive blending
-Blend OneMinusDstColor One # Soft Additive blending
-Blend DstColor Zero # Multiplicative blending
-Blend DstColor SrcColor # 2x Multiplicative blending
-```
 
 ## BlendOp
 
@@ -77,21 +40,47 @@ Blend DstColor SrcColor # 2x Multiplicative blending
 
 ## ColorMask
 
-## Conservative 
+## Conservative
 
 ## Cull
+
+[Cull](unity-shaderlab-commands-cull.md)
 
 ## Offset
 
 ## Stencil
 
+[Stencil](unity-shaderlab-commands-stencil.md)
+
 ## ZClip
 
 ## ZTest
 
+Z represents the depth
+
+- Disabled
+- Never
+- Less
+- Equal
+- LEqual: means less or equal, **default value**
+- Greater: Draw geometry that is behind existing geometry
+- NotEqual
+- GEqual
+- Always
+
 ## ZWrite
 
+- set whether [depth buffer](unity-shader-terminology.md#depth-buffer) are updated during rendering
+- `ZWrite On` or `ZWrite Off`
+
 ## UsePass
+
+What's For
+
+- Insert a pass from another shader object into the current pass
+- For Reusing shader code
+
+`UsePass "<ShaderName>/<PassName>"`
 
 ## GrabPass
 

@@ -11,6 +11,9 @@
 * [Shader Variant Collection](#shader-variant-collection)
 * [Shader Keywords](#shader-keywords)
 * [Shader Stage](#shader-stage)
+* [Vertex Shader](#vertex-shader)
+* [Stencil Buffer](#stencil-buffer)
+* [Depth Buffer](#depth-buffer)
 
 ## Shader Program
 
@@ -107,6 +110,14 @@ Common Stages
 ```c
 
 ```
+
+## Stencil Buffer
+
+- [stencil command](unity-shaderlab-commands-stencil.md#stencil-buffer)
+
+## Depth Buffer
+
+
 
 
 

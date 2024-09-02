@@ -38,7 +38,27 @@ Explaination of how shader effect what material looks
 
 [ShaderLab](unity-shaderlab.md)
 
-## Workflow
+## Data Flow
+
+Most common shader process is [vertex-fragment stage](unity-shader-terminology.md#shader-stage) process
+
+Data Flow Direction: Vertex -> Fragment
+
+Explaination By Code
+
+```c
+v2f vert (appdata_t v)
+{
+    v2f o;
+    o.pos = UnityObjectToClipPos(v.vertex);
+    return o;
+}
+
+fixed4 frag (v2f i) : SV_Target // i is the input from vertex shader
+{
+    // ...
+}
+```
 
 ## Shader Types
 

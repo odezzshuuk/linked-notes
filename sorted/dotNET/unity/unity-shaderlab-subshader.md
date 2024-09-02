@@ -2,8 +2,9 @@
 
 ## Features
 
-- separate shader object into different parts for compatibility
-- One or more [pass objects](#pass)
+- Only one of subshaders in shader block is executed at a time
+- Separate shader object into different parts for compatibility
+- Include One or more [pass objects](#pass)
 
 ```sl
 {
@@ -35,7 +36,7 @@
 
 ## Tag
 
-- include predefined tags and user-defined tags
+- Include predefined tags and user-defined tags
 
 ### Predefined tags:
 
@@ -67,3 +68,6 @@ details:
 - `"RenderType"="[name]"`:
   - user-defined tags: can be accessed from c# script, for example `material.GetTag("tagname")`
 
+## how unity select the subshader
+
+- ...
