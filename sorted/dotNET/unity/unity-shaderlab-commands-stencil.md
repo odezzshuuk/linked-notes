@@ -55,10 +55,41 @@ Stencil
 }
 ```
 
-- `ref`: The value that GPU compares
-- `readMask`
+- `Ref`: The value that GPU compares
+- `Comp`: Comparing value in `Ref`, if true, then **Render the pixel**. Distinct to `Pass`, which is used to **update the Ref value**
+- `ReadMask`
   - Value Range: 0 ~ 255(b11111111)
   - used as readMask in [test equation](#test-equation)
-- `writeMask`:
+- `WriteMask`:
   - Control what value can be written to the stencil buffer
+- `Pass`: How to update the stencil buffer **`Ref` value** when the stencil test passes
+
+## Best Practice
+
+```c
+SubShader
+{
+    // Main Pass
+    Pass
+    {
+        Stencil
+        {
+            Ref 1
+            Comp Always
+            Pass Replace
+        }
+    }
+
+    // Second Pass
+    Pass
+    {
+        Stencil
+        {
+            Ref 1
+            Comp Equal
+            Pass Keep
+        }
+    }
+}
+```
 

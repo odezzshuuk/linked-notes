@@ -38,7 +38,7 @@
 
 - Include predefined tags and user-defined tags
 
-### Predefined tags:
+Predefined tags
 
 - unity use them to determine how and when to use which shader
 
@@ -55,18 +55,36 @@ predefined tags:
 | PreviewType          | how to display a material that use this subshader in material inspector |
 | CanUseSpriteAtlas    |                                                                         |
 
-details:
+## Predefined Tags
 
-- `"RenderPipeline"="[name]"`: whether subshader is compatible with the universal render pipeline,
-  - available values are `UniversalRenderPipeline` and `HDRenderPipeline`, other names represent that subshader is not compatible with the render pipeline
-- `"Queue"="[name]"`: tell unity which render queue to use
-  - available values are `Background`, `Geometry`, `AlphaTest`, `Transparent`, `Overlay`
-  - `Queue="Transparent + 1"`: give offset after the named queue
-    - In C# script
-      - `Shader.renderQueue`: get the queue tag of active subshader
-      - `material.renderQueue`: set the queue tag of the material
-- `"RenderType"="[name]"`:
-  - user-defined tags: can be accessed from c# script, for example `material.GetTag("tagname")`
+`"RenderPipeline"="[name]"`: whether subshader is compatible with the universal render pipeline,
+
+- Available values are `UniversalRenderPipeline` and `HDRenderPipeline`, other names represent that subshader is not compatible with the render pipeline
+
+`"Queue"="[name]"`: tell unity which render queue to use
+
+- Available values are `Background`, `Geometry`, `AlphaTest`, `Transparent`, `Overlay`
+- `Queue="Transparent + 1"`: give offset after the named queue
+  - In C# script
+    - `Shader.renderQueue`: get the queue tag of active subshader
+    - `material.renderQueue`: set the queue tag of the material
+
+`"RenderType"="[name]"`:
+
+- User-defined tags: can be accessed from c# script, for example `material.GetTag("tagname")`
+- Available values
+  - `Opaque`: default value
+  - `Transparent`:
+  - `Cutout`:
+  - `Fade`:
+
+`"ForceNoShadowCasting"="True"`: disable shadow casting
+
+`"DisableBatching"="True"`: disable batching
+
+`"IgnoreProjector"="True"`: ignore projector
+
+`"PreviewType"="[name]"`: how to display a material that use this subshader in material inspector
 
 ## how unity select the subshader
 

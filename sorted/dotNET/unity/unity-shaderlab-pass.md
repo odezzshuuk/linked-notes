@@ -8,6 +8,7 @@
 
 - If A subshader is executed, **all passes** in the subshader are executed in sequence by **written order**
 - Each pass is a [complete shader process](unity-shader-terminology.md#shader-stage)
+- [Multiple-pass]() is not supported in [URP](unity-universal-render-pipeline.md)
 
 ## Inside pass
 
@@ -18,8 +19,6 @@
 5. PackageRequirements
 
 ## Multiple Passes
-
-
 
 ## Take A Look
 

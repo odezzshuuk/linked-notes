@@ -62,9 +62,10 @@ fixed4 frag (v2f i) : SV_Target // i is the input from vertex shader
 
 ## Shader Types
 
-- shader graph: visual shader editor
-- Unlit shader: do not interact with light
-- Image Effect Shader: [post processing](unity-post-processing.md) effect
+[built-in render pipeline](unity-render-pipeline.md#supported-render-pipeline) has following shader types
+
+- [Vertex-fragment](unity-vertex-fragment-shader.md)
+- [Surface shader](unity-surface-shader.md)
 - Compute Shaders
 
 ## Shader Object

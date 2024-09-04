@@ -102,6 +102,40 @@ Common Stages
 4. Fragment Shader
 5. Compute Shader
 
+## Vertex-fragement Shader
+
+- Most common shader process
+- With two functions, vertex and fragment
+
+Vertex-fragment shader function may call like this
+
+> **Fragment shader will use the output of the vertex shader**
+
+1. DATA type
+2. Function signature
+3. Executing the function
+
+```c
+// data type declaration
+struct appdata {
+    float4 vertex : POSITION;
+    float4 color : COLOR;
+};
+struct v2f {
+    float4 vertex : SV_POSITION;
+    float4 color : COLOR;
+};
+
+// function signature
+v2f vert(appdata v) { }
+float4 frag(v2f i) : SV_Target { return i.color; }
+void main(in appdata data, out float4 fragColor) {}
+
+// main function call
+appdata app_data;
+main(app_data, frag(vert(app_data)));
+```
+
 ## Vertex Shader
 
 - Must output vertex position in homogeneous clip space

@@ -2,7 +2,7 @@
 
 ## What's for
 
-- combines the output of the **fragment shader**
+- Combines the output of the **fragment shader**
 
 ## Blend Equation
 
@@ -20,7 +20,7 @@
 
 - `state`: Off, On
 - `render target`: from 0 to 7
-- `***Factor`
+- `___Factor`
   - One
   - Zero
   - SrcColor
