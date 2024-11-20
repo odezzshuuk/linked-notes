@@ -22,14 +22,15 @@ sbyte var2 = 10;
 var = (sbyte)var1;
 ```
 
-There are 2 ways to do explicit conversion
+2 ways to explicit conversion
 
-- cast expression: `(T)E`
-- [Operator `as`](#operator-as), unlike cast expression, `as` operator will not throw an exception if the conversion is not possible
+- Cast expression: `(T)E`
+- [Operator `as`](#operator-as), 
+- `as` vs `(T)E`: unlike cast expression, `as` operator will not throw an exception if the conversion is not possible
 
 Cast expression may cause exception at runtime
 
-```cs
+```c
 class Animal
 {
     public void Eat() => System.Console.WriteLine("Eating.");

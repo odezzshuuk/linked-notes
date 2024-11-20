@@ -18,15 +18,15 @@ Can be used for:
 - Application debugging
 - Application runtime UI
 
-## [Unity UI](unity-ui-ugui.md)
+## [Unity UI/UGUI](unity-ui-ugui.md)
 
-Can not be used for:
+Can be used for:
 
 - Application runtime UI
 
-Can not be used for:
+Can NOT be used for:
 
-- Create editor UI
+- Editor UI
 
 ## IMGUI
 
@@ -35,5 +35,3 @@ Can be used for:
 - InspectorUI extensions
 - Editor extensions
 - Application debugging UI
-
-## OnGUI

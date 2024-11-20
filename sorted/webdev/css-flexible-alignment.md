@@ -60,10 +60,10 @@ shorthand for
 
 ## align-self
 
-- for **grid or flex** layout
+- For **grid or flex** layout
 - use to align **single item**
 - override `align-items` value
-- in flex box, aligns the item on the **cross axis**
+- In flex box, aligns the item on the **cross axis**
 
 value
 

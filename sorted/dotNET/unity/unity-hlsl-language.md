@@ -1,25 +1,29 @@
 # Unity - HLSL Language 
 
+* [Semantic](#semantic)
+* [Variable](#variable)
+* [Function](#function)
+* [Built-in Functions](#built-in-functions)
+* [Operators](#operators)
+
 ## Semantic
 
 [Semantic](unity-hlsl-semantic.md)
 
 ## Variable
 
-Data Types
-
-- float
+[Data Types](unity-hlsl-data-types.md)
 
 Modifier
 
-- uniform: constant throughout the shader, global variable is default uniform
-- extern
-- precise
-- nointerpolation
-- shared
-- groupshared
-- static
-- volatile
+- `uniform`: constant throughout the shader, global variable is default uniform
+- `extern`
+- `precise`
+- `nointerpolation`
+- `shared`
+- `groupshared`
+- `static`
+- `volatile`
 
 ## Function
 
@@ -40,4 +44,19 @@ Argument Modifier
 
 ## Built-in Functions
 
-- tex2D(s, t)
+[Built-in Functions](unity-hlsl-built-in-functions.md)
+
+## Operators
+
+`*`: scale multiplication
+
+- `(1, 2, 3) * (4, 5, 6) = (1 * 4, 2 * 5, 3 * 6) = (4, 10, 18)`
+
+dot product
+
+```c
+float3 a = float3(1, 2, 3);
+float3 b = float3(4, 5, 6);
+float dotProduct = dot(a, b);
+```
+

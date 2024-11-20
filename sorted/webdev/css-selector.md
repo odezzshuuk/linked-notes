@@ -40,7 +40,7 @@ select element `id="value"`, id is unique
 
 ## class selector
 
-- use prefix `.`
+- Use prefix `.`
 
 ```css
 .classvalue {
@@ -49,7 +49,7 @@ select element `id="value"`, id is unique
 }
 ```
 
-select all elements with `class="value"`
+Select all elements with `class="value"`
 
 ## Descendant Selector
 
@@ -103,7 +103,7 @@ input[type='submit'] {
 
 ## adjacent sibling combinator
 
-the second element is immediately preceded by the first, the second element will be selected
+The second element is immediately preceded by the first, the second element will be selected
 
 ```css
 img + p {

@@ -1,79 +1,84 @@
-# Matrices
+# Computer Graphic - Coordinates And Matrices
 
-* [Transformation Matrices](#transformation-matrices)
-* [Only Translate On Position](#only-translate-on-position)
-* [Scaling Matrix](#scaling-matrix)
+* [Homogeneous Coordinates](#homogeneous-coordinates)
+* [Model/Transform Matrix](#modeltransform-matrix)
+* [View/Camera Matrix](#viewcamera-matrix)
+* [Clip/Projection Matrix](#clipprojection-matrix)
+* [Normalized Device Coordinates](#normalized-device-coordinates)
+* [Equation](#equation)
 
-## Transformation Matrices
+## Homogeneous Coordinates
+
+- Also called projective coordinates
+- This coordinates are used to describe objects(a point) itself
 
 $$
-\begin{bmatrix}
-a & b & c & d\\[1mm]
-e & f & g & h\\[1mm]
-i & j & k & l\\[1mm]
-m & n & o & p
-\end{bmatrix}
-\times
 \begin{bmatrix}
 x \\[1mm]
 y \\[1mm]
 z \\[1mm]
-w
-\end{bmatrix}
-=
-\begin{bmatrix}
-ax + by + cz + dw\\[1mm]
-ex + fy + gz + hw\\[1mm]
-ix + jy + kz + lw\\[1mm]
-mx + ny + oz + pw
+w \\[1mm]
 \end{bmatrix}
 $$
 
-## Only Translate On Position
+- `w` for perspective projection
 
-the translation matrix looks like:
+## Model/Transform Matrix
 
-$$
-\begin{bmatrix}
-1 & 0 & 0 & x\\[1mm]
-0 & 1 & 0 & y\\[1mm]
-0 & 0 & 1 & z\\[1mm]
-0 & 0 & 0 & 1
-\end{bmatrix}
-$$
+$M$: [Model Matrix Detail](computer-graphics-model-matrix.md)
 
-translate vector $[1, 1, 1, 1]$ to $[4, 1, 1, 1]$
+What's For
 
-$$
-\begin{bmatrix}
-1 & 0 & 0 & 3\\[1mm]
-0 & 1 & 0 & 0\\[1mm]
-0 & 0 & 1 & 0\\[1mm]
-0 & 0 & 0 & 1
-\end{bmatrix}
-\times
-\begin{bmatrix}
-1 \\[1mm]
-1 \\[1mm]
-1 \\[1mm]
-1
-\end{bmatrix}
-=
-\begin{bmatrix}
-4 \\[1mm]
-1 \\[1mm]
-1 \\[1mm]
-1
-\end{bmatrix}
-$$
+- Transforming object in the [world space]()
 
-## Scaling Matrix
+## View/Camera Matrix
 
-$$
-\begin{bmatrix}
-x & 0 & 0 & 0\\[1mm]
-0 & y & 0 & 0\\[1mm]
-0 & 0 & z & 0\\[1mm]
-0 & 0 & 0 & 1
-\end{bmatrix}
-$$
+$V$: [View Matrix Detail](computer-graphics-view-matrix.md)
+
+What's For
+
+- Transforming the [world space]() to the [camera space]()
+
+## Clip/Projection Matrix
+
+$C$: [Clip Matrix](computer-graphics-clip-matrix.md)
+
+For maps 3D coordinates to 2D coordinates
+
+## Transformation Path
+
+Convention
+
+- $P_{model}$: The object matrix
+
+Equation
+
+$
+P_{world} = M \times P_{model} \\[1mm]
+P_{view} = V \times P_{world} \\[1mm]
+P_{clip} = C \times P_{view}
+$
+
+## Normalized Device Coordinates
+
+- The coordinates are in the range of $[-1, 1]$
+
+Conversion from [Clip space] to **Normalized Device Coordinates**
+
+$
+x_{\text{NDC}} = \frac{x_{\text{clip}}}{w_{\text{clip}}}, \quad y_{\text{NDC}} = \frac{y_{\text{clip}}}{w_{\text{clip}}}, \quad z_{\text{NDC}} = \frac{z_{\text{clip}}}{w_{\text{clip}}}
+$
+
+[NDC](#normalized-device-coordinates) range
+
+- $x_{\text{NDC}}, y_{\text{NDC}}, z_{NDC} \in [-1, 1]$
+
+## Screen Space
+
+Conversion from **NDC** to **Screen Space**
+
+$
+x_{\text{screen}} = \frac{(x_{\text{NDC}} + 1)}{2} \cdot \text{viewport width} \\[1mm]
+y_{\text{screen}} = \frac{(y_{\text{NDC}} + 1)}{2} \cdot \text{viewport height}
+$
+

@@ -6,10 +6,9 @@
 - They Are Component
   - MonoBehaviour
 
-## Create Component
+## Important Components
 
-- Create By `Add Component` in the inspector window
-
+[Camera](unity-camera.md)
 
 
 

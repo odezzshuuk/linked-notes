@@ -2,7 +2,7 @@
 
 ## font-family
 
-- specifies a prioritized(按优先排列) **list** of one or more font family name
+- specifies a prioritized **list** of one or more font family name
 - values are separated by commas
 - the are alternatives
   - browser will select the first font in the list that is installed

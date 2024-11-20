@@ -6,7 +6,7 @@
 - Separate shader object into different parts for compatibility
 - Include One or more [pass objects](#pass)
 
-```sl
+```c
 {
     SubShader
     {

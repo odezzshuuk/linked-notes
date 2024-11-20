@@ -1,4 +1,4 @@
-# UI toolkit中的C\#
+# UI toolkit
 
-- 命名空间UnityEditor.UIElements
-- 命名空间UnityEngine.UIElements
+- UnityEditor.UIElements
+- UnityEngine.UIElements

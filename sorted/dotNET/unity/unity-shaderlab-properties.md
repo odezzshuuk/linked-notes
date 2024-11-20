@@ -10,8 +10,7 @@
 `[optional: attribute] name("display name in inspector", type name) = default value`
 
 ```sl
-Properties
-{
+Properties {
     _Color ("Main Color", Color) = (1,1,1,1)
 }
 ```

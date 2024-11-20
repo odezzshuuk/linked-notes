@@ -1,4 +1,8 @@
-# Unity UI
+# Unity - Unity UI
+
+## Features
+
+- Based on GameObjects and Components.
 
 ## Canvas
 

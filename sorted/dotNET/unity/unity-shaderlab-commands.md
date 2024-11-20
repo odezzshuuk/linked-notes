@@ -33,7 +33,6 @@ Pass Commands
 
 [Blend](unity-shaderlab-commands-blend.md)
 
-
 ## BlendOp
 
 - operation in the blending equation

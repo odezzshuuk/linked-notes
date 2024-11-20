@@ -13,6 +13,10 @@
 
 ## Where To Use
 
+- After a structure member
+- After an argument in a function's input argument list
+- After the function's input argument list
+
 - Used as parameter or return value of shader stage function
 - Parameter and return value correspond to input and output of the shader stage
 - Both wrapped in a struct or directly is allowed
@@ -21,7 +25,7 @@
 
 ## Take A Look
 
-wrapped in a struct
+Wrapped in a struct
 
 ```c
 struct VertexOutput
@@ -91,7 +95,9 @@ Fragment(Pixel) Shader Semantic
 
 - Input semantics
   - `COLOR[n]`
-  - `TEXCOORD[n]`
+  - `TEXCOORD[n]`: 
+    - **One material** can have **multiple** texture coordinates
+    - `n` refers to the index/slot/channel of the texture coordinate
   - ...
 - Output semantics
   - `COLOR[n]`

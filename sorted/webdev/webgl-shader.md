@@ -5,7 +5,7 @@
 * [Instance Method](#instance-method)
 * [webgl shader code](#webgl-shader-code)
 
-## what it is
+## What It Is
 
 - A program
 - Written using the [GLSL](webgl-fundamentals.md)
@@ -15,7 +15,7 @@
     - position of pixels
     - color of pixels
 
-## shader function
+## Shader Function
 
 - vertex shader function
 - fragment shader function
@@ -68,7 +68,7 @@ const fsSource = `
 - type: `gl.VERTEX_SHADER` or `gl.FRAGMENT_SHADER`
 - return a shader object
 
-## webgl shader code
+## Webgl Shader Code
 
 ```html
 <!DOCTYPE html>

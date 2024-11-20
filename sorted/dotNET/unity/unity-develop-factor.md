@@ -14,19 +14,17 @@ this factor can be created outside of unity
 
 ## Rendering Factors
 
-[Rendering](unity-rendering.md)
-
 [Material](unity-material.md)
 
 [Shader](unity-shader.md)
-
-[Space](unity-space.md)
 
 [Render Pipeline](unity-render-pipeline.md)
 
 [Universal Render Pipeline](unity-universal-render-pipeline.md)
 
 [Post Processing](unity-post-processing.md)
+
+[Space](unity-space.md)
 
 ## Animation
 

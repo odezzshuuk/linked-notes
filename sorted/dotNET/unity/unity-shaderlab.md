@@ -1,7 +1,7 @@
 # Unity - ShaderLab
 
 * [What It Is](#what-it-is)
-* [ShaderLab Syntax](#shaderlab-syntax)
+* [What's In .shader](#what's-in-.shader)
 * [Shader Block Structure](#shader-block-structure)
 * [Shader Declaration](#shader-declaration)
 * [Properties](#properties)

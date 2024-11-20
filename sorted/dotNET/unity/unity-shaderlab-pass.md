@@ -2,7 +2,7 @@
 
 ## What Is This
 
-- Fundamental element
+- Fundamental element of a [subshader](unity-shaderlab-subshader.md)
 
 ## Features
 
@@ -17,6 +17,16 @@
 3. [Shaderlab commands](unity-shaderlab-commands.md)
 4. [Shader code](unity-shader-code.md)
 5. PackageRequirements
+
+## Predefined Tags
+
+> Predefined tags in pass NOT shared the exact same set with [subshader](unity-shaderlab-subshader.md#tag)
+
+| Tag Name       | Description |
+| -------------- | ----------- |
+| LightMode      |             |
+| PassFlags      |             |
+| RequireOptions |             |
 
 ## Multiple Passes
 
