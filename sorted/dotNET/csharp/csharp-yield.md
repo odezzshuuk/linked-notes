@@ -11,7 +11,7 @@
 
 ## Execution
 
-```c
+```cs
 public class Program {
     public static void Main()
     {
@@ -44,7 +44,7 @@ public class Program {
 
 Output:
 
-```c
+```sh
 GetNumbers() called
 GetNumbers() Executed
 1

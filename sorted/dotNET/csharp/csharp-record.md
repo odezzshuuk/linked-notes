@@ -10,7 +10,7 @@
 
 1. **Value-based equality** by default
 
-```c
+```cs
 public record Person {
     public string FirstName { get; init; }
     public string LastName { get; init; }
@@ -25,7 +25,7 @@ Console.WriteLine(person1 == person2); // True
 
 > class do not have built-in deconstructor
 
-```c
+```cs
 var person = new Person("John", "Doe");
 var (firstName, lastName) = person; // Deconstructing
 ```

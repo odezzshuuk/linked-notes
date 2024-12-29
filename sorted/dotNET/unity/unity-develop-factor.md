@@ -2,7 +2,7 @@
 
 ## Generic Factors
 
-this factor can be created outside of unity
+Factor can be created outside of unity
 
 [Asset](unity-asset.md)
 
@@ -11,6 +11,8 @@ this factor can be created outside of unity
 [Scene](unity-scene.md)
 
 [Prefab](unity-prefab.md)
+
+[Resources](unity-resources.md)
 
 ## Rendering Factors
 

@@ -52,8 +52,9 @@ property
   - default: 0
   - Nagative values are invalid
   - when number is positive, allow item to fill any available space
-- 2. `flex-shrink`: when flex item is too big, how much should it shrink
+- 2. `flex-shrink`: when size of all flex items larger than containe, flex items will be shrinked
   - default: 1
+  - when 0: the item will not shrink
 - 3. `flex-basis`: initial main size of a flex item
   - basis value grow or shrink
   - default: auto

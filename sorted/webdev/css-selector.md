@@ -64,7 +64,7 @@ div p {
 }
 ```
 
-## children selector
+## children Selector
 
 use `>` to select children
 
@@ -77,7 +77,7 @@ div > p {
 }
 ```
 
-## group selector
+## Group Selector
 
 select multiple elements, separate selectors by `,`
 
@@ -101,7 +101,7 @@ input[type='submit'] {
 
 - select input element with attribute type="submit"
 
-## adjacent sibling combinator
+## Adjacent Sibling Combinator
 
 The second element is immediately preceded by the first, the second element will be selected
 
@@ -113,7 +113,7 @@ img + p {
 
 - for above example `<p>` after `<img>` will be selected
 
-**owl selector**: select all sibling element after first element
+**Owl Selector**: select all sibling element after first element
 
 ```css
 body * + * {
@@ -121,7 +121,7 @@ body * + * {
 }
 ```
 
-## pseudo-class selector
+## Pseudo-class Selector
 
 - use to capture special state of element
 
@@ -162,7 +162,7 @@ pseudo-class can be used with CSS class
 <a class="red" href="####">CSS</a>
 ```
 
-## pseudo element selector
+## Pseudo Element Selector
 
 > element that doesn't exist in the HTML markup
 

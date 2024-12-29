@@ -9,9 +9,9 @@
 * [Discard All Local Changes](#discard-all-local-changes)
 * [check staged files](#check-staged-files)
 * [Set HEAD to specified status](#set-head-to-specified-status)
-* [changes forgotten to add to the last commit](#changes-forgotten-to-add-to-the-last-commit)
+* [Append new modification to the last commit](#append-new-modification-to-the-last-commit)
 * [Temporarily save current modification](#temporarily-save-current-modification)
-* [check all branches](#check-all-branches)
+* [Check all branches](#check-all-branches)
 * [Get Remote Url](#get-remote-url)
 * [Resovle Conflict](#resovle-conflict)
 * [A way to make the lastest commit as the initial commit](#a-way-to-make-the-lastest-commit-as-the-initial-commit)
@@ -46,13 +46,13 @@ output
 
 ```
 commit d590a26b3b988f24842d433d4b64708ff545d399 (HEAD -> main)
-Author: enigmaiiiiiiii <62017693+enigmaiiiiiiii@users.noreply.github.com>
+Author: example <62017693+example@users.noreply.github.com>
 Date:   Mon May 30 15:24:20 2022 +0800
 
     mainwindow.cpp : 608
 
 commit fa552d867bb6615f049720adaf336faed2727a16 (origin/main)
-Author: enigmaiiiiiiii <62017693+enigmaiiiiiiii@users.noreply.github.com>
+Author: example <62017693+example@users.noreply.github.com>
 Date:   Mon May 30 09:12:14 2022 +0800
 ```
 
@@ -106,7 +106,7 @@ git ls-files
 git reset --hard <commitid>
 ```
 
-## changes forgotten to add to the last commit
+## Append new modification to the last commit
 
 - `git commit --amend` after some changes have been made
 
@@ -140,7 +140,7 @@ restore modification and delete stash record
 git stash pop
 ```
 
-## check all branches
+## Check all branches
 
 
 ```bash

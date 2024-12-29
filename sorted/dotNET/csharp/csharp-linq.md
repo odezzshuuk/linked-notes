@@ -3,7 +3,7 @@
 ## What Is LINQ
 
 
-```c#
+```cs
 int[] numbers = {2, 5, 28};
 
 IEnumerable<int> lowNums = from n in numbers
@@ -13,7 +13,7 @@ IEnumerable<int> lowNums = from n in numbers
 
 Query Syntax
 
-```c#
+```cs
 var numQuery = from n in numbers
                where n < 20
                select n;
@@ -21,7 +21,7 @@ var numQuery = from n in numbers
 
 LINQ Method
 
-```c#
+```cs
 var numCount = numbers.Where(x => x < 20); 
 ```
 

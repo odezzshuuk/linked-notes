@@ -62,7 +62,7 @@ layer relationship
 - width = border + padding + content width
 - height = border + padding + content height
 
-Put this code at the beginning of css file is a common practice
+**Put this code at the beginning of css file becomes a common practice**
 
 ```css
 *, ::before, ::after {

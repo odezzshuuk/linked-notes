@@ -2,15 +2,14 @@
 
 ## What It Is
 
-- Similar To Class At Declaration
-- Can contain data members and **function members**
 - Struct is a [value type](csharp-value-reference.md#value)
-- Struct can't inherit from other [class]() or [struct]()
-- Struct can implement interface
+- Struct **Cannot** inherit from other [class]() or [struct]()
+- Struct **CAN** contain data members and **function members**
+- Struct **CAN** implement interface
 
 ## VS Class
 
-```c
+```cs
 public struct Point(int x, int y)
 {
     public int X

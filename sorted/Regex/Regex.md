@@ -10,7 +10,7 @@
 
 use `[]` to match single character
 
-- `[a-z]`: match the character from a to z
+- `[a-z]`: match the character/[group](#group) from a to z
 - `[a-z0-9]`: match the character from a to z and 0 to 9
 - `[^abc]`: `^` in `[]`, represents not, match any character except a, b, c
 
@@ -61,6 +61,8 @@ use `[]` to match single character
 `()` use to group, inside `()` is one group
 
 `(abc){3}`: match string `abcabcabc`
+
+`(abc|def)`: match `abc` or `def`
 
 ## Multiple Patterns
 

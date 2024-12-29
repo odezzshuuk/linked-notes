@@ -1,13 +1,29 @@
 # Linux - Jobs
 
+## Features
+
+- **single process or multiple processes** wrapped with job meta information, such as job id, job status...
+- An shell-level abstraction of single or multiple processes
+- Can be managed by command such as `fg`, `bg`, `jobs`
+- **Shell dependency**
+- When a job is created, one or more processes are created
+- But Not vice versa, process can exist without job
+
 ## Switch Between Suspend Process And Command Line
 
-when use `ctrl + z` to suspend process
+Suspend current job
 
-- resume most recent suspended process
+- `ctrl + z`: suspend current job
+
+Resume most recent suspended process
 
 ```sh
 fg
+```
+
+Resume a job by job id
+
+```
 fg %1
 ```
 
