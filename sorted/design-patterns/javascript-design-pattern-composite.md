@@ -26,7 +26,7 @@
 
 ## Composite
 
-- hold a collection of child components
+- Hold a collection of child components
 - implement the behavior defined by [component](#component) by delegating the operations to its child objects
   - usually contains a **traverse** and **recursive** operation
 
