@@ -12,13 +12,10 @@ Set-PoshPrompt Paradox
 Set-PSReadLineKeyHandler -Key Tab -Function Complete
 ```
 
-## PowerShell命令
+## PowerShell
 
 
-## Windows Terminal快捷键
-
-- `Alt + shift + '+'` 右侧新建窗口
-- `Alt + shift + '-'` 下侧新建窗口
+## Windows Terminal
 
 ## oh my posh
 
@@ -36,4 +33,3 @@ New-Item -Path $PROFILE -Type File -Force
 oh-my-posh init pwsh --config ~/theme-name.omp.json | Invoke-Expression
 ```
 
-- `theme-name`: 主题名称

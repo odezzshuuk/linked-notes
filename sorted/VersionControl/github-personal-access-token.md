@@ -3,9 +3,9 @@
 ## Create
 
 - Settings -> Developer settings -> Personal access tokens
-- 设置名称
-- 设置到期时间
-- 选择作用权限
+- Set name
+- Set Expiration
+- Set permissions
 - Click Generate token
 
 ## Usage
