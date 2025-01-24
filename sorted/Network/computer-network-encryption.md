@@ -1,15 +1,17 @@
 # Computer Network - Encryption
 
-- transform plaintext data into ciphertext
-- used to protect protect data confidentiality
-- only be decrypeted with appropriate **decryption key**
+## What It Is
 
-two types of encryption
+- Transform plaintext data into ciphertext
+- Used to protect protect data confidentiality
+- Only be decrypeted with appropriate **decryption key**
 
-- symmetric: same key used for both encryption and decryption
-- asymmetric: different keys used for encryption and decryption
+## 2 Types Of Encryption
 
-## encryption algorithms
+- Symmetric: same key used for both encryption and decryption
+- Asymmetric: different keys used for encryption and decryption
+
+## Encryption algorithms
 
 - [RSA](computer-network-cryptographic-algorithms.md#rsa)
 - ed25519

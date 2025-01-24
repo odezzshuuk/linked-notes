@@ -2,7 +2,10 @@
 
 * [Features](#features)
 * [await expression](#await-expression)
-* [Task And Task<T>](#task-and-task<t>)
+* [Return Type](#return-type)
+* [Any type has a `GetAwaiter` method](#any-type-has-a-`getawaiter`-method)
+* [`IAsyncEnumerable<T>`](#`iasyncenumerable<t>`)
+* [Wait A Async Value In A Sync Method](#wait-a-async-value-in-a-sync-method)
 
 ## Features
 
@@ -31,7 +34,7 @@ public async Task<int> GetAnswerAsync()
 
 Take A Look
 
-```c
+```cs
 public class AwaitOperator
 {
     public static async Task Main()
@@ -54,36 +57,24 @@ public class AwaitOperator
         return content.Length;
     }
 }
-// Output similar to:
-// DownloadDocsMainPageAsync: About to start downloading.
-// Main: Launched downloading.
-// DownloadDocsMainPageAsync: Finished downloading.
-// Main: Downloaded 27700 bytes.
 ```
 
-> the caller of `Main()` is CLR
+- Output looks like:
+
+```
+DownloadDocsMainPageAsync: About to start downloading.
+Main: Launched downloading.
+DownloadDocsMainPageAsync: Finished downloading.
+Main: Downloaded 27700 bytes.
+```
+
+> the caller of `Main()` is [CLR](dotnet-glossary.md#CLR)
 
 ## Return Type
 
-1. `Task<T>`
-2. Any type has a `GetAwaiter` method
-3. `IAsyncEnumerable<T>`
-
-## `Task<T>`
-
-> like [`Promise`](javascript-promise.md) in JavaScript
-
-`Task` for Asynchronous operation return nothing
-
-- Doesn't have a `Result` property
-- No value is produced when an `async` method is called
-
-`Task<T>` for Asynchronous operation return T
-
-- Contains a `Result` property of type `T`
-- `Result` is a blocking property, try to access `Result` before the `Task` is completed will block the thread
-
-Both `Task` and `Task<T>` has a `Status` property
+1. [`Task<T>`](csharp-task.md)
+2. [Any type has a `GetAwaiter` method](#any-type-has-a-getawaiter-method)
+3. [`IAsyncEnumerable<T>`](#iasyncenumerablet)
 
 ## Any type has a `GetAwaiter` method
 
@@ -129,7 +120,14 @@ class Program
 
 ## `IAsyncEnumerable<T>`
 
-combine the features of [`IEnumerable<T>`](csharp-ienumerable.md) and `async` method
+Combine the features of [`IEnumerable<T>`](csharp-ienumerable.md) and `async` method
+
+## Wait A Async Value In A Sync Method
+
+- Blocking the execution: use `GetAwaiter().GetResult()` or `Result` property
+- Fire and forget:
+
+
 
 
 

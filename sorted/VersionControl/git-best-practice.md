@@ -142,7 +142,6 @@ git stash pop
 
 ## Check all branches
 
-
 ```bash
 git branch -a
 ```

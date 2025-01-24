@@ -20,13 +20,13 @@
 ## CLR
 
 - CLR: Common Language Runtime
-- 托管代码: .NET框架编写的代码称为托管代码
-- 非托管代码: 不在CLR控制之下运行的代码，比如Win32 C/C++,称为非托管代码
-- Services provide by CLR
-  - garbage collection
-  - safety and security
-  - 代码执行，线程管理及异常处理
-  - 通过BCL得到广泛的编程功能, 包括Web服务和数据服务等
+- **Managed Code**: Code written using the .NET framework is called managed code.
+- **Unmanaged Code**: Code that runs outside the control of the CLR (Common Language Runtime), such as Win32 C/C++, is called unmanaged code.
+- Services provided by the CLR:
+  - Garbage collection
+  - Safety and security
+  - Code execution, thread management, and exception handling
+  - Access to a wide range of programming functionalities through the Base Class Library (BCL), including web services and data services.
 
 ## Program Assembly
 

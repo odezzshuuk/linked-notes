@@ -1,5 +1,9 @@
 # Git - Tag
 
+* [List Tag](#list-tag)
+* [2 Types Of Tag](#2-types-of-tag)
+* [Tag A Historical Commit](#tag-a-historical-commit)
+* [Sharing Tag](#sharing-tag)
 
 ## List Tag
 
@@ -7,12 +11,14 @@
 git tag
 ```
 
-## Two Types of Tag
+## 2 Types Of Tag
 
 Lightweight Tag
 
-- just a pointer to a commit
-- create by `git tag <tag-name>`
+- Just a pointer to a commit
+- Create by `git tag <tag-name>`
+
+> Github default tag is lightweight tag
 
 Annotated Tag
 
@@ -29,9 +35,9 @@ Annotated Tag
 git tag -a <tag-name> -m <tag-message> <commit>
 ```
 
-## Sharing Tag
+## Add Tag To Remote Repository
 
-- just like sharing branch
+- Just like sharing branch
 
 ```sh
 git push origin <tag-name>

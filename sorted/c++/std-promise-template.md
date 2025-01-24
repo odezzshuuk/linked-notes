@@ -30,7 +30,8 @@ promise( const promise& other ) = delete;  // copy constructor unavailable
 ```c++
 std::future<T> get_future()
 ```
-- no parameter， 返回与`*this`共享状态的[future](std-future-template.md)  
+- no parameter 
+- return: [future](std-future-template.md) object that shares the shared state of `*this`
 
 ## set_value()
 
@@ -41,7 +42,7 @@ void set_value( R& value );
 void set_value();
 ```
    
-- value: 要存储与共享状态的值
+- value:
    
 ## set_value_at_thread_exit
 

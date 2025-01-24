@@ -10,27 +10,21 @@
 
 ## catch statement
 
-```c#
+Catch any exception but without any information
+
+```cs
 catch
 {
-    Statements
+    // Statements
 }
 ```
 
-match any type of exception
+Match exception type `SomeException`
 
-```c#
-catch(Exception Type)
+```cs
+catch(SomeException e)
 {
-    Statements
-}
-```
-
-
-```c#
-catch(Exception e)
-{
-    Statements
+    // Statements
 }
 ```
 

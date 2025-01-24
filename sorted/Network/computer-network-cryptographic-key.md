@@ -2,23 +2,25 @@
 
 ## What It Is
 
-- usually a string of numbers and letters
+- Usually a string of numbers and letters
+
+## How Crotographic Key Create
 
 ## Strength Property
 
-- describes how difficult it is to decrypt the message without the key
-- depends on
-  - **length** of the key
+- Describes how difficult it is to decrypt the message without the key
+- Depends on
+  - **Length** of the key
   - cryptographic **algorithm** used to generate the key
 
 ## VS Password
 
-- key is randomly generated
+- Key is randomly generated
 - password created by human
 
 ## Symmetric Key
 
-- use the same key to encrypt and decrypt data
+- Use the same key to encrypt and decrypt data
 
 ## Asymmetric Key
 

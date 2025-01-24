@@ -1,9 +1,14 @@
 # Git - Rebase
 
+* [Feature](#feature)
+* [Rebase to First Commit](#rebase-to-first-commit)
 * [Squash last n commits](#squash-last-n-commits)
 * [Removed A Range Of Commit](#removed-a-range-of-commit)
 * [Rebase A Branch](#rebase-a-branch)
 * [Interactive Mode](#interactive-mode)
+* [Continue Rebase](#continue-rebase)
+* [Push rebased branch to remote](#push-rebased-branch-to-remote)
+* [How to Undo Rebase](#how-to-undo-rebase)
 
 ## Feature
 

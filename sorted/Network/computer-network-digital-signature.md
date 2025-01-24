@@ -1,6 +1,6 @@
 # Computer Network - Digital Signature
 
-- for verify the **authenticity** and **integrity** of a message
+- For verify the **authenticity** and **integrity** of a message
 
 ## Digital Signature Algorithms
 

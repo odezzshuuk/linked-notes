@@ -107,3 +107,22 @@ vs (T)E
 
 [boxing](csharp-boxing.md)
 
+## User-Defined Conversion
+
+```cs
+public class FixedUserName
+{
+    // ...
+    public static implicit operator string(FixedUserName s) => s.ToString();  // ①
+    public static implicit operator FixedUserName(string s) => new FixedUserName() { m_Name = new FixedString32Bytes(s) };  // ②
+}
+
+// this is what ①  do
+FixedUserName username = new FixedUserName();
+string name1 = username;
+
+// this is what ②  do
+string name2 = "John";
+FixedUserName username2 = name2;
+```
+

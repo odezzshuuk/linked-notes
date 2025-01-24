@@ -18,6 +18,8 @@
 
 [AssetBundles](unity-assetbundles.md)
 
+[Unity Game Services](unity-game-services.md)
+
 ## Component
 
 [NavMesh](unity-navmesh.md)

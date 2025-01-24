@@ -4,22 +4,22 @@
 
 ## Key Pair
 
-- consists of
+- Include
   - [public key](#public-key)
   - [private key](#private-key)
-- **anyone** with public key can encrypt a message
-- **only those who** know the corresponding private key can decrypt the message
-- generated with crptographic algorithms
+- **Anyone** with public key can encrypt a message
+- **Only those who** know the corresponding private key can decrypt the message
+- Generated with [crptographic algorithms](computer-network-cryptographic-algorithms.md)
 
 ## Public Key
 
-- kind of [cryptographic key](computer-network-cryptographic-key.md)
-- free to distribute
+- Kind of [cryptographic key](computer-network-cryptographic-key.md)
+- Free to distribute
 
 ## Private Key
 
-- kind of [cryptographic key](computer-network-cryptographic-key.md)
-- must be kept secret
+- Kind of [cryptographic key](computer-network-cryptographic-key.md)
+- Must be kept secret
 
 ## Concrete demonstration
 

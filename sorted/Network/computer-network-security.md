@@ -1,12 +1,8 @@
 # Security
 
-## Foundation
-
-[Cryptographic Key](computer-network-cryptographic-key.md)
+## Cryptographic Algorithms
 
 [Cryptographic Algorithms](computer-network-cryptographic-algorithms.md)
-
-[Encryption](computer-network-encryption.md)
 
 ## Protocols
 
@@ -16,6 +12,10 @@
 
 ## Application Scenarios
 
-[fingerprint](computer-network-fingerprint.md)
+[Encryption](computer-network-encryption.md)
+
+[Cryptographic Key](computer-network-cryptographic-key.md)
+
+[Fingerprint](computer-network-fingerprint.md)
 
 [digital signature](computer-network-digital-signature.md)
