@@ -20,7 +20,7 @@
 
 [Unity Game Services](unity-game-services.md)
 
-## Component
+## Components
 
 [NavMesh](unity-navmesh.md)
 

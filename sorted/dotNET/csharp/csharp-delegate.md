@@ -1,11 +1,14 @@
 # CSharp - Delegate
 
-* [Delegate Declaration](#delegate-declaration)
-* [Create Delegate Instance](#create-delegate-instance)
+* [What is Delegate](#what-is-delegate)
+* [Declaring A Delegate](#declaring-a-delegate)
+* [How To Use](#how-to-use)
 * [Group Delegate](#group-delegate)
-* [invoke Delegate](#invoke-delegate)
 * [Delegate Return Value](#delegate-return-value)
-* [Create Anonymous Delegate](#create-anonymous-delegate)
+* [Anonymous Delegate](#anonymous-delegate)
+* [Predefined Delegate](#predefined-delegate)
+* [Action](#action)
+* [Func](#func)
 
 ## What is Delegate
 
@@ -17,7 +20,7 @@
 
 ## Declaring A Delegate
 
-```c#
+```cs
 delegate void FooFunc(int x);
 ```
 

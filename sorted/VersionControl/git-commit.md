@@ -79,3 +79,10 @@ Show Changes Between Two Commits
 ```sh
 git diff <commit1>~ <commit2>
 ```
+
+## Rewrite Commit Message
+
+```sh
+
+```
+

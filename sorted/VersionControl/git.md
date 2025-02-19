@@ -34,6 +34,8 @@
 
 [Git Command List](git-command-list.md)
 
+[Work With Submodule](git-work-with-submodule.md)
+
 ## Github
 
 [Github Issues](github-issues.md)
@@ -41,6 +43,8 @@
 [Github Actions](github-actions.md)
 
 [Pull Request](github-pull-request.md)
+
+[Github CLI](github-cli.md)
 
 ## Git Customization
 

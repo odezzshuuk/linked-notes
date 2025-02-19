@@ -6,6 +6,37 @@
 
 ## Features
 
+## With vs Without event keyword
+
+- Use to Declare a delegate that can **only** be invoked from **within** the class that declared it
+
+```cs
+class Example {
+    public event EventHandler<EventArgs> onUpdate0;
+    public EventHandler<EventArgs> onUpdate1;
+}
+```
+
+- With `event` keyword, 
+  - Ensure that `onUpdate0` can be listened by other classes.
+  - Meanwhile `onUpdate0` can only be invoked within `Example` class
+
+## Event
+
+## EventHandler vs Action
+
+Purpose
+
+- [`Action`](csharp-delegate.md#action): General for [callback]
+- `EventHandler`: Designed for [event pattern]
+
+Parameters
+
+- `Action`: flexible parameters, based on generic format
+- `EventHandler`: Has standard parameters, `object sender` and [`EventArgs e`]()
+  - `object sender`: the sender of the event, generally pass `this`
+  - `EventArgs e`: the event data
+
 ## 3 Parts of An Event System
 
 - [Publish]()

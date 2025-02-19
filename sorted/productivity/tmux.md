@@ -1,10 +1,14 @@
 # Tmux
 
 * [Usage](#usage)
-* [config](#config)
+* [Config](#config)
+* [Format](#format)
+* [Options](#options)
+* [Status Line](#status-line)
 * [default key bindings](#default-key-bindings)
 * [basic object in tmux](#basic-object-in-tmux)
 * [Plugin](#plugin)
+* [plugin: tmux-powerline](#plugin:-tmux-powerline)
 * [Cheat Sheet](#cheat-sheet)
 
 ## Usage
@@ -61,7 +65,7 @@ uninstalling plugin
 
 `~/.tmux/plugins/tpm/bin/clean_plugins`
 
-## plugin
+## plugin: tmux-powerline
 
 tmux-powerline
 

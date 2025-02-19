@@ -1,4 +1,0 @@
-# Vim Config
-
-goodbye vim
-

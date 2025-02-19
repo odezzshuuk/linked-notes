@@ -39,6 +39,7 @@ public void UseParams(params int[] list)
 
 ## base
 
-- 用于从派生类中访问基类成员
-  - 调用基类上一辈其他方法重写的方法
-- 基类是指派生体系中相邻的基类 
+## event
+
+[with or without event keyword](csharp-events.md#with-vs-without-event-keyword)
+

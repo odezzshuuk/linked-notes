@@ -70,6 +70,10 @@ use `[]` to match single character
 
 `a|b`: match `a` or `b`
 
+## Negative Lookahead
+
+`foo(?!bar)`: `fooabc` will match, while `foobar` will not match
+
 ## VS Glob Pattern
 
 [glob pattern](glob-pattern.md)

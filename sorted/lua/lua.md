@@ -18,6 +18,8 @@
 
 [Formatter](lua-stylua.md)
 
+[Iterator](lua-iterator.md)
+
 [LDoc](lua-ldoc.umd)
 
 ## pcall

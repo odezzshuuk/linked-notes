@@ -2,7 +2,7 @@
 
 - based on html, css, and javascript web technology
 
-[UXML](unity-script-ui-toolkit-uxml.md): html
+[UXML](unity-ui-toolkit-uxml.md): html
 
 [USS](unity-script-ui-toolkit-uss.md): css
 

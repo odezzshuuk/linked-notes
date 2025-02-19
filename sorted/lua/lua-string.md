@@ -18,7 +18,6 @@
 
 ```lua
 
-
 `string.gsub(s, pattern, repl[, n])`
 
 - `repl`: can be a string, a table, a function

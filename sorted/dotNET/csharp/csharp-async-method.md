@@ -124,10 +124,8 @@ Combine the features of [`IEnumerable<T>`](csharp-ienumerable.md) and `async` me
 
 ## Wait A Async Value In A Sync Method
 
-- Blocking the execution: use `GetAwaiter().GetResult()` or `Result` property
-- Fire and forget:
+Blocking the execution by:
 
-
-
-
+- Get the returned value: By `GetAwaiter().GetResult()` or `Result` property
+- Fire and forget: use `Wait()` method
 

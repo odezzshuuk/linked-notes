@@ -5,7 +5,7 @@
 * [Numbers](#numbers)
 * [Strings](#strings)
 * [Array](#array)
-* [Tables](#tables)
+* [Table](#table)
 * [Functions](#functions)
 * [Threads](#threads)
 
@@ -27,7 +27,8 @@ local str = "hello" .. "world"
 
 ## Array
 
-**By Default: lua start array index from 1**
+- **Array is a [table](#table) with integer index**
+- **By Default: lua start array index from 1**
 
 ```lua
 a = {1, 2, 3}
@@ -64,9 +65,9 @@ print(a[#a]) -- 3
 ```
 
 
-## Tables
+## Table
 
-[tables](lua-table.md)
+[table](lua-table.md)
 
 ## Functions
 
