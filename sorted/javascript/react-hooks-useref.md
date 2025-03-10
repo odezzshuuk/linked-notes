@@ -7,10 +7,18 @@
 
 ## Features
 
-- changing a ref does not cause re-render
-- use to store information doesn't affect the visual output
+- Changing a ref does not cause re-render
+- Use to store information doesn't affect the visual output
 
 ## Reference A Component DOM
+
+Features
+
+- `useRef` return an Object `tmpRef`
+- with single property `current`, reference to the [DOM Element](javascript-dom-element.md)
+- `initialValue` is required in `useRef(initialValue)`, can be `null`
+
+How to use
 
 ```js
 import { useRef } from 'react'
@@ -39,9 +47,7 @@ function myComponent() {
 }
 ```
 
-- `useRef` return an Object `tmpRef`
-- with single property `current`, reference to the [DOM Element](javascript-dom-element.md)
-- `initialValue` is required in `useRef(initialValue)`, can be `null`
+- In thid code, element `<input ref={tmpRef} />` can be accessed by `tmpRef.current`
 
 ## Reference A Value
 

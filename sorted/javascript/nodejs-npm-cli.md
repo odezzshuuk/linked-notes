@@ -65,7 +65,7 @@ options
 
 Options:
 
-`-D --save-dev`:
+`-D, --save-dev`:
 
 - add package to `devDependencies`
 

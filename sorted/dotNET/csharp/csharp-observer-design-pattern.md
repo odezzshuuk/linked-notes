@@ -9,7 +9,7 @@
 
 ## Essential Elements
 
-1. [Provider/Subject/Event Publisher](#provider)
+1. [Provider/Subject/Event Publisher](#observable/provider)
 2. [Observer/Listener/Subscriber](#observer)
 3. [Subscribe() Method](#subscribe()-method)
 4. [IDisposable Object](#idisposable-object)
@@ -22,19 +22,9 @@
 - [Subscribe()](#subscribe()-method) method to add observers
 - Hold a container to store observers
 
-## Observer
+Subscribe() Method
 
-> Also Listener/Subscriber
-
-- Must implement three methods **triggered by [provider](#provider)**
-  - `IObserver<T>.OnNext()`: receive a new value
-  - `IObserver<T>.OnError()`: receive an error notification
-  - `IObserver<T>.OnCompleted()`: receive a completion notification
-- receive a reference [IDisposible]() reference from the provider
-
-## Subscribe() Method
-
-`IObserver<T> Subscribe(IObserver<T> observer)`
+`IDisposable IObservable.Subscribe(IObserver<T> observer)`
 
 Parameter
 
@@ -50,6 +40,16 @@ How to Implementate
 1. Stores a reference to the observer in a collection object
 2. Return a reference to an [IDisposable](csharp-idisposable.md) interface
 
+## Observer
+
+> Also Listener/Subscriber
+
+- Must implement three methods **triggered by [provider](#provider)**
+  - `IObserver<T>.OnNext()`: receive a new value
+  - `IObserver<T>.OnError()`: receive an error notification
+  - `IObserver<T>.OnCompleted()`: receive a completion notification
+- receive a reference [IDisposible]() reference from the provider
+
 ## IDisposable Object
 
 - An IDisposable implementation enable the [provider]() to remove observers when complete
@@ -58,6 +58,6 @@ How to Implementate
 
 ## Data
 
-- refers to the generic type parameter of `IObserveable<T>`
+- Refering to the generic type parameter of `IObserveable<T>`
 - Linq query can be used to filter, transform, or combine data before sending to observers
 

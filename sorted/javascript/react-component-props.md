@@ -98,7 +98,7 @@ export default function Profile() {
 
 ## Define Props For Component
 
-for react component `Avatar.js`
+For react component `Avatar.js`
 
 ```js
 function Avatar({ person, size }) {
@@ -116,7 +116,7 @@ function Avatar(props) {
 
 ## Set props for Component
 
-then parent to set the component attribute
+Set component attribute from parent component
 
 ```js
 import Avatar from "./Avatar";
@@ -130,7 +130,7 @@ function App() {
 }
 ```
 
-or
+OR use [spread syntax](javascript-spread-syntax.md)
 
 ```js
 function App(props) {

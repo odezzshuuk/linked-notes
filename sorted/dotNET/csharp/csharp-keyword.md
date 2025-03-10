@@ -8,7 +8,7 @@
 
 declared modifier
 
-- display a member that is hidden by a similar named member in a base class
+- Represent a member that is **hidden** by a similar named member in a base class
 
 ## out
 

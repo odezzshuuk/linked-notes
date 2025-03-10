@@ -1,17 +1,8 @@
 # HTLM Tag Attribute
 
-## boolean attribute
-
-`<input type="checkbox" checked>`
-
-- `checked` represents a value whether true or false
-
-## common attribute
+## General attributes
 
 class
-
-- 用来将元素归类
-- 一个元素可以归入多个类别
 
 ```html
 <a class="class1 class2" href="http://apress.com">apress web site</a>
@@ -19,4 +10,11 @@ class
 
 id
 
-- 用来唯一标识一个元素
+- element identifier
+
+## boolean attribute
+
+`<input type="checkbox" checked>`
+
+- `checked` represents a value whether true or false
+

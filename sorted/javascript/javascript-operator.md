@@ -26,7 +26,7 @@ expression `array || (array = new Array(5))` means
 
 `!!` is not a special operator, it is just `!` twice
 
-- `!!` will convert any value to boolean
+- Why `!!`? `!!` will convert any value to boolean
 
 ```js
 console.log(!!null)       // false
