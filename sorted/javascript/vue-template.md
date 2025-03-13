@@ -8,3 +8,6 @@
 
 [Template Attributes](vue-template-attributes.md)
 
+## Slots
+
+[Slots](vue-template-slots.md)

@@ -6,7 +6,7 @@
 
 - To define a **Reference Type** that providers built-in functionality for **encapsulating data**
 
-## vs class
+## VS class
 
 1. **Value-based equality** by default
 

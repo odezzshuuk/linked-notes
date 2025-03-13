@@ -5,7 +5,7 @@
 
 ## Features
 
-- **calling** a [generator function](javascript-generator-function.md), will return a [Generator](javascript-generator.md) Object
+- **Calling** a generator function, will return a [Generator](javascript-generator.md) Object
 
 ## Declare Generator Function
 

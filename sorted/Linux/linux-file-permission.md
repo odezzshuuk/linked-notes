@@ -1,11 +1,9 @@
 # Linux - File Permission
 
-- [File ID](#file-id)
-- [File Permission Properties](#file-permission-properties)
-- [File Permission related File](#file-permission-related-file)
-- [File Permission Mask](#file-permission-mask)
-- [File Sort](#file-sort)
-- [File Extension](#file-extension)
+* [File ID](#file-id)
+* [File Permission Properties](#file-permission-properties)
+* [File Permission related File](#file-permission-related-file)
+* [File Permission Mask](#file-permission-mask)
 
 ## File ID
 
@@ -50,21 +48,5 @@ File Permission Properties
 
 - [linux-system-function-umask](linux-system-function-umask.md)
 
-## File Sort
 
-- regular file: 一般意义上的文件，
-  - 纯文字文件: 由数字，字母构成
-  - 二进制文件:
-  - 数据格式文件: 有特定格式的文件
-- directory: 目录文件
-- link 连结档: 类似快捷方式
-- device(设备与装置文件)
-- sockets: 资料接口文件
-- FIFO,pipe(数据输送文件)
 
-## File Extension
-
-- `.sh`：scripts, 用 shell 写成
-- `.Z, .tar, .tar.gz, .zip, .tgz` 压缩文件, 依据压缩软件命名
-- `.html, .php` 网页相关文件
-- 还有其他个操作系统扩展名

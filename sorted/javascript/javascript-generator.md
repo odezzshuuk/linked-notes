@@ -11,7 +11,7 @@
 - the Object return by a [generator function](javascript-generator-function.md)
 - have three method: `next()`, `return()`, `throw()`
 
-> [Simalar Concept in CSharp](csharp-ienumerator.md)
+> [Analogy to IEnumerator in C#](csharp-ienumerator.md)
 
 ## next()
 

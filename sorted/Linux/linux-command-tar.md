@@ -2,8 +2,10 @@
 
 ## What's For
 
-- storing multiple files in one file, but not compressing
-- unbinding .tar file
+- Storing multiple files in one file, but **NOT COMPRESSING**
+- Unbinding `.tar` file
+
+> For compressing, use [`gzip`](linux-command-gzip.md)
 
 ## Practical Use
 
@@ -25,11 +27,17 @@ tar -xvf package.tar -C /tmp
 tar -zxvf package.tar.gz -C /tmp
 ```
 
-list files in `package.tar.gz` and `package.tar`
+List files in `package.tar.gz` and `package.tar`
 
 ```sh
 tar -tf package.tar.gz
 tar -tf package.tar
+```
+
+List files in `package.tgz`
+
+```sh
+tar -tf package.tgz
 ```
 
 ## Options
