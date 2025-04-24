@@ -1,8 +1,16 @@
 # CSharp - Cancel Task
 
+* [Cooperation With CancellationToken](#cooperation-with-cancellationtoken)
+* [TaskCanceledException](#taskcanceledexception)
+
 ## Cooperation With CancellationToken
 
-Check `CancellationToken`'s `IsCancellationRequested` property
+Cancel need **Cooperation**: 
+
+1. Call `CancellationTokenSource.Cancel()` to toggle `CancellationToken.IsCancellationRequested` to `true`
+2. Check `CancellationToken.IsCancellationRequested` cancel flag in wrapped function
+
+Check `CancellationToken.IsCancellationRequested` property
 
 - **Optional(not recommend)**: When cancellation is requested, Replace `token.ThrowIfCancellationRequested()` with `return`
 
@@ -17,7 +25,14 @@ Task.Run(() => {
 })
 ```
 
-Cancel a async operation before it starts by pass a `CancellationToken` as parameter [task](csharp-task.md) api, such as `Task()`, `Task.Run()`
+## Pass CancellationToken VS Not Pass CancellationToken 
+
+What's the difference between `Task.Run(callback)` and `Task.Run(callback, token)`?
+
+- `Task.Run(callback)`: the scheduled task will still execute before cancellation token cancel flag is checked
+- `Task.Run(callback, token)`: the scheduled task will never execute
+
+By pass a canceled `CancellationToken` as parameter [task](csharp-task.md) api, such as `Task()`, `Task.Run()`, to prevent the task from starting
 
 ```cs
 CancellationTokenSource source = new();
@@ -33,7 +48,7 @@ Task.Run(() => {
 }, token);
 ```
 
-- task will not start
+- task won't start
 
 ## TaskCanceledException
 
@@ -43,7 +58,7 @@ Task.Run(() => {
 
 Thrown wrapped in an `AggregateException` when:
 
-- A CancellationTokenSource.ThrowIfCancellationRequested() is called
+- A `CancellationTokenSource.ThrowIfCancellationRequested()` is called
 - And the task is waited by wait api is called, such as `Task.Wait()`
 
 ```cs

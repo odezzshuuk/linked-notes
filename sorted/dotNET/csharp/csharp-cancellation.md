@@ -4,7 +4,7 @@
 
 - An operations can be cancelled
 - Not limited to asynchronous operations, long running synchronous operations can also be cancelled
-- Cancel need **cooperation**: Check cancellation token's cancel flag in wrapped function
+- Cancel need **Cooperation**: Check cancellation token's cancel flag in wrapped function
 
 ## CancellationTokenSource
 

@@ -12,7 +12,7 @@
 
 - kind of behavioral pattern
 - similar structure
-   - [strategy](javascript-design-pattern-strategy.md)
+  - [strategy](javascript-design-pattern-strategy.md)
 
 ## What Problem To Solve
 

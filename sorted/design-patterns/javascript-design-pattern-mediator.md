@@ -13,7 +13,7 @@ vs [Observer](javascript-design-pattern-observer.md#vs-mediator)
 
 ## What Problem To Solve
 
-- useful when objects need to interact with many other object
+- Useful when objects need to interact with many other object
 
 ## Structure of Mediator
 
@@ -21,7 +21,7 @@ vs [Observer](javascript-design-pattern-observer.md#vs-mediator)
 - [concrete mediator](#concrete-mediator)
 - [components ](#components), also called colleague
 
-## mediator
+## Mediator
 
 - typically declare a single  `notify()` method to notify [component]
   - methods should receive component andt event type as arguments

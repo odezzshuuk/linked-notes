@@ -85,6 +85,7 @@ brew info <package>
 
 ```sh
 brew bundle dump
+# or specify the file
 brew bundle dump --file=~/.dotfiles/Brewfile
 ```
 

@@ -1,5 +1,13 @@
 # CSharp - Task
 
+* [What It Is](#what-it-is)
+* [Task And Task<T>](#task-and-task<t>)
+* [Task Status](#task-status)
+* [TaskFactory](#taskfactory)
+* [Exception In Task](#exception-in-task)
+* [Method Wait() Vs Keyword Await](#method-wait()-vs-keyword-await)
+* [Take A Look](#take-a-look)
+
 ## What It Is
 
 > like [`Promise`](javascript-promise.md) in JavaScript
@@ -33,20 +41,54 @@ _ `Task<T>` is a asynchronous operation that returns a value of type `T`
 
 ## TaskFactory
 
-Provides a way to create and start multiple tasks with the same configuration
+what's the difference between declare async method return `Task` and `void`?
+
+public async Task ExampleMethod();
+public async void ExampleMethod();
+
+## Handle Non-cancel Exception In Task In Calling Method
+
+1. when `Task.Wait()` 
+
+- Exception is wrapped in an `AggregateException.InnerExceptions`
+- Catch the `AggregateException` to get the Non-cancel exception
 
 ```cs
-var factory = new TaskFactory(cts.Token, TaskCreationOptions.LongRunning, TaskContinuationOptions.None, TaskScheduler.Default);
-List<Task> tasks = [];
-for (int i = 0; i < 10; i++)
-{
-  tasks.Add(factory.StartNew(() => { Console.WriteLine("Task is running"); }));
+public static void ExampleMethod() {
+  var task = Task.Run(static () => throw new CustomException("Inside Task Exception"));
+
+  try {
+    task.Wait();
+  } catch (AggregateException e) {
+    foreach (var ex in e.InnerExceptions) {
+      if (ex is CustomException customEx) {
+        Console.WriteLine(customEx.Message);
+      } else {
+        Console.WriteLine("Other exception: " + ex.Message);
+      }
+    }
+  }
 }
 ```
 
-- tasks created by the factory will use the same `CancellationToken`
+2. when `await` the task
 
-## Wait Api Vs Await
+- Handle Exception Like a normal exception
+
+```cs
+public static async Task ExampleMethod() {
+  var task = Task.Run(static () => throw new CustomException("Inside Task Exception"));
+
+  try {
+    await task;
+  } catch (Exception e) {
+    Console.WriteLine(e.Message);
+  }
+}
+```
+
+
+## Method task.Wait() Vs Keyword Await
 
 Blocking vs Non-blocking
 
@@ -55,8 +97,8 @@ Blocking vs Non-blocking
 
 Exception Handling When Task Is Canceled
 
-- Wait api throw exception, such as `TaskCanceledException`, by wrapping it in an `AggregateException`
-- throw actual exception, such as `OperationCanceledException`
+- Method `task.Wait()` throw exception, such as `TaskCanceledException`, by wrapping it in an `AggregateException`
+- `Await` throw actual exception, such as `OperationCanceledException`
 
 ## Take A Look
 

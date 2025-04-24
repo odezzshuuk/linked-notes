@@ -1,6 +1,6 @@
 # Unity - Area
 
-[mainmenu](unity-editor-mainmenu.md)
+[Main menu](unity-editor-mainmenu.md)
 
 [editor tools](unity-editortools.md)
 

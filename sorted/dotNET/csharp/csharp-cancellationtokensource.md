@@ -3,10 +3,8 @@
 ## What It Is
 
 - To cancel asynchronous operation or thread
-- Source of `CancellationToken`
-- Signal to cancellation by calling `Cancel()`
-
-## Cancel()
+- Source of [`CancellationToken`](csharp-cancel-task.md)
+- Signal to cancel a task by calling `CancellationTokenSource.Cancel()`
 
 ## Take A Look
 

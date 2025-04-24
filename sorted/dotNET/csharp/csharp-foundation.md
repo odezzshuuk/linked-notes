@@ -2,7 +2,7 @@
 
 [preprocess](csharp-preprocess.md)
 
-[primitive type](csharp-primitive-type.md)
+[Types](csharp-types.md)
 
 [keyword](csharp-keyword.md)
 

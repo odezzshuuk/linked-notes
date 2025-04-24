@@ -1,5 +1,17 @@
 # CSharp - Event
 
+* [What is Event](#what-is-event)
+* [Features](#features)
+* [With vs Without event keyword](#with-vs-without-event-keyword)
+* [EventHandler vs Action](#eventhandler-vs-action)
+* [3 Parts of An Event System](#3-parts-of-an-event-system)
+* [Publish Event](#publish-event)
+* [Subscribe Event](#subscribe-event)
+* [Trigger Event](#trigger-event)
+* [Standard Events](#standard-events)
+* [Event Accessor](#event-accessor)
+* [Sample Code](#sample-code)
+
 ## What is Event
 
 - A special kind of multicast [delegate](csharp-delegate.md)
@@ -20,8 +32,6 @@ class Example {
 - With `event` keyword, 
   - Ensure that `onUpdate0` can be listened by other classes.
   - Meanwhile `onUpdate0` can only be invoked within `Example` class
-
-## Event
 
 ## EventHandler vs Action
 

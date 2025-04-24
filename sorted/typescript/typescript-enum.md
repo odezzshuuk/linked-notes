@@ -13,4 +13,7 @@ let direction: Direction = Direction.Up;
 console.log(direction); // UP
 ```
 
+## VS Union Types
+
+[Union Types](typescript-type.md#union-types)
 

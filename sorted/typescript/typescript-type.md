@@ -8,6 +8,7 @@
 * [type check](#type-check)
 * [type inference](#type-inference)
 * [Type Assertion](#type-assertion)
+* [Assets Signature](#assets-signature)
 * [Narrowing](#narrowing)
 * [Keyof Operator](#keyof-operator)
 * [Conditional Types](#conditional-types)
@@ -223,7 +224,7 @@ window.onmousedown = function(mouseEvent) {
 
 What's for
 
-- for some value, coder know the type, but ts can't infer it, then use type assertion
+- For some value, coder know the type, but ts can't infer it, then use type assertion
 - After assert a type, you can use the members of the type
 
 how to assert type
@@ -249,6 +250,66 @@ function fb(p: Point) {
     return (p as Point3d).z;  // access to z is legal
 }
 ```
+
+## Assets Signature
+
+Why asserts signature while type declaration already exist
+
+- type declaration is for type check, asserts signature is for runtime check
+
+Use command design pattern as instruction
+
+```ts
+function assertType(condition: unknown, type?: string): asserts condition {
+    if (!condition) {
+        throw new Error(`Type assertion failed${type ? `: ${type}` : ''}`);
+    }
+}
+
+function executeCommand(command: (a: string, b: number) => void, ...args: any[]) {
+    const a = args[0];
+    const b = args[1];
+    assertType(typeof a === 'string');
+    assertType(typeof b === 'number');
+    command(a, b);
+}
+```
+
+2 ways to assert signature
+
+1. Condition assertion:
+
+- whatever passed into `condition` is `true`
+
+```ts
+function assertAnything(condition: any): asserts condition {
+    if (!condition) {
+        throw new Error();
+    }
+}
+function foo(x: number) {
+    assertAnything(x > 5);
+    return x + 1;
+}
+```
+
+2. Assert with type narrowing:
+
+```ts
+function assertIsString(val: any): asserts val is string {
+    if (typeof val !== 'string') {
+        throw new Error('Not a string');
+    }
+}
+function yell(str: any) {
+    assertIsString(str);
+    return str.toUpperCase();
+}
+```
+
+- `asserts val is string` is for [type narrowing](typescript-type-narrowing.md)
+- if statement in `assertIsString` function body is the type check part. Without this part, the type check will be delayed
+
 
 ## Narrowing
 

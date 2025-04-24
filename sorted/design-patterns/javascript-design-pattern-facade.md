@@ -27,9 +27,9 @@
 
 ## Facade
 
-- hold the fields reference to subsystem class that facade need to use
-- the relationship between facade and subsystem class is [**has-a**](uml.md#line-association) relationship
-- it is not necessary to receive subsystem class instance in facade constructor
+- Hold the fields reference to subsystem class that facade need to use
+- Relationship between facade and subsystem class is [**has-a**](uml.md#line-association) relationship
+- It is not necessary to receive subsystem class instance in facade constructor
 
 ## Subsystem Classes
 
