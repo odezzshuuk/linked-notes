@@ -5,8 +5,14 @@
 * [NetworkObject](#networkobject)
 * [NetworkManager](#networkmanager)
 * [Player Object](#player-object)
+* [Spawning](#spawning)
 * [Scene Management](#scene-management)
+* [Synchronization](#synchronization)
+* [Serialization](#serialization)
+* [NetworkVariable](#networkvariable)
+* [OwnerShip](#ownership)
 * [Connection Approval](#connection-approval)
+* [Rpc](#rpc)
 
 ## NetworkBehaviour
 
@@ -26,11 +32,11 @@ properties
 
 Component order
 
-- NetworkObject component must before any other [NetworkBehaviour](#networkbehaviour)
+- NetworkObject component must before any other [NetworkBehaviour](unity-networkbehaviour.md)
 
 ## NetworkObject
 
-- A GameObject with a [NetworkObject component](#networkobject-component) and at least one [NetworkBehaviour](#networkbehaviour)
+[NetworkObject](unity-networkobject.md)
 
 ## NetworkManager
 
@@ -67,11 +73,15 @@ How to subscribe
 
 ```cs
 public voie Example() {
+    NetworkManager.Singleton.SceneManager.OnLoad += SceneLoadCallback;
     NetworkManager.Singleton.SceneManager.OnSceneEvent += SceneEventCallback;
-    NetworkManager.Singleton.SceneManager.OnSceneEventCompleted += OnSceneEventCompleted;
 }
 
-public void SceneEventCallback(SceneEvent sceneEvent) {
+private void ScenenLoadCallback() {
+  // ...
+}
+
+private void SceneEventCallback(SceneEvent sceneEvent) {
     switch (sceneEvent.Type) {
         case SceneEventType.Load:
             break;
@@ -97,7 +107,6 @@ Scene [Event](csharp-events.md) Properties
 - `OnUnloadComplete`: Invoked only when an UnloadComplete event is being processed
 - `OnSynchronizeComplete`: Invoked only when a SynchronizeComplete event is being processed
 
-
 Scene Events Enum `SceneEventType`
 
 - Loading:
@@ -110,7 +119,24 @@ Scene Events Enum `SceneEventType`
   - `SceneEventType.SynchronizeComplete`
   - `SceneEventType.ReSynchronize`
 
+## Synchronization
+
+## Serialization
+
+[Serialization](unity-multiplayer-serialization.md)
+
+## NetworkVariable
+
+[NetworkVariable](unity-networkvariable.md)
+
+## OwnerShip
+
+- In client-server topology, server owns all NetworkObjects
+
 ## Connection Approval
+
+## Rpc
+
 
 
 

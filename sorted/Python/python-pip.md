@@ -1,5 +1,14 @@
 # Python - Pip
 
+* [What It Is](#what-it-is)
+* [Where to Install Package](#where-to-install-package)
+* [Checking Where Packages Are Installed](#checking-where-packages-are-installed)
+* [Query Installed Packge List](#query-installed-packge-list)
+* [Install Package](#install-package)
+* [Remove Package](#remove-package)
+* [File requirements.txt](#file-requirements.txt)
+* [pyproject.toml](#pyproject.toml)
+
 ## What It Is
 
 - package manager for python

@@ -88,14 +88,14 @@ Features
 - Unlimit coordinates range
 - Any part outside [view frustum](#view-frustum) will be clipped
 
-The process before clip space to [normalized device coordinates](#normalized-device-coordinates) 
+The process before clip space to [normalized device coordinates](#normalized-device-coordinates)
 
-- Called [perspective division](#perspective-division) 
+- Called [perspective division](#perspective-division)
 
 ## Normalized Device Coordinates
 
-- After the [perspective division](#perspective-division), the coordinates are normalized to the range of $[-1, 1]$
-- A [vec3]() vector
+* After the [perspective division](#perspective-division), the coordinates are normalized to the range of $[-1, 1]$
+* A [vec3]() vector
 
 ## Screen Space
 

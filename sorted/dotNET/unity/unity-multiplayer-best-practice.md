@@ -38,4 +38,50 @@ public class ExampleUI : NetworkBehaviour {
 
 2. `Spawn(bool destroyWithSceneObject = false)` method takes 1 optional parameter
 
+## Syncharizing Field
+
+Use [`NetworkVariable<T>`](unity-networkvariable.md) to synchronize field between server and client
+
+```cs
+publc class Example : NetworkBehaviour {
+    // Declare a NetworkVariable
+    public NetworkVariable<int> count = new NetworkVariable<int>();
+
+    public override void OnNetworkSpawn() {
+        // listen on the value changed event
+        count.OnValueChanged += ValueChangedCallback;
+    }
+
+    public override void OnNetworkDespawn() {
+        // unsubscribe from the value changed event
+        count.OnValueChanged -= ValueChangedCallback;
+    }
+
+    private void ValueChangedCallback(int oldValue, int newValue) {
+        Debug.Log($"Count changed from {oldValue} to {newValue}");
+    }
+}
+```
+
+## Change Client GameObject Field That Not NetworkVariable(Use NetworkObjectReference)
+
+check [unsupported serialization types](unity-multiplayer-serialization.md#unsupported-serialization-types)
+
+```cs
+public class Example : NetworkBehaviour {
+    public int count;
+}
+
+public class Program : NetworkBehaviour {
+
+    [Rpc(SentTo.Everyone)]
+    public void ChangeClientObjectCountRpc(NetworkObjectReference nobjRef) {
+        GameObject obj = nobjRef;  // implicit conversion
+        Example example = obj.GetComponent<Example>();
+        example.count = 10;
+    }
+
+}
+```
+
 

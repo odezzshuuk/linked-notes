@@ -47,14 +47,14 @@ lrwxrwxrwx 1 username group 7 2019-01-01 00:00 $HOME/.vimrc -> .vimrc
 
 ## Hard Link
 
-- default link type
+- Default link type
 - Target must exist
 
 ## Symbolic Link
 
-- symbolic link: files that act as pointers to other files
-- set with `--symbolic`
-- each argument not to be exist
+- Symbolic link: files that act as pointers to other files
+- Set with `--symbolic`
+- Each argument not to be exist
 
 ## Options
 

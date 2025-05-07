@@ -10,6 +10,7 @@
 ## Features
 
 - Synchronize settings before, during and after spawning [NetworkObjects](unity-multiplayer-concepts.md#networkobject-component)
+- Synchronization relies on the [serialization](unity-multiplayer-serialization.md)
 
 ## Synchronizing Methods
 
