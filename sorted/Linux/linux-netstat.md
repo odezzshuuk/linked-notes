@@ -1,4 +1,4 @@
-# netstat
+# linux -command netstat
 
 * [Description](#description)
 * [Output](#output)
@@ -6,7 +6,7 @@
 
 ## Description
 
-- `sudo apt install net-tools` 安装net-tools
+- `sudo apt install net-tools`
 
 `netstat -[a/n/t/u/l/p/c]`
 

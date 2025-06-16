@@ -8,9 +8,17 @@
 
 ## What's For
 
+- Clean up unmanaged resources or managed resources that wrap unmanaged resources
+- Clean up event handlers to prevent memory leaks
+  - The publisher will hold a reference to the subscriber, preventing the garbage collector from collecting the subscriber object
+
 ## Unmanaged Resources
 
+- Resources automatically handled by the [CLR](dotnet-glossary.md#clr), such as memory allocated on the managed heap
+
 ## Managed Resources
+
+- Such as file handles, network sockets, database connections, COM objects
 
 ## using Statment
 

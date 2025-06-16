@@ -10,14 +10,14 @@
 
 Conditions:
 
-1. parent element's margin-top and first child, or parent element's margin-bottom and last child
-2. 没有分开父元素与后代元素的margin-top
-  - 没有创建[BFC](css-block-formatting-context.md)或没有[clear]()
-  - 父元素没有border, padding, 没有inline内容,
-3. 没有分开父元素与后代元素的margin-bottom
-  - 父元素没有border, padding, 没有inline内容,
-  - 没有设置height, min-height, max-height
+1. Parent element's margin-top and first child, or parent element's margin-bottom and last child:
+2. The margin-top of the parent element and its descendant elements is not separated:
+  - No Block Formatting Context (BFC) has been created (e.g., via overflow: hidden, float, or display: flow-root), or no clear property has been applied.
+  - The parent element has no border, padding, or inline content (e.g., text or inline elements).
+3. The margin-bottom of the parent element and its descendant elements is not separated:
+  - The parent element has no border, padding, or inline content.
+  - The parent element has no height, min-height, or max-height set.
 
-## scene 3: Empty Element
+## Ccene 3: Empty Element
 
-- 空元素没有设置border, padding, height, min-height, max-height, inline内容, 或clear-fix, 将不同block的margin-top和margin-bottom分开
+- An empty element (with no content) that has no border, `padding`, `height`, `min-height`, `max-height`, inline content, or clear-fix (e.g., overflow: auto or a pseudo-element to clear floats) will not prevent the margin-top and margin-bottom of different blocks from collapsing together.

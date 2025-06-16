@@ -30,7 +30,7 @@
 ## position: absolute
 
 - Allows to modify the position of the element in the document with property `top, right, bottom, left`
-- positioned relative to the closest [positioned](#positioned-element) ancestor or [containing block]css-containing-block.md)
+- positioned relative to the closest [positioned](#positioned-element) ancestor or [containing block](css-containing-block.md)
 - removed from [normal document flow](css-normal-flow.md)
 
 > in most cases, height or width set to `auto` to fit its content, or fill available space
@@ -83,12 +83,14 @@ stick to the nearest **scrolling ancestor**
 
 ## positioned element
 
-property `position` value is:
+positioned element is the element that property `position` value is:
 
 - [relative](#position-relative)
 - [absolute](#position-absolute)
 - [fixed](#position-fixed)
 - [sticky](#position:-sticky)
+
+which is not `static`
 
 ## Positioning Contexts
 

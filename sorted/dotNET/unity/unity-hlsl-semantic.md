@@ -1,8 +1,14 @@
 # Unity HLSL - Semantic
 
+* [What Is Semantic](#what-is-semantic)
+* [Why Semantic](#why-semantic)
+* [Where To Use](#where-to-use)
+* [Take A Look](#take-a-look)
+* [Catagories](#catagories)
+
 ## What Is Semantic
 
-- String that attached to a variable
+- Metadata tag that attached to a variable. such as in `float4 position : POSITION` POSITION is the semantic
 - Indicate that variable is passed between [shader stages](unity-shader-teminology.md#shader-stage)
 - Semantic is **REQUIRED** for shader stages function's parameter and return value
 - Semantic for Normal function is **OPTIONAL**

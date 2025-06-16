@@ -10,6 +10,8 @@
 - in many languages, we [need a class](#use-class-to-implement-singleton)
 - in javascript, we can achieve this by [use regular object](#implement-with-regular-object)
 
+## VS Static Class  
+
 ## Use Scenarios
 
 - database connections

@@ -1,5 +1,9 @@
 # Unity Multiplayer - Best Practices
 
+* [Spawn a Network Prefab](#spawn-a-network-prefab)
+* [Syncharizing Field](#syncharizing-field)
+* [Change Client GameObject Field That Not NetworkVariable Type(Use NetworkObjectReference)](#change-client-gameobject-field-that-not-networkvariable(use-networkobjectreference))
+
 ## Spawn a Network Prefab
 
 > Only server can spawn NetworkObjects
@@ -63,7 +67,7 @@ publc class Example : NetworkBehaviour {
 }
 ```
 
-## Change Client GameObject Field That Not NetworkVariable(Use NetworkObjectReference)
+## Change Client GameObject Field That Not NetworkVariable Type(Use NetworkObjectReference)
 
 check [unsupported serialization types](unity-multiplayer-serialization.md#unsupported-serialization-types)
 

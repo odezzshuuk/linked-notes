@@ -54,6 +54,11 @@ properties
 - Asign A [NetworkObject](#networkobject) a specific client as Player Object
 - Player Object can be create by instantiated the reference the NetworkObject assigned to `PlayerPrefab` property of [NetworkManager](#networkmanager)
 
+When Player Object is spawned
+
+- when scene management is disabled, spawned when a joining client's is [approved]()
+- when scene management is enabled, spawned when a joining client's finished initial [synchronization](unity-multiplayer-scene-management.md#synchronization)
+
 ## Spawning
 
 What's Spawning
@@ -69,55 +74,7 @@ Features
 
 ## Scene Management
 
-How to subscribe
-
-```cs
-public voie Example() {
-    NetworkManager.Singleton.SceneManager.OnLoad += SceneLoadCallback;
-    NetworkManager.Singleton.SceneManager.OnSceneEvent += SceneEventCallback;
-}
-
-private void ScenenLoadCallback() {
-  // ...
-}
-
-private void SceneEventCallback(SceneEvent sceneEvent) {
-    switch (sceneEvent.Type) {
-        case SceneEventType.Load:
-            break;
-        case SceneEventType.Unload:
-            break;
-        case SceneEventType.Synchronize:
-            break;
-        default:
-            break;
-    }
-}
-```
-
-Scene [Event](csharp-events.md) Properties
-
-- **To receive all scene event type, use `OnSceneEvent` event**
-- `OnLoad`: Invoked only when a Load event is being processed
-- `OnUnload`: Invoked only when an Unload event is being processed
-- `OnSynchronize`: Invoked only when a Synchronize event is being processed
-- `OnLoadEventCompleted`: Invoked only when a LoadEventCompleted event is being processed
-- `OnUnloadEventCompleted`: Invoked only when an UnloadEventCompleted event is being processed
-- `OnLoadComplete`: Invoked only when a LoadComplete event is being processed
-- `OnUnloadComplete`: Invoked only when an UnloadComplete event is being processed
-- `OnSynchronizeComplete`: Invoked only when a SynchronizeComplete event is being processed
-
-Scene Events Enum `SceneEventType`
-
-- Loading:
-  - `SceneEventType.LoadComplete`: signifies that a scene has been loaded locally. Clients send this event to the server.
-  - `SceneEventType.LoadEventCompleted`: signifies that the server and all clients have finished loading the scene and signifies that the Scene Event has completed.
-- Unloading:
-  - `SceneEventType.UnloadComplete`: 
-  - `SceneEventType.UnloadEventCompleted`
-- Synchronization
-  - `SceneEventType.SynchronizeComplete`
-  - `SceneEventType.ReSynchronize`
+[Scene Management](unity-multiplayer-scene-management.md)
 
 ## Synchronization
 
@@ -131,11 +88,19 @@ Scene Events Enum `SceneEventType`
 
 ## OwnerShip
 
-- In client-server topology, server owns all NetworkObjects
+Misunderstandings
+
+- `NetworkManager.LocalClientId` is not `NetworkBehaviour.OwnerClientId`
 
 ## Connection Approval
 
 ## Rpc
+
+Rpc as event listener
+
+```cs
+public override void OnNetworkSpawn() { }
+```
 
 
 

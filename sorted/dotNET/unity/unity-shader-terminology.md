@@ -237,13 +237,17 @@ Global Volume And Local Volume
 
 ## Texture
 
+- Mostly a 2D image
+
 ## Material
 
-Assigning texture to material
+- Shader + Properties
 
-- base map property is where the texture is assigned
+Material: where the [texture](#texture) is assigned
 
-simple mapping
+- For example, [base map](unity-material.md#base-map) property is where texture can be assigned
+
+Simple mapping
 
 - vertex position doesn't matter
 

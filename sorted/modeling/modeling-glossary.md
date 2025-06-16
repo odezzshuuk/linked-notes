@@ -1,8 +1,19 @@
 # Modeling - Glossary
 
+* [Model](#model)
+* [Mesh](#mesh)
+* [Material](#material)
+* [Texture](#texture)
+* [UV Mapping](#uv-mapping)
+* [Normal Map](#normal-map)
+* [Bump Map](#bump-map)
+* [Metallic Map](#metallic-map)
+
 ## Model
 
 ## Mesh
+
+- structure of interconnected vertices, edges, faces
 
 ## Material
 

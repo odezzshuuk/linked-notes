@@ -1,4 +1,4 @@
-# unity - Material
+# Unity - Material
 
 ## What's For
 
@@ -7,4 +7,6 @@
 ## Metallic Map
 
 ## Normal Map
+
+> [Normal Map](modeling-glossary.md#normal-map)
 

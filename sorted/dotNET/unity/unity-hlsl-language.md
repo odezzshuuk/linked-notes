@@ -25,6 +25,21 @@ Modifier
 - `static`
 - `volatile`
 
+## Input
+
+[Mesh](modeling-glossary.md#mesh) Vertex Data structure
+
+Built-in
+
+- `appdata_base`
+- `appdata_tan`
+- `appdata_full`
+- `appdata_img`
+
+Custom
+
+
+
 ## Function
 
 Declaration

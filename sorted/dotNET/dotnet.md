@@ -2,8 +2,6 @@
 
 ## basic
 
-[.NET Concept](dotnet-concept.md)
-
 [.NET Glossary](dotnet-glossary.md)
 
 [.NET Install](dotnet-install.md)

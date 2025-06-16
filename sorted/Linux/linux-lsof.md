@@ -2,8 +2,8 @@
 
 ## What is lsof used for
 
-- list open files
-- usually used to check network status
+- List open files
+- Usually used to check network status
 
 ## Practical Use
 

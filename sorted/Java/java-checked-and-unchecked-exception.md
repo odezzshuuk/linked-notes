@@ -2,10 +2,10 @@
 
 ## Checked Exception
 
-- 其他异常称为checked异常
-- 必须被处理, 两种处理方j式
-  1. 在方法中声明异常
-  2. 在try-catch块中调用
+- Other exceptions are called checked exceptions
+- Must be handled, two ways to handle:
+  - Declare the exception in the method
+  - Call it within a try-catch block
 
 ## Unchecked Exception
 
@@ -14,14 +14,14 @@
 - can be catched, but it is not required to catch unchecked exception
 
 > Runtime Exception: 
->> 设计者认为声明Run-time 异常对程序正确性没有太大帮助
->> Java编译器可用的信息和编译器执行的分析级别通常不足以确定这种运行时异常不会发生
+>> Designer believes that declaring Runtime exceptions does not significantly help program correctness
+>> The level of information available to the Java compiler and the level of analysis performed by the compiler are usually insufficient to determine that such runtime exceptions will not occur
 
   
 ## When to declare checked exception
 
-- 调用一个抛出受查异常的方法
-- 程序运行过程中发现错误
-- 程序出现错误
-- Java虚拟机和运行时库出现的内部错误
+- Call a method that throws a checked exception
+- An error is discovered during program execution
+- An error occurs in the program
+- An internal error occurs in the Java Virtual Machine and runtime library
 

@@ -1,12 +1,12 @@
 # CSharp - Task
 
-* [What It Is](#what-it-is)
-* [Task And Task<T>](#task-and-task<t>)
-* [Task Status](#task-status)
-* [TaskFactory](#taskfactory)
-* [Exception In Task](#exception-in-task)
-* [Method Wait() Vs Keyword Await](#method-wait()-vs-keyword-await)
-* [Take A Look](#take-a-look)
+- [What It Is](#what-it-is)
+- [Task And Task<T>](#task-and-task<t>)
+- [Task Status](#task-status)
+- [TaskFactory](#taskfactory)
+- [Handle Non-cancel Exception In Task In Calling Method](#handle-non-cancel-exception-in-task-in-calling-method)
+- [Method task.Wait() Vs Keyword Await](<#method-task.wait()-vs-keyword-await>)
+- [Take A Look](#take-a-look)
 
 ## What It Is
 
@@ -26,7 +26,7 @@
 
 - `Task` is an asynchronous operation that doesn't return a value
 - `Task` is also provider of helper methods for asynchronous operations, such as `Wait()`, `WaitAll()`, `WaitAny()`, `Run()`, `WhenAll()`, `WhenAny()`, `FromResult()`, `FromCanceled()`, `FromException()`
-_ `Task<T>` is a asynchronous operation that returns a value of type `T`
+  \_ `Task<T>` is a asynchronous operation that returns a value of type `T`
 
 ## Task Status
 
@@ -46,9 +46,27 @@ what's the difference between declare async method return `Task` and `void`?
 public async Task ExampleMethod();
 public async void ExampleMethod();
 
+## Wait A Task
+
+3 ways to wait a task
+
+1. `Task.Wait()`
+2. `Task.GetAwaiter().GetResult()`
+3. `await Task`
+
+| Feature               | Task.Wait()                             | Task.GetAwaiter().GetResult()          | await Task                               |
+| --------------------- | --------------------------------------- | -------------------------------------- | ---------------------------------------- |
+| Blocking              | Synchronous (blocks thread)             | Synchronous (blocks thread)            | Asynchronous (non-blocking)              |
+| Returns               | Nothing (access Task.Result separately) | Task’s result directly                 | Task’s result directly                   |
+| Exception Handling    | Throws AggregateException               | Throws inner exception                 | Throws inner exception                   |
+| Thread Safety (Unity) | Risks deadlock on main thread           | Risks deadlock on main thread          | Safe, respects Unity’s sync context      |
+| Performance (Unity)   | Freezes game if on main thread          | Freezes game if on main thread         | Keeps game responsive                    |
+| Use Case              | Rare; non-main-thread sync calls        | Rare; forced sync calls in legacy code | Preferred for async operations in Unity  |
+| Unity Friendliness    | Poor (avoid on main thread)             | Poor (avoid on main thread)            | Excellent (designed for async workflows) |
+
 ## Handle Non-cancel Exception In Task In Calling Method
 
-1. when `Task.Wait()` 
+1. when `Task.Wait()`
 
 - Exception is wrapped in an `AggregateException.InnerExceptions`
 - Catch the `AggregateException` to get the Non-cancel exception
@@ -86,7 +104,6 @@ public static async Task ExampleMethod() {
   }
 }
 ```
-
 
 ## Method task.Wait() Vs Keyword Await
 

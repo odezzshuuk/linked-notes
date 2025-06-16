@@ -1,51 +1,51 @@
 # RBAC
 
-- RBAC: Role Based Access Control
-- 广泛使用的关于**权限设计**的**数据库模型**
-- 用户和权限逻辑分离, 两组多对多的关系
-  - 用户可以扮演多个角色
-  - 不同角色可以拥有不同的权限
+- **RBAC**: Role-Based Access Control
+- A widely used **database model** for **permission design**
+- Logical separation between users and permissions, with two many-to-many relationships:
+  - A user can assume multiple roles
+  - Different roles can have different permissions
 
-## 数据库设计
+## Database Design
 
-三个数据表: 用户, 角色, 权限
+Three main tables: **User**, **Role**, and **Permission**
 
-- user: 用户表
-  - id: 用户id
-  - name: 用户名
-  - password: 密码
-- role: 角色表
-  - id: 角色id
-  - role_id: 角色id
-  - user_id: 用户id
-- permission: 权限表
-  - id: 权限id
-  - name: 权限名称
-  - value: 权限值, 一般是url资源字符串, 并不表示真实资源地址，只是资源的标识
-  - sort: 权限排序, 自定义
+- **user**: User table
+  - `id`: User ID
+  - `name`: Username
+  - `password`: Password
+- **role**: Role table
+  - `id`: Role ID
+  - `role_id`: Role ID
+  - `user_id`: User ID
+- **permission**: Permission table
+  - `id`: Permission ID
+  - `name`: Permission name
+  - `value`: Permission value (usually a URL-like resource identifier)
+  - `sort`: Custom sorting for permissions
 
-两个关联表: 用户角色, 角色权限
+Two association tables: **User-Role** and **Role-Permission**
 
-- user_role: 用户角色关联表
-  - id: 用户角色关联id
-  - user_id: 用户id
-  - role_id: 角色id
+- **user_role**: User-Role association table
+  - `id`: Association ID
+  - `user_id`: User ID
+  - `role_id`: Role ID
 
-> user_id和role_id是多对多的关系
+> `user_id` and `role_id` have a many-to-many relationship
 
-- role_permission: 角色权限关联表
-  - id: 角色权限关联id
-  - role_id: 角色id
-  - permission_id: 权限id
+- **role_permission**: Role-Permission association table
+  - `id`: Association ID
+  - `role_id`: Role ID
+  - `permission_id`: Permission ID
 
-> role_id和permission_id是多对多的关系
+> `role_id` and `permission_id` have a many-to-many relationship
 
-## 逻辑
+## Logic
 
-添加用户
+### Adding a User
 
-- 添加用户同时添加用户角色关联表
-- 不需要考虑权限相关表
+- Add the user while also updating the user-role association table
+- No need to modify permission-related tables
 
 ```sql
 INSERT INTO user (name, password) VALUES ('admin', '123456');

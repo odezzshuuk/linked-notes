@@ -22,7 +22,7 @@ then
 git submodule add <submodule_url> <submodule_local_path>
 ```
 
-## Submodule Url When Parent Module Already Commit Without Set Submodule Url
+## When Parent Module Already Commit Without Set Submodule Url
 
 > Where Error "fatal: '<submodule_path>' already exists in the index" Occurs
 > When `git submodule add <submodule_url>` directly without Parent Module set Submodule Url 

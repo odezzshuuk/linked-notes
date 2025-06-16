@@ -17,7 +17,7 @@
 
 ## await expression
 
-- await expression doesn't block the thread
+- await represent "async wait", await expression doesn't block the thread
 - `await` operator suspends the enclosing async method
 - **return the control to the caller** of the method
 - `await` operator can only be used in an `async` method, function, or [lambda expression]()
