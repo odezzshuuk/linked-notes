@@ -1,12 +1,13 @@
 # CSharp - Task
 
-- [What It Is](#what-it-is)
-- [Task And Task<T>](#task-and-task<t>)
-- [Task Status](#task-status)
-- [TaskFactory](#taskfactory)
-- [Handle Non-cancel Exception In Task In Calling Method](#handle-non-cancel-exception-in-task-in-calling-method)
-- [Method task.Wait() Vs Keyword Await](<#method-task.wait()-vs-keyword-await>)
-- [Take A Look](#take-a-look)
+* [What It Is](#what-it-is)
+* [Task And Task<T>](#task-and-task<t>)
+* [Task Status](#task-status)
+* [TaskFactory](#taskfactory)
+* [Wait A Task](#wait-a-task)
+* [Handle Non-cancel Exception In Task In Calling Method](#handle-non-cancel-exception-in-task-in-calling-method)
+* [Method task.Wait() Vs Keyword Await](#method-task.wait()-vs-keyword-await)
+* [Take A Look](#take-a-look)
 
 ## What It Is
 

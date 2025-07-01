@@ -6,115 +6,65 @@
 
 [Best Practices](unity-entities-best-practices.md)
 
-## Entity
+## I
 
-What's it
-
-- icon 󰋙 represents an entity in editor
-
-Features
-
-- Consists of various type of [Components](#component)
-
-How to create entities
-
-- `EntityManager` manages all the entites in the [world](#world)
-
-```cs
-// ...
-```
-
-How entities come from
-
-- [Baking](#baking) subscene GameObject
-- create baker, use MonoBehaviour component data to create 
-
-## Component
+[Entity](unity-entities-entity.md)
 
 [Component](unity-entities-component.md)
 
-## System
+[System](unity-entities-system.md)
 
-- perform logic on component data
-
-System types
-
-- SystemBase
-- ISystem
-- EntityCommandBufferSystem: allows group [structural changes]()
-- ComponentSystemGroup
-
-method to override
-
-- `OnUpdate()`, `OnCreate()`, `OnDestroy()`
-
-```cs
-public partical class MovementSystem : SystemBase {
-    protected override void OnUpdate()
-    {
-        Entities.ForEach((ref Translation translation, in Velocity velocity) =>
-        {
-            translation.Value += velocity.Value * Time.DeltaTime;
-        }).Schedule();
-    }
-}
-
-```
-
-System Groups
-
-- More about [SystemGroup](#systemgroup)
-
-how to query
-
-- ...
-
-## Authoring
-
-> For convenient editing, GameObject data is made up of both runtime and authoring, which lead to bad runtime performance 
-
-What's this
-
-- To distinguish [Components](unity-component.md) like `MonoBehaviour` and [ECS component](unity-entities-component.md), former components are called **authoring components**
-- Similar to authoring Scene and authoring GameObject
-- Authoring data is any data that you create during the editing, such as scripts, assets
-
-## Baking
+[Authoring](unity-entities-authoring.md)
 
 [Baking](unity-entities-baking.md)
 
-## Spawner
-
-## World
-
-- Collection of entities and systems
-
-## SystemGroup
+[World](unity-entities-world.md)
 
 [SystemGroup](unity-entities-systemgroup.md)
 
-## Archetypes
-
 [Archetype](unity-entities-archetype.md)
 
-## Structural Changes
+[Aspect](unity-entities-aspect.md)
 
-What's It
+[Subscene](unity-entities-subscene.md)
 
-- Operations that cause unity reorganizing [chunks](unity-entities-archetype.md#archetypes-chunk)
+[Spawner]()
 
-Why Structural Changes Matter
+[Singleton]()
 
-- Although ECS can increase performance, When structural changes performed, it can cause intensive resource usage
+## Programming
 
-Features
+[Best Practices](unity-entities-best-practices.md)
 
-Which considered structural changes
+[Structural Changes](unity-entities-structural-changes.md)
 
-- Creating or destroy [entities](#entity)
-- Adding or remove [components](#component)
-- Setting a [shared component](unity-entities-component.md#shared-component) value
+[Iterating Entities and Components](unity-entities-iterating-entities-and-components.md)
 
-Managed Structural Changes
+[Querying entities](unity-entities-query-entities.md)
 
+[Job Dependencies](unity-entities-job-in-entities.md)
+
+[look up arbitrary data](unity-entities-look-up-arbitrary-data.md)
+
+- [ ] JobEntities
+
+## API Abstracts
+
+[EntityManager](unity-entities-api-entitymanager.md)
+
+[EntityCommandBuffer](unity-entities-api-entitycommandbuffer.md)
+
+[SystemState](unity-entities-api-systemstate.md)
+
+[SystemAPI](unity-entities-api-systemapi.md)
+
+[EntityQuery](unity-entities-api-entityquery.md)
+
+[SystemBase.Entities.ForEach](unity-entities-api-systembase-entities-foreach.md)
+
+[ComponentType](unity-entities-api-componenttype.md)
+
+[JobHandle](unity-jobs-jobhandle.md)
+
+[IJobChunk](unity-entities-query-with-ijobchunk.md)
 

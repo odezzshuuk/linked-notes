@@ -10,6 +10,11 @@
 
 ## Primitive Types
 
+- byte, sbyte
+- int, uint
+- long, ulong
+- float, double
+
 ## Built-in Types
 
 ## Unmanaged Types
@@ -20,7 +25,7 @@
 - A [tuple] whose element types are all unmanaged types
 - Any user-defined [struct types](csharp-struct.md) that contains fields of unmanaged types only
 
-## Reference Types(managed type)
+## Reference Types(managed types)
 
 - Class, interface, delegate, [record](csharp-record.md)
 - Array, such as `int[]`..., 

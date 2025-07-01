@@ -20,7 +20,7 @@
 
 What's Chunk
 
-- entities in the same archetype will be split into pieces with the same size, called [chunks](#chunk)
+- Entities in the same archetype will be split into pieces with the same size, called [chunks](#chunk)
 
 Features
 

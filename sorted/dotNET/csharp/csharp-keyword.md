@@ -1,5 +1,7 @@
 # CSharp - Keywords
 
+## yield
+
 [yield](csharp-yield.md)
 
 ## using
@@ -20,10 +22,10 @@ parameter modifier
 
 ## params
 
-- declare a variable parameter
-- the type of the parameter must be a single-dimensional array
-- no other parameter is allowed after params
-- only one `params` is allowed
+- Declare a mutable number of parameters
+- The type of the parameter must be a single-dimensional array
+- No other parameter is allowed after params
+- Only one `params` is allowed
 
 ```cs
 public void UseParams(params int[] list)

@@ -1,12 +1,23 @@
 # Unity Entites - Component
 
+* [What's it](#what's-it)
+* [Features](#features)
+* [What Should Do In Component](#what-should-do-in-component)
+* [Component Types](#component-types)
+* [Unmanaged component](#unmanaged-component)
+* [Managed component](#managed-component)
+* [Shared component](#shared-component)
+* [Enable/Disable Of Component](#enable/disable-of-component)
+
 ## What's it
 
 - Where data is stored
 
-Features
+## Features
 
 - Can contain method, but not recommended, pure data is best practice
+
+## What Should Do In Component
 
 ## Component Types
 
@@ -96,6 +107,8 @@ public struct ExampleUnmanagedSharedComponent : ISharedComponentData
     public int Value;
 }
 ```
+
+## Enable/Disable Of Component
 
 
 

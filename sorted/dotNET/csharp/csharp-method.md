@@ -33,7 +33,27 @@ public void Method2(Point point)
 }
 ```
 
-## Method
+## Extension Method
 
-[extend](csharp-extend-method.md)
+[extend](csharp-extension-method.md)
+
+## ref return
+
+```cs
+public class A {
+  private int[] _array = new int[10];
+  public ref int GetNumber(int index) {
+    return ref _array[index];
+  }
+}
+public class Program {
+  public static void Main() {
+    A a = new A();
+    Console.WriteLine(a.GetNumber(5)); // Output: 0
+    ref int temp = ref a.GetNumber(5);
+    temp = 42; // Modify the value at index 5
+    Console.WriteLine(a.GetNumber(5)); // Output: 42
+  }
+}
+```
 
