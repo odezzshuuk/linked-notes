@@ -1,7 +1,4 @@
-# 数组
+# Data Structure - Array
 
-- 数组在内存中是连续的
+- Array elements are stored in contiguous memory locations.
 
-## 特殊情况
-
-- 数组维度(size)为0

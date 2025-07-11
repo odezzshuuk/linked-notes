@@ -10,13 +10,19 @@
 
 ## Features
 
-## Which considered structural changes
+- Every structural change will trigger a [sync point](csharp-task#wait-a-task) in the main thread 
+- Should avoid structural changes in every frame
+
+## Which Considered Structural Changes
 
 - Creating or destroy [entities](#entity)
 - Adding or remove [components](#component)
 - Setting a [shared component](unity-entities-component.md#shared-component) value
 
-## Managed Structural Changes
+## Structural Changes Management
+
+> [`EntityManager`](unity-entities-api-entitymanager.md)
+> [`EntityCommandBuffer`](unity-entities-api-entitycommandbuffer)
 
 - Both [`EntityManager`](unity-entities-api-entitymanager.md) and [`EntityCommandBuffer`](unity-entities-api-entitycommandbuffer) can perform structural changes
 - Structural changes caused by `EntityManager` execute in a sync way

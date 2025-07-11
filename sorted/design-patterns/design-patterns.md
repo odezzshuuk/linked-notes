@@ -1,40 +1,21 @@
-# Design Pattern
+# Design Patterns
 
 ## Common Concepts
 
 there are some common concepts in design patterns
 
-- client: the object that use the pattern
-- ... 
-
-## SOLID Principles
-
-- All design patterns are based on SOLID principles
-
-SOLID Stand For:
-
-1. Single Responsibility Principle
-2. Open/Closed Principle
-3. Listkov Substitution Principle
-4. Interface Segregation Principle
-
-- more specific interfaces are better than one general interface
-
-5. Dependency Inversion Principle
-
-- High-level modules should not depend on low-level
+- user code: code that use the pattern
+- ...
 
 ## Creational Patterns
 
-[Factory](javascript-design-pattern-factory-method.md), [Factory java](/sorted/designpatterns/design-patterns-factory.md)
+[Factory](javascript-design-pattern-factory-method.md)
 
 [Abstract Factory](javascript-design-pattern-abstract-factory.md)
 
-[Singleton](javascript-design-pattern-singleton.md), [Singleton java](/sorted/designpatterns/design-patterns-singleton.md)
+[Singleton](javascript-design-pattern-singleton.md)
 
 [Builder](javascript-design-pattern-builder.md)
-
-[Fluent Builder](javascript-design-pattern-fluent-builder.md)
 
 [Prototype](javascript-design-pattern-prototype.md)
 
@@ -68,19 +49,17 @@ SOLID Stand For:
 
 [Observer](javascript-design-pattern-observer.md)
 
-[Event-Listener](javascript-design-pattern-event-listener.md)
-
 [State](javascript-design-pattern-state.md)
 
 [Strategy](javascript-design-pattern-strategy.md)
 
 [Template Method](javascript-design-pattern-template-method.md)
 
-[Visitor](javascript-design-pattern-visitor.md)
+[Visitor](design-pattern-visitor.md)
 
 [Interpreter](javascript-design-pattern-interpreter.md)
 
 ## Framework Patterns
 
-[dependency injection](design-pattern-dependency-injection.md)
+[dependency injection](javascript-design-pattern-dependency-injection.md)
 

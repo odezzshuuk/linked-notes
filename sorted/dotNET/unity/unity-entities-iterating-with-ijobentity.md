@@ -3,10 +3,10 @@
 ## What's For
 
 - With `IJobEntity`, you can use it in multiple systems
-- `IJobEntity` iterating mechanism is similar to [`IJobFor`](unity-jobs-parallel-jobs#how-to)
+- `IJobEntity` parallel iterating mechanism is similar to [`IJobFor`](unity-jobs-parallel-jobs#how-to)
   - but replace `Execute(int index)` with method like `Execute(ref TComponent component, in TReadOnlyComponent readOnlyComponent)`
   - So don't need write for loop to iterate
-- It create an `IJobChunk` job
+- It create an [`IJobChunk`](unity-entities-ijobchunks) job
 
 ## How to
 

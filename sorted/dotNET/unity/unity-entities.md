@@ -8,6 +8,8 @@
 
 ## I
 
+[ECS Overview](unity-ecs-overview.md)
+
 [Entity](unity-entities-entity.md)
 
 [Component](unity-entities-component.md)
@@ -41,8 +43,6 @@
 [Iterating Entities and Components](unity-entities-iterating-entities-and-components.md)
 
 [Querying entities](unity-entities-query-entities.md)
-
-[Job Dependencies](unity-entities-job-in-entities.md)
 
 [look up arbitrary data](unity-entities-look-up-arbitrary-data.md)
 

@@ -1,9 +1,9 @@
-# std_move函数
+# CPP - std_move
 
-- utility头文件
-- 返回一个绑定到左值上的[右值引用](c++-rvalue-reference.md)
-- move后源对象除**赋值**或**销毁**外，不再使用
-- move不会重新分配内存
-- 移动后的源对象必须可析构
+- Utility header file  
+- Returns an [rvalue reference](c++-rvalue-reference.md) bound to an lvalue  
+- After moving, the source object should not be used except for **assignment** or **destruction**  
+- `move` does not reallocate memory  
+- The source object after moving must be destructible
 
-[std_forward函数](std-forward函数模板.md)
+[`std_forward`](std-forward-function-template.md)

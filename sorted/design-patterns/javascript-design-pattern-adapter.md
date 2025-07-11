@@ -30,7 +30,7 @@ class Adaptee{
     // ...
   }
 }
-class Target{
+class Target {
   getBar(): number {
 
   }
@@ -51,20 +51,18 @@ class Adapter extends Target {
 
 In above code demo
 
-- CLIENT try to call `getBar()` method in ADAPTEE
-- But CLIENT can't call directly
-- Use ADAPTER wrap the Adaptee And inherit the TARGET
+- Client code try to call `getBar()` method in ADAPTEE
+- But client can't call directly
+- Use [adapter](#adapter) wrap the [adaptee](#adaptee) And inherit the TARGET
 - Re-implement the client-compatible method use TARGET
 - CLIENT use ADAPTER's method to run business logic
 
-## structure of adapter pattern
-
-basic structure
+## Structure Of Adapter Pattern
 
 - [Target](#target)
-- [Client](#client)
 - [Adaptee](#adaptee)
 - [Adapter](#adapter)
+- Client: Who use the [target](#target) interface to finish the work
 
 ## Target
 
@@ -74,7 +72,7 @@ basic structure
 ## Adaptee
 
 - An object that wrapped by [adapter](#adapter)
-- have method that [client](#client) want to use but not compatible
+- Contains a method that [client](#client) want to use but not compatible
 
 ## Adapter
 

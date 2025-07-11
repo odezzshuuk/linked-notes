@@ -8,6 +8,7 @@
 ## What's This
 
 - A class that provides caching and utility methods for accessing data in an entity's world
+- Works in non-static methods of SystemBase and ISystem
 
 ## Practical Usage
 

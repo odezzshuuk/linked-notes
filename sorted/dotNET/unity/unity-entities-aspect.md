@@ -8,7 +8,7 @@
 ## Declare An Aspect
 
 - Implement `IAspect`
-- keyword `readonly` is necessary
+- Keyword `readonly` is necessary **both** on struct declaration and on the struct members
 
 ```cs
 using Unity.Entities;
@@ -19,6 +19,8 @@ public readonly partial struct MyAspect : IAspect {
 ```
 
 ## Aspect Can Include
+
+> Primitive types are not allowed in aspects.
 
 - A single `Entity` field to store entity's ID
 - `RefRW<T>` and `RefRO<T>` fields to access components

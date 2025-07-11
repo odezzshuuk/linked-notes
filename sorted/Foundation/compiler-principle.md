@@ -1,11 +1,11 @@
-# 编译原理
+# Compiler Principles
 
 [Lexical Analysis](compiler-principle-lexical-analysis.md)
 
-## Parsing(解析)
+## Parsing
 
-## Semantic Analysis(语义分析)
+## Semantic Analysis
 
-## Optimization(优化)
+## Optimization
 
-## Code Generation(代码生成)
+## Code Generation

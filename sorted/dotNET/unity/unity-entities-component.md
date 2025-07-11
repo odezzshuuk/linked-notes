@@ -29,6 +29,8 @@
 
 Declaration
 
+- keyword `struct`
+
 ```cs
 public struct MyComponent : IComponentData
 {
@@ -43,6 +45,8 @@ Features
 ## Managed component
 
 Declaration
+
+- keyword `class`
 
 ```cs
 public class MyComponent : IComponentData

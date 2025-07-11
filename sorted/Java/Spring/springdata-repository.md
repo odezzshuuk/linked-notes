@@ -1,12 +1,10 @@
 # Repository
 
-- 用来减少访问持久层(persistence)的代码量
+## Core interface `Repository<T, ID>`
 
-## 核心接口`Repository<T, ID>`
+[Repository Interface](springdata-repository-interface.md)
 
-[Repository接口](springdata-repository-interface.md)
+## Query Methods
 
-## 查询方法
-
-[SpringData查询方法](springdata-query-method.md)
+[SpringData](springdata-query-method.md)
 

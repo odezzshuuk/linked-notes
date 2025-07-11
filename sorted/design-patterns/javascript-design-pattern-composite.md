@@ -1,4 +1,4 @@
-# Javascript Design Pattern - Composite
+# Design Patterns - Composite
 
 ## Feature
 

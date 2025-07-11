@@ -1,7 +1,5 @@
 # code
 
-#动态规划  #字符串
-
 ```c++
 class Solution {
  public:
@@ -24,5 +22,3 @@ class Solution {
 }
 ```
 
-- 要点dp数组的size
-- 外层循环的范围

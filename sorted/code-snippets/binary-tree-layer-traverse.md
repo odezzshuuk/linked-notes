@@ -1,7 +1,7 @@
 # Binary Tree layer insert
 
 ```c++
-void BTLayerInsert(TreeNode *&root, std::vector<int> list) {  /// 层序插入完全二叉树  
+void BTLayerInsert(TreeNode *&root, std::vector<int> list) {
   root = new TreeNode(list[0]);  
   std::queue<TreeNode *> tq;  
   tq.push(root);  
@@ -15,11 +15,11 @@ void BTLayerInsert(TreeNode *&root, std::vector<int> list) {  /// 层序插入�
       TreeNode *lnode;  
       TreeNode *rnode;  
     
-      if (list[j]) {  // 如果元素不为NULL, 则插入左节点  
+      if (list[j]) {
         lnode = new TreeNode(list[j++]);  
         node->left = lnode;  
         tq.push(lnode);  
-      } else {  // 否则跳过插入结点过程  
+      } else {
         j++;  
       }  
       

@@ -1,37 +1,37 @@
-# vector
+# C++ - Vector
 
-- vector表示**对象**的集合, 引用不是对象，vector不能包含引用
-- vector是c++的**类模板**(class template)而非类型
-- **类模板**需要提供 **额外信息(T)** 来确定实例化成什么样的类
-- 初始化方式
-  - **默认初始化**，不含任何元素,如以下code中的`vector<int> v1`
-  - **拷贝初始化**，如`vector<int> v2`
-  - **列表初始化**，多个元素用花括号括起来,如`v5`
-  - **值初始化**，参数用圆括号括起来,如`v3,v4`
-  - **用数组初始化**, 和值初始化相似，参数为首元素指针，和尾后指针
-  > 所给列表不符合列表初始化类型是，编译器会尝试用值初始化vector对象
+- A vector represents a collection of **objects**. Since references are not objects, a vector cannot contain references.
+- `vector` is a **class template** in C++, not a type.
+- A **class template** requires **additional information (T)** to determine what kind of class to instantiate.
+- Initialization methods:
+  - **Default initialization**: Contains no elements, e.g., `vector<int> v1` in the code below.
+  - **Copy initialization**: E.g., `vector<int> v2`.
+  - **List initialization**: Multiple elements enclosed in curly braces, e.g., `v5`.
+  - **Value initialization**: Arguments enclosed in parentheses, e.g., `v3, v4`.
+  - **Initialization from an array**: Similar to value initialization, takes pointers to the first and one-past-the-end elements.
+  > If the provided list does not match list initialization, the compiler will attempt value initialization for the vector object.
 
 ```c++
-vector<T> v1;  // 空vector
-vector<T> v2(v1);  // v2是v1的副本
-vector<T> v2 = v1;  // v2是v1的副本 等价于vector<T> v2(v1)
-vector<T> v3(n,val);  // v3包含了n个重复元素,每个元素的值都是val
-vector<T> v4(n);  // v4包含了n个T类型的初始化对象
-vector<T> v5{a,b,c...};  // v5包含了对应元素
-vector<T> v5 = {a,b,c...};  // 等价于v5{a,b,c...}
-vector<T> v6(begin(arr),end(arr));  // v6由数组arr初始化的指针
-vector<T> v7(arr+1,arr+4)  // v7是由数组arr的第2个元素到第4个元素的部分组成
+vector<T> v1;            // Empty vector
+vector<T> v2(v1);        // v2 is a copy of v1
+vector<T> v2 = v1;       // Equivalent to vector<T> v2(v1)
+vector<T> v3(n, val);    // v3 contains n elements, each initialized to val
+vector<T> v4(n);         // v4 contains n default-initialized elements of type T
+vector<T> v5{a,b,c...};  // v5 contains the specified elements
+vector<T> v5 = {a,b,c...}; // Equivalent to v5{a,b,c...}
+vector<T> v6(begin(arr), end(arr)); // v6 is initialized from array arr
+vector<T> v7(arr+1, arr+4); // v7 consists of elements 2 to 4 of array arr
 ```
 
-- 支持下标查找元素，不支持下标添加元素, `object[ind]`
-- vector对象中添加元素
-  - `vector_object.push_back()`; 尾端添加元素
-- **vector&lt;T>::size_type**类型
-  - 同string,由size函数返回
-  - 需指定T的类型
-- 只有当**元素**可比较时，**vector对象**才可以比较
-- [添加元素](c++手册.md#顺序容器添加元素)
-- [删除元素](c++手册.md#顺序容器删除元素)
-   - 不需要参数删除元素`vector.pop_back()`, `vector.pop_front()`
-  - 通过迭代器参数删除元素`vector.erace(P)`
-  - 不能通过元素值参数来删除元素
+- Supports element access via subscript (`object[ind]`), but does not support adding elements via subscript.
+- Adding elements to a vector:
+  - `vector_object.push_back()`; // Adds an element at the end
+- **`vector<T>::size_type`**:
+  - Similar to `string`, returned by the `size()` function
+  - The type `T` must be specified
+- **Vector objects** can only be compared if their **elements** are comparable
+- [Adding Elements](c++_manual.md#sequential-container-adding-elements)
+- [Removing Elements](c++_manual.md#sequential-container-removing-elements)
+  - Removing elements without parameters: `vector.pop_back()`, `vector.pop_front()`
+  - Removing elements via iterator parameter: `vector.erase(P)`
+  - Cannot remove elements by passing their value as parameter

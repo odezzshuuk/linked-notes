@@ -1,40 +1,40 @@
-# 数组
+# Array
 
-- 显示初始化数组：`int arr[size]= {0, 1, 2, ..., size-1}`
-  - 初始元素数量可以**小于等于**size，不能大于size
-  - size可省略, 根据初始元素数量，确定维度
-- 相对vector，性能较好，灵活性较差
-- 数组不是类
-  - 所以begin和end不是成员函数, 使用形式是将数组作为begin(arr)和end(arr)的**参数**
-  - begin返回首元素的**指针**，end返回**尾后元素**的**指针**
-  - begin和end函数定义在`iterator`头文件中
-- 维度必须是一个[常量表达式](c++-constexpr.md), 维度可以理解为类型的一部分
-- 引用不是对象，数组的元素不能为引用, 与vector相同
-- 不允许**拷贝**和**赋值**
+- Explicitly initialize an array: `int arr[size] = {0, 1, 2, ..., size-1}`
+  - The number of initial elements can be **less than or equal to** size, but cannot exceed size
+  - size can be omitted, and the dimension is determined by the number of initial elements
+- Compared to vector, arrays have better performance but poorer flexibility
+- An array is not a class
+  - Therefore, `begin` and `end` are not member functions. The usage involves passing the array as an **argument** to `begin(arr)` and `end(arr)`
+  - `begin` returns a **pointer** to the first element, and `end` returns a **pointer** to the **one-past-the-end** element
+  - The `begin` and `end` functions are defined in the `<iterator>` header file
+- The dimension must be a [constant expression](c++-constexpr.md), and the dimension can be considered part of the type
+- References are not objects, so array elements cannot be references (same as vector)
+- **Copying** and **assignment** are not allowed
 
-> 所以不能**直接**作为函数的形参, 会自动转换为数组指针
-> 一些编译器支持数组赋值，属于**编译器扩展**(compiler extension), 是非标准特性
+> Therefore, arrays cannot be **directly** used as function parameters—they are automatically converted to pointers to the array.
+> Some compilers support array assignment as a **compiler extension**, which is a non-standard feature.
 
-- 理解**由指针构成的数组**和**指向数组的指针**
-  - `int *ptr[10];` ptr是**由指针构成的数组**
-  - `int (*Parray)[10];` Parray是**指向数组的指针**
-  - **<font color="red">数组的类型声明，声明的是元素类型</font>**，即ptr的元素类型是`int*`, `*Parray`的元素的类型是`int`
-- 区别于std::array
+- Understand the difference between **an array of pointers** and **a pointer to an array**
+  - `int *ptr[10];` `ptr` is an **array of pointers**
+  - `int (*Parray)[10];` `Parray` is a **pointer to an array**
+  - **<font color="red">The type declaration of an array declares the element type</font>**, meaning the element type of `ptr` is `int*`, and the element type of `*Parray` is `int`
+- Distinct from `std::array`
 
-## 指针和数组
+## Pointers and Arrays
 
-- **数组名**会被编译器替换为数组**首元素**的**指针**
-- ia是一个数组，`auto ia1(ia);`, ia1被推断为指针类型
-- ia是一个数组，`decltype(ia) ia2;`, ia2是一个与ia类型和维度都相同的数组
-- **尾后指针**指向一个不存在的元素，可以获取**尾后指针**的**地址**，**不能**通过**解引用**获得其元素
-- 指向数组元素的指针同迭代器运算
-  [[c++_iterator#运算]]
-- 下标和指针
+- The **array name** is replaced by the compiler with a **pointer** to the **first element** of the array
+- If `ia` is an array, `auto ia1(ia);` infers `ia1` as a pointer type
+- If `ia` is an array, `decltype(ia) ia2;` declares `ia2` as an array with the same type and dimension as `ia`
+- The **one-past-the-end pointer** points to a non-existent element. You can obtain the **address** of the **one-past-the-end pointer**, but you **cannot** dereference it to access an element
+- Pointers to array elements support the same [operations](c++-iterator#operations) as iterators
+- Subscripts and pointers
 
-  ```c++
-  int ia[] = {0,2,4,6,8};  // 
-  int *p = &ia[2];  // p是一个指针,指向数组ia索引为2的元素
-  int j = p[1];  // p[1]等价与*(p+1),
-  ```
+```c++
+int ia[] = {0, 2, 4, 6, 8};  // 
+int *p = &ia[2];  // p is a pointer pointing to the element at index 2 of array ia
+int j = p[1];  // p[1] is equivalent to *(p + 1),
+```
 
-## 多维数组
+## Multi-Dimensional arrray
+

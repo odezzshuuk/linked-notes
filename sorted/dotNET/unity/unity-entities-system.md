@@ -3,8 +3,21 @@
 ## What's For
 
 - Perform logic on component data
+- Mainly for providing an efficient alternative to the traditional `MonoBehaviour.Update()`
 
 ## Features
+
+- Do not declare public methods in a system for external code to call
+
+```cs
+public partial class MovementSystem : SystemBase {
+    // this is bad practice
+    protected void Create()
+    {
+        // Do not declare public methods here
+    }
+}
+```
 
 ## System types
 
@@ -74,7 +87,6 @@ When SystemBase
 ## System Dependency
 
 [System Dependency](unity-entities-system-dependency.md)
-
 
 ## WorldSystemFilterAttribute
 

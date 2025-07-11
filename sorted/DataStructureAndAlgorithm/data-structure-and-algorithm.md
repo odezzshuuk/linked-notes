@@ -1,14 +1,14 @@
-# 数据结构
+# Data Structure
 
-[[数组]]
+[[data-structure-array]]
 
-[[链表]]
+[[data-structure-linked-list]]
 
-[[Data_Structure_Hash_Table]]
+[[data-structure-hash-table]]
 
 [Stack](data-structure-stack.md)
 
-[[队列]]
+[[data-structure-queue]]
 
 [树](data-structure-tree.md)
 

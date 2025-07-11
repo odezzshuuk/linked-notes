@@ -32,7 +32,7 @@
 
 [JSDoc](javascript-jsdoc.md)
 
-[Design Pattern](javascript-design-pattern.md)
+[Design Pattern](design-pattern.md)
 
 ## II Built-in Object
 
