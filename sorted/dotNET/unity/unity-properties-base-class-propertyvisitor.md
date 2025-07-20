@@ -8,7 +8,10 @@
 
 ## Method To Override
 
-- `VisitorProperty<TContainer, TValue>(Property<TContainer, TValue> property, ref TConatiner container, ref TValue value)`
+`VisitorProperty<TContainer, TValue>(Property<TContainer, TValue> property, ref TConatiner container, ref TValue value)`
+
+- Type parameter `TContainer` is the type of `container` whose properties are being visited. 
+- Type parameter `TValue` is the type of property value being visited. 
 
 ## Simple Implementation
 
@@ -35,11 +38,10 @@ Features Of Property Adapter
 
 How to
 
-- implement `IVisitPropertyAdapter<TProperty>` interface, `TProperty` is the type of property you want to adapt
+- Implement `IVisitPropertyAdapter<TProperty>` interface, `TProperty` is the concrete type of property you want to adapt
+- Call `AddAdapter(this)` to register adapters
 
 Take A Look
-
-- `AddAdapter(this)` is necessary
 
 ```cs
 public class DumpObjectVisitor

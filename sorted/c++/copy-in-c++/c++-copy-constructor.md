@@ -1,10 +1,10 @@
-# 拷贝构造函数
+# Copy Constructor
 
-- 用来执行拷贝初始化, 如`string s1 = s2;`
-- 拷贝构造函数的参数必须是引用类型
-  - 因为**非引用类型参数**形参变实参的过程就是**调用拷贝构造函数的过程**
-- 会有拷贝初始化发生的情况
-  - 将一个对象作为实参传递给非引用类型的形参
-  - 从一个返回类型为非引用类型的函数返回一个对象
-  - 用花括号列表初始化一个数组中的元素或一个聚合类中的成员
-  - 向容器中添加元素
+- Used to perform copy initialization, such as `string s1 = s2;`.
+- The parameter of the copy constructor must be a reference type.
+  - Because the process of passing a **non-reference type parameter** to a formal parameter is the process of **calling the copy constructor**.
+- Situations where copy initialization occurs:
+  - Passing an object as an argument to a non-reference type parameter.
+  - Returning an object from a function with a non-reference return type.
+  - Initializing elements in an array or members in an aggregate class with a braced list.
+  - Adding elements to a container.

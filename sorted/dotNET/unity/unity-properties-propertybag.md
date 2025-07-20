@@ -4,7 +4,7 @@
 
 - Properties collection of .Net object
 - Untiy uses reflection to generate property bag for a type, once per type
-- Perform the traverse operation that [structured object](design-pattern-visitor#structured-object) role does in [visitor design pattern](design-pattern-visitor)
+- Determining how to traverse operation that [structured object](design-pattern-visitor#structured-object) role does in [visitor design pattern](design-pattern-visitor)
 - Is a companion object for given type
 
 ## Features
@@ -18,14 +18,21 @@ Method to override
 
 - `Visit<TContainer>(PropertyBag<TContainer> propertyBag, ref TContainer container)`
 - Type parameter `TContainer` is the type of `container` whose properties are being visited. 
+- Parameter 
+  - `propertyBag`: has a method `GetProperties(ref container)` to get [iterator]() of [`IProperty<TContainer>`](unity-properties-property.md)
 
 Simple Implementation:
 
 ```cs
+public class ExampleAttribute : Attribute { }
 public class ExamplePropertyVisitor : IPropertyBagVisitor, IPropertyVisitor {
     protected override void IPropertyBagVisitor.Visit<TContainer>(IPropertyBag<TContainer> propertyBag, ref TContainer container) {
-        foreach (var property in propertyBag.Properties)
+        foreach (var property in propertyBag.GetProperties(ref container))
         {
+            if (property.HasAttribute<ExampleAttribute>())
+            {
+                // do something
+            }
             property.Accept(this, ref container);
         }
     }

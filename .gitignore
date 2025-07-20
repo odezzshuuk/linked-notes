@@ -1,8 +1,10 @@
 .obsidian
 .vscode
 .venv
+.opencode
 
 *.DS_Store
 prompt.md
+opencode.json
 
 

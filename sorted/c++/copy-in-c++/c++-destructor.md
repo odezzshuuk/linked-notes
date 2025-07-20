@@ -1,26 +1,26 @@
-# 析构函数
+# Destructor
 
-- 通过[[直接管理内存]]创建的类内对象, 需要析构函数重点关注
-- 形式: `~Foo() {}`
-- 释放对象使用的资源
+- Objects within a class created through [[direct memory management]] require special attention from the destructor.
+- Format: `~Foo() {}`
+- Releases the resources used by the object.
 
-> 显式声明后, 需要给出定义
-
-***
-
-- 没有返回值, 
-- 也不受参数
-- 因此也不能被重载
+> After an explicit declaration, a definition must be provided.
 
 ***
 
-- 析构函数按成员按初始化顺序, 逆序销毁
+- No return value.
+- Does not take parameters.
+- Therefore, it cannot be overloaded.
 
-自动调用析构函数的情况
+***
 
-- 变量离开作用域
-- 对象被销毁时，其成员被销毁
-- 容器(无论标准库容器还是数组), 其元素被销毁
-- 对于动态分配对象，当对指向它的指针应用`delete`运算符时被销毁
-- 临时对象，当创建它的表达式结束时被销毁
+- The destructor destroys members in the reverse order of their initialization.
+
+Situations where the destructor is called automatically:
+
+- A variable goes out of scope.
+- When an object is destroyed, its members are destroyed.
+- For a container (whether a standard library container or an array), its elements are destroyed.
+- For a dynamically allocated object, it is destroyed when the `delete` operator is applied to a pointer to it.
+- For a temporary object, it is destroyed when the expression that created it ends.
 

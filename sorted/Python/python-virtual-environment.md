@@ -47,7 +47,7 @@ echo $VIRTUAL_ENV
 $env:VIRTUAL_ENV
 ```
 
-## deactivate virtual environment
+## Deactivate/Quit Virtual Environment
 
 ```sh
 deactivate

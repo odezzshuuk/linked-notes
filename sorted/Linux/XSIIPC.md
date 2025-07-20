@@ -1,24 +1,24 @@
 # XSI IPC
 
-- InterProcess Communication, 简称IPC
-- 子进程通过fork()可以继承父进程的IPC资源
-- XSI IPC资源类型: [[消息队列]]，[[linux-systemv-semaphore]]，[共享内存](linux-shared-memory-segment.md)
+- InterProcess Communication, abbreviated as IPC
+- Child processes can inherit IPC resources from parent processes through fork()
+- XSI IPC resource types: [[Message Queue]], [[linux-systemv-semaphore]], [Shared Memory](linux-shared-memory-segment.md)
 
-## 相似特征
+## Similar Features
 
-- 标识符(identifier)
-  - 作用类似文件描述符 
-  - 相同类型的ipc资源标识符不会重复
-  - 获取方式：[[msgget()函数]], [[semget()函数]], [[shmget()函数]]
-- 键(key)
-  - 数据类型key_t
-  - 方便多个进程引用
-  - 可以是指定的常数正整数
-  - 作用类似于文件名
-  - [[ftok()函数]] 返回ipc资源生成标识符所需的key
-- 权限结构, [[ipc_perm结构体]]
+- Identifier
+  - Functions similar to file descriptors
+  - Identifiers for the same type of IPC resources will not be duplicated
+  - Access methods: [[msgget() function]], [[semget() function]], [[shmget() function]]
+- Key
+  - Data type key_t
+  - Facilitates reference by multiple processes
+  - Can be a specified positive integer constant
+  - Functions similar to a filename
+  - [[ftok() function]] returns the key needed to generate an identifier for IPC resources
+- Permission structure, [[ipc_perm structure]]
 
-## 三个get函数
+## Three get functions
 
-- 相似的参数key和flag
-- key为参数IPC_PRIVATE,或和当前某种类型ipc结构无关，则需要设置flag的IPC_CREAT标志位
+- Similar parameters key and flag
+- When key is IPC_PRIVATE parameter, or is unrelated to current IPC structure of a certain type, the IPC_CREAT flag bit needs to be set in flag

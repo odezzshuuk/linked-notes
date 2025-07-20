@@ -1,4 +1,5 @@
-# which命令
+# which command
 
-- `which [-a] command` 寻找同名执行文件, 不加 -a 则只显示第一个
-- `which`后接完整可执行文件名
+- `which [-a] command` finds executable files with the same name. Without the `-a` option, it only displays the first one found.
+- `which` should be followed by a complete executable file name.
+

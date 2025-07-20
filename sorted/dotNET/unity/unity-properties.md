@@ -19,17 +19,24 @@ Roles of each class corresponding to the visitor design pattern
 
 ## Glossarys
 
+Container: a .Net object that has properties
+
+Property: a member of a container that can be visited by a visitor
+
+- Which means a reference property can also be a container
+- And a container can also be a property of another container
+
+## API
+
 [Property Bag](unity-properties-propertybag.md)
 
 [Property Visitor](unity-properties-propertyvisitor.md)
+
+[Property Path](unity-properties-propertypath.md)
 
 [Property Container](unity-properties-propertycontainer.md)
 
 [Unity Object Property](unity-properties-property.md)
 
-
-### Property Path
-
-- string that describe the location of a property withwin a container object
-
 ## Container Object
+
