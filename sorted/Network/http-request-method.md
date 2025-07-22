@@ -2,25 +2,25 @@
 
 ## GET
 
-- retrieves data specified by [URI](computer-network-uri.md)
-- send data in [query string](computer-network-url.md#query-string)
-- data length is limited by url or browser
-- can be cached by browser cause it's considered as safe
-- **Considered idempotence**
-  - meaning multiple identical request should have the same effect as a single request
-  - have not side effect on the server
+- Retrieves data specified by [URI](computer-network-uri.md).
+- Sends data in [query string](computer-network-url.md#query-string).
+- Data length is limited by URL or browser.
+- Can be cached by browser because it's considered safe.
+- **Considered idempotent**:
+  - Meaning multiple identical requests should have the same effect as a single request.
+  - Has no side effect on the server.
 
 ## POST
 
-- often used to submit form, upload files
-- send data in [request body](http-request-message.md#request-body)
-- data length is not limited
-- **Not considered idempotence**: cause it may **change server** state
+- Often used to submit forms, upload files.
+- Sends data in [request body](http-request-message.md#request-body).
+- Data length is not limited.
+- **Not considered idempotent**: because it may **change server** state.
 
 ## PUT
 
-- Commonly Used to **update** existing resource
-- **Considered idempotence** like [GET](#get)
+- Commonly used to **update** existing resources.
+- **Considered idempotent** like [GET](#get).
 
 ## DELETE
 
@@ -30,11 +30,11 @@
 
 ## OPTIONS
 
-- request the information of communication options available for the target resource or server, include
-  - allowed methods
-  - headers
-  - authentication requirement
-  - supported content types
+- Requests information about communication options available for the target resource or server, including:
+  - Allowed methods
+  - Headers
+  - Authentication requirements
+  - Supported content types
   - ...
-- often used in the context of Cross-Origin Resource Sharing
+- Often used in the context of Cross-Origin Resource Sharing.
 

@@ -2,19 +2,18 @@
 
 ## What It is
 
-- use to check if server support CORS
+- Used to check if the server supports CORS.
 
 ## Send Preflighted Request
 
-- header method is [`OPTIONS`](http-request-method.md#options)
-- browser automatically send preflighted request
-- send a http request to check if server support CORS, generally include following headers
+- Header method is [`OPTIONS`](http-request-method.md#options).
+- Browser automatically sends preflighted request.
+- Sends an HTTP request to check if the server supports CORS, generally including the following headers:
   - Origin
   - Access-Control-Request-Method
   - Access-Control-Request-Headers
 
-code that will trigger preflighted request
-
+Code that will trigger a preflighted request:
 
 ```js
 const xhr = new XMLHttpRequest();
@@ -25,50 +24,50 @@ xhr.onreadystatechange = handler;
 xhr.send('<person><name>Arun</name></person>');
 ```
 
-- Cause `Content-Type` header is `application/xml`, so browser will send preflighted request
+- Because the `Content-Type` header is `application/xml`, the browser will send a preflighted request.
 
-interact process of client and server
+Interaction process of client and server:
 
-- first interaction is preflighted request/response
+- The first interaction is a preflighted request/response.
 
-1. client send preflighted request
+1. Client sends preflighted request.
 
-- contains `OPTIONS` [request line](http-request-message.md#request-line)
-- contains `Origin: http://foo.example` [header field](http-request-header.md)
-- contains `Access-Control-Request-*` [header field](http-request-header.md)
+- Contains `OPTIONS` [request line](http-request-message.md#request-line).
+- Contains `Origin: http://foo.example` [header field](http-request-header.md).
+- Contains `Access-Control-Request-*` [header field](http-request-header.md).
 
-2. server side response http preflighted request
+2. Server responds to HTTP preflighted request.
 
-- include `Access-Control-Allow-*: http://foo.example` [header field](http-response-message.md#header-lines)
+- Includes `Access-Control-Allow-Origin: http://foo.example` [header field](http-response-message.md#header-lines).
 
 3. POST Request
 
-- won't carry `Access-Control-Request-*` [header field](http-request-header.md)
+- Will not carry `Access-Control-Request-*` [header field](http-request-header.md).
 
-4. Server side request
+4. Server side response
 
-- Carry `Allow-Control-Allow-Origin` [header field](http-request-header.md)
-- Carry `Vary: Accept-Encoding, Origin` [header field](http-request-header.md) 
+- Carries `Access-Control-Allow-Origin` [header field](http-request-header.md).
+- Carries `Vary: Accept-Encoding, Origin` [header field](http-request-header.md).
 
-## condition that will not trigger preflighted request
+## Condition that will not trigger a preflighted request
 
-- request method is one `GET`, `HEAD`, `POST`之一
-- 包含自动设置的头部字段
+- Request method is one of `GET`, `HEAD`, `POST`.
+- Contains automatically set header fields:
   - Accept
   - Accept-Language
   - Content-Language
   - Content-Type
-    - 只限于`application/x-www-form-urlencoded`, `multipart/form-data`, `text/plain`
-- 任意[XMLHttpRequest](javascript-bom-xmlhttprequest.md)对象没有注册任何事件监听器
-- 没有使用任何[ReadableStream]对象
+    - Only limited to `application/x-www-form-urlencoded`, `multipart/form-data`, `text/plain`.
+- Any [XMLHttpRequest](javascript-bom-xmlhttprequest.md) object has no event listeners registered.
+- No [ReadableStream] object is used.
 
-## 如果服务器允许, 会响应这个预检请求
+## If the server allows, it will respond to this preflight request.
 
-一般包括以下几个头部字段
+Generally includes the following header fields:
 
 - Access-Control-Allow-Origin
 - Access-Control-Allow-Methods
 - Access-Control-Allow-Headers
-- Access-Control-Max-Age: 在此时间内浏览器无需为同一请求再次发送预检请求
+- Access-Control-Max-Age: During this time, the browser does not need to send a preflight request again for the same request.
 - Access-Control-Allow-Credentials
 - Access-Control-Expose-Headers

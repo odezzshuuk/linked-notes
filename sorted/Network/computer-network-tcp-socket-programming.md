@@ -2,16 +2,16 @@
 
 ```mermaid
 flowchart LR
-A["创建套接字, port = x:<br>serverSocket = <br>socket()"]
+A["Create socket, port = x:<br>serverSocket = <br>socket()"]
 Atmp[ ]
-B["等待入连接请求<br>connectionSocket=<br>serverSocket.accept()"]
-C["从connectionSocket<br>读请求"]
-D["像connectionScoket<br>写响应"]
-E["关闭connectioSocket"]
-A1["创建连接到serverIP<br>的套接字,port=x:clientSocket=socket()"]
-B1["使用clientSocket<br>发送请求"]
-C1["从clientSocket读响应"]
-D1["关闭clientSocket"]
+B["Wait for incoming connection request<br>connectionSocket=<br>serverSocket.accept()"]
+C["Read request from<br>connectionSocket"]
+D["Write response to<br>connectionSocket"]
+E["Close connectionSocket"]
+A1["Create socket connected to serverIP<br>port=x:clientSocket=socket()"]
+B1["Send request using<br>clientSocket"]
+C1["Read response from clientSocket"]
+D1["Close clientSocket"]
 
 subgraph server
 A --> Atmp
@@ -43,19 +43,19 @@ clientSocket = socket(AF_INET, SOCK_STREAM)
 
 clientSocket.connect((serverName, serverPort))  
 
-# 服务器名称，服务器端口
+# Server name, server port
 
 sentence = input('Input lowercase sentence:')  
 
-# 从用户端获得输入，放入变量sentence
+# Get input from user, put into variable sentence
 
 clientSocket.send(sentence.encode())  
 
-# 发送socket to Server
+# Send socket to Server
 
 modifiedSentence = clientSocket.recv(1024)  
 
-# 接收套接字，1024是缓存长度
+# Receive socket, 1024 is buffer length
 
 print('From Server: ', modifiedSentence.decode())  
 clientSocket.close()
@@ -69,26 +69,26 @@ from socket import *
 serverPort = 12000  
 serverSocket = socket(AF_INET, SOCK_STREAM)  
 
-# 创建Socket
+# Create Socket
 
 serverSocket.bind(('', serverPort))  
 
-# 将服务器端口serverPort与套接字关联
+# Associate serverPort with the socket
 
 serverSocket.listen(1)  
 
-# 让服务器聆听来自客户的TCP连接请求
+# Make the server listen for TCP connection requests from clients
 
 print('The server is ready to receive')  
 
 while True:  
     connectionSocket, addr = serverSocket.accept()  
     
-    # 创建客户专用的套接字connectionSocket
+    # Create a dedicated socket connectionSocket for the client
     
     sentence = connectionSocket.recv(1024).decode()  
     
-    # 接收用户发送的字节
+    # Receive bytes sent by the user
     
     capitalizedSentence = sentence.upper()  
     connectionSocket.send(capitalizedSentence.encode())  

@@ -4,9 +4,9 @@
 
 [Subresource Integrity]()
 
-- 使浏览器能够验证他们获取的资源的完整性, 是否存在被篡改的可能性
-- 原理允许浏览器提供一个要获取的资源的cryptographic hash值, 获取资源的cryptographic hash值必须匹配
+- Enables browsers to verify the integrity of the resources they fetch, checking for potential tampering.
+- The principle allows the browser to provide a cryptographic hash value of the resource to be fetched; the cryptographic hash value of the fetched resource must match.
 
-how helps
+How it helps:
 
-- 使用[CDN](/sorted/frontend/cdn.md)时, 避免CDN获取的资源被攻击者篡改
+- When using a [CDN](/sorted/frontend/cdn.md), it prevents attackers from tampering with resources fetched from the CDN.

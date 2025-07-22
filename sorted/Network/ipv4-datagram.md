@@ -4,65 +4,65 @@
 
 <table align="center">
 	<tr align ="center">
-		<td>4位<br>版本号</td>
-		<td>4位<br>头部长度</td>
-		<td colspan ="2">8位服务类型
-			<br>(TOS)Type Of Service
+		<td>4-bit<br>Version</td>
+		<td>4-bit<br>Header Length</td>
+		<td colspan ="2">8-bit Type Of Service
+			<br>(TOS)
 		</td>
-		<td colspan = "4">16位总长度(字节数)</td>
+		<td colspan = "4">16-bit Total Length (bytes)</td>
 	</tr>
 	<tr align="center">
-		<td colspan = "4">16位标识</td>
-		<td>3位<br>标志</td>
-		<td colspan ="3">13位片偏移</td>
+		<td colspan = "4">16-bit Identification</td>
+		<td>3-bit<br>Flags</td>
+		<td colspan ="3">13-bit Fragment Offset</td>
 	</tr>
 	<tr align="center">
-		<td colspan = "2">8位生存时间<br>(TTL)</td>
-		<td colspan = "2">8位生存协议</td>
-		<td colspan ="4">16位头部校验和</td>
+		<td colspan = "2">8-bit Time To Live<br>(TTL)</td>
+		<td colspan = "2">8-bit Protocol</td>
+		<td colspan ="4">16-bit Header Checksum</td>
 	</tr>
 	<tr align="center">
-		<td colspan = "8">32位源端IP地址</td>
+		<td colspan = "8">32-bit Source IP Address</td>
 	</tr>
 	<tr align="center">
-		<td colspan = "8">32位目的端IP地址</td>
+		<td colspan = "8">32-bit Destination IP Address</td>
 	</tr>
 	<tr align="center">
-		<td colspan = "8">选项，最多40字节</td>
+		<td colspan = "8">Options, max 40 bytes</td>
 	</tr>
 	<tr align="center">
-		<td colspan = "8">数据</td>
+		<td colspan = "8">Data</td>
 	</tr>
 </table>
 
-- 4bits version number: 指定IP协议的版本。对IPv4来说，其值是4。其他IPv4协议的扩展版本（如SIP协议和PIP协议），则具有不同的版本号（它们的头部结构也和图2-1不同）。
-- 4位首部长度（header length）标识该IP头部有多少个32 bit字（4字节）,一般是[computer-network-transport-layer-datagram](computer-network-transport-layer-datagram.md)开始的位置。因为4位最大能表示15，所以IP头部最长是60字节。
-- 8位服务类型（Type Of Service，TOS）
-  - 包括一个3位的优先权字段（现在已经被忽略）
-  - 4位的TOS字段
-    - 最小延时
-    - 最大吞吐量
-    - 最高可靠性
-    - 最小费用
-	- 应用程序根据实际需要设置
-  - 1位保留字段（必须置0）
-- 16位总长度是指IP数据报的总长度
-  - 长度的单位是字节
-  - 最大长度是65535($2^{16}-1$)字节
-  - 数据报超过MTU限制会被分片传输
-- 16位标识
-  - 唯一标识主机发送的每一个数据报
-  - 随机生成
-  - 每发送一个数值+1
-  - 同一数据的所有分片具有相同标识值
-- 3位标志
-- 13位分片位移
-- 8位生存时间
-- 8位协议
-- 16位头部校验和
-- 32位源端IP地址和目的端IP地址
-- 可选字段40字节
-  - 记录路由
-  - 时间戳
-  - 松散源路由选择
-  - 严格源路由选择
+- 4-bit version number: Specifies the version of the IP protocol. For IPv4, its value is 4. Other extended versions of the IPv4 protocol (such as SIP and PIP protocols) have different version numbers (and their header structures are also different from Figure 2-1).
+- 4-bit header length: Identifies how many 32-bit words (4 bytes) are in the IP header, generally the starting position of the [computer-network-transport-layer-datagram](computer-network-transport-layer-datagram.md). Since 4 bits can represent a maximum of 15, the maximum length of the IP header is 60 bytes.
+- 8-bit Type Of Service (TOS):
+  - Includes a 3-bit precedence field (now ignored).
+  - 4-bit TOS field:
+    - Minimum delay
+    - Maximum throughput
+    - Highest reliability
+    - Minimum cost
+	- Applications set according to actual needs.
+  - 1-bit reserved field (must be 0).
+- 16-bit total length: Refers to the total length of the IP datagram.
+  - The unit of length is bytes.
+  - The maximum length is 65535 ($2^{16}-1$) bytes.
+  - Datagrams exceeding the MTU limit will be fragmented for transmission.
+- 16-bit identification:
+  - Uniquely identifies each datagram sent by the host.
+  - Randomly generated.
+  - Increments by 1 for each sent value.
+  - All fragments of the same data have the same identification value.
+- 3-bit flags
+- 13-bit fragment offset
+- 8-bit Time To Live
+- 8-bit protocol
+- 16-bit header checksum
+- 32-bit source IP address and destination IP address
+- Optional field 40 bytes:
+  - Record route
+  - Timestamp
+  - Loose source routing
+  - Strict source routing

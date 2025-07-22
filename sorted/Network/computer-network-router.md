@@ -1,36 +1,36 @@
 # Computer Network - Router
 
-- 作用于[网络层](网络层.md)
-- [computer-network-end-system](computer-network-end-system.md)到任何其他远端系统的路径上的第一台路由器，称为边缘路由器
-- 路由器的输入端口、输出端口和交换结构几乎总是用硬件实现
+- Operates at the [network layer](网络层.md).
+- The first router on the path from a [computer-network-end-system](computer-network-end-system.md) to any other remote system is called the edge router.
+- The router's input ports, output ports, and switching fabric are almost always implemented in hardware.
 
-## 输入端口
+## Input Port
 
-- 物理层功能的终结
-- 还要与位与如链路远端的数据链路层交互来执行[数据链路层](数据链路层.md)功能
-- 通过查询[转发表](转发表.md)决定路由器的输出端口
-- 执行属于[数据平面](数据平面.md)的功能
+- Termination of physical layer functions.
+- Also interacts with the data link layer at the remote end of the link to perform [data link layer](数据链路层.md) functions.
+- Determines the router's output port by querying the [forwarding table](转发表.md).
+- Performs functions belonging to the [data plane](数据平面.md).
 
-## 交换结构
+## Switching Fabric
 
-- 是路由器中的一个网络结构
-- 从输入端口交换到输出端口, 即转发
-- 交换方式
-  - 经内存交换
-  - 经总线交换
-  - 经互联网络交换
-  
-## 输出端口
+- Is a network structure within the router.
+- Switches from input port to output port, i.e., forwards.
+- Switching methods:
+  - Switching via memory
+  - Switching via bus
+  - Switching via interconnection network
 
-- 处理取出已经存放在输出端口内存中的分组并将其发送到输出链路上
-- 通过执行必要的数据链路层和物理层功能在输出链路上传输这些分组
+## Output Port
+
+- Handles taking packets already stored in the output port's memory and sending them to the output link.
+- Transmits these packets on the output link by performing necessary data link layer and physical layer functions.
 
 ```mermaid
 flowchart LR
-A["排队<br>(缓存管理)"] --> B["数据链路处理<br>(协议，封装)"]
-B --> C[线路端接]
+A["Queueing<br>(Buffer Management)"] --> B["Data Link Processing<br>(Protocol, Encapsulation)"]
+B --> C[Line Termination]
 ```
 
-## 路由选择处理器
+## Routing Processor
 
-- 执行路由器的[控制平面](控制平面.md)功能
+- Executes the router's [control plane](控制平面.md) functions.

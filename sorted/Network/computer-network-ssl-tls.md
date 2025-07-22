@@ -10,16 +10,16 @@
 
 ## What It Is
 
-- **Used to ensure client talking to the correct server**
-- A cryptographic protocol
-- Abbeviation of Secure [Socket](computer-network-socket.md) Layer
-- Which [Https](computer-network-https.md) is based on
-- More popularly protocol is TLS(Transport Layer Security)
+- **Used to ensure client talking to the correct server**.
+- A cryptographic protocol.
+- Abbreviation of Secure [Socket](computer-network-socket.md) Layer.
+- Which [Https](computer-network-https.md) is based on.
+- More popularly protocol is TLS (Transport Layer Security).
 
 ## Feature
 
-- server hold the [private key](computer-network-asymmetric-key.md#private-key)
-- server send digital certificate to client
+- Server holds the [private key](computer-network-asymmetric-key.md#private-key).
+- Server sends digital certificate to client.
 
 ## Entity in SSL/TLS
 
@@ -29,41 +29,41 @@
 
 Session Key
 
-- used to encrypt and decrypt **data**
-- a [symmetric key](computer-network-cryptographic-key.md#symmetric-key)
+- Used to encrypt and decrypt **data**.
+- A [symmetric key](computer-network-cryptographic-key.md#symmetric-key).
 
 ## Steps For Client To Trust A Server
 
-1. client [handshakes](computer-network-reliable-transmission.md#three-way-handshake) with server
+1. Client [handshakes](computer-network-reliable-transmission.md#three-way-handshake) with server.
 2. Server Hello
 
-- Client send hello message to server, in this message it tells server
-  - what TLS version it supports
-  - which [cipher suite](#cipher-suite) it supports
-- server send hello message to client, in this message it tells client
-  - what TLS version it chooses
-  - which cipher suite it chooses
-- server then send another [packet](computer-network-tcp-segment-structure.md) to client, which contains
-  - [digital certificate](ssl-tls-digital-certificates.md)
-  - which contains the [public key](computer-network-asymmetric-key.md#public-key)
-- server send FIN to client, which means the handshake is done
+- Client sends hello message to server, in this message it tells server:
+  - What TLS version it supports.
+  - Which [cipher suite](#cipher-suite) it supports.
+- Server sends hello message to client, in this message it tells client:
+  - What TLS version it chooses.
+  - Which cipher suite it chooses.
+- Server then sends another [packet](computer-network-tcp-segment-structure.md) to client, which contains:
+  - [Digital certificate](ssl-tls-digital-certificates.md).
+  - Which contains the [public key](computer-network-asymmetric-key.md#public-key).
+- Server sends FIN to client, which means the handshake is done.
 
-3. Certificate Verification. The Verification on my understanding
+3. Certificate Verification. The Verification on my understanding:
 
-- client [public key](computer-network-asymmetric-key.md#public-key) which
-  - stored in pre-installed [digital certificate](ssl-tls-digital-certificates.md) which
-    - issued by Root [CA](ssl-tls-certificate-authority.md)
-- will be decrypted by [private key](computer-network-asymmetric-key.md#private-key)
-  - stored in Root CA
+- Client [public key](computer-network-asymmetric-key.md#public-key) which:
+  - Stored in pre-installed [digital certificate](ssl-tls-digital-certificates.md) which:
+    - Issued by Root [CA](ssl-tls-certificate-authority.md).
+- Will be decrypted by [private key](computer-network-asymmetric-key.md#private-key).
+  - Stored in Root CA.
 
 4. Key Exchange
 
-- generate [Session Key](#session-key) by server's public key
-- used to encrypt and decrypt data between client and server
+- Generate [Session Key](#session-key) by server's public key.
+- Used to encrypt and decrypt data between client and server.
 
 5. Secure Data Transfer
 
-- use [Session Key](#session-key) to encrypt and decrypt data between client and server
+- Use [Session Key](#session-key) to encrypt and decrypt data between client and server.
 
 ## Trust Of Chain
 
@@ -73,13 +73,14 @@ Session Key
 
 [ssh](computer-network-ssh.md)
 
-- more emphasis on **communication** between client and server
+- More emphasis on **communication** between client and server.
 
 ## Question
 
 Certificate Verification is online or offline?
 
-- locally is offline
-- **maybe browser will do online verification**
+- Locally is offline.
+- **Maybe browser will do online verification**.
 
-Does digital certificate contains the private key?
+Does digital certificate contain the private key?
+

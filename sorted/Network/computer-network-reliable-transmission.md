@@ -6,7 +6,7 @@
 - `TCP SYN/ACK` From Server to Client
 - `TCP ACK` from server to Server
 
-## Four-way Handwave
+## Four-way Handshake
 
 Start With A send disconnect request
 
@@ -21,63 +21,63 @@ A ->> B: ACK
 
 ## Normal Case
 
-- 每发送完一个[network-group](network-group.md)就停止发送，等待对方确认，在收到确认后再发送下一个
-  - A发送完一个分组后，暂时保留已发送分组的副本
-  - 分组和确认分组都必须进行编号
-  - 超时计时器设置的重传时间应当比数据在分组传输的平均往返时间更长
+- After sending each [network-group](network-group.md), stop sending and wait for acknowledgment from the other party. Only after receiving the acknowledgment, send the next one.
+  - After A sends a packet, it temporarily keeps a copy of the sent packet.
+  - Both packets and acknowledgment packets must be numbered.
+  - The retransmission time set by the timeout timer should be longer than the average round-trip time of data transmission in the packet.
 
 ```mermaid
 sequenceDiagram
-A ->> B: 发送分组M1
-Note left of A:RTT 
-B ->> A: 确认M1
-A -) B: 继续发送分组M2
-Note left of A:RTT 
-B ->> A: 确认M2
+A ->> B: Send packet M1
+Note left of A: RTT
+B ->> A: Acknowledge M1
+A -) B: Continue sending packet M2
+Note left of A: RTT
+B ->> A: Acknowledge M2
 ```
 
-## 异常情况
+## Abnormal Cases
 
-### 1. 不返回信息
+### 1. No response
 
 ```mermaid
 sequenceDiagram
-participant A 
+participant A
 participant B
-A -x B: 发送有差错分组M1
-B --> A: 丢弃有差错M1,不发送任何信息
-Note left of A: 超时重传
-A ->> B: 发送分组M1
-B -->> A: 确认M1
+A -x B: Send erroneous packet M1
+B --> A: Discard erroneous M1, do not send any information
+Note left of A: Timeout retransmission
+A ->> B: Send packet M1
+B -->> A: Acknowledge M1
 ```
 
-### 2. B发送的的确认信息丢失
+### 2. Acknowledgment from B is lost
 
-1. A重传
-2. B丢弃重复的M1
-3. 向A发出确认
+1. A retransmits.
+2. B discards the duplicate M1.
+3. Sends acknowledgment to A.
 
 ```mermaid
 sequenceDiagram
-participant A 
+participant A
 participant B
-A ->> B: 发送有差错分组M1
-B --x A: 发送的确认信息丢失
-Note left of A: 超时重传
-A ->> B: 发送分组M1
-B -->> A: 确认M1
-A ->> B: 继续发送分组M2
+A ->> B: Send erroneous packet M1
+B --x A: Acknowledgment sent is lost
+Note left of A: Timeout retransmission
+A ->> B: Send packet M1
+B -->> A: Acknowledge M1
+A ->> B: Continue sending packet M2
 ```
 
-### 3. B发送的确认信息迟到 
+### 3. Acknowledgment from B is delayed
 
-1. A重传
-2. B丢弃重复的M1
+1. A retransmits.
+2. B discards the duplicate M1.
 
-## 连续ARQ协议
+## Go-Back-N ARQ Protocol (Continuous ARQ Protocol)
 
-- 发送方维持一个发送窗口，窗口中的分组都可连续发送出去, 而不需要等待对方确认, 提高[信道利用率](信道利用率.md)
-- 发送方每收到一个确认，就把发送窗口向前滑动一个分组位置
-- 接收方不必逐个发送确认，只对收到的最后一个分组发送确认，表示当前分组和在这之前的分组都已正确收到
+- The sender maintains a sending window, and all packets in the window can be sent continuously without waiting for acknowledgment from the other party, improving [channel utilization](信道利用率.md).
+- Each time the sender receives an acknowledgment, it slides the sending window forward by one packet position.
+- The receiver does not need to send acknowledgments one by one; it only sends an acknowledgment for the last received packet, indicating that the current packet and all preceding packets have been correctly received.
 
-[超时重传](超时重传.md)
+[Timeout Retransmission](超时重传.md)

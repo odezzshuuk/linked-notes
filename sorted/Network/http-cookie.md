@@ -1,35 +1,35 @@
 # Cookie
 
 - [feature](#feature)
-- [工作原理](#工作原理)
+- [How it works](#how-it-works)
 - [set cookie to client](#set-cookie-to-client)
 - [cookies in request](#cookies-in-request)
 - [cookies properties](#cookies-properties)
-- [access to cookies by bowser console](#access-to-cookies-by-bowser-console)
-- [security problim](#security-problim)
-- [会话cookie和持久cookie](#会话cookie和持久cookie)
+- [access to cookies by browser console](#access-to-cookies-by-browser-console)
+- [security problem](#security-problem)
+- [Session cookies and persistent cookies](#session-cookies-and-persistent-cookies)
 
 ## feature
 
-- 保存在**客户端**中
-- 只保存字符串类型数据
-- 单个cookie大小限制为4KB
-- 每个**主机名**都有对应的cookie
-- **automatically** sent by browser to server
-- when cookie HttpOnly property is true, client-side javascript cannot access to cookie
+- Stored on the **client-side**.
+- Only stores string type data.
+- Single cookie size limit is 4KB.
+- Each **hostname** has corresponding cookies.
+- **automatically** sent by browser to server.
+- When cookie HttpOnly property is true, client-side javascript cannot access to cookie.
 
 ![cookie.svg](cookie.svg)
 
-## 工作原理
+## How it works
 
-- 用户首次访问服务器时, 服务器会在响应报文中设置一个cookie, 通过**Set-Cookie**[首部字段](http-response-message.md)来设置
-- 再次访问时, 浏览器会将cookie发送给服务器, 请求报文会携带**Cookie**[首部字段](http-request-message.md)字段
+- When a user first visits the server, the server sets a cookie in the response message using the **Set-Cookie** [header field](http-response-message.md).
+- When visiting again, the browser sends the cookie to the server; the request message carries the **Cookie** [header field](http-request-message.md).
 
 ## set cookie to client
 
-- 服务器通过**Set-Cookie**[首部字段](http-response-message.md)来设置cookie
+- The server sets cookies via the **Set-Cookie** [header field](http-response-message.md).
 
-use [nodejs express](nodejs-express-api-response.md)
+Use [nodejs express](nodejs-express-api-response.md)
 
 ```js
 import express from `express`;
@@ -42,14 +42,14 @@ app.get('/', (req, res) => {
 app.listen(3000);
 ```
 
-响应报文中包含`Set-Cookie`相关的字段
+The response message contains `Set-Cookie` related fields:
 
 ```http
 Set-Cookie: name=value; Max-Age=900000; Path=/; HttpOnly
 Set-Cookie: sky=blue; Path=/
 ```
 
-再次访问服务器时, 浏览器会将Cookie发送给服务器, Cookie字段looks like
+When visiting the server again, the browser sends the Cookie to the server. The Cookie field looks like:
 
 ```http
 Cookie: sky=blue; name=value
@@ -83,33 +83,33 @@ cookies: key1=value1; key2=value2; key3=value
 
 SameSite:
 
-- value is Strict, 阻止浏览器所有跨站点发送cookie, 虽然可以阻止csrf攻击, 但是也会导致cookie无法发送到常规链接, 如Github登录的用户无法访问其它发布在github上的链接
-- value is Lax
+- If the value is Strict, it prevents the browser from sending cookies across all cross-site requests. Although it can prevent CSRF attacks, it also prevents cookies from being sent to regular links, such as a user logged into Github being unable to access other links published on Github.
+- If the value is Lax
 
-## access to cookies by bowser console
+## access to cookies by browser console
 
-only can access to cookies which flag **`HttpOnly` is false**
+Only can access to cookies which flag **`HttpOnly` is false**.
 
 `document.cookies`
 
-## security problim
+## security problem
 
 - [csrf](web-csrf.md) attack
 
 [best example](https://github.com/learnwebcode/youtube-cookies-and-more/tree/main/01-cookies)
 
-## 会话cookie和持久cookie
+## Session cookies and persistent cookies
 
-- 会话cookie
-  - 一种临时cookie
-  - 退出浏览器时失效
-- 持久cookie
-  - 一种长期有效的cookie
-  - 通过设置过期时间来实现
-- 会话cookie和持久cookie的过期时间唯一区别
-  - 会话cookie
-    - 设置`Max-Age`为0
-    - 设置`Expires`为过去的时间来实现
-  - 持久cookie
-    - 设置`Max-Age`为正数
-    - 设置`Expires`为未来的时间
+- Session cookies
+  - A temporary cookie.
+  - Expires when the browser is closed.
+- Persistent cookies
+  - A long-term valid cookie.
+  - Achieved by setting an expiration time.
+- The only difference in expiration time between session cookies and persistent cookies:
+  - Session cookies:
+    - Set `Max-Age` to 0.
+    - Set `Expires` to a past time.
+  - Persistent cookies:
+    - Set `Max-Age` to a positive number.
+    - Set `Expires` to a future time.

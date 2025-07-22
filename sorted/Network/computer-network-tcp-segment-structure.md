@@ -7,8 +7,8 @@
 - [Reserved](#reserved)
 - [Flags](#flags)
 - [Window Size](#window-size)
-- [checksum](#checksum)
-- [urgent pointer](#urgent-pointer)
+- [Checksum](#checksum)
+- [Urgent Pointer](#urgent-pointer)
 - [Options](#options)
 
 ## Take A Look
@@ -17,7 +17,7 @@
 0x0000:  4500 0034 0014 0000 2e06 c005 4e8e d16e  E..4........N..n
 0x0010:  ac1e 0090 6c86 01bb 8e0a b73e 1095 9779  ....l......>...y
 0x0020:  8010 001c d202 0000 0101 080a 3803 7b55  ............8.{U
-0x0030:  4801 8100
+00030:  4801 8100
 ```
 
 ## TCP segment structure
@@ -43,17 +43,17 @@
 
 ## Sequence Number
 
-- 32bits sequence number
-- if [syn flag](#flags) is set,
+- 32-bit sequence number
+- If [SYN flag](#flags) is set,
 
 ## Acknowledgement Number
 
-- 32bits acknowledgement number(ack = )
+- 32-bit acknowledgment number (ack = )
 
 ## Data Offset
 
-- 4bits data offset
-- specify the size of TCP header
+- 4-bit data offset
+- Specifies the size of the TCP header
 
 ## Reserved
 
@@ -65,42 +65,43 @@
 - ECE:
 - URG: [Urgent pointer](#urgent-pointer) field is significant
 - ACK: Acknowledgment field
-  - All packets after the initial SYN packet send by client **should have** this flag set
+  - All packets after the initial SYN packet sent by the client **should have** this flag set
 - PSH:
 - RST: Reset the connection
 - SYN: Synchronize sequence numbers
   - Connection Initialization
   - Synchronization
-- FIN: last packet from sender
+- FIN: Last packet from sender
 
 
 ## Window Size
 
-> 16bits
+> 16 bits
 
-- specifies the number of window size units
-- that the sender of this segment is currently willing to receive
+- Specifies the number of window size units
+- That the sender of this segment is currently willing to receive
 
-## checksum
+## Checksum
 
-> 16bits
+> 16 bits
 
-- used for error-checking
+- Used for error-checking
 
-## urgent pointer
+## Urgent Pointer
 
-> 16bits
+> 16 bits
 
-- used to send urgent data byte
+- Used to send urgent data byte
 
 ## Options
 
 <table>
     <tr>
-        <td>kind(1byte)</td>
-        <td>length(1byte)</td>
-        <td>info(remain byte)</td>
+        <td>kind (1 byte)</td>
+        <td>length (1 byte)</td>
+        <td>info (remaining bytes)</td>
    </tr>
 </table>
 
-- kind can be 0~8
+- Kind can be 0~8
+

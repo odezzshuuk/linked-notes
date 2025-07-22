@@ -1,6 +1,6 @@
 # Http - Request Message
 
-## typecal request message
+## Typical Request Message
 
 ```http
 GET /api/data HTTP/1.1
@@ -13,20 +13,20 @@ Connection: keep-alive
 
 <content>
 ```
-> when request method is post, the content is the form provided by user
+> When the request method is POST, the content is the form provided by the user.
 
-## request line
+## Request Line
 
 `GET /api/data HTTP/1.1` request line
 
-- first line of request message, including
+- First line of the request message, including:
   - [request method](http-request-method.md)
   - [URI](computer-network-uri.md)
   - request version
 
-request method, including GET, POST, HEAD, PUT, DELETE
+Request method, including GET, POST, HEAD, PUT, DELETE.
 
-- [method detail](http-request-method.md)
+- [Method detail](http-request-method.md)
 
 ## Header Fields
 
@@ -34,13 +34,13 @@ request method, including GET, POST, HEAD, PUT, DELETE
 
 ## Empty Line
 
-represent `<CR><LF>`
+Represents `<CR><LF>`.
 
 - `<CR>`
 - `<LF>`
 
-## request body
+## Request Body
 
-- when request method is GET, request body is empty
-- when request method is POST, request body is the [form](html-element-form.md) provided by user
+- When the request method is GET, the request body is empty.
+- When the request method is POST, the request body is the [form](html-element-form.md) provided by the user.
 

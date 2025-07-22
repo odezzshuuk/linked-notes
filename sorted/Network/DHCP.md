@@ -1,4 +1,4 @@
-# 动态主机配置协议
+# Dynamic Host Configuration Protocol
 
-- 某组织获得一块地址，可为本组织内的主机与路由器接口逐个分配IP地址
-- 网络管理员能够配置DHCP，使主机每次与网络连接时能得到一个相同得ip, 也可分配临时ip
+- An organization obtains a block of addresses and can assign IP addresses to hosts and router interfaces within the organization one by one.
+- Network administrators can configure DHCP to allow hosts to obtain the same IP address each time they connect to the network, or to assign temporary IP addresses.

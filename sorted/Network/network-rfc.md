@@ -1,12 +1,11 @@
 # RFC
 
-[官方说明](https://www.rfc-editor.org/rfc-index.html)
+[Official description](https://www.rfc-editor.org/rfc-index.html)
 
-- 标准文档RFC(Request For Comment)
-  - 由IETF定义
-  
+- Standard document RFC (Request For Comment)
+  - Defined by IETF
+
 ## IETF
 
-- 因特网工程任务组
 - Internet Engineering Task Force, IETF
-- 定义了TCP，IP，HTTP(用于web）, SMTP(用于电子邮件)等协议
+- Defines protocols such as TCP, IP, HTTP (for web), SMTP (for email), etc.

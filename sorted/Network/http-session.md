@@ -1,7 +1,6 @@
 # Session
 
-- 保存在服务器中
-- 单个session保存数据没有限制
+- Stored on the server.
+- No limit on the amount of data a single session can store.
 
-## session
-
+## Session

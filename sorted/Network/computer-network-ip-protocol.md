@@ -1,17 +1,16 @@
 # IP Protocol
 
-- IP头部信息
-  - 出现在IP数据报中，用于指定IP通信的源端IP地址、目标端的IP地址, 指导IP分片和重组，以及指定部分通信行为
-- IP数据报的路由和转发
-  - 发生在除目标机器之外的所有主机上和路由器上
-  - 决定数据报是否应该转发以及如何转发
+- IP header information:
+  - Appears in IP datagrams, used to specify the source IP address and destination IP address for IP communication, guide IP fragmentation and reassembly, and specify some communication behaviors.
+- IP datagram routing and forwarding:
+  - Occurs on all hosts and routers except the destination machine.
+  - Determines whether and how datagrams should be forwarded.
 
+## Characteristics of IP Service
 
-## IP服务的特点
-
-- 提供**无状态，无连接，不可靠**的服务
-- 无状态：IP通信双方不同步传输数据的状态信息
-- 无连接： 不长久的位置对方的任何信息
-- 不可靠：不保证准确到达接收端
-  - 比如发送时间过长或[IP数据报](ipv4数据报.md)不正确
-  - 发送失败会通知上层协议，并且不会试图重传
+- Provides **stateless, connectionless, unreliable** service.
+- Stateless: IP communication parties do not synchronize the state information of data transmission.
+- Connectionless: Does not permanently store any information about the other party.
+- Unreliable: Does not guarantee accurate arrival at the receiver.
+  - For example, if the transmission time is too long or the [IP datagram](ipv4数据报.md) is incorrect.
+  - If transmission fails, it will notify the upper layer protocol and will not attempt retransmission.

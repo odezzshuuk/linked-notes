@@ -1,14 +1,14 @@
 # URI
 
 - [Syntax](#syntax)
-- [opaque URI](#opaque-uri)
-- [hierarchical URI](#hierarchical-uri)
+- [Opaque URI](#opaque-uri)
+- [Hierarchical URI](#hierarchical-uri)
 
 ## Syntax
 
 `[scheme]://[authority][path][?query][#fragment]`
 
-for example
+For example:
 
 ```
 https://www.example.com/products/laptops?brand=dell&price=1000#section-1`
@@ -22,9 +22,9 @@ https://www.example.com/products/laptops?brand=dell&price=1000#section-1`
 
 ## Encoded URI
 
-- uri may have special characters, which can not be transmit over the internet
+- URI may have special characters, which cannot be transmitted over the internet.
 
-## opaque URI
+## Opaque URI
 
 ```text
 mailto: java-net@www.example.com
@@ -32,7 +32,7 @@ news: comp.lang.java
 urn:isbn:096139210x
 ```
 
-## hierarchical URI
+## Hierarchical URI
 
 ```text
 http://exaple.com/languages/java/
@@ -41,13 +41,13 @@ sample/a/index.html#28
 file:///~/calendar
 ```
 
-- 需要进一步解析的hierarchical URI语法
+- Hierarchical URI syntax that needs further parsing:
 
 `[scheme:][//authority][path][?query][#fragment]`
 
-- 基于服务器的hierarchical URI语法
+- Server-based hierarchical URI syntax:
 
-> 目前所用的URI方案几乎都是基于服务器的hierarchical URI语法
+> Currently, almost all URI schemes used are based on server-based hierarchical URI syntax.
 
 `[user-info@][host][:port]`
 

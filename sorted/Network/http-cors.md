@@ -3,16 +3,14 @@
 ## What It Is
 
 - CORS: Cross-Origin Resource Sharing
-- allow web application servers to control cross-origin requests
+- Allows web application servers to control cross-origin requests.
 
-> there are something related to [XMLHttpRequest](javascript-bom-xmlhttprequest.md)
+> There are some things related to [XMLHttpRequest](javascript-bom-xmlhttprequest.md).
 
-## What Indicate there is a CORS
+## What Indicates there is a CORS issue
 
-- message like `net::ERR_FAILED 200 (OK)`
+- Message like `net::ERR_FAILED 200 (OK)`.
 
 ## Preflighted Requests
 
 [Preflight Request](http-cors-preflighted-requests.md)
-
-

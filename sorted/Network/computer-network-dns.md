@@ -3,19 +3,19 @@
 ## What Is DNS
 
 - DNS: Domain Name System
-- Is a Service that translate [domain name](computer-network-domain-name.md) to [IP address](computer-network-ip-address.md)
-- like a phonebook
-- provides services
-  - host aliasing
-  - mail server aliasing
-  - load distribution
+- Is a Service that translates [domain name](computer-network-domain-name.md) to [IP address](computer-network-ip-address.md).
+- Like a phonebook.
+- Provides services:
+  - Host aliasing
+  - Mail server aliasing
+  - Load distribution
 
 ## Why DNS
 
-1. [routers](computer-network-router.md) deal with fixed-length [IP addresses](computer-network-ip-address.md)
-2. users are better at remembering [domain names](computer-network-domain-name.md)
+1. [Routers](computer-network-router.md) deal with fixed-length [IP addresses](computer-network-ip-address.md).
+2. Users are better at remembering [domain names](computer-network-domain-name.md).
 
-## What Happened When Typing A Domain Name In Browser
+## What Happens When Typing A Domain Name In Browser
 
 
 
@@ -23,28 +23,28 @@
 
 <table align="center">
 	<tr align ="center">
-		<td>16位标识</td>
-		<td>16位标志</td>
+		<td>16-bit Identification</td>
+		<td>16-bit Flags</td>
 	</tr>
 	<tr align ="center">
-		<td>16位问题个数</td>
-		<td>16位应答资源记录个数</td>
+		<td>16-bit Number of Questions</td>
+		<td>16-bit Number of Answer Resource Records</td>
 	</tr>
 	<tr align ="center">
-		<td>16位授权资源记录数目</td>
-		<td>16位额外的资源记录数目</td>
+		<td>16-bit Number of Authority Resource Records</td>
+		<td>16-bit Number of Additional Resource Records</td>
 	</tr>
 	<tr align ="center">
-		<td colspan="2">查询问题, 长度可变</td>
+		<td colspan="2">Query Questions, variable length</td>
 	</tr>
 	<tr align ="center">
-		<td colspan="2">应答(资源记录数目可变，长度可变)</td>
+		<td colspan="2">Answers (variable number of resource records, variable length)</td>
 	</tr>
 	<tr align ="center">
-		<td colspan="2">授权(资源记录数目可变，长度可变)</td>
+		<td colspan="2">Authority (variable number of resource records, variable length)</td>
 	</tr>
 	<tr align ="center">
-		<td colspan="2">额外信息(资源记录数目可变，长度可变)</td>
+		<td colspan="2">Additional Information (variable number of resource records, variable length)</td>
 	</tr>
 </table>
 

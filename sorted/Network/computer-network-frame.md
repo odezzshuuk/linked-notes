@@ -1,26 +1,26 @@
 # Computer Network - Frame
 
-- 传输媒介不同, 帧的类型也不同
-  - [以太网](以太网.md)帧
-  - [令牌环](令牌环.md)帧
+- Different transmission media have different frame types.
+  - [Ethernet](以太网.md) frame
+  - [Token Ring](令牌环.md) frame
 
-## 以太网帧
+## Ethernet Frame
 
 <table>
     <tr align="center">
-        <td>目的物理地址</td>
-        <td>源物理地址</td>
-        <td>类型</td>
-        <td>数据</td>
+        <td>Destination Physical Address</td>
+        <td>Source Physical Address</td>
+        <td>Type</td>
+        <td>Data</td>
         <td>CRC</td>
     </tr>
     <tr align="center">
-        <td>6字节</td>
-        <td>6字节</td>
-        <td>2字节</td>
-        <td>46~1500字节</td>
-        <td>4字节</td>
+        <td>6 bytes</td>
+        <td>6 bytes</td>
+        <td>2 bytes</td>
+        <td>46~1500 bytes</td>
+        <td>4 bytes</td>
     </tr>
 </table>
-- 最大传输单元MTU，是指协议能携带多少上层数据, 上表中MTU是1500字节
-- ARP的请求/应答报文属于帧的数据
+- Maximum Transmission Unit (MTU) refers to how much upper-layer data a protocol can carry. In the table above, the MTU is 1500 bytes.
+- ARP request/response messages belong to the frame data.

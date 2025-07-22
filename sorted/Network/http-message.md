@@ -2,14 +2,14 @@
 
 ## What Is This
 
-- is [formatted message](#message-format) used to transfer data between client and server
-- divide into two parts
+- Is a [formatted message](#message-format) used to transfer data between client and server.
+- Divided into two parts:
   - [request message](#request-message)
   - [response message](#response-message)
 
 ## Message format
 
-- encode character set: ISO-8859-1
+- Encode character set: ISO-8859-1
 
 <table>
   <tr>
@@ -39,11 +39,11 @@
 
 [content encode](http-content-encode.md)
 
-## take look at message header
+## Take a look at message header
 
-- store in format `key: value`
+- Stored in format `key: value`.
 
-use response message as example
+Use response message as example:
 
 ```http
 HTTP/1.1 200 OK
@@ -76,7 +76,7 @@ Age: 7
 
 ```
 
-header field in above message is:
+Header fields in the above message are:
 
 - `Content-Type`
 - `Content-Length`
@@ -86,10 +86,11 @@ header field in above message is:
 - `Date`
 - `ETag`
 - `Server`
-- `Strict-Transport-security`
+- `Strict-Transport-Security`
 - `X-Content-Type-Options`
 - `X-Frame-Options`
 - `X-XSS-Protection`
 - `Vary`
 - `Age`
+
 

@@ -1,5 +1,5 @@
-# 半关闭状态
+# Half-Close State
 
-- TCP协议允许一端可以发送结束报文段给对方，表示本端已完成发送，但继续接受来自对方的数据
-- 允许两个方向的数据传输被独立关闭
-- [socket](socket.md)网络编程接口通过shutdown函数提供了对半关闭状态的支持
+- The TCP protocol allows one end to send a FIN segment to the other, indicating that this end has finished sending data, but continues to receive data from the other end.
+- Allows data transmission in both directions to be closed independently.
+- The [socket](socket.md) network programming interface supports the half-close state through the `shutdown` function.

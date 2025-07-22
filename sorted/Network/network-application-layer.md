@@ -1,23 +1,23 @@
-# 应用层
+# Application Layer
 
-- 应用层协议定义了运行在不同[computer-network-end-system](computer-network-end-system.md)上的应用程序[进程](进程.md)如何相互传递报文
-  - 交换的报文类型，例如请求报文和响应报文
-  - 各种报文类型的语法，如报文中的各个字段及这些字段是如何描述的
-  - 字段的语义,字段中信息的含义
-  - 确定一个进程合适以及如何发送报文，对报文进行响应的规则
-- [http](computer-network-http.md)协议(web文档请求和传送)
-- SMTP协议(电子邮件), [FTP](computer-network-ftp.md)(文件传送), [DNS](dns.md)协议
-- 应用程序要求可以分为四类
-  - 可靠数据传输
-  - 吞吐量
-  - 定时
-  - 安全性
-- 应用程序对[运输层](network-transport-layer.md)的控制仅限于:
-  - 选择运输层协议
-  - 设定几个运输层参数
-  
+- Application layer protocols define how application [processes](进程.md) running on different [computer-network-end-system](computer-network-end-system.md) pass messages to each other.
+  - Types of messages exchanged, such as request messages and response messages.
+  - The syntax of various message types, such as the fields in the message and how these fields are described.
+  - The semantics of the fields, the meaning of the information in the fields.
+  - Rules for determining when and how a process sends messages and responds to messages.
+- [HTTP](computer-network-http.md) protocol (web document request and transfer).
+- SMTP protocol (email), [FTP](computer-network-ftp.md) (file transfer), [DNS](dns.md) protocol.
+- Application requirements can be divided into four categories:
+  - Reliable data transfer
+  - Throughput
+  - Timing
+  - Security
+- Application control over the [transport layer](network-transport-layer.md) is limited to:
+  - Selecting the transport layer protocol.
+  - Setting several transport layer parameters.
+
 [Web](web.md)
-  
-[电子邮件](电子邮件.md)
-  
+
+[Email](电子邮件.md)
+
 [DNS](dns.md)

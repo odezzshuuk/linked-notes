@@ -1,8 +1,8 @@
-# 端口
+# Port
 
-- 是一个16位的比特数，范围在0~65535之间
-- 0~1023之间是周知(well-known)端口号，是受限制的
-  - [Http](computer-network-http.md)端口号80
-  - [FTP](computer-network-ftp.md)端口号21
-  - 以及其他周知(well-known)的应用层协议来使用
-  - 在[RFC](network-rfc.md) 3232中列出
+- Is a 16-bit number, ranging from 0 to 65535.
+- Ports between 0 and 1023 are well-known port numbers and are restricted.
+  - [HTTP](computer-network-http.md) port number 80.
+  - [FTP](computer-network-ftp.md) port number 21.
+  - And other well-known application layer protocols to use.
+  - Listed in [RFC](network-rfc.md) 3232.

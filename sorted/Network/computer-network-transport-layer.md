@@ -1,23 +1,23 @@
-# transport layer
+# Transport Layer
 
-## About transport layer
+## About Transport Layer
 
-- function
-  - extend the delivery service between two [computer-network-end-system](computer-network-end-system.md) in network layer to delivery service between two different application layer **process** in two different end system
-- between [Network_Application_Layer](network-application-layer.md) and [network layer](computer-network-network-layer.md)
-- mainly have 2 protocols: [TCP](computer-network-tcp.md), [UDP](udp.md)
-- translate message received from application layer process to group in transport layer, the group is called transport layer segment
-- provide logical communication between **process** in different host
-- [multiplexing] and [demultiplexing]
+- Function:
+  - Extends the delivery service between two [computer-network-end-system](computer-network-end-system.md) in the network layer to a delivery service between two different application layer **processes** in two different end systems.
+- Between [Network_Application_Layer](network-application-layer.md) and [network layer](computer-network-network-layer.md).
+- Mainly has 2 protocols: [TCP](computer-network-tcp.md), [UDP](udp.md).
+- Translates messages received from application layer processes to groups in the transport layer; the group is called a transport layer segment.
+- Provides logical communication between **processes** in different hosts.
+- [Multiplexing] and [Demultiplexing].
 
 ![Multiplexing_diagram.svg](/image/Multiplexing_diagram.svg.png)
 
-- structure transport layer segment
-  - source port number and destination port number
-  - other header fields
-  - application data(message)
+- Structure of a transport layer segment:
+  - Source port number and destination port number.
+  - Other header fields.
+  - Application data (message).
 
-## Glossary of transport layer
+## Glossary of Transport Layer
 
 [TCP](computer-network-tcp.md)
 
