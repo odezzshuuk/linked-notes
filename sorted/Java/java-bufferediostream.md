@@ -1,42 +1,42 @@
-# 缓冲流: BufferInputStream/BufferOutputStream
+# Buffered Stream: BufferInputStream/BufferOutputStream
 
-- 扩展自FilterInputStream/FilterOutputStream
-- 创建时会创建一个内部的缓冲区数组(byte[] buf)
-- 通过减少IO次数提高效率
+- Extends from `FilterInputStream`/`FilterOutputStream`.
+- Creates an internal buffer array (`byte[] buf`) upon creation.
+- Improves efficiency by reducing the number of I/O operations.
 
 ***
 
-- 创建BufferInputStream/BufferOutputStream对象
-  - `BufferedInputStream(InputStream in)`: 将in流转为缓冲流
-  - `BufferedInputStream(InputStream in, int size)`: 将in流转为缓冲流, 缓冲区大小设置为size
+- Creating `BufferInputStream`/`BufferOutputStream` objects:
+  - `BufferedInputStream(InputStream in)`: Converts the `in` stream to a buffered stream.
+  - `BufferedInputStream(InputStream in, int size)`: Converts the `in` stream to a buffered stream with a buffer size of `size`.
 
-## 字段
+## Fields
 
-input
+### Input
 
-- buf: 存储数据的内部缓冲区数组
-- count: 缓冲区有效字节索引+1
-  - 范围[0, buf.length]
-- pos: 缓冲区中的当前位置, 从buf数组中读取的下一个字符的索引
-  - 范围[0, count]
-- markpos: 调用最后一个mark()方法时pos字段的值
-  - 范围[-1, pos]
-- marklimit:
+- `buf`: Internal buffer array for storing data.
+- `count`: Index of the last valid byte in the buffer + 1.
+  - Range: `[0, buf.length]`.
+- `pos`: Current position in the buffer, index of the next character to be read from the `buf` array.
+  - Range: `[0, count]`.
+- `markpos`: Value of the `pos` field when the last `mark()` method was called.
+  - Range: `[-1, pos]`.
+- `marklimit`:
 
-output
+### Output
 
-- buf: 存储数据的内部缓冲区数组
-- count: 缓冲区有效字节索引+1
-  - 范围[0, buf.length]
+- `buf`: Internal buffer array for storing data.
+- `count`: Index of the last valid byte in the buffer + 1.
+  - Range: `[0, buf.length]`.
 
-## 方法
+## Methods
 
-output
+### Output
 
-- flush()将缓冲区的内容
+- `flush()`: Flushes the contents of the buffer.
 
-input
+### Input
 
-- read()读取一个字节
-  - 返回读取的字节, 如果读取到文件末尾, 返回-1
-  - 调用read()时从缓冲区(byte[] buf)获得数据
+- `read()`: Reads one byte.
+  - Returns the byte read, or -1 if the end of the file is reached.
+  - When `read()` is called, data is obtained from the buffer (`byte[] buf`).

@@ -1,11 +1,11 @@
-# 访问权限
+# Access Permissions
 
-|Modifier|Class|Package|Subclass|World|
-|--|--|--|--|--|
-|public|Y|Y|Y|Y|
-|protected|Y|Y|Y|N|
-|no modifier|Y|Y|N|N|
-|private|Y|N|N|N|
+| Modifier    | Class | Package | Subclass | World |
+| ----------- | ----- | ------- | -------- | ----- |
+| public      | Y     | Y       | Y        | Y     |
+| protected   | Y     | Y       | Y        | N     |
+| no modifier | Y     | Y       | N        | N     |
+| private     | Y     | N       | N        | N     |
 
-- 不建议no modifier(默认访问权限)
-- 类的访问权限只能是public 或 no modifier
+- `no modifier` (default access permission) is not recommended.
+- The access permission of a class can only be `public` or `no modifier`.

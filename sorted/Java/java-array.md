@@ -1,26 +1,26 @@
-# 数组
+# Array
 
-- 是一种[引用类型]
-- 元素类型必须相同
-- 必须指定元素个数
-- 数组长度不可改变
-- 初始值为0, 0.0, false
+- Is a [reference type].
+- The element type must be the same.
+- The number of elements must be specified.
+- The length of the array cannot be changed.
+- The initial values are 0, 0.0, false.
 
-## 创建数组
+## Creating an Array
 
 ```java
-int[] a1 = new int[5];               // 创建一个长度为5的数组, 元素值为0
-int[] a2 = {1, 2, 3, 4, 5};          // 创建一个长度为5的数组, 元素值为1, 2, 3, 4, 5
-int[] a3 = new int[]{1, 2, 3, 4, 5}; // 创建一个长度为5的数组, 元素值为1, 2, 3, 4, 5
+int[] a1 = new int[5];               // Create an array of length 5, with element values of 0.
+int[] a2 = {1, 2, 3, 4, 5};          // Create an array of length 5, with element values of 1, 2, 3, 4, 5.
+int[] a3 = new int[]{1, 2, 3, 4, 5}; // Create an array of length 5, with element values of 1, 2, 3, 4, 5.
 ```
 
-## 元素
+## Elements
 
-- 数组元素的值为地址, 引用对象实例
+- The value of an array element is an address, referencing an object instance.
 
-## 数组复制
+## Array Copying
 
-- 复制指定数组，截断或填充
+- Copies the specified array, truncating or padding it.
 
 ```java
 Arrays.copyOf(T[] original, int newLength)

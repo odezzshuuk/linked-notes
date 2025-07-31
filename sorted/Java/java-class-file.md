@@ -1,3 +1,3 @@
-# 类文件
+# Class File
 
-- containing [java bytecode](java-byte-code.md)
+- Containing [java bytecode](java-byte-code.md)

@@ -1,6 +1,6 @@
-# 字段初始化方式
+# Field Initialization Methods
 
-## 显式初始化
+## Explicit Initialization
 
 ```java
 class Employee {
@@ -8,14 +8,14 @@ class Employee {
 }
 ```
 
-## 初始化块
+## Initialization Block
 
-- 静态初始化块， 普通块前加static
+- Static initialization block, add `static` before a normal block.
 
 ```java
 class Employee {
     {
-        id =nextId;
+        id = nextId;
         nextId++;
     }
 
@@ -26,13 +26,12 @@ class Employee {
 }
 ```
 
+## Instance Field Initialization
 
-## 实例域初始化
+- When an instance of a class is constructed, the initialization block is executed.
 
-- 构造类的实例时， 初始化块就会被执行
+## Static Initialization Block
 
-## 静态初始化块
-
-- static标记的代码块`static {...}`
-- [类第一次加载]时，会执行static block
-- 可以用于加载资源到变量, 避免多次加载的IO消耗
+- A code block marked with `static`: `static {...}`.
+- When a [class is first loaded], the static block is executed.
+- Can be used to load resources into variables, avoiding the I/O overhead of multiple loads.

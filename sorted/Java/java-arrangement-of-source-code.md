@@ -1,8 +1,8 @@
-# 组织源文件
+# Organizing Source Files
 
-- 在Java语言中，类和接口可以组织成package，package可以组织成module
-- Javac期望在文件系统目录中的源文件的物理排列会将类的组织镜像到package中，将package的组织镜像到module中
-- `.java`文件表示一个类
+- In the Java language, classes and interfaces can be organized into packages, and packages can be organized into modules.
+- Javac expects the physical arrangement of source files in the file system directory to mirror the organization of classes into packages, and the organization of packages into modules.
+- A `.java` file represents a class.
 
-> 1. 建议将文件分为多个目录，并将列表传递给[javac]
-> 2. 命名约定: 模块名和包名以小写字母开头，类名以大写字母开头
+> 1. It is recommended to divide files into multiple directories and pass the list to [javac].
+> 2. Naming convention: Module names and package names start with a lowercase letter, and class names start with an uppercase letter.

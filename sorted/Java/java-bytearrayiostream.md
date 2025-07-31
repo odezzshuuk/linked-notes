@@ -2,17 +2,17 @@
 
 ## ByteArrayOutputStream
 
-- 数据被写入**自动增长**的缓冲数组
+- Data is written to an **auto-growing** buffer array.
 
-创建对象
+Creating an object:
 
 - `ByteArrayOutputStream()`
 - `ByteArrayOutputStream(int size)`
 
-提取buffer中的数据
+Extracting data from the buffer:
 
-- `byte[] toByteArray()`: 复制流buffer中的数据到一个byte数组
-- `String toString()`: 使用默认字符集将缓冲区的内容转换为解码字节的字符串
+- `byte[] toByteArray()`: Copies the data from the stream's buffer to a byte array.
+- `String toString()`: Converts the contents of the buffer into a string by decoding the bytes using the default character set.
 
 ## ByteArrayInputStream
 

@@ -1,77 +1,77 @@
-# 类加载器
+# Class Loader
 
-- [类加载器(class loader)](#类加载器class-loader)
-- [类加载过程](#类加载过程)
+- [Class Loader](#class-loader)
+- [Class Loading Process](#class-loading-process)
 - [Run-time Built-in Class Loaders](#run-time-built-in-class-loaders)
-- [类加载器层次结构](#类加载器层次结构)
-- [类加载器作为命名空间](#类加载器作为命名空间)
-- [自定义类加载器](#自定义类加载器)
-- [ClassLoader类](#classloader类)
-- [Module类](#module类)
+- [Class Loader Hierarchy](#class-loader-hierarchy)
+- [Class Loader as a Namespace](#class-loader-as-a-namespace)
+- [Custom Class Loader](#custom-class-loader)
+- [ClassLoader Class](#classloader-class)
+- [Module Class](#module-class)
 
-> ClassLoader指类加载器的抽象类，class loader指Java中类加载器的含义
+> `ClassLoader` refers to the abstract class of class loaders, while `class loader` refers to the concept of class loaders in Java.
 
 ## Introduction
 
-- 因为资源通常和应用程序或库打包在一起，所以除了装入类之外，类加载器还负责定位资源
-- 通过识别类的Binary name来加载类
+- Because resources are usually packaged with applications or libraries, class loaders are also responsible for locating resources in addition to loading classes.
+- Loads classes by identifying their binary names.
 
-> binary name比如: "Java.lang.String", "javax.swing.JSpinner$DefaultEditor"
+> Binary names, for example: "java.lang.String", "javax.swing.JSpinner$DefaultEditor".
 
-- 一个类加载器需要尝试 定位 或 生成 定义类的数据
+- A class loader needs to try to locate or generate the data that defines a class.
 
-> 普遍做法是将类名称作为路径名称, 然后从文件系统中读取类字节码
-> 也有一些类也许会从网络或其他应用构成
+> A common practice is to use the class name as a path name and then read the class bytecode from the file system.
+> Some classes may also be composed from the network or other applications.
 
-- 数组对象由fooArray.getClassLoader()返回类加载器, 与其中元素的**Class Loader**相同
+- The class loader returned by `fooArray.getClassLoader()` for an array object is the same as the **Class Loader** of its elements.
 
-## Class Load Process
+## Class Loading Process
 
-假设从MyProgram.class文件开始运行
+Assuming execution starts from the `MyProgram.class` file:
 
-1. 加载[类文件](java-class-file.md)
-2. MyProgram中的 拥有某个类型field 或 扩展超类, 那么这些类文件也会被加载
-3. 虚拟机中执行MyProgram中的main方法, main方法中的类也会被加载
+1. Load the [class file](java-class-file.md).
+2. If `MyProgram` has a field of a certain type or extends a superclass, those class files will also be loaded.
+3. The `main` method in `MyProgram` is executed in the virtual machine, and the classes in the `main` method will also be loaded.
 
 ## Run-time Built-in Class Loaders
 
-1. Bootstrap ClassLoader, 引导类加载器
+1. Bootstrap ClassLoader
 
-- 从**rt.jar**中加载**core libraries**
-- core library located in `$Java_HOME/jre/lib` directory
-- **系统类**通常用C语言来实现, 没有对应的ClassLoader对象
+- Loads **core libraries** from **rt.jar**.
+- Core libraries are located in the `$JAVA_HOME/jre/lib` directory.
+- **System classes** are usually implemented in C, and there is no corresponding `ClassLoader` object.
 
-2. 扩展类加载器
+2. Extension ClassLoader
 
-- 从`$JAVA_HOME/jre/lib/ext`目录加载标准扩展
-- 将jar文件放入jre/lib/ext目录，即使没有任何类路径，扩展器可以找到其中的各个类
+- Loads standard extensions from the `$JAVA_HOME/jre/lib/ext` directory.
+- By placing a JAR file in the `jre/lib/ext` directory, the extension loader can find the classes within it even without any classpath.
 
-> 将包含系统类或扩展jar文件放入jre/lib/ext目录, 会遇到麻烦，扩展类加载器并不使用类路径(CLASSPATH)
+> Placing JAR files containing system classes or extensions in the `jre/lib/ext` directory can cause trouble, as the extension class loader does not use the classpath (CLASSPATH).
 
-3. 系统类加载器
+3. System ClassLoader
 
-> ~~主要指的是**用户定义的类**~~
+> ~~Mainly refers to **user-defined classes**.~~
 
-- 由 CLASSPATH 环境变量或在[命令行option](java-command-javac.md)中设置的类路径中查找这些类
+- Finds these classes in the classpath set by the `CLASSPATH` environment variable or in the [command-line options](java-command-javac.md).
 
-## 类加载器层次结构
+## Class Loader Hierarchy
 
-- 除引导类加载器, 每个类都有一个父类加载器
-- 类加载器首先会让父类加载器尝试加载给定的类, 父类加载失败时，子类加载器才会尝试加载
+- Except for the bootstrap class loader, every class loader has a parent class loader.
+- A class loader will first let its parent class loader try to load a given class. Only when the parent class loader fails will the child class loader try to load it.
 
-## 类加载器作为命名空间
+## Class Loader as a Namespace
 
-## Custome Classloader
+## Custom Classloader
 
-- 继承ClassLoader类，重写findClass方法
-- 重写findClass必须做到以下几点
-  - 为来自本地文件系统或者其他来源的类加载其字节码
-  - 调用ClassLoader超类的defineClass()方法, 向虚拟机提供字节码
+- Inherit the `ClassLoader` class and override the `findClass` method.
+- Overriding `findClass` must do the following:
+  - Load the bytecode for classes from the local file system or other sources.
+  - Call the `defineClass()` method of the `ClassLoader` superclass to provide the bytecode to the virtual machine.
 
-## ClassLoader类
+## ClassLoader Class
 
-[ClassLoader类](java-lang-classloader.md)
+[ClassLoader Class](java-lang-classloader.md)
 
-## Module类
+## Module Class
 
-[Module类](java-jvm-class-module.md)
+[Module Class](java-jvm-class-module.md)

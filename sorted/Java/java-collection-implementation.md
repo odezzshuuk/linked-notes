@@ -1,40 +1,40 @@
-# 具体实现
+# Concrete Implementations
 
-|Interfaces|Hash Table|Resizable Array|Tree|Linkedlist|Hash table + Linked list|
-|--|--|--|--|--|--|
-|set|HashSet||TreeSet||LinkedHashSet|
-|List||ArrayList||LinkedList||
-|Queue, Deque||ArrayDeque||LinkedList||
-|Map|HashMap||TreeMap||LinkedHashMap|
+| Interfaces   | Hash Table | Resizable Array | Tree    | Linked List | Hash table + Linked list |
+|--------------|------------|-----------------|---------|-------------|--------------------------|
+| Set          | HashSet    |                 | TreeSet |             | LinkedHashSet            |
+| List         |            | ArrayList       |         | LinkedList  |                          |
+| Queue, Deque |            | ArrayDeque      |         | LinkedList  |                          |
+| Map          | HashMap    |                 | TreeMap |             | LinkedHashMap            |
 
-- 所有实现提供了其接口中包含的所有可选操作
-- 所有元素都允许空元素，键和值
-- 线程安全
-- 可以序列化
-- 支持clone()
+- All implementations provide all optional operations contained in their interfaces.
+- All elements allow null elements, keys, and values.
+- Thread-safe.
+- Can be serialized.
+- Supports `clone()`.
 
-## 链表LinkedList
+## LinkedList
 
-## 数组列表ArrayList
+## ArrayList
 
-## 散列集HashSet
+## HashSet
 
-- [散列表]为每个对象计算一个整数，成为散列码
+- [Hash table] computes an integer for each object, called a hash code.
 
-## 树集
+## TreeSet
 
-- TreeSet\<T\>
-- 任意顺序插入，顺序输出
-- 用红黑树实现
+- `TreeSet<T>`
+- Inserts in any order, outputs in sorted order.
+- Implemented with a red-black tree.
 
-## 映射
+## Map
 
-API
+### API
 
-- HashMap\<k, V\>
-- 添加元素
+- `HashMap<K, V>`
+- Adding elements:
   - `V put(K key, V value)`
-- 更新值
+- Updating values:
   - `V put(K key, V newVal)`
   - `V merge(K key, V value, BiFunction<? super V, ? super V, ? extends V> remappingFunction)`
 
@@ -42,19 +42,20 @@ API
   map.merge(key, msg, String::concat)
   ```
 
-- 返回键或值的集合
-  - 键Set(集): `Set<K> keySet()`, 返回的Set并不是HashSet或TreeSet
-  - 值Collection(集合): `Collection<V> values()`
-  - 键值Set(集): `Set<Map.Entry<K, V>> entrySet()`
+- Returning a collection of keys or values:
+  - Key Set: `Set<K> keySet()`, the returned Set is not a `HashSet` or `TreeSet`.
+  - Value Collection: `Collection<V> values()`
+  - Key-Value Set: `Set<Map.Entry<K, V>> entrySet()`
 
-### WeakHashMap 
+### WeakHashMap
 
-- 对于其他Map对象, 如果对象是活动的，垃圾回收机制不会回收Map中不再被值引用的对象
-- 所以设计了WeakHashMap\<K, V\>, WeakHashMap给定键的映射的存在不会阻止该键被垃圾收集器丢弃
+- For other Map objects, if an object is active, the garbage collector will not reclaim objects in the Map that are no longer referenced by values.
+- Therefore, `WeakHashMap<K, V>` was designed. The existence of a mapping for a given key in a `WeakHashMap` does not prevent that key from being discarded by the garbage collector.
 
-## LinkedHashSet 和 LinkeHashMap
+## LinkedHashSet and LinkedHashMap
 
-- 用来记住元素的插入顺序 
-- 调用get()或put()影响的元素将从当前位置删除，并放到链表末尾
-- 构造函数`LinkedHashMap<K, V>(initialCapacity, loadFactor, true)`
-- 可以将访问频率高的元素放在内存中, 而访问频率低的元素则从数据库中读取
+- Used to remember the insertion order of elements.
+- Elements affected by `get()` or `put()` calls will be removed from their current position and placed at the end of the linked list.
+- Constructor: `LinkedHashMap<K, V>(initialCapacity, loadFactor, true)`
+- Can keep frequently accessed elements in memory, while less frequently accessed elements are read from the database.
+

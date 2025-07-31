@@ -46,7 +46,7 @@
 
 [look up arbitrary data](unity-entities-look-up-arbitrary-data.md)
 
-- [ ] JobEntities
+[JobEntities](unity-entities-iterating-with-ijobentity)
 
 ## API Abstracts
 

@@ -1,19 +1,19 @@
-# 迭代器
+# Iterator
 
-## get Iterator
+## Get Iterator
 
 ```java
 Iterator it = coll.iterator();
 ```
 
-- 迭代器起始位置在集合的第一个元素之前
+- The initial position of the iterator is before the first element of the collection.
 
-## 遍历元素
+## Traversing Elements
 
-- it.next(): 返回集合coll中下一个元素
-- it.hasNext(): 判断集合coll中是否还有元素
+- `it.next()`: Returns the next element in the collection `coll`.
+- `it.hasNext()`: Checks if there are more elements in the collection `coll`.
 
-## remove()方法
+## `remove()` Method
 
-- 如果在迭代过程中，底层集合以任何方式被修改，而不是通过调用这个方法，那么迭代器的行为是未被指定的，除非一个覆盖类指定了一个并发修改策略。
-- 调用forEachRemaining方法后，迭代器行为未指定
+- If the underlying collection is modified in any way during iteration, other than by calling this method, the behavior of the iterator is unspecified, unless an overriding class specifies a concurrent modification policy.
+- After calling the `forEachRemaining` method, the behavior of the iterator is unspecified.

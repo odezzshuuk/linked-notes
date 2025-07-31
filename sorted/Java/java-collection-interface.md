@@ -1,44 +1,44 @@
-# 集合接口
+# Collection Interface
 
-- 表示一组对象
+- Represents a group of objects.
 
-## Interface Collection
+## Interface `Collection`
 
-- `Iterable<E>`, 是所有Collection相关接口的超类接口, E默认为Object
-- 用于实现包含一组元素的类的根接口
+- `Iterable<E>`, is the superinterface of all `Collection`-related interfaces, where `E` defaults to `Object`.
+- The root interface for implementing classes that contain a group of elements.
 
-实现`Collection<T>`的类提供了两个构造函数
+Classes that implement `Collection<T>` provide two constructors:
 
-- 创建一个空集合
-- 复制一个集合
+- To create an empty collection.
+- To copy a collection.
 
 ```java
 new HashSet<>();
 new HashSet<>(Collection<? extends E> c);
 ```
 
-`for(element e : IterableInstace)`语句只能用于实现了`Iterable<E>`接口的类
+The `for(element e : IterableInstance)` statement can only be used with classes that implement the `Iterable<E>` interface.
 
-## SubInterface of Collection
+## Subinterfaces of `Collection`
 
-Interface Set
+### Interface `Set`
 
-- 不包含重复元素的集合
+- A collection that does not contain duplicate elements.
 
-> 换句话说不会存在这样两个元素e1, e2, 使e1.equals(e2)为true
+> In other words, there will not be two elements `e1` and `e2` such that `e1.equals(e2)` is true.
 
-- Interface SortedSet
+- Interface `SortedSet`
 
-Interface List
+### Interface `List`
 
-- 可以包含重复元素
-- 可以通过索引访问元素
-- 可以再任意位置插入元素
+- Can contain duplicate elements.
+- Elements can be accessed by index.
+- Elements can be inserted at any position.
 
-Interface Queue
+### Interface `Queue`
 
-- 队列集合
+- A queue collection.
 
-Interface Deque
+### Interface `Deque`
 
-- 双端队列集合
+- A double-ended queue collection.

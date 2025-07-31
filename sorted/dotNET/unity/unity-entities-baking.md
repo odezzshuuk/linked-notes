@@ -1,5 +1,16 @@
 # Unity Entities - Baking
 
+* [What's this](#what's-this)
+* [What's for](#what's-for)
+* [Authoring](#authoring)
+* [When Baking Happens](#when-baking-happens)
+* [Write Baker](#write-baker)
+* [Baking World](#baking-world)
+* [Baking System](#baking-system)
+* [IBaker](#ibaker)
+* [GetEntity Methods](#getentity-methods)
+* [Filter Baking Output](#filter-baking-output)
+
 ## What's this
 
 - Converting data from [authoring](#authoring) data into ECS data 
@@ -23,7 +34,7 @@
 - Whenever the authoring data in an authoring scene changes, baking process triggered
 - Only in the editor
 
-## Write Baker
+## Baker
 
 - Step 1: Create Baker
   - Inherit from `Baker<TAuthoring>` where `TAuthoring` is the authoring component, normally a `MonoBehaviour` component
@@ -36,6 +47,11 @@
 public class ExampleAuthoring : MonoBehaviour {
     public int exampleValue;
 }
+
+public struct ExampleComponent : IComponentData {
+    public int exampleValue;
+}
+
 public class ExampleBaker : Baker<ExampleAuthoring> {
     public override void Bake(ExampleAuthoring authoring) {
         // Create an entity
@@ -104,6 +120,10 @@ partial struct AddTagToRotationBakingSystem : ISystem
 What those methods do
 
 - get [entity](unity-entities-entity.md) from authoring gameobject/component
+
+## Filter Baking Output
+
+- `[BakingType]`: Any component that is marked with this is filtered out from the baking output
 
 
 

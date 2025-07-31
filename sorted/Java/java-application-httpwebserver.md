@@ -1,4 +1,4 @@
-# Http服务器解析
+# HTTP Server Parsing
 
 ## WebserverApplication
 
@@ -8,8 +8,8 @@
 
 ## ClientHandler
 
-- 客户端
+- Client
 
 ## UserController
 
-- 处理用户请求
+- Handles user requests

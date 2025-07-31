@@ -1,28 +1,28 @@
-# 注释元素
+# Annotated Element
 
 ## Containing Annotation Interface
 
-注释接口A的containing annotation interface必须具有以下条件:
+The containing annotation interface of an annotation interface A must meet the following conditions:
 
-1. 声明一个value()方法, 返回类型为A[]
-2. 除value()外的其他方法有默认值
-3. 保留时间至少和A一样长
-4. ~~A中元素适用于其中的对应的元素~~
-5. 与A对应的的java.lang.annotation.Documented
-6. 与A对应的的java.lang.annotation.Inherited
+1. Declare a `value()` method that returns a type of `A[]`.
+2. Other methods besides `value()` have default values.
+3. The retention period is at least as long as A's.
+4. ~~Elements in A are applicable to the corresponding elements within it.~~
+5. Corresponds to `java.lang.annotation.Documented` of A.
+6. Corresponds to `java.lang.annotation.Inherited` of A.
 
-## 保留策略
+## Retention Policy
 
-> 指定注释保留时间
+> Specifies the retention period of the annotation.
 
-- CLASS: In class but need not be retained in VM
-- RUNTIME: In class by compiler and at run time in VM
-- SOURCE: discarded by compiler
+- CLASS: In class but need not be retained in VM.
+- RUNTIME: In class by compiler and at run time in VM.
+- SOURCE: Discarded by compiler.
 
-## AnnotatedElement接口
+## AnnotatedElement Interface
 
-- 当前VM中运行的程序的带注释结构
-- 实现了AnnotatedElement接口的类
+- An annotated structure of a program running in the current VM.
+- Classes that implement the `AnnotatedElement` interface:
   - [x] [AccessibleObject](java-reflect-accessibleobject.md)
   - [x] [Class](java-reflect-class.md)
   - [ ] Constructor
@@ -33,5 +33,5 @@
   - [ ] Package
   - [ ] Parameter
   - [ ] RecordComponent
-- 在元素上的AnnotatedElement, 称为declaration annotation
-- 在type(class, interface, enum)上的AnnotatedElement, 称为type annotation
+- An `AnnotatedElement` on an element is called a declaration annotation.
+- An `AnnotatedElement` on a type (class, interface, enum) is called a type annotation.

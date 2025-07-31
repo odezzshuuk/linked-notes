@@ -4,12 +4,12 @@
 - [Custom Annotation](#custom-annotation)
 - [Use Annotation](#use-annotation)
 - [Built-in Annotation](#built-in-annotation)
-- [Annotation接口](#annotation接口)
+- [Annotation Interface](#annotation-interface)
 
 ## Introduction
 
-- 注解是源代码中标签
-- 编译器对于包含注解和不包含注解的代码会生成相同的虚拟机指令
+- Annotations are labels in the source code.
+- The compiler generates the same virtual machine instructions for code with and without annotations.
 
 ## Custom Annotation
 
@@ -17,11 +17,11 @@
 
 ## Use Annotation
 
-- can be used declarations of classed, fileds, methods
+- Can be used in declarations of classes, fields, methods.
 
 ```java
 @ClassPreamble(
-    auther = "John Doe",
+    author = "John Doe",
     date = "01/01/2017",
     reviewers = {"Alice", "Bob", "Charlie"}
 )
@@ -30,9 +30,9 @@ public class Generation3List {
 }
 ```
 
-使用单值注解
+Using a single-value annotation:
 
-- 可以省略`value=`
+- You can omit `value=`.
 
 ```java
 @Copyright("2017")
@@ -43,27 +43,27 @@ public class Generation3List {
 
 ## Built-in Annotation
 
-Normal Built-in Annotation
+Normal Built-in Annotation:
 
 - `@Deprecated`
-- `@Override`:
-- `@FunctionalInterface`: 用于标记[函数式接口](java-functional-interface.md)
+- `@Override`
+- `@FunctionalInterface`: Used to mark a [functional interface](java-functional-interface.md).
 - `@SuppressWarnings`
 - `@SafeVarargs`
 
-应用于其他注解的注解, or called meta annotation
+Annotations applied to other annotations, also called meta-annotations:
 
 - `@Retention`
-  - RetentionPolicy.SOURCE: 不包括在类文件中的注解
-  - RetentionPolicy.CLASS: 包括在类文件中的注解, 但是虚拟机额不需要将他们载入
-  - RetentionPolicy.RUNTIME: 包括在类文件中的注解，并由虚拟机载入, **通过反射可访问**
-- `@Repeatable`: 允许同一个元素多次使用同一个注解
-- `@Documented`: elements using this should documented by javadoc tools
-- `@Target`: 限制注解的作用元素
-- `@Inherited`: 注解类型被自动继承
-  - 查找这种类型的注解时, 若没有在当前类中找到, 则会在其父类中查找
-  - 查找过程会一直沿着继承链向上查找, **直到找到**或**达到Object**
+  - `RetentionPolicy.SOURCE`: Annotations not included in the class file.
+  - `RetentionPolicy.CLASS`: Annotations included in the class file, but the virtual machine does not need to load them.
+  - `RetentionPolicy.RUNTIME`: Annotations included in the class file and loaded by the virtual machine, **accessible via reflection**.
+- `@Repeatable`: Allows the same annotation to be used multiple times on the same element.
+- `@Documented`: Elements using this should be documented by Javadoc tools.
+- `@Target`: Restricts the elements to which the annotation can be applied.
+- `@Inherited`: The annotation type is automatically inherited.
+  - When searching for an annotation of this type, if it is not found in the current class, it will be searched for in its superclass.
+  - The search process continues up the inheritance chain **until it is found** or **reaches Object**.
 
-## Annotation接口
+## Annotation Interface
 
 [Interface Annotation](java-interface-annotation.md)

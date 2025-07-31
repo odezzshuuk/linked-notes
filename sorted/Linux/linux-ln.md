@@ -42,7 +42,7 @@ lrwxrwxrwx 1 username group 7 2019-01-01 00:00 $HOME/.vimrc -> .vimrc
 **conclusion**
 
 - `TARGET` is a string describe symbolic link will be link to
-  - path relative to LINK_NAME
+  - path relative to `LINK_NAME`
   - or absolute path
 
 ## Hard Link

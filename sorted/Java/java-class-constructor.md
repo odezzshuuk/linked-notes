@@ -1,16 +1,16 @@
-# 构造器
+# Constructor
 
-- 与类同名
-- 一个类可以有多个构造器
-- 没有返回值
-- 总是伴随着new(不同于c++)
+- Same name as the class.
+- A class can have multiple constructors.
+- No return value.
+- Always accompanied by `new` (unlike C++).
 
-## 使用this调用另一个构造器
+## Calling Another Constructor Using `this`
 
 ```java
-public Emplouee(double s)
+public Employee(double s)
 {
-    this("Employee #" + nextId, s);  // 将调用
+    this("Employee #" + nextId, s);  // Will call another constructor
     nextId++;
 }
 ```

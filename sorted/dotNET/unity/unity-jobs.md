@@ -124,7 +124,7 @@ JobHandle jobA = jobA.Schedule();
 jobB.Schedule(jobA);
 ```
 
-- jobB depends on jobA
+- `jobB` depends on `jobA`
 
 Combining/merging dependencies
 

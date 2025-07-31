@@ -1,16 +1,16 @@
-# 初始化
+# Initialization
 
 ## Constructor
 
-[构造器](java-class-constructor.md)
+[Constructor](java-class-constructor.md)
 
 ## Field
 
-[字段初始化](java-class-field-initialize.md)
+[Field Initialization](java-class-field-initialize.md)
 
-## 调用构造器时处理步骤
+## Steps when calling a constructor
 
-1. 所有数据初始化为默认值(0, false或null)
-2. 按照在类声明中出现的次序，依次执行所有[字段初始化语句和初始化块](java-class-field-initialize.md)
-3. 调用第一行调用的另一个构造器
-4. 执行构造器主体
+1. All data is initialized to its default value (0, false, or null).
+2. All [field initialization statements and initialization blocks](java-class-field-initialize.md) are executed in the order they appear in the class declaration.
+3. The other constructor called in the first line is invoked.
+4. The body of the constructor is executed.
