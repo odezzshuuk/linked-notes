@@ -7,6 +7,8 @@
 * [Unmanaged component](#unmanaged-component)
 * [Managed component](#managed-component)
 * [Shared component](#shared-component)
+* [Singleton Component](#singleton-component)
+* [Dynamic Buffer Component](#dynamic-buffer-component)
 * [Enable/Disable Of Component](#enable/disable-of-component)
 
 ## What's it
@@ -24,6 +26,8 @@
 - [unmanaged component](#unmanaged-component)
 - [managed component](#managed-component)
 - [shared component](#shared-component)
+- [Singleton component](#singleton-component)
+- [Dynamic Buffer component](#dynamic-buffer-component)
 
 ## Unmanaged component
 
@@ -112,7 +116,32 @@ public struct ExampleUnmanagedSharedComponent : ISharedComponentData
 }
 ```
 
-## Enable/Disable Of Component
+## Singleton Component
 
+What It Is
+
+- A component that only one [entity](unity-entities-entity) in **a [world](unity-entities-world)** can have
+
+Features
+
+- If a singleton component is added to another entity, then it's no longer a singleton component
+
+How To Determine A Singleton Component
+
+- When use singleton APIs on a component with more than one instance, it will throw an **exception**
+
+How To Access Singleton Component
+
+- Use singleton APIs
+  - `EntityManager.CreateSingleton()`
+  - `SystemAPI.GetSingletonEntity()`
+  - `SystemAPI.GetSingleton()`
+  - `SystemAPI.SetSingleton()`
+
+## Dynamic Buffer Component
+
+[Dynamic Buffer Component](unity-entities-dynamic-buffer-component.md)
+
+## Enable/Disable Of Component
 
 

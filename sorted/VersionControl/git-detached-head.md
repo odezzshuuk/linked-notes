@@ -1,4 +1,4 @@
-# Git - detached head
+# Git - Detached Head
 
 ## What Is It
 

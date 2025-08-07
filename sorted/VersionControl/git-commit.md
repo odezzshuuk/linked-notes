@@ -1,10 +1,13 @@
 # Git - git commit
 
-* [How to commit](#how-to-commit)
-* [What Happen When Git Commit](#what-happen-when-git-commit)
-* [Relative Reference Represent A Commit](#relative-reference-represent-a-commit)
-* [check commit range](#check-commit-range)
-* [Amend Commit](#amend-commit)
+* [How to commit](#How to commit)
+* [What Happen When Git Commit](#What Happen When Git Commit)
+* [Relative Reference Represent A Commit](#Relative Reference Represent A Commit)
+* [check commit range](#check commit range)
+* [Amend Commit](#Amend Commit)
+* [Cleanup Commit History](#Cleanup Commit History)
+* [Check Changes ](#Check Changes)
+* [Rewrite Commit Message](#Rewrite Commit Message)
 
 ## How to commit
 
@@ -66,7 +69,7 @@ git branch -f main HEAD^  # force move main branch to parent commit
 
 ## Cleanup Commit History
 
-## Check Changes 
+## Check Changes
 
 Show Changes Of A Commit
 

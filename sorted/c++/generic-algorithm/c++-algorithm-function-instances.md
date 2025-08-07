@@ -1,52 +1,52 @@
-# 算法函数实例
+# Algorithm Function Instances
 
 ## equal
 
-> 只读元素，不改变，不重排
+> Read-only elements, no changes, no reordering
 
-```c++
+```cpp
 equal(roster1.cbegin(), roster1.cend(), roster2.cbegin())
 ```
 
-- 比较两个**序列**是否保存相同的值
-- 接受三个**迭代器**作为参数
-  - 前两个表示第一个序列范围
-  - 第三个表示第二个序列的首元素
-- 第二个序列不能短于第一个序列(只接受一个迭代器表示第二个序列的算法函数都有相同要求)
+- Compares whether two **sequences** hold the same values.
+- Accepts three **iterators** as parameters.
+  - The first two represent the range of the first sequence.
+  - The third represents the first element of the second sequence.
+- The second sequence cannot be shorter than the first sequence (all algorithm functions that accept only one iterator for the second sequence have the same requirement).
 
 ## fill
 
-> 只写不读元素，不重新排序
+> Write-only elements, no reading, no reordering
 
-- 向序列中写入数据
-- 接受三个参数
-  - 两个迭代器参数表示范围
-  - 一个值参数给序列元素赋值
+- Writes data to a sequence.
+- Accepts three parameters.
+  - Two iterator parameters represent the range.
+  - One value parameter assigns a value to the sequence elements.
 
 ## copy
 
-- 接受参数同equal
-- 多个算法都有copy版本，用来保留原序列
+- Accepts the same parameters as `equal`.
+- Many algorithms have a `copy` version to preserve the original sequence.
 
 ## replace
 
-- 将指定值替换为特定值
+- Replaces a specified value with a specific value.
 - `replace(b, e, search_val, replace_val)`
 - `replace_copy(b, e, new_lst_b, search_val, replace_val)`
-  - arg new_lst_b: 保存替换后的序列
-  - arg search_val：被替换的值
-  - arg replace_val： 替换值
+  - `arg new_lst_b`: Stores the sequence after replacement.
+  - `arg search_val`: The value to be replaced.
+  - `arg replace_val`: The replacement value.
 
 ## unique
 
-- 消除重复元素
-  - 先排序，后消除相邻重复元素
-- 接受两个迭代器参数作为序列范围
-- 返回一个指向最后一个不重复元素的下一个迭代器？
-- 通过覆盖重复元素实现去重，不改变序列大小
-- 为了真正删除重复元素，必须使用容器操作，如erase
+- Eliminates duplicate elements.
+  - First sort, then eliminate adjacent duplicate elements.
+- Accepts two iterator parameters as the sequence range.
+- Returns an iterator to the element following the last unique element.
+- Implements deduplication by overwriting duplicate elements, without changing the sequence size.
+- To truly delete duplicate elements, you must use container operations, such as `erase`.
 
 ## sort
 
-- sort默认使用`<`运算符
-- sort的重载版本接受第三个参数，可以自定义排序方法
+- `sort` uses the `<` operator by default.
+- The overloaded version of `sort` accepts a third parameter to customize the sorting method.

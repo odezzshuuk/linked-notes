@@ -1,11 +1,11 @@
-# 理解标准库算法函数方法
+# Understanding Standard Library Algorithm Functions
 
-- 理解标准库算法函数在于了解是否**读取元素, 改变元素，重排元素顺序**
-- 算法不执行容器操作
-  - 也就不会改变容器大小
-  - 算法访问数据的唯一通道是[迭代器](c++-iterator.md)
-- 从两个序列中读取元素的算法函数，两个序列可以是不同容器
-- 算法两种重要参数**迭代器参数**和**可调用对象作为参数**
-  - 可调用对象参数有谓词[^predicate]数量要求
+- Understanding standard library algorithm functions lies in knowing whether they **read elements, change elements, or reorder elements**.
+- Algorithms do not perform container operations.
+  - This means they do not change the size of the container.
+  - The only way for algorithms to access data is through [iterators](c++-iterator.md).
+- Algorithm functions that read elements from two sequences can have the two sequences be from different containers.
+- Two important types of parameters for algorithms are **iterator parameters** and **callable objects as parameters**.
+  - Callable object parameters have requirements on the number of predicates[^predicate].
 
-[^predicate]:返回bool类型的可调用对象,一元谓词只接受一个参数,二元谓词接受两个参数
+[^predicate]: A callable object that returns a bool type. A unary predicate accepts only one parameter, while a binary predicate accepts two parameters.

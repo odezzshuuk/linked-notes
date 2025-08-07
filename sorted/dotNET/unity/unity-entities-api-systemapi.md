@@ -23,7 +23,8 @@ Access [Component](unity-entities-component.md)
 
 - `GetComponentLookup`
 - `GetComponent`
-- `SetComponent`
+- `SetComponent(Entity, T)`: Set the value of a component on an entity.
+- `SetComponent(SystemHandle, T)`: 
 - `HasComponent`
 - `IsComponentEnabled`
 - `SetComponentEnabled`

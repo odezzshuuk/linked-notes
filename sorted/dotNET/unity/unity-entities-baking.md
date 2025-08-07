@@ -4,17 +4,18 @@
 * [What's for](#what's-for)
 * [Authoring](#authoring)
 * [When Baking Happens](#when-baking-happens)
-* [Write Baker](#write-baker)
+* [Baker](#baker)
 * [Baking World](#baking-world)
 * [Baking System](#baking-system)
 * [IBaker](#ibaker)
 * [GetEntity Methods](#getentity-methods)
 * [Filter Baking Output](#filter-baking-output)
+* [BakeDerivedTypesAttribute](#bakederivedtypesattribute)
 
 ## What's this
 
 - Converting data from [authoring](#authoring) data into ECS data 
-- Process that converts GameObjects data into [entities](#entity)
+- Process that converts GameObjects data into [entities](unity-entities-entity.md)
 
 ## What's for
 
@@ -40,7 +41,7 @@
   - Inherit from `Baker<TAuthoring>` where `TAuthoring` is the authoring component, normally a `MonoBehaviour` component
   - Override `Bake(TAuthoring authoring)` method to write data to the entity
 - Step 2: Implement `Bake` method
-  - Get the entity using [`GetEntity()`](#getentity-methods)
+  - Get the entity using [`GetEntity()`](#GetEntity Methods)
   - Use `AddComponent(entity, componentData)` to add component data to the entity
 
 ```cs
@@ -112,7 +113,6 @@ partial struct AddTagToRotationBakingSystem : ISystem
 }
 ```
 
-
 ## IBaker
 
 ## GetEntity Methods
@@ -123,7 +123,20 @@ What those methods do
 
 ## Filter Baking Output
 
-- `[BakingType]`: Any component that is marked with this is filtered out from the baking output
+`[BakingType]`: Any component that is marked with this is filtered out from the baking output
 
+- Which means when `AddComponent(entity, new ExampleComponetData())` in [baker](#baker), this component will not be added to the baked entity
 
+## BakeDerivedTypesAttribute
 
+- when baking `DerivedAuthoring`, the `BaseAuthoring` will also be baked
+
+```cs
+class BaseAuthoring : MonoBehaviour { public int BaseValue; }
+class DerivedAuthoring : BaseAuthoring { public float DerivedValue; }
+
+[BakeDerivedTypes]
+class BaseBaker : Baker<BaseAuthoring> { public override void Bake(BaseAuthoring authoring) { }
+
+class DerivedBaker : Baker<DerivedAuthoring> { public override void Bake(DerivedAuthoring authoring) { }
+```

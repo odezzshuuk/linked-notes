@@ -31,7 +31,7 @@ Run commands In parent module repository directory
 
 ```bash
 git rm -r --cached <submodule_local_path>
-git commit -m "<message_after_remove_submodule_path>"
+git commit -m "<message_after_remove_submodule_path>"  # optional
 git submodule add <submodule_url> <submodule_local_path>
 ```
 
@@ -43,8 +43,9 @@ Then file `.gitmodules` created, and looks like
     url = <submodule_url>
 ```
 
-## Can Once Commit Submodule From Parent Module Which Submodule Development With?
+## Can I Commit Submodule From Parent Module?
 
 - No, submodule is a separate repository, commit submodule separately.
 - If there is a new commit in submodule. Parent module should decide whether to follow the new commit or not.
 
+## Remove Submodule

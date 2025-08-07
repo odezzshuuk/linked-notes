@@ -48,6 +48,12 @@
 
 [JobEntities](unity-entities-iterating-with-ijobentity)
 
+[NativeContainer Component Support](unity-entities-nativecontainer-component-support.md)
+
+[Organizing System Data](unity-entities-organizing-system-data.md)
+
+[Communication With MonoBehaviour](unity-entities-communication-with-monobehaviour.md)
+
 ## API Abstracts
 
 [EntityManager](unity-entities-api-entitymanager.md)
