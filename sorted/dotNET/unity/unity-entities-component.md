@@ -142,6 +142,12 @@ How To Access Singleton Component
 
 [Dynamic Buffer Component](unity-entities-dynamic-buffer-component.md)
 
+## Restrictions Of Native Container In Component
+
+- When components have [Native Container](unity-jobs-nativecontainer.md), 
+- Scheduling jobs with [IJobEntity](unity-entities-iterating-with-ijobentity) And [IJobChunk](unity-entities-query-with-ijobchunk) against those component is not allowed
+- But you can schedule the job against container it self on main thread
+
 ## Enable/Disable Of Component
 
 

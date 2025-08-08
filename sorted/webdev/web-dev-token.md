@@ -1,13 +1,13 @@
 # Token
 
-## 什么是Token
+## What is a Token
 
-- 用来保障数据的来源**可靠性**, 即数据不会被篡改
-- 不是用来保障数据的**安全性**, 即不能保证数据不会被泄露
-- server doesn't need to store data in memory
-- platform无关
+- Used to ensure the **reliability** of the data source, meaning the data has not been tampered with
+- Not used to ensure data **security**, meaning it cannot guarantee that data will not be leaked
+- Server doesn't need to store data in memory
+- Platform independent
 
-> jwt.io 可以解析jwt中保存的内容
+> jwt.io can parse the content stored in jwt
 
 ## JWT
 

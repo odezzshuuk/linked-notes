@@ -31,24 +31,31 @@ public partial class MovementSystem : SystemBase {
 
 ## System types
 
-- [ISystem]()
-- [SystemBase]()
+- [ISystem](#isystem)
+- [SystemBase](#systembase)
 - EntityCommandBufferSystem: allows group [structural changes]()
 - ComponentSystemGroup
 
 ## ISystem
 
-- Used to create [unmanaged]() system
-- Must implement method
-  - `OnCreate(ref SystemState)`
-  - `OnDestroy(ref SystemState)`
-  - `OnUpdate(ref SystemState)`
+when `ISystem`
+
+- To create [unmanaged]() system
+
+Implemented method:
+
+- `OnCreate(ref SystemState)`
+- `OnDestroy(ref SystemState)`
+- `OnUpdate(ref SystemState)`
 
 > Details about [SystemState](unity-entities-api-systemstate.md)
 
 ## SystemBase
 
+When `SystemBase`
+
 - Used to create [managed]() system
+- Or need a [bridge to `MonoBehaviour`](unity-entities-communication-with-monobehaviour.md)
 
 ```cs
 public partical class MovementSystem : SystemBase {

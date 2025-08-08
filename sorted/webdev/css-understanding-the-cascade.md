@@ -1,15 +1,15 @@
 # Understanding the Cascade
 
-## 顺序
+## Order
 
-- 层叠性: 两条**同级别**的规则应用到同一个元素的时候，后一条规则会生效
+- Cascade: When two rules of the **same level** are applied to the same element, the latter rule will take effect
 
-## 优先级
+## Specificity
 
-> 优先级: 选择器范围小覆盖大, 本质上不同的选择器有不同的分数
+> Specificity: Selectors with smaller scope override those with larger scope; essentially different selectors have different scores
 
-- 可以把ID, CLASS, ELEMENT看作数字的百位，十位，个位
-- *, +, >, ~不会影响选择器的优先级
+- You can think of ID, CLASS, ELEMENT as the hundreds, tens, and ones places of a number
+- *, +, >, ~ don't affect the specificity of selectors
 
 |Selector|Identifiers|Classes|Elements|Total specificity|
 |--|--|--|--|:--:|
@@ -19,12 +19,12 @@
 |\#identifier|1|0|0|100|
 |button:not(\#mainBtn, .cta)|1|0|1|101|
 
-## 重要性
+## Importance
 
 ```css
 selector {
     property:value !important;
 }
 ```
-- `!important` 会覆盖所有规则
+- `!important` will override all rules
 

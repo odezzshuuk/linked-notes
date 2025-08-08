@@ -1,16 +1,16 @@
 # Where CSS can be used
 
-## 外部样式表
+## External Stylesheet
 
-语法：
+Syntax:
 
 ```html
 <link rel="stylesheet" type="text/css" href="filepath">
 ```
 
-## 内部样式表
+## Internal Stylesheet
 
-语法：
+Syntax:
 
 ```html
 <style type="text/css">
@@ -20,9 +20,9 @@
 </style>
 ```
 
-## 行内样式表
+## Inline Stylesheet
 
-在标签的style属性中定义
+Defined in the style attribute of the tag
 
 ```html
 <body>

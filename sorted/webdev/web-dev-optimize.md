@@ -2,12 +2,12 @@
 
 ## glossary
 
-- layout: 浏览器为元素计算几何信息, size and location 过程, 这个过程在chrome, opera, safari中叫做reflow, 在firefox中叫做layout
+- layout: The process where the browser calculates geometric information for elements, size and location. This process is called reflow in Chrome, Opera, Safari, and is called layout in Firefox
 - reflow: layout in Firefox
 
 ## Pipeline Shipping A Frame
 
-Shipping a frame(帧) to screen order(装载一帧的顺序):
+Shipping a frame to screen order:
 
 JS -> Style -> Layout -> Paint -> Composite
 
@@ -41,7 +41,7 @@ function logBoxHeight() {
 ```
 
 - get box.offsetHeight will trigger synchronous layout
-- 如果不需要立即获取 style 改变之后的 box.offsetHeight, get it before re-layout
+- If you don't need to immediately get the box.offsetHeight after the style change, get it before re-layout
 
 ```js
 console.log(box.offsetHeight);

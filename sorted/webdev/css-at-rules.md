@@ -1,4 +1,4 @@
-# `@`规则
+# @ Rules
 
 - [`@import`](#import)
 - [`@layer`](#layer)
@@ -8,14 +8,14 @@
 
 - import styles from another css file
 
-语法:
+Syntax:
 
 ```css
 @import url list-of-media-queries;
 @import url layer
 ```
 
-- url: 资源位置
+- url: resource location
 
 import from css file
 

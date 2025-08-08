@@ -1,7 +1,7 @@
 # XSS
 
-- XSS: Cross Site Scripting 跨站脚本
-- 一种代码注入
+- XSS: Cross Site Scripting
+- A type of code injection
 
 a xss happenned when convert markdown to html
 

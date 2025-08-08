@@ -92,7 +92,7 @@ public partial class ExampleSystem : SystemBase
 
 ## Narrow the query
 
-there are 2 ways to query
+There are 2 ways to query
 
 - Pass a [query](unity-entities-api-entityquery.md) object when schedule the job
 - Use attribute set on the job struct

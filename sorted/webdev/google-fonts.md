@@ -1,6 +1,6 @@
 # Google Fonts
 
-> [Google Fonts地址](https://developers.google.com/fonts)
+> [Google Fonts Address](https://developers.google.com/fonts)
 
 ## Import
 
@@ -15,16 +15,16 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
 ```
 
-- 用`family=`添加字体, 多个字体用`|`分隔
+- Use `family=` to add fonts, separate multiple fonts with `|`
 
 > https://fonts.googleapis.com/css?family=Tangerine|Inconsolata|Droid+Sans
 
-- 指定样式用`:`分隔, 多个样式用`,`分隔
+- Specify styles using `:` separator, separate multiple styles with `,`
 
 ## Usage
 
 [google font usage](google-fonts-usage.md)
 
-## 查看可用字体
+## View available fonts
 
-[字体地址](font.google.com)
+[Font address](font.google.com)

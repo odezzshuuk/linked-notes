@@ -1,14 +1,14 @@
-# 模块化CSS
+# Modularized CSS
 
-- 模块选择器由单个类名构成
-- 模块化CSS中禁用**后代选择器**, 因为使用后代选择器
-  - 会导致CSS的耦合性增加
-  - 增加优先级, 下次需要修改时可能需要继续增加优先级
-  - 复用性差, 不方便用到其它位置
+- Module selectors are composed of a single class name
+- **Descendant selectors** are prohibited in modular CSS, because using descendant selectors:
+  - Increases CSS coupling
+  - Increases specificity, which may require further specificity increases for future modifications
+  - Poor reusability, not convenient to use in other locations
 
-## 修饰符来表示模块的不同状态
+## Using modifiers to represent different module states
 
-> 如message--error
+> Such as message--error
 
 ```css
 .message {
@@ -38,7 +38,7 @@
 }
 ```
 
-- 将主模块名和修饰符类名同时添加到元素上
+- Add both the main module name and the modifier class name to the element
 
 ```html
 <div class="message message--error">
@@ -46,9 +46,9 @@
 </div>
 ```
 
-## 多元素模块
+## Multi-element modules
 
-- 类名用模块名称开头, 用`__`分隔, 然后是子元素名称
+- Class names start with the module name, separated by `__`, followed by the sub-element name
 
 
 ```css

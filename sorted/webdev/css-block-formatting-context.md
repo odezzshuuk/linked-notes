@@ -11,13 +11,12 @@
 - [ ] Table cells
 - [ ] Table captions
 - [ ] Anonymous table cells
-- [ ] [overflow](css-overflow.md)属性的值不为visible, clip的块元素(Block elements where overflow has visible, clip
-- [ ] display值为flow-root
-- [ ] contain值为layout, content, paint
-- [ ] 弹性元素(display为flex或inline-flex), 如果本身不是flex, grid, table容器
-- [ ] 网格元素(display为grid或inline-grid), 如果本身不是flex, grid, table容器
-- [ ] 多列容器值不为auto
-- [ ] column-span值为all的元素始终会创建一个新的BFC, 即使该元素包裹在一个多列容器中
+- [ ] Block elements where the value of the [overflow](css-overflow.md) property is not visible or clip
+- [ ] display value is flow-root
+- [ ] contain value is layout, content, paint
+- [ ] Grid elements (display is grid or inline-grid), if not a flex, grid, or table container itself
+- [ ] Multi-column container value is not auto
+- [ ] Elements with column-span value of all always create a new BFC, even if the element is wrapped in a multi-column container
 
 ## Create BFC For Positioning or Clearing Floats
 
@@ -58,7 +57,7 @@ Set parent element property to:
 </section>
 ```
 
-### 2. 排除外部浮动, exclude external floats
+### 2. Exclude external floats
 
 ```html
 <style>
@@ -99,6 +98,6 @@ Set parent element property to:
 ```
 
 
-### 3. 阻止外边界重叠, suppress margin collapsing
+### 3. Suppress margin collapsing
 
 

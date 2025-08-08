@@ -11,13 +11,13 @@
 ## What it is
 
 - rotate, scale, skew, translate an element
-- 几何变换, **not animation**
+- geometric transformation, **not animation**
 
 ## feature
 
 - if `transform: value` value different than none
   - a stack context is created
-  - 元素表现的像一个包含在`position: fixed`或`position: absolute;`的 containing block
+  - element behaves like a containing block with `position: fixed` or `position: absolute;`
 
 ## transform function pass to transform properties
 
@@ -47,11 +47,11 @@ translate()
 
 - `transform: scale(val)`: scale on 2D plane
 
-`matrix()`: 变换矩阵
+`matrix()`: transformation matrix
 
 - `matrix(a, b, c, d, tx, ty)`
 
-`perspective()`: (透视)
+`perspective()`: (perspective)
 
 - use for 3D transform
 

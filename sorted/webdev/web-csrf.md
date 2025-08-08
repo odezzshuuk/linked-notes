@@ -1,10 +1,10 @@
 # CSRF
 
-- CSRF: cross site request forgery 跨站请求伪造
-- 欺骗用户的浏览器去访问一个曾经[认证过](springsecurity-authentication.md)的网站, 并执行一些操作; 由于认证过, 网站会认为这个请求是用户自己操作
-- 与[xss](web-xss.md)不同
-  - xss是利用**用户对网站的信任**
-  - csrf是利用**网站对用户的信任**
+- CSRF: cross site request forgery
+- Tricks a user's browser into visiting a previously [authenticated](springsecurity-authentication.md) website and performing certain operations; because the user is authenticated, the website will consider this request to be the user's own operation
+- Different from [xss](web-xss.md):
+  - xss exploits **user's trust in the website**
+  - csrf exploits **website's trust in the user**
 
 ## take a look
 
@@ -47,17 +47,17 @@ In short
 - framework built-in CSRF protection
 - stateful software use [synchronizer token pattern]()
 - stateless software use [double submit cookie](#double-submit-cookies)
-- **附加**的**深层次**措施中的至少一项
+- **Additional** **deep** measures, at least one of the following:
   - [SameSite Cookie Attribute](/sorted/network/http-cookie.md)
-  - 实现基于用户交互的保护措施
-  - 考虑使用自定义的请求头
-  - 使用[origin header](/sorted/network/http-request-message.md#请求头)
-- **任何[XSS]可以击败csrf防御措施**
-- 在修改状态的请求中不要使用GET
+  - Implement user interaction-based protection measures
+  - Consider using custom request headers
+  - Use [origin header](/sorted/network/http-request-message.md#request-header)
+- **Any [XSS] can defeat csrf defense measures**
+- Don't use GET in requests that modify state
 
 ### SameSite Cookie Attribute
 
-- 是一种通过浏览器来保护用户免受CSRF攻击的方法
+- A method to protect users from CSRF attacks through the browser
 
 ### double submit cookies
 

@@ -12,7 +12,7 @@ width: width of the viewport
 
 ## hover
 
-- to test user input can trigger hover(检查用户设备是否支持hover操作)
+- to test if user input can trigger hover (checks if the user's device supports hover operations)
 
 value can be chosen
 

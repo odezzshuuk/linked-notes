@@ -41,7 +41,7 @@
 2. Schedule the job
 3. Wait for the job to complete
 
-Implement IJob interface
+Implementing IJob interface
 
 ```cs
 public struct ExampleJob: IJob
@@ -59,7 +59,7 @@ public struct ExampleJob: IJob
 }
 ```
 
-Schedule the job
+Scheduling the job
 
 ```cs
 public class ExampleBehaviour : MonoBehaviour {

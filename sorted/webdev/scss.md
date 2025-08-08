@@ -1,8 +1,8 @@
 # SCSS
 
-- CSS的超集
+- Superset of CSS
 
-SCSS提供了变量
+SCSS provides variables
 
 ```scss
 $white: #ffffff;

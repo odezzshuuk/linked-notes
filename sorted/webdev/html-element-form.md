@@ -33,7 +33,7 @@ get method
 - form data is appended to the action attribute URL with a '?' as a separator
 - the corresponding name/value pairs are concatenated after the '?', for example `/url?key1=value1&key2=value2`
 
-## enctype属性
+## enctype property
 
 ```html
 <form action="demo_post_enctype.html"
@@ -51,14 +51,14 @@ Available Value
 <table>
   <tr>
     <td>application/x-www-form-urlencoded</td>
-    <td>默认，空格转换成'+', 特殊字符转换成ASCII HEX值</td>
+    <td>Default, spaces are converted to '+', special characters are converted to ASCII HEX values</td>
   </tr>
   <tr>
     <td>multipart/form-data</td>
-    <td>有文件上传的控件表单时，该值是必须的<td>
+    <td>Required when the form has file upload controls</td>
   </tr>
   <tr>
     <td>text/plain</td>
-    <td>将空格转换为‘+’ , 不编码特殊字符<td>
+    <td>Converts spaces to '+', does not encode special characters</td>
   </tr>
 </table>

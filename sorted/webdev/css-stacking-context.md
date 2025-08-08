@@ -1,4 +1,4 @@
 # stacking context
 
-- html元素在z轴上的布局
-- z-index: 来调整z轴上的位置
+- Layout of HTML elements on the z-axis
+- z-index: to adjust position on the z-axis
