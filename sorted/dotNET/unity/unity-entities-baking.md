@@ -126,6 +126,7 @@ What those methods do
 `[BakingType]`: Any component that is marked with this is filtered out from the baking output
 
 - Which means when `AddComponent(entity, new ExampleComponetData())` in [baker](#baker), this component will not be added to the baked entity
+- Also can not be queried in [system](unity-entities-system.md)
 
 ## BakeDerivedTypesAttribute
 

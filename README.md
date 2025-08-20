@@ -16,9 +16,5 @@ The notes are organized by topic and are intended to be a living document, conti
 
 ## Life Changer
 
-- VIM
-- ctrl + o & ctrl + i
-- vscode
-- bind `:` to `workbench.action.showCommands`
-
+- neovim keymap: ctrl + o & ctrl + i
 
