@@ -10,7 +10,7 @@ git init
 
 if there is no remote repository, create first
 
-- Use [Github Cli](github-cli.md)
+- Use [Github CLI](github-cli.md)
 
 ```bash
 gh repo create

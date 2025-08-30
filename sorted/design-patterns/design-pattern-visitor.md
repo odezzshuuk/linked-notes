@@ -1,5 +1,13 @@
 # Design Pattern - Visitor
 
+* [Features](#features)
+* [When To Use](#when-to-use)
+* [Components](#components)
+* [Visitor](#visitor)
+* [Element](#element)
+* [Structured Object](#structured-object)
+* [Example Code](#example-code)
+
 ## Features
 
 ## When To Use
