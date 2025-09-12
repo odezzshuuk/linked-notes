@@ -1,28 +1,37 @@
-# 布隆过滤器
+# Bloom Filter
 
-- 有一定的误判率: 实际不存在判断为存在
+A Bloom filter is a space-efficient probabilistic data structure that is used to test whether an element is a member of a set.
 
-## 位数组
+- **False Positives**: It may have a certain false positive rate, meaning it might incorrectly identify an element as being in the set when it is not.
 
-- 每个位置1bit
-- 位数组长度就是过滤器的长度
+## Bit Array
 
-## 原理
+- Each position in the array is a single bit.
+- The length of the bit array determines the size of the filter.
 
-- 将元素映射到位数组中: 通过随机的几个hash函数，将函数值对应的为数组的位置设置为1
-- 判断元素是否存在: 通过随机的几个hash函数，将函数值对应的为数组的位置判断是否为1
-    - 如果都为1，那么很可能存在
-    - 如果有一个为0，那么一定不存在
+## Principle
 
-## 误判率
+1.  **Mapping Elements**: To add an element, it is hashed by several random hash functions. The positions in the bit array corresponding to the resulting hash values are set to 1.
+2.  **Checking for Existence**: To check if an element exists, it is hashed by the same hash functions.
+    - If all the corresponding positions in the bit array are 1, the element **most likely** exists.
+    - If any of the corresponding positions is 0, the element **definitely** does not exist.
 
-- 误判率公式: $p \approx (1 - e^{(-kn/m)})^k$
-  - k: hash函数个数
-  - n: 元素个数
-  - m: 位数组长度
+## False Positive Rate
 
-## 如何确定位数组长度和hash函数个数
+The formula for the false positive rate is:
 
-- 位数组长度: $m = -\frac{n \cdot ln(p)}{ln^2(2)}$
-  - p: 可接受的误判率
-- hash函数个数: $k = \frac{m}{n} \cdot ln(2)$
+$p \approx (1 - e^{(-kn/m)})^k$
+
+- **k**: Number of hash functions
+- **n**: Number of elements in the set
+- **m**: Length of the bit array
+
+## Determining Filter Size and Hash Functions
+
+- **Length of the Bit Array**: To achieve a desired false positive rate (`p`), the required length of the bit array (`m`) can be calculated as:
+
+  $m = -\frac{n \cdot \ln(p)}{(\ln(2))^2}$
+
+- **Number of Hash Functions**: The optimal number of hash functions (`k`) can be calculated as:
+
+  $k = \frac{m}{n} \cdot \ln(2)$

@@ -6,10 +6,10 @@
 void sort(std::vector<int> &nums) {  
   int n = nums.size();  
   for (int j = 1; j < n; j++) {  
-    int tmp = nums[j];  /// 取出待排序值
-    int i = j - 1;  /// 开始比较的起点
+    int tmp = nums[j];  /// Extract the value to be sorted
+    int i = j - 1;  /// Starting point for comparison
     while (i >= 0 && nums[i] > tmp) {  
-      nums[i+1] = nums[i];  /// 给nums[i + 1]赋值左侧元素的值
+      nums[i+1] = nums[i];  /// Assign the value of the left element to nums[i + 1]
       i--;  
     }  
     nums[i+1] = tmp;  

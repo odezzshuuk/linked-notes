@@ -88,7 +88,7 @@ When ISystem
 
 - Faster
 - Value-based
-- Unsupport [managed types](csharp-types.md#referece-types-managed-types)
+- Unsupport [managed types](csharp-types.md#reference-types(managed-types))
 - support [burst]() compile
 
 When SystemBase

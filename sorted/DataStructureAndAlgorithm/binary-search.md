@@ -44,4 +44,3 @@ class Solution {
 ## example
 
 [[leetcode34查找元素第一和最后的位置]]
-

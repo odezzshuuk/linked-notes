@@ -2,7 +2,7 @@
 
 ## What's For
 
-- design for matching files and directories
+- Design for matching files and directories
 
 ## Special Characters
 

@@ -1,5 +1,4 @@
-# Algorithm - Deep First Search
+# Algorithm - Depth First Search
 
-- 二叉树的前序，中序，后序遍历均为深度优先搜索
-- 通常用[[递归]]实现，也可用数据结构[stack](data-structure-stack.md)实现
-
+- Pre-order, in-order, and post-order traversals of a binary tree are all depth-first searches.
+- Usually implemented with [[recursion]], can also be implemented with the data structure [stack](data-structure-stack.md).

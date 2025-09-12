@@ -1,10 +1,10 @@
-# 图
+# Graph
 
 - $G  = (N, E)$
-  - N表示N个结点
-  - E表示E条边
+  - N represents N nodes
+  - E represents E edges
  
  
- ## 有向图
+ ## Directed Graph
  
- ## 无向图
+ ## Undirected Graph

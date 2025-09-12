@@ -1,4 +1,4 @@
-# binary search tree
+# Binary Search Tree
 
 - ordered tree
 - left subtree < root
@@ -10,4 +10,4 @@
 > if right subtree is not empty, then all nodes in right subtree are greater than root
 
 - left and right subtree are also binary search tree
-- inorder traverse on binary search tree, get a **sorted*e array
+- inorder traverse on binary search tree, get a **sorted** array

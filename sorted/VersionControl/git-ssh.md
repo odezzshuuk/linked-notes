@@ -39,9 +39,9 @@ file list create in `~/.ssh` by above steps
 
 ## ssh-agent
 
-- 用于保存私钥的程序, 用于私钥的公钥认证
-- 通常在X-session或登陆会话开始时启动
-- 所有其他程序或窗口作为ssh-agent的客户端启动
+- A program used to hold private keys for public key authentication
+- Usually started at the beginning of an X-session or login session
+- All other programs or windows are started as clients of the ssh-agent
 
 ## Algorithm
 

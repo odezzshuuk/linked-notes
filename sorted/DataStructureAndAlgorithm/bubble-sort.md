@@ -2,7 +2,7 @@
 
 - time complexity is $O(n^2)$
 
-## How It workds
+## How It works
 
 - swap two adjacent elements if the left one is greater than the right one
 - put the largest number to the end of the array in each loop

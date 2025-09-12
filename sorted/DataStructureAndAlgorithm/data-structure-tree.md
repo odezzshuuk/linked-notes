@@ -170,4 +170,3 @@ class Trie {
 - Characteristics:
 - Slower searches compared to AVL trees.
 - Faster insertions and deletions than AVL trees.
-

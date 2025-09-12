@@ -10,38 +10,38 @@
 
 [[data-structure-queue]]
 
-[树](data-structure-tree.md)
+[Tree](data-structure-tree.md)
 
-[堆](data-structure-heap.md)
+[Heap](data-structure-heap.md)
 
-[[图]]
+[[Graph]]
 
-# 基础算法
+# Basic Algorithms
 
-[[递归]]
+[[Recursion]]
 
-[[双指针]]
+[[Double Pointer]]
 
-[[二分查找]]
+[[Binary Search]]
 
-[[排序算法]]
+[[Sorting Algorithms]]
 
-[[深度优先搜索]]
+[[Depth-First Search]]
 
-[[回溯]]
+[[Backtracking]]
 
-[[广度优先搜索]]
+[[Breadth-First Search]]
 
-[动态规划](algorithm-dynamic-programming.md)
+[Dynamic Programming](algorithm-dynamic-programming.md)
 
-[dijkstra算法](algorithm-dijkstra.md)
+[Dijkstra's Algorithm](algorithm-dijkstra.md)
 
-[[KMP算法(模式匹配算法)]]
+[[KMP Algorithm (Pattern Matching Algorithm)]]
 
-[[时间复杂度分析]]
+[[Time Complexity Analysis]]
 
-## 应用
+## Applications
 
-[布隆过滤器](../sorted/数据结构和算法/algorithm-bloom-filter.md)
+[Bloom Filter](../sorted/DataStructureAndAlgorithm/algorithm-bloom-filter.md)
 
-[消息摘要算法](../sorted/数据结构和算法/message-digest-algorithm.md)
+[Message Digest Algorithm](../sorted/DataStructureAndAlgorithm/message-digest-algorithm.md)

@@ -16,13 +16,13 @@ python -m venv .venv
 python3 -m venv .venv
 ```
 
-create virtual environment, and specify the virtual environment directory as `env_path`
+Create virtual environment, and specify the virtual environment directory as `env_path`
 
 ```shell
 python -m venv env_path
 ```
 
-activate virtual environment
+Activate virtual environment
 
 - windows
   - **cmd**: `env_path/Scripts/activate.bat`
@@ -53,7 +53,7 @@ $env:VIRTUAL_ENV
 deactivate
 ```
 
-## how venvs work
+## How venvs Work
 
 - python interperter running from a virtual environment
 - `sys.prefix` and `sys.exec_prefix` point to the virtual environment
@@ -63,6 +63,6 @@ deactivate
 ```py
 sys.prefix == sys.base_prefix
 ```
-## Conda
+## conda
 
-[Conda](python-conda.md)
+[conda](python-conda.md)

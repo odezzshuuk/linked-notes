@@ -2,34 +2,34 @@
 
 ## What It Is
 
-- 哈希音译自英语hash，hash表示散列
-- 使用哈希函数将键映射到存储桶
-  - 插入新键:哈希函数决定该键分配到哪个桶
-  - 搜索键：使用哈希函数映射到对应的桶，并只在对应的桶中进行搜索
+- Hash is a transliteration from English, meaning scattering
+- Uses a hash function to map keys to buckets
+  - Inserting a new key: The hash function determines which bucket the key is assigned to
+  - Searching for a key: Uses the hash function to map to the corresponding bucket, and only searches in that bucket
 
 ## Hash Function
 
 - $hashFunction(key)$
-- 返回值是哈希地址
-- 哈希函数的选取
-  - 直接定址：
-  - 数字分析：
-  - 除余法：$hash(key) = key % P + b$, 理论和实践表明 p 应选取小于存储容量的素数
-  - 平方取中法：k为键，取$k^2$的中间几位作为哈希地址, 位数可根据表长决定，如1000，可取中间三位数
-  - 折叠法：
-  - 哈希函数的选取是一个开放问题
-- 冲突：不同的键映射到相同的哈希地址
+- The return value is the hash address
+- Selection of hash functions:
+  - Direct addressing:
+  - Digit analysis:
+  - Division method: $hash(key) = key % P + b$, theory and practice show that p should be a prime number less than storage capacity
+  - Mid-square method: k is the key, take the middle few digits of $k^2$ as the hash address, the number of digits can be determined by the table length, such as 1000, can take the middle three digits
+  - Folding method:
+  - The selection of hash functions is an open problem
+- Collision: Different keys map to the same hash address
 
-## 决定查找效率的因素
+## Factors Determining Search Efficiency
 
-- 哈希函数是否均匀
-- 冲突解决方法
-- 元素个数与哈希表长度
+- Whether the hash function is uniform
+- Collision resolution method
+- Number of elements vs. hash table length
 
-## 解决冲突
+## Resolving Collisions
 
-- 1. 线性探测: $i$为键映射的地址，发生冲突时检测$i+1$是否为空，否则检测$i+2$，依次递增
-- 2. 二次探测: 增量为$1^2, -1^2, 2^2, 2^2$
-- 3. 再哈希:若哈希函数$H1(key)$发生冲突，则用$H2(key)$生成一个新地址,依次$H3(key)$, $H4(key)$,直到产生不冲突地址
-- 4. 链地址法：将哈希地址作为一个指针，指向一个**链表**,若哈希表长度为m，则建立m个空链表
-- 5. 建立溢出区
+- 1. Linear probing: $i$ is the address mapped by the key, when a collision occurs, check if $i+1$ is empty, if not, check $i+2$, and so on
+- 2. Quadratic probing: Increments are $1^2, -1^2, 2^2, 2^2$
+- 3. Rehashing: If hash function $H1(key)$ causes a collision, use $H2(key)$ to generate a new address, then $H3(key)$, $H4(key)$, until a non-colliding address is produced
+- 4. Chaining: Use the hash address as a pointer to a **linked list**, if the hash table length is m, establish m empty linked lists
+- 5. Establishing an overflow area

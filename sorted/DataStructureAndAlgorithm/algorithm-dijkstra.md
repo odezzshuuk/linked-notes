@@ -1,19 +1,18 @@
-# Dijkstra算法
+# Dijkstra's Algorithm
 
-起始位置
+Starting position
 
- `visit[]`: 已访问节点, 
+ `visit[]`: visited nodes, 
  
-- 访问过为1， 为访问为0
+- 1 for visited, 0 for unvisited
  
-`dist[]`: 起始节点到其它节点的当前最短距离
+`dist[]`: current shortest distance from the starting node to other nodes
 
-`middle`: 中间节点
+`middle`: intermediate node
 
-`path[]`: 
+`path[]`:
 
-1. 初始化`dist[]`
-2. 选择`middle`, 满足`visit[middle] == 0`且`dist[middle]`中最小
-3. 标记`vist[middle] = 1;` 
-4. 更新`dist[]`
-
+1. Initialize `dist[]`
+2. Select `middle`, satisfying `visit[middle] == 0` and `dist[middle]` is the minimum
+3. Mark `visit[middle] = 1;` 
+4. Update `dist[]`

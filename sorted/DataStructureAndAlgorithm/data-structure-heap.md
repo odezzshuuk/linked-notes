@@ -2,7 +2,7 @@
 
 ## What It Is
 
-- Can be look as a [complete tree]()
+- Can be looked at as a [complete tree]()
 - Max Heap: the value of each node is **greater than or equal to** its left and right child nodes
 - Min Heap: the value of each node is **less than or equal to** its left and right child nodes
 
@@ -55,4 +55,3 @@ Method build from basic methods
 - leaf node index is $[n/2] + 1, [n/2] + 2, ...., n$
 
 [Heap Sort](heap-sort.md)
-

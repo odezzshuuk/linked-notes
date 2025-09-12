@@ -1,18 +1,23 @@
 # Algorithm - Backtracking
 
-[[leetcode51N皇后]]
+- Related to [[Depth-First Search]]
 
-- 与[[深度优先搜索]]联系紧密
+## Summary
 
-## Summerize
+- **Return Condition**: The condition that stops the recursive process.
+- For example, in a binary tree traversal:
 
-- 返回条件
-- 比如二叉树的遍历
-
-```c++
+```cpp
 void dfs(TreeNode* root) {
-  if (root = nullptr) return;  // 返回条件, 深度的体现
-  dfs(root->left);  // 优先每棵树的左节点
+  // The return condition determines the depth of the search.
+  if (root == nullptr) {
+    return;
+  }
+  
+  // Prioritize traversing the left subtree.
+  dfs(root->left);
+  
+  // Then traverse the right subtree.
   dfs(root->right);
 }
 ```
