@@ -89,9 +89,9 @@ Parameters
 
 ## setImmediate()
 
-- 中断长时间运行的操作
-- 在浏览器完成其它操作后执行
-- nodejs中[setImmediate()](nodejs-timers.md#setimmediate)
+- Interrupt long-running operations
+- Execute after the browser completes other operations
+- In nodejs, [setImmediate()](nodejs-timers.md#setimmediate)
 
 ## clearTimeout()
 

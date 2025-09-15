@@ -1,8 +1,8 @@
-# 寄存器
+# Register
 
-- 寄存器Register）是中央处理器内用来暂存指令、数据和地址的电脑存储器。
-- 寄存器的存贮容量有限，读写速度非常快。
-- 在计算机体系结构里，寄存器存储在已知时间点所作计算的中间结果，通过快速地访问数据来加速计算机程序的运行。  
+- A register is a computer memory used in the central processing unit to temporarily store instructions, data, and addresses.
+- Registers have limited storage capacity but very fast read/write speeds.
+- In computer architecture, registers store intermediate results of calculations at known time points, speeding up the execution of computer programs through rapid data access.  
 
-[寄存器-维基百科](https://zh.wikipedia.org/wiki/%e5%af%84%e5%ad%98%e5%99%a8)  
-[寄存器-百度百科](https://baike.baidu.com/item/%e5%af%84%e5%ad%98%e5%99%a8/187682?fr=aladdin)  
+[Register - Wikipedia](https://en.wikipedia.org/wiki/Processor_register)  
+[Register - Baidu Encyclopedia](https://baike.baidu.com/item/%e5%af%84%e5%ad%98%e5%99%a8/187682?fr=aladdin)  

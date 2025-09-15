@@ -1,3 +1,4 @@
-# 
-- 内存管理单元
-- 虚拟地址到物理内存的转换，内存保护，中央处理器高速缓存控制
+# MMU
+
+- Memory Management Unit
+- Translates virtual addresses to physical memory, provides memory protection, and controls the CPU cache.

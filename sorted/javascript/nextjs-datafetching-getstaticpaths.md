@@ -111,34 +111,34 @@ render root path `/`:
 
 `fallback: true`: function [getStaticProps()](nextjs-datafetching-getstaticprops.md) behavior changes in following ways:
 
-1. `getStaticPaths()`返回的`paths`属性中的路径会在build time 被[getStaticProps()](nextjs-datafetching-getstaticprops.md)预渲染
-2. 不在`paths`中的路径, 不会导致 404 page, `Next.js` 会为首次访问的这种路径提供一个[备用页面](#fallback-page)
-3. nextjs 在后台静态的生成请求的页面, 包括运行getStaticProps()
-4. 当完成时, 浏览器根据[props]()渲染一个页面
+1. The paths property returned by `getStaticPaths()` will be pre-rendered at build time by [getStaticProps()]
+2. Paths not in `paths` will not result in a 404 page; Next.js will provide a [fallback page] for the first visit to such a path
+3. Next.js will statically generate the requested page in the background, including running getStaticProps()
+4. When completed, the browser will render a page based on [props]()
 
-> 第四点, 从用户的角度看, 页面会从**fallback page**切换到渲染后的完整页面
+> For point 4, from the user's perspective, the page will switch from the **fallback page** to the fully rendered page
 
-5. page navigated by `next/link` or `next/router` 不会提供备用页面, 行为和`fallback: blocking`一样
+5. Pages navigated by `next/link` or `next/router` will not provide a fallback page; behavior is the same as `fallback: blocking`
 
 `fallback: blocking`: function [getStaticProps()]() behavior changes in following ways
 
-1. `getStaticPaths()`返回的`paths`属性中的路径会在build time 被[getStaticProps()]预渲染
+1. The paths property returned by `getStaticPaths()` will be pre-rendered at build time by [getStaticProps()]
 2. 不在`paths`中的路径, 不会导致 404 page, Next.js会为首次访问的路径面开始SSR
 
-> `Next.js` 不会**提供备用页面
+> Next.js will not **provide a fallback page**
 
-3. 用户只会看到一个完整的页面, 不会用转换过程
+3. Users will only see a complete page, without a transition process
 
 #### when `fallback: ture`
 
 your app have a very large number of **static pages** that **depend on data**, and the builds would take a very long time
 
-你可以提供一小部分静态页面, 剩下的部分使用`fallback: true`
+You can provide a small number of static pages, and use `fallback: true` for the rest
 
 #### fallback page
 
 - page [props](nextjs-datafetching-getstaticprops.md) will be empty
-- [router.isFallback](nextjs-parse-routes.md#routerisfallback) 可以检测需要是否渲染fallback page
+- [router.isFallback](nextjs-parse-routes.md#routerisfallback) can be used to detect whether to render a fallback page
 
 ```js
 import { useRouter } from 'next/router'

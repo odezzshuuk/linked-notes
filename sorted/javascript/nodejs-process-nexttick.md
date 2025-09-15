@@ -62,7 +62,7 @@ bar = 1;
 
 - `process.nextTick()` is more immediate `setImmediate()`
 - 互换名称会更符合函数的功能
-- 但是互换命名会影响npm大部分package
+- However, swapping the names would affect most npm packages
 - it is recommended to use `setImmediate()` instead of `process.nextTick()`
 
 [and setTimeout()](nexttick-setimmediate-settimeout.md)
@@ -80,7 +80,7 @@ server.on('listen', () => {});
 ```
 
 `listen()` is run at beginning of the event loop
-- 有可能在`listen()`之前, `connection`事件就已经触发了
+- It is possible that the `connection` event is triggered before `listen()`
 
 emitting an event from constructor immediately
 

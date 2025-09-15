@@ -1,4 +1,4 @@
-# Lexical Analysis(词法分析)
+# Lexical Analysis
 
 code: 
 
@@ -9,22 +9,21 @@ else
     z = 1;
 ```
 
-lexical分析器看到的是：
+What the lexical analyzer sees:
 
 `\tif (i == j)\n\t\tz = 0;\n\telse\n\t\tz = 1;`
 
 ## Token Class 
 
-> 如： Identifier, Keywords, `()`
+> For example: Identifier, Keywords, `()`
 
-- 对应一组字符串
-- Identifier: 以英文字母开头的字符串
-- Integer :0, 12, 001
+- Corresponds to a group of character strings
+- Identifier: character strings starting with an English letter
+- Integer: 0, 12, 001
 - Keyword: if, else, begin
 - WhiteSpace
 - Token: `<class, string>`
 
-源文件中的字符串foo=42转换成Token: 
-`<Id, "foo">, <OP, "=">, <Int, "42">
-
+The string "foo=42" in the source file is converted to Tokens:
+`<Id, "foo">, <OP, "=">, <Int, "42">`
 

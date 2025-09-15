@@ -69,7 +69,7 @@ export function* generatorFunctionName() { /* … */ }
 export const { name1, name2: bar } = o;
 export const [ name1, name2 ] = array;
 ```
-导出列表
+Export list
 
 ```javascript
 // Export list
@@ -78,7 +78,7 @@ export { variable1 as name1, variable2 as name2, /* …, */ nameN };
 export { variable1 as "string name" };
 export { name1 as default /*, … */ };
 ```
-默认导出
+Default export
 
 ```javascript
 // Default exports
@@ -91,10 +91,10 @@ export default class { /* … */ }
 export default function* () { /* … */ }
 ```
 
-聚合模块: 将多个模块聚合到一个模块中
+Aggregation module: aggregate multiple modules into one module
 
 - export moduleA with file scope
-- export moduleB with nameb, 在其它模块中使用 `agg.nameb` 访问
+- export moduleB with nameb, in other modules use `agg.nameb` to access
 - export moduleC
 - export moduleD
 - export moduleE

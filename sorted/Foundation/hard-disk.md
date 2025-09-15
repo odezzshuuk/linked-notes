@@ -1,11 +1,11 @@
-# 硬盘
+# Hard Disk
 
-- 由许多圆形的硬盘盘组成
+- Composed of many circular hard disk platters
 
-## 硬盘的组成
+## Components of a Hard Disk
 
-- 以硬盘盘为例
-- 磁头: 进行读取动作, 固定在机械臂上，机械臂上有多个磁头
-- 磁道：硬盘盘转动时， 磁头运行的轨道
-- 磁柱：相同半径的磁道组成磁柱，磁盘分割时的最小单位
-- 扇区：由圆心向外的直线分割出来, 是最小储存物理量
+- Taking a hard disk platter as an example
+- Read/write head: performs reading actions, fixed on a mechanical arm, there are multiple heads on the mechanical arm
+- Track: the path along which the read/write head moves when the disk platter rotates
+- Cylinder: tracks with the same radius form a cylinder, the smallest unit when partitioning a disk
+- Sector: segments divided by straight lines from the center outward, the smallest physical storage unit

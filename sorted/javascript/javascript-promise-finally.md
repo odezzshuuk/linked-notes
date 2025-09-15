@@ -1,11 +1,11 @@
 # Javascript - Promise.prototype.finally()
 
-- 无论结果是fulfilled还是rejected, 都会执行的函数
+- A function that will be executed regardless of whether the result is fulfilled or rejected
 
 syntax
 
 `promiseInstance.finally(onfinally)`
 
-- 参数: `onfinally`是一个无参数的函数对象
+- Parameter: `onfinally` is a function object with no arguments
 
 

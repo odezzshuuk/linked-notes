@@ -1,23 +1,23 @@
 # Git - Best Practice
 
-* [Output Git Log In Stdout](#Output Git Log In Stdout)
-* [Track A file Changes History](#Track A file Changes History)
-* [print merges commit log](#print merges commit log)
-* [Check Commit Log](#Check Commit Log)
-* [Undo commit](#Undo commit)
-* [Remove File From Stage](#Remove File From Stage)
-* [Discard All Local Changes](#Discard All Local Changes)
-* [check staged files](#check staged files)
-* [Set HEAD to specified status](#Set HEAD to specified status)
-* [Append new modification to the last commit](#Append new modification to the last commit)
-* [Temporarily save current modification](#Temporarily save current modification)
-* [Check all branches](#Check all branches)
-* [Get Remote Url](#Get Remote Url)
-* [Resovle Conflict](#Resovle Conflict)
-* [A way to make the lastest commit as the initial commit](#A way to make the lastest commit as the initial commit)
-* [Copy Files Or Directory From Another Commit](#Copy Files Or Directory From Another Commit)
-* [Check Ignored Files](#Check Ignored Files)
-* [Filter Commit History By Specified File](#Filter Commit History By Specified File)
+* [Output Git Log In Stdout](#output-git-log-in-stdout)
+* [Track A file Changes History](#track-a-file-changes-history)
+* [print merges commit log](#print-merges-commit-log)
+* [Check Commit Log](#check-commit-log)
+* [Undo commit](#undo-commit)
+* [Remove File From Stage](#remove-file-from-stage)
+* [Discard All Local Changes](#discard-all-local-changes)
+* [check staged files](#check-staged-files)
+* [Set HEAD to specified status](#set-head-to-specified-status)
+* [Append new modification to the last commit](#append-new-modification-to-the-last-commit)
+* [Temporarily save current modification](#temporarily-save-current-modification)
+* [Check all branches](#check-all-branches)
+* [Get Remote Url](#get-remote-url)
+* [Resovle Conflict](#resovle-conflict)
+* [A way to make the lastest commit as the initial commit](#a-way-to-make-the-lastest-commit-as-the-initial-commit)
+* [Copy Files Or Directory From Another Commit](#copy-files-or-directory-from-another-commit)
+* [Check Ignored Files](#check-ignored-files)
+* [Filter Commit History By Specified File](#filter-commit-history-by-specified-file)
 
 ## Output Git Log In Stdout
 
@@ -199,4 +199,12 @@ specified line number
 ```sh
 git log -L 1,1:<file>
 ```
+
+## Writing Git Commit Message
+
+Format: `<type>(<scope>): <description>`
+
+- type: feat, fix, docs, style, refactor, test, chore
+- scope: optional, such as auth, ui, api
+- description: short description of the change
 

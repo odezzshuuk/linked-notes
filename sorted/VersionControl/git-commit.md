@@ -1,13 +1,13 @@
 # Git - git commit
 
-* [How to commit](#How to commit)
-* [What Happen When Git Commit](#What Happen When Git Commit)
-* [Relative Reference Represent A Commit](#Relative Reference Represent A Commit)
-* [check commit range](#check commit range)
-* [Amend Commit](#Amend Commit)
-* [Cleanup Commit History](#Cleanup Commit History)
-* [Check Changes ](#Check Changes)
-* [Rewrite Commit Message](#Rewrite Commit Message)
+* [How to commit](#how-to-commit)
+* [What Happen When Git Commit](#what-happen-when-git-commit)
+* [Relative Reference Represent A Commit](#relative-reference-represent-a-commit)
+* [check commit range](#check-commit-range)
+* [Amend Commit](#amend-commit)
+* [Cleanup Commit History](#cleanup-commit-history)
+* [Check Changes](#check-changes)
+* [Rewrite Commit Message](#rewrite-commit-message)
 
 ## How to commit
 
@@ -55,7 +55,6 @@ git branch -f main HEAD^  # force move main branch to parent commit
 
 - properly to answer question: what changes have I not yet applied to my master branch from this branch?
 - Double Dot: `git log <commit1>..<commit2>`: display all commits after commit1 separated with commit2 on commit2, **not include commit2**
-- Triple Dot: `git log <commit1>...<commit2>`: 显示commit1和commit2之间的提交记录
 - Triple Dot: `git log <commit1>...<commit2>`: display all commits between commit1 and commit2
 
 ## Amend Commit
@@ -86,6 +85,5 @@ git diff <commit1>~ <commit2>
 ## Rewrite Commit Message
 
 ```sh
-
 ```
 

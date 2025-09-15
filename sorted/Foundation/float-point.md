@@ -1,41 +1,41 @@
-# 浮点数
+# Floating Point
 
-## 浮点数二进制编码格式
+## Binary Encoding Format for Floating Point Numbers
 
 $$
 (-1)^s \times 1.f \times 2^{e-1023}
 $$
 
-- float类型: s=1位符号位， e=8位指数位， f=23位有效数字 
-- double类型: s=1位符号位， e=11位指数位， f=52位有效数字 
-  - 指数位, 首位表示符号, 指数能表示的范围-1024 ~ 1024 
-  - 0 ~ 1023表示负数, 1024 ~ 2048表示正数
+- float type: s=1 bit sign, e=8 bits exponent, f=23 bits significand 
+- double type: s=1 bit sign, e=11 bits exponent, f=52 bits significand 
+  - For the exponent, the first bit represents the sign, the exponent can represent the range -1024 ~ 1024 
+  - 0 ~ 1023 represents negative numbers, 1024 ~ 2048 represents positive numbers
 
-以`float f = 624.424`为例
+Taking `float f = 624.424` as an example
 
-- 二进制编码为: `1 00010000 0111000001101100100011`
+- Binary encoding: `1 00010000 0111000001101100100011`
 
 ***
 
-- 实数可用这样的形式表示：$d_md_{m-1}...d_1d_0d_{-1}d_{-2}...d_{-n}$
-- 十进制实数d可以表示为： $d = \sum_{i=-n}^m10^i \times d_i$
-- 二进制实数d可以表示为： $d = \sum_{i=-n}^m2^i \times d_i$
-- $0.111111_2$ 表示$\frac {63}{64}$
-- 十进制数$12.34_{10}$可以表示为：$1\times10^{1}+2\times10^{0}+3\times10^{-1}+4\times10^{-2}=12\frac{34}{100}$
-- 仅考虑有限长度编码是不能准确表达$\frac{1}{3}$, $\frac{5}{7}$这样的数
-- 类似的二进制表示发只能表示那些能够被写成$x \times 2^y$的数，其他值只能被近似表示
-- IEEE浮点标准，用$V=(-1)^s \times M \times 2^E$来表示一个数
-  - s=1表示整数， s=0表示正数
-  - 有效数M是一个二进制小数
-  - 指数E是2的幂
-- 浮点数的位被划分为三个域
-  - 1位符号位s
-  - k位存储指数E
-  - n位小数域存储M
-  - 单精度$k=8, n=23$
-  - 双精度$k=11,n=52$
+- Real numbers can be represented in the form: $d_md_{m-1}...d_1d_0d_{-1}d_{-2}...d_{-n}$
+- A decimal real number d can be represented as: $d = \sum_{i=-n}^m10^i \times d_i$
+- A binary real number d can be represented as: $d = \sum_{i=-n}^m2^i \times d_i$
+- $0.111111_2$ represents $\frac {63}{64}$
+- The decimal number $12.34_{10}$ can be represented as: $1\times10^{1}+2\times10^{0}+3\times10^{-1}+4\times10^{-2}=12\frac{34}{100}$
+- Considering only finite-length encoding, numbers like $\frac{1}{3}$, $\frac{5}{7}$ cannot be accurately represented
+- Similarly, binary representation can only represent numbers that can be written as $x \times 2^y$, other values can only be approximated
+- IEEE floating-point standard uses $V=(-1)^s \times M \times 2^E$ to represent a number
+  - s=1 represents negative, s=0 represents positive
+  - The significand M is a binary fraction
+  - The exponent E is a power of 2
+- The bits of a floating-point number are divided into three fields
+  - 1 bit sign s
+  - k bits to store the exponent E
+  - n bits fraction field to store M
+  - Single precision: $k=8, n=23$
+  - Double precision: $k=11, n=52$
 - $11100.101_2=0.11100101\times2^{101}$
-- $11100.101$规格化表示$1.1100101\times2^{100}$
+- $11100.101$ normalized as $1.1100101\times2^{100}$
   - s=0
   - M=1.1100101
   - E=100

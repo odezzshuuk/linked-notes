@@ -50,7 +50,7 @@ function* generator() {
 var gen = generator();
 console.log(gen.next()); // { value: 10, done: false }
 console.log(gen.next()); // { value: 'foo', done: false }
-console.log(gen.next(5)); // 执行x=5, 返回{ value: 5, done: false }
+console.log(gen.next(5)); // executes x=5, returns { value: 5, done: false }
 ```
 
 how to understand yield

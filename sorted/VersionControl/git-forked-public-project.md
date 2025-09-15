@@ -1,4 +1,4 @@
-# 为Public Project作贡献
+# Contribute to Public Project
 
 1. 克隆远程仓库
 

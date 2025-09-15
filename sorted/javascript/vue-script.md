@@ -1,5 +1,13 @@
 # Vue - Script
 
+* [Catagories](#catagories)
+* [data](#data)
+* [computed](#computed)
+* [props](#props)
+* [methods](#methods)
+* [watch](#watch)
+* [emits](#emits)
+
 ## Catagories
 
 state
@@ -7,7 +15,7 @@ state
 - [data](#data)
 - [computed](#computed)
 - [props](#props)
-- methods
+- [methods](#methods)
 - watch
 - emits
 - expose

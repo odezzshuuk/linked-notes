@@ -37,26 +37,26 @@ console.log(x);  // undifined
 var x = 1;
 ```
 
-> 浏览器中var定义全局变量和函数都会成为window对象的属性和方法
+> In browsers, global variables and functions defined with var become properties and methods of the window object.
 
 ## let declaration
 
-> ECMAScript6后新增关键字
+> Keyword introduced after ECMAScript 6
 
-- let变量在块内部，即`{}`之间
-- let与var的最大区别在于作用域
-- let不能单独作为块主体
+- let variables are scoped within blocks, i.e., between `{}`
+- The biggest difference between let and var is scope
+- let cannot be used alone as a block body
 
 ```javascript
-if (true) let a = 1; // 语法错误
+if (true) let a = 1; // Syntax error
 ```
 
 ## const declaration
 
-- const变量必须在声明时赋值
-- 将[原始值](javascript-variable-copy-and-reference.md)赋值个const变量，就不能改变const变量值
-- 可以改变const对象的属性, 无法重新为const对象赋值
-- const数组可以更改，不能重新赋值
+- const variables must be assigned a value at declaration
+- Assigning a [primitive value](javascript-variable-copy-and-reference.md) to a const variable means the value cannot be changed
+- You can change the properties of a const object, but cannot reassign the object itself
+- A const array can be modified, but cannot be reassigned
 
 ## Non-identifier Names
 

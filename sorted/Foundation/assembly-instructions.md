@@ -1,26 +1,26 @@
-# 汇编语言
+# Assembly Language
 
-- 执行语句
+- Executable statements
 <table>
     <tr>
-        <td>标号</td>
-        <td>指令</td>
-        <td>操作数</td>
-        <td>操作数</td>
-        <td>注释</td>
+        <td>Label</td>
+        <td>Instruction</td>
+        <td>Operand</td>
+        <td>Operand</td>
+        <td>Comment</td>
     </tr>
 </table>
-  - 标号表示处理器指令在[[主存]]中的逻辑地址, 可有可无
+  - A label represents the logical address of a processor instruction in [[main memory]], it is optional
 
-- 说明语句
+- Declarative statements
 <table>
     <tr>
-        <td>名字</td>
-        <td>伪指令</td>
-        <td>参数</td>
-        <td>参数</td>
+        <td>Name</td>
+        <td>Pseudo-instruction</td>
+        <td>Parameter</td>
+        <td>Parameter</td>
         <td>......</td>
-        <td>;注释</td>
+        <td>;Comment</td>
     </tr>
 </table>
-- 执行语句中的标号和说明语句中的名字可以是符合汇编程序语法的用户自定义id, 不能用汇编保留字
+- Labels in executable statements and names in declarative statements can be user-defined IDs that conform to assembly program syntax, and cannot use assembly reserved words

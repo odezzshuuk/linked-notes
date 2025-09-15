@@ -1,6 +1,6 @@
 # package.json - Fields
 
-> 包含被nodejs识别的字段和被npm识别的字段
+> Includes fields recognized by nodejs and npm
 > include fields recognized by nodejs and npm
 
 ## must contain `name` and `version` fields

@@ -1,4 +1,4 @@
-# variable
+# JavaScript - Variable
 
 ## Declaration
 
@@ -42,11 +42,11 @@ var c = foo(2);
 LHS
 
 - `c=`
-- `a=2`, 隐式变量分配
+- `a=2`
 - `b=` 
 
-RHS查询
+RHS
 
 - `=a`
-- `return a + b` , 中的a和b
+- `return a + b`,
 - `foo(2)`
