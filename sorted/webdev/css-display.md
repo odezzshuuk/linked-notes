@@ -11,7 +11,7 @@ decide inside and outer display type of an element
 
 Set element **outer** display type
 
-- `block`: generate a [block box](css-box-model-sorted.md), tag `h1`-`h6`, `p`, `div` are default block
+- `block`: generate a [block box](css-box-model-sorted.md#block-box), tag `h1`-`h6`, `p`, `div` are default block
 - `inline`: generate an [inline box](css-box-model-sorted.md), tag `span`, `a`, `b`, `i`, `u`, `s` are default inline
 - `inline-block`: equilavent to `display: inline flow-root`
 

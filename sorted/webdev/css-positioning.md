@@ -30,8 +30,9 @@
 ## position: absolute
 
 - Allows to modify the position of the element in the document with property `top, right, bottom, left`
-- positioned relative to the closest [positioned](#positioned-element) ancestor or [containing block](css-containing-block.md)
-- removed from [normal document flow](css-normal-flow.md)
+- Positioned relative to the closest [positioned](#positioned-element) ancestor. The ancestor could be parent, grandparent or even further element
+- Or position relative to closet [containing block](css-containing-block.md)
+- Removed from [normal document flow](css-normal-flow.md)
 
 > in most cases, height or width set to `auto` to fit its content, or fill available space
 

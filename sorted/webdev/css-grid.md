@@ -9,7 +9,7 @@
 
 [Grid Foundation](css-grid-foundation.md)
 
-## flexible number of tracks(rows, columns)
+## Flexible number of tracks(rows, columns)
 
 - use `auto-fit` and `minmax()` in `repeat()` function to implment flexible number of tracks
 
@@ -19,6 +19,8 @@
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 ```
+
+- unit `fr`: a fraction of the available space in the grid container
 
 ## Grid And Absolutely Positioned Elements
 

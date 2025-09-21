@@ -2,7 +2,7 @@
 
 - Containing block mostly is the nearest **block-level** element in the ancestor, ~~not always parent element~~
 
-## How to determine containing block
+## How containing block defined
 
 - if [positioned element's](css-positioning.md#positioned-element) containing block is nearest positioned ancestor
 - if not containing block is the nearest block container
