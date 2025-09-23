@@ -26,19 +26,19 @@ a document in type `start` will contain all the details of the order
 
 search statement: http://localhost:9200/truck_order/start/order_1
 
-## 使用索引保存日志
+## Using Index to Store Logs
 
-一个索引对应一个日志文件, 索引名可能是:
+One index corresponds to one log file, possible index names are:
 
 - logs-2013-02-22
 - logs-2013-02-21
 - logs-2013-02-20
 
-同时查询多个索引
+Query multiple indices at the same time
 
 ```
 curl -XGET localhost:9200/logs-2013-02-22,logs-2013-02-21/Errors/_search?query="q:ErrorMessage"
 ```
 
-- 搜索这两天的日志
+- Search logs from these two days
 

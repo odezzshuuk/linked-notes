@@ -6,13 +6,13 @@ Use of Reflection in Java
 
 - analysis class at **runtime**
 - access object at **runtime**
-- 通用数组操作代码
-- 定位资源位置
-- ~~Method对象, 很像[c++中的函数指针](c++-function-pointer.md)~~
+- Generic array operation code
+- Locate resource position
+- ~~Method object, very similar to [function pointers in C++](c++-function-pointer.md)~~
 
 ## Feature
 
-- from Java 9, 增加了使用reflect的限制, will cause `InaccessibleException`
+- from Java 9, restrictions on the use of reflection have increased, which may cause `InaccessibleException`
 
 ## API
 
@@ -30,7 +30,7 @@ AccessibleObject
 
 Modifier
 
-[java.lang.reflect.Modifier](java-reflect-modifier.md): public, private, 等修饰符
+[java.lang.reflect.Modifier](java-reflect-modifier.md): public, private, and other modifiers
 
 Annotation
 
@@ -38,5 +38,5 @@ Annotation
 
 [annotated element](java-annotated-element.md)
 
-## 通过反射实现通用toString()
+## Implementing a Generic toString() Using Reflection
 

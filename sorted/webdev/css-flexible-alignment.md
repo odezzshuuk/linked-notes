@@ -63,7 +63,7 @@ shorthand for
 - For **grid or flex** layout
 - use to align **single item**
 - override `align-items` value
-- In flex box, aligns the item on the **cross axis**
+- In flex box, aligns the item on the [**cross axis**](css-flex.md#cross-axis)
 
 value
 
@@ -74,7 +74,7 @@ value
 
 ## justify-self
 
-- **ignored** in **flexbox** and **table cell** layout
+- **Ignored** in **flex box** and **table cell** layout
 - for **grid layout**, aligns an item inside its grid area along [inline axis](css-grid-foundation.md#feature)
 
 value
@@ -96,12 +96,12 @@ value
 
 ## align-items
 
-> influence direct children elements, not container self, not **other elements** either
+> Influence direct children elements, not container self, not **other elements** either
 
-- define the default [align-self](#align-self) for all items of the box
-- describe the distribution of **child elements**
-- in **flex container**, control the distribution of child elements in [**cross axis**](css-flex.md#cross-axis)
-- in **grid container**, control the distribution of child element in grid
+- Defining the default [align-self](#align-self) for all items of the box
+- Describing the distribution of **child elements**
+- In **flex container**, control the distribution of child elements in [**cross axis**](css-flex.md#cross-axis)
+- In **grid container**, control the distribution of child element in grid
 
 [code](css-align.md)
 

@@ -11,7 +11,7 @@ java -cp sample/classes com.example.App
 
 ## execute .jar
 
-执行jar文件
+Execute jar file
 
 ```bash
 java -jar MyProgram.jar

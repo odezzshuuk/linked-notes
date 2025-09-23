@@ -33,7 +33,7 @@ use [`alternatives`](linux-alternatives.md) to check the path of java command, t
 alternatives --list | grep java
 ```
 
-假如输出内容如下:
+If the output is as follows:
 
 ```
 /usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el9_1.x86_64/bin/java
@@ -41,13 +41,13 @@ alternatives --list | grep java
 
 `JAVA_HOME` is `/usr/lib/jvm/java-1.8.0-openjdk-1.8.0.352.b08-2.el9_1.x86_64`
 
-[环境变量](linux-system-environment.md)`JAVA_HOME`, `CATALINA_HOME`, 设置在`/etc/profile.d/tomcat.sh`文件中
+[Environment variables](linux-system-environment.md) `JAVA_HOME`, `CATALINA_HOME`, are set in the `/etc/profile.d/tomcat.sh` file
 
 ```bash
 vim /etc/profile.d/tomcat.sh
 ```
 
-添加内容
+Add the following content
 
 ```
 export CATALINA_HOME="/opt/tomcat"
@@ -72,12 +72,12 @@ chown -R tomcat: /opt/tomcat
 
 ## Set Web Management Accounts
 
-此账号用于管理tomcat, 通过`http://localhost:8080/manager/html`访问
+This account is used to manage Tomcat and can be accessed via `http://localhost:8080/manager/html`
 
 ```bash
 vim /opt/tomcat/conf/tomcat-users.xml
 ```
-访问`http://localhost:8080/manager/html`时, 需要输入用户名和密码, 用于验证
+When accessing `http://localhost:8080/manager/html`, you need to enter a username and password for authentication
 
 ```xml
 <tomcat-users>
@@ -88,17 +88,17 @@ vim /opt/tomcat/conf/tomcat-users.xml
 </tomcat-users>
 ```
 
-- 设置用户名和密码分别为`admin`和`mystrongpassword`
+- Set the username and password to `admin` and `mystrongpassword` respectively
 
 ## Configure Remote Host
 
-> tomcat默认只允许本地访问, 需要修改配置文件
+> By default, Tomcat only allows local access; you need to modify the configuration file
 
 ```bash
 vim /opt/tomcat/webapps/manager/META-INF/context.xml
 ```
 
-删除这一条
+Delete this line
 
 ```xml
 <Valve className="org.apache.catalina.valves.remoteAddrValve" allow="127\.\d+\.\d+\.\d+|::1|0:0:0:0:0:0:0:1">

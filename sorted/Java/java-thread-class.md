@@ -1,39 +1,39 @@
-# Thread类
+# Thread Class
 
-## 启动线程
+## Starting a Thread
 
 - start()
 
-## 等待线程结束
+## Waiting for a Thread to Finish
 
 - join()
 - join(long millis) throws InterruptedException
-  - 等待最多millis毫秒
-  - millis为0, 意味着一直等待
+  - Wait for at most millis milliseconds
+  - If millis is 0, it means wait indefinitely
 
-## 守护线程
+## Daemon Threads
 
-- 当运行的线程都是守护线程时，Java虚拟机将退出。
-- setDaemon(boolean daemon)将线程设置为守护线程
-  - 必须在start()之前调用
-- isDaemon(): 线程是否是[守护线程]()
+- When all running threads are daemon threads, the Java Virtual Machine will exit.
+- setDaemon(boolean daemon) sets the thread as a daemon thread
+  - Must be called before start()
+- isDaemon(): Checks if the thread is a [daemon thread]()
 
-## 优先级
+## Priority
 
-- 同一核心上的线程，优先级越高的线程获得的时间片越多
+- For threads on the same core, the higher the priority, the more time slices the thread gets
 
-## 线程中断
+## Thread Interruption
 
+## Methods
 
-## 方法
-
-- Thread.sleep(): 在指定的毫秒数内阻塞当前线程
-- interrupt(): 中断线程
-- static yield(): 提示调度器当前线程愿意放弃其当前对处理器的使用，调度器可以决定是否忽略这个提示
+- Thread.sleep(): Blocks the current thread for the specified number of milliseconds
+- interrupt(): Interrupts the thread
+- static yield(): Hints to the scheduler that the current thread is willing to yield its current use of the processor; the scheduler may ignore this hint
 
 ***
 
-- currentThread() 当前线程对象
-- isAlive(): 线程是否活动
-- isinterrupted()
-- getPriority() 获取线程优先级
+- currentThread(): The current thread object
+- isAlive(): Whether the thread is active
+- isInterrupted()
+- getPriority(): Gets the thread's priority
+

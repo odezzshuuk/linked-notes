@@ -13,20 +13,24 @@
 
 ## Content
 
-width, height
+`width`, `height`
 
-- cannot be negative
-- value type
+- Cannot be negative
+- Value type
   - united number: specify the size directly, like `width: 100px;`
   - percentage: percent based on [containing block](css-containing-block.md)
 
-max-width, max-height, min-width, min-height
+[Situations when `width` and `height` won't be respected](css-when-width-height-ignored.md)
+
+
+`max-width`, `max-height`, `min-width`, `min-height`
 
 - if the content of the container is mutable, the size of the element will change accordingly, min/max can limit the range of the element's adjustment
 - Values
   - max-content:
   - min-content:
   - `<percentage>`:
+
 
 
 ## padding

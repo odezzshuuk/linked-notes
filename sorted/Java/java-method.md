@@ -9,15 +9,15 @@
 ## Default Method
 
 - add keyword `default` before method
-- 主要用于Interface
+- Mainly used for interfaces
 - 隐式声明为public, 因此public关键字可省略
-- 默认方法能够向库的接口添加新功能，并确保与为这些接口的旧版本编写的代码的二进制兼容性
+- Default methods can add new functionality to library interfaces and ensure binary compatibility with code written for older versions of those interfaces
 
 ## Static Method
 
 - 隐式声明为public, 因此public关键字可省略
-- 与**类**关联，而不是与任何**实例**关联
-- 通过类名直接访问
+- Associated with the **class**, not with any **instance**
+- Accessed directly by class name
 
 ## Method Signature
 
@@ -32,10 +32,10 @@
 
 ## inline method
 
-- java中，方法是否内联是Java虚拟机的任务
+- In Java, whether a method is inlined is determined by the JVM
 - 简洁，经常被调用，没有被重载以及可优化的方法
 
-## 方法的参数
+## Method Parameters
 
 - Cannot modify a parameter of a primitive type.
 - Can change the state (content) of an object parameter.

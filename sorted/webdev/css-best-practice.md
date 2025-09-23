@@ -55,3 +55,8 @@
 
 
 ```
+
+## When `width` and `height` are ignored
+
+[When `width` and `height` are ignored](css-when-width-height-ignored.md)
+

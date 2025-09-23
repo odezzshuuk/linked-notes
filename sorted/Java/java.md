@@ -66,19 +66,19 @@
 
 [Tomcat](java-tomcat.md)
 
-[Spring框架](spring.md)
+[Spring Framework](spring.md)
 
-[MyBatis](/sorted/java/mybatis.md): 完成数据库交互
+[MyBatis](/sorted/java/mybatis.md): Database interaction
 
 [junit](/sorted/java/java-junit.md)
 
-[Nginx](/sorted/java/java-nginx.md): 反向代理服务器
+[Nginx](/sorted/java/java-nginx.md): Reverse proxy server
 
-[Lombok](/sorted/java/lombok.md): 简化Pojo类的开发
+[Lombok](/sorted/java/lombok.md): Simplifies Pojo class development
 
-[SLF4j: 日志框架](/sorted/java/java-slf4j.md): 日志框架
+[SLF4j: Logging Framework](/sorted/java/java-slf4j.md): Logging framework
 
-[knife4j](/sorted/java/java-knife4j.md): 在线API框架
+[knife4j](/sorted/java/java-knife4j.md): Online API framework
 
 [JJWT](/sorted/java/java-jjwt.md): jwt in java
 
@@ -86,30 +86,30 @@
 
 [fastjson](java-fastjson.md): json in java ali
 
-[quartz](/sorted/java/java-quartz.md): 定时任务
+[quartz](/sorted/java/java-quartz.md): Scheduled tasks
 
-[lwjgl](/sorted/java/java-lwjgl.md): 游戏引擎
+[lwjgl](/sorted/java/java-lwjgl.md): Game engine
 
-[Javassist](/sorted/java/java-javassist.md): 字节码操作
+[Javassist](/sorted/java/java-javassist.md): Bytecode manipulation
 
-[Semver4j](/sorted/java/java-semver4j.md): 版本号处理工具
+[Semver4j](/sorted/java/java-semver4j.md): Version number processing tool
 
-## 应用
+## Applications
 
-[设计规范](/sorted/java/java-design-standard.md)
+[Design Standards](/sorted/java/java-design-standard.md)
 
 [HttpWebserver](/sorted/java/java-application-httpwebserver.md)
 
-[java项目中的Pojo类](/sorted/java/java-pojo.md)
+[Pojo classes in Java projects](/sorted/java/java-pojo.md)
 
 [website]()
 
 ## VI
 
-[隐式创建实例](java-create-instance-implicitly.md)
+[Implicit Instance Creation](java-create-instance-implicitly.md)
 
 [RESTful](restful.md)
 
 ## Bug
 
-[Bug记录](java-learn-from-bug.md)
+[Bug Records](java-learn-from-bug.md)

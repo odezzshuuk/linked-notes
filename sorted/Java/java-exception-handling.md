@@ -12,9 +12,9 @@
 
 ## Try Block
 
-- 包含一个或多个可能引发异常的代码
-- 如果try语句中抛出了异常，程序将跳过try语句块的其余代码
-  - 因此通常不在try语句块执行资源的close()方法
+- Contains one or more pieces of code that may throw exceptions
+- If an exception is thrown in the try statement, the program will skip the remaining code in the try block
+  - Therefore, it is usually not recommended to call the resource's close() method in the try block
 
 ## Catch Block
 

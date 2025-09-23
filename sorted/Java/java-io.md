@@ -3,16 +3,16 @@
 - [feature](#feature)
 - [Practical Use](#practical-use)
 - [File IO](#file-io)
-- [Byte Stream](#字节流)
+- [Byte Stream](#byte-stream)
 - [Reader/Writer](#readerwriter)
 - [Why Buffer IO faster than unbuffered IO](#why-buffer-io-faster-than-unbuffered-io)
 - [IO Class Hierarchy](#io-class-hierarchy)
 
 ## feature
 
-- **必须关闭流**
-- 低级流(节点流): 实际连接程序与另一端的流，负责读写字节数据
-- 高级流(处理流): 用于简化读写操作, 不能独立存在, 必须建立在其他流上
+- **Streams must be closed**
+- Low-level stream (node stream): Actually connects the program to the other end, responsible for reading and writing byte data
+- High-level stream (processing stream): Used to simplify read/write operations, cannot exist independently, must be built on other streams
 
 [流的抽象理解](java-stream.md)
 
@@ -41,34 +41,34 @@ Low Level Stream
 
 High Level Stream
 
-- [Buffer Stream](java-bufferediostream.md): [通过缓冲减少IO次数]的流
-- [Object Stream](java-objectiostream.md): 将对象序列化与反序列化的流
-- [Data Stream](java-dataiostream.md): 读写[基本数据类型](java-primitives-type.md)的流
+- [Buffer Stream](java-bufferediostream.md): Stream that reduces the number of IO operations through buffering
+- [Object Stream](java-objectiostream.md): Stream for serializing and deserializing objects
+- [Data Stream](java-dataiostream.md): Stream for reading and writing [primitive data types](java-primitives-type.md)
 
 ## Reader/Writer
 
-抽象基类
+Abstract base class
 
 [Reader/Writer](java-io-character-stream.md)
 
 > write to a stream need close() flush the buffer
 
-**转换** 字节流为字符流
+**Convert** byte stream to character stream
 
 [InputStreamReader/OutputStreamWriter](java-io-byte-to-charcter.md)
 
-**缓冲**的字符流
+**Buffered** character stream
 
 [BufferedReader/BufferedWriter](java-io-buffer-character.md)
 
-支持**行操作** 的字符输出流
+Character output stream that supports **line operations**
 
 [PrintWriter](java-printwriter.md)
 
 ## Why Buffer IO faster than unbuffered IO
 
-- 硬盘访问不是按字节访问, 是按块访问
-- 所以, 如果write 1 byte, taken time is 1, 并不能得出write x bytes, taken time is x
+- Hard disk access is not by byte, but by block
+- Therefore, if writing 1 byte takes time t, it does not mean writing x bytes takes x*t
 
 ## IO Class Hierarchy
 
