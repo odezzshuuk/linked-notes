@@ -10,6 +10,8 @@
 
 [pip](python-pip.md)
 
+[uv](python-uv.md)
+
 [Fundamental](python-fundamental.md)
 
 [Iteration](python-iteration.md)

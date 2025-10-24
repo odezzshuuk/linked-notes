@@ -2,8 +2,8 @@
 
 ## Feature
 
-- URL类**并不**根据RFC2396定义的机制对其字符串内容进行解码或编码
-- **调用者负责**在调用前对转义字符进行编码
+- The URL class **does not** decode or encode its string content according to the mechanism defined by RFC2396
+- **The caller is responsible** for encoding escape characters before invoking
 
 ## Practical Use
 
@@ -54,6 +54,8 @@ public void test() {
 
 ## Method
 
-- `new URL(String);` 构建URL对象
-- `public InputStream openStream();`: 获得资源内容
-  - 相当于`openConnection().getInputStream()`
+- `new URL(String);` Construct a URL object
+
+- `public InputStream openStream();`: Obtain resource content
+
+  - Equivalent to `openConnection().getInputStream()`

@@ -69,13 +69,13 @@
 
 ## replica set
 
-- A cluster of MongoDB servers that implements replication and automated failover(自动故障转移)
+- A cluster of MongoDB servers that implements replication and automated failover (automatic failover)
 - a group of mongod processes that maintain the same data set
 
 ## replication
 
 - a feature allowing multiple database servers to shared the same data
-- ensuring redundancy(冗余) and facilitating load balancing(促进负载均衡)
+- ensuring redundancy (redundancy) and facilitating load balancing (facilitating load balancing)
 
 ## shard
 

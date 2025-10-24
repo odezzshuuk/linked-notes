@@ -1,70 +1,92 @@
-# 原理
+# Principle
 
-- [原理](#原理)
-  - [缓存淘汰策略](#缓存淘汰策略)
-  - [redis击穿](#redis击穿)
-  - [redis穿透](#redis穿透)
-  - [redis雪崩](#redis雪崩)
-  - [redis持久化](#redis持久化)
-  - [redis存储原理](#redis存储原理)
-  - [redis集群](#redis集群)
+- [Principle](#principle)
+  - [Cache Eviction Policy](#cache-eviction-policy)
+  - [Redis Cache Breakdown](#redis-cache-breakdown)
+  - [Redis Cache Penetration](#redis-cache-penetration)
+  - [Redis Cache Avalanche](#redis-cache-avalanche)
+  - [Redis Persistence](#redis-persistence)
+  - [Redis Storage Principle](#redis-storage-principle)
+  - [Redis Cluster](#redis-cluster)
 
 
-## 缓存淘汰策略
+## Cache Eviction Policy
 
-- 当内存不足时，新写入操作会报错: noeviction
-- 数据删除策略
-  - allkeys-random: 随机删除
-  - volatile-random: 随机删除过期数据
-  - volatile-ttl: 最近过期的数据
-  - allkeys-lru: 最近最少使用的数据
-  - volatile-lru: 有时间限制的数据, 距上次使用时间最长的
-  - allkeys-lfu: 所有数据, 使用频率最少
-  - volatile-lfu: 有时间限制的数据, 使用频率最少
+- When memory is insufficient, new write operations will report an error: noeviction
+- Data deletion strategies:
+  - allkeys-random: randomly delete
+  - volatile-random: randomly delete expired data
+  - volatile-ttl: most recently expired data
+  - allkeys-lru: least recently used data
+  - volatile-lru: data with time limit, longest since last use
+  - allkeys-lfu: all data, least frequently used
+  - volatile-lfu: data with time limit, least frequently used
 
-## redis击穿
+## Redis Cache Breakdown
 
-- **redis击穿**: 请求访问的key不存在, 会从数据库中查找
-- 一般需要从数据库中同步到redis
+- **Redis cache breakdown**: When the requested key does not exist in Redis, it will be looked up in the database
+- Usually needs to be synchronized from the database to Redis
 
-## redis穿透
+## Redis Cache Penetration
 
-- 当请求查询的某个key不在Redis中时，就去数据库中查询
-- 可以被恶意请求利用: 大量查询不存在的key，导致数据库压力过大
-  - 使用布隆过滤器解决
+- When a requested key is not in Redis, it will be queried in the database
+- Can be exploited by malicious requests: a large number of queries for non-existent keys, causing excessive database pressure
+  - Use Bloom filter to solve
 
-## redis雪崩
+## Redis Cache Avalanche
 
-- 指的就是Redis中保存的数据短时间内有大量数据同时到期的情况
+- Refers to the situation where a large amount of data in Redis expires at the same time in a short period
 
-## redis持久化
+## Redis Persistence
 
-- 由于Redis是内存数据库，当Redis服务重启时，数据会丢失
-- 策略
-  - RDB: 将内存中的数据快照保存到硬盘中, 备份到dump.rdb文件中
-    - 优点: 恢复速度快
-    - 缺点: 会丢失一些数据
-  - AOF: 将每次写入的操作记录到硬盘中
-    - 优点: 不会丢失数据
-    - 缺点: 占用空间大
+- Since Redis is an in-memory database, data will be lost when the Redis service restarts
+- Strategies:
+  - RDB: Save a snapshot of the data in memory to disk, backup to dump.rdb file
+    - Advantage: fast recovery
+    - Disadvantage: some data may be lost
+  - AOF: Record each write operation to disk
+    - Advantage: no data loss
+    - Disadvantage: takes up a lot of space
 
-## redis存储原理
+## Redis Storage Principle
 
-- hash表
+- hash table
 
-## redis集群
+## Redis Cluster
 
-**主从复制**
+**Master-Slave Replication**
 
-- 主从复制是一种常用的数据备份方式
-- 主机负责读写操作, 备用机负责备份主机数据
-- 主机宕机, 备用机会升级为主机
+- Master-slave replication is a common data backup method
+- The master is responsible for read and write operations, the slave is responsible for backing up the master's data
+- If the master fails, the slave will be promoted to master
 
-**读写分离**
+**Read-Write Separation**
 
-- 主机执行**读写**操作
-- 备用机执行**读**操作
+- The master performs **read and write** operations
+- The slave performs **read** operations
 - [ ] TODO
+
+**Sentinel Mode**
+
+- Detects the running status of master and slave to complete master-slave switch
+- [ ] TODO
+
+**Sentinel Cluster**
+
+- Multiple sentinels monitor master and slave, preventing misjudgment
+- [ ] TODO
+
+**Sharded Cluster**
+
+- Redis has 0-16383 slots, each slot stores a key-value pair
+- Deploy multiple Redis instances, each instance is responsible for a portion of the slots, these Redis instances are called **nodes**
+- Each node is responsible for a portion of the slots, for example:
+  - Node 1: 0-5460
+  - Node 2: 5461-10922
+  - Node 3: 10923-16383
+- A key is located on a specific server using the CRC algorithm
+- [ ] TODO
+
 
 **哨兵模式**
 

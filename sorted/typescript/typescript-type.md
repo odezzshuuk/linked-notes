@@ -60,7 +60,8 @@ Tuples
 
 - `[string, number]`
 
-`any[]` is an array of any type, `[]` is an empty array
+> `any[]` is an array of any type, 
+> `[]` is an empty array
 
 2. typescript [special types](#special-types)
 

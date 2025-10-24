@@ -1,17 +1,17 @@
-# 预定义的函数式接口
+# Predefined Functional Interfaces
 
 ## Generic Functional Interface
 
-| 函数式接口          | 参数类型 | 返回类型 | 抽象方法名 | 描述                       | 其他方法                   |
-| ------------------- | -------- | -------- | ---------- | -------------------------- | -------------------------- |
-| `Runnable`          | 无       | void     | run        | 作为无参数或无返回值的动作 |                            |
-| `Supplier<T>`       | 无       | T        | get        | 提供一个 T 类型的值        |                            |
-| `Consumer<T>`       | T        | void     | accept     | 处理 T 类型的值            | andThen                    |
-| `BiConsumer<T, U>`  | T, U     | void     | accept     | 处理 T 类型和 U 类型的值   | andThen                    |
-| `Function<T, R>`    | T        | R        | apply      | 有一个 T 类型参数的函数    | compose, andThen, identity |
-| `BiFunction<T, U, R>` | T, U     | R        | apply      | 有一个 T 类型参数的函数    | andThen, identity |
+| Functional Interface   | Parameter Type | Return Type | Abstract Method Name | Description                                 | Other Methods                   |
+| ------------------- | -------------- | ---------- | -------------------- | ------------------------------------------- | ------------------------------- |
+| `Runnable`          | None           | void       | run                  | Action with no parameters or return value    |                                 |
+| `Supplier<T>`       | None           | T          | get                  | Provides a value of type T                  |                                 |
+| `Consumer<T>`       | T              | void       | accept               | Processes a value of type T                 | andThen                         |
+| `BiConsumer<T, U>`  | T, U           | void       | accept               | Processes values of type T and U            | andThen                         |
+| `Function<T, R>`    | T              | R          | apply                | Function with a parameter of type T         | compose, andThen, identity      |
+| `BiFunction<T, U, R>` | T, U         | R          | apply                | Function with parameters of type T and U    | andThen, identity               |
 
-这些函数接口 have a method `apply()`, 表示应用apply中的参数调用这个函数对象
+These functional interfaces have a method `apply()`, which means calling this function object with the parameters passed to apply.
 
 example
 
@@ -37,10 +37,10 @@ public class Demo {
 }
 ```
 
-## 基本类型函数式接口
+## Primitive Type Functional Interfaces
 
-| 函数式接口      | 参数类型 | 返回类型 | 抽象方法名   |
-| --------------- | -------- | -------- | ------------ |
-| BooleanSupplier | none     | boolean  | getAsBoolean |
-| PSupplier       | none     | p        | getAsP       |
-| PConsumer       | p        | void     | accept       |
+| Functional Interface | Parameter Type | Return Type | Abstract Method Name |
+| -------------------- | -------------- | ----------- | -------------------- |
+| BooleanSupplier      | none           | boolean     | getAsBoolean         |
+| PSupplier            | none           | p           | getAsP               |
+| PConsumer            | p              | void        | accept               |

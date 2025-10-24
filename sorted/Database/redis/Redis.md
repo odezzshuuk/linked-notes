@@ -1,93 +1,94 @@
 # Redis
 
-- 是Key-Value数据库，
-- 数据类型
-  - 字符串(String)
-  - 哈希(Hash)
-  - 列表(list)
-  - 集合(sets)和有序集合(sorted sets)
+- It is a Key-Value database.
+- Data types:
+  - String
+  - Hash
+  - List
+  - Set and Sorted Set
 
-## 安装
+## Installation
 
-[windows地址](https://github.com/poradowski/redis/releases)
+[Windows download link](https://github.com/poradowski/redis/releases)
 
-check redis version
+Check redis version
 
 ```bash
 redis-server --version
 ```
 
-## 启动
+## Startup
 
-启动客户端
+Start client
 
 ```bash
 redis-cli
 ```
 
-启动服务
+Start server
 
 ```bash
 redis-server
 ```
 
-## 客户端操作
+## Client operations
 
-- exit: 从redis客户端退出
-- shutdown: 关闭redis服务
+- exit: exit redis client
+- shutdown: shut down redis server
 
-键(key)操作
+Key operations
 
-- set key value: 设置key的值为value
-- del key: 删除key
-- exists key: 判断key是否存在
-- keys *: 获取所有的key
-- keys key: 查询是否存在key
-- expire key seconds: 设置key的过期时间
+- set key value: set the value of key to value
+- del key: delete key
+- exists key: check if key exists
+- keys *: get all keys
+- keys key: check if key exists
+- expire key seconds: set expiration time for key
 
-值(value)获取
+Value retrieval
 
-- get key: 获取**String**类型的value
-- hgetall key: 获取**Hash**类型的value
-- lrange key start end: 获取**List**类型的value
-- smembers key: 获取**Set**类型的value
+- get key: get value of **String** type
+- hgetall key: get value of **Hash** type
+- lrange key start end: get value of **List** type
+- smembers key: get value of **Set** type
 
-## Redis下标
+## Redis Indexing
 
-- 正向下标: 0标识第一个元素，1标识第二个元素，以此类推
-- 反向下标: -1表示最后一个元素, -2
+- Forward index: 0 indicates the first element, 1 the second, and so on
+- Reverse index: -1 indicates the last element, -2 the second last, etc.
 
-## Redis key命名最佳实践
+## Redis key naming best practices
 
-> 命名约定(naming convention)
+> Naming convention
 
-- 保存对象属性: `object:id:subobjects`
+- Store object properties: `object:id:subobjects`
 
 ```
 user:1:roles
 user:john:roles
 ```
 
-使用命名空间: `namespace:object:id:subobjects`
+Use namespace: `namespace:object:id:subobjects`
 
-- 适合用在**多个应用开发**的情况下
+- Suitable for **multiple application development**
 
 ```
 tenant:user:1:roles
 ```
 
-- 列表
+- List
 
-## redis适合的场景
+## Suitable scenarios for redis
 
-- 访问频率高的数据
-- 修改频率低的数据
-- 一致性要求不高的数据
+- Frequently accessed data
+- Infrequently modified data
+- Data with low consistency requirements
 
-## redis使用规范
+## Redis usage guidelines
 
-- redis虽然可以存储集合类型的值, 一般不保存集合, 因为redis会保存集合的各种子集
+- Although redis can store set-type values, generally do not store sets, because redis will store all kinds of subsets of the set
 
-## redis原理
+## Redis principle
 
-[redis原理](redis-principle.md)
+[Redis principle](redis-principle.md)
+

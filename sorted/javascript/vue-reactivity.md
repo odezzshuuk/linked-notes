@@ -7,7 +7,6 @@ import { ref } from 'vue'
 const count = ref(0)
 ```
 
-
 ## reactive(): Declaring reactive object
 
 ```vue
@@ -34,47 +33,30 @@ function increment() {
 </script>
 ```
 
+## defineModel(): Declaring Double Way Binding
 
-## Exposing Reactive State To Template
+```vue
+<script setup>
+const model = defineModel()
+</script>
 
-By `setup()` or `<script setup>`
+<template>
+    <input type="text" v-model="model" />
+    <!-- equivalent to -->
+    <input
+        :value="text"
+        @input="event => text = event.target.value">
+</template>
+```
 
-- `<script setup>`
-
-> `<script setup>` is more common
+##  watch(): Watching reactive state changes
 
 ```vue
 <script setup lang="ts">
-import { ref } from 'vue'
 const count = ref(0)
-function increment() {
-    count.value++
-}
-}
+watch(count, (count, prevCount) => {
+  /* ... */
+})
 </script>
-    
-<template>
-  <button @click="increment">Count is: {{ count }}</button>
-</template>
 ```
 
-- `setup()`
-
-```vue
-<script lang="ts">
-let count = 0;
-function increment() {
-  count++;
-}
-export default {
-  name: 'App',
-  setup() {
-    return { count, increment };
-  }
-}
-</script>
-
-<template>
-  <button @click="increment">Count is: {{ count }}</button>
-</template>
-```

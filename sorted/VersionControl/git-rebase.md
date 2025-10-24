@@ -13,8 +13,8 @@
 ## Feature
 
 - **Cause rebased branch commit history being modified**
-- never used on public branch
-- not recommend to rebase if branch is already pushed to remote
+- Never used on public branch
+- Not recommend to rebase if branch is already pushed to remote
 
 ## Rebase to First Commit
 

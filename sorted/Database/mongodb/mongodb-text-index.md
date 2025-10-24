@@ -15,15 +15,15 @@ case insensitive
 
 - text does not distinguish between **é, É, e, and E.**
 
-Tokenization Delimiters(分词符号)
+Tokenization Delimiters (tokenization delimiter)
 
-> 用于创建搜索关键词
+> used to create search keywords
 
 - Dash(-)
-- Pattern_Syntax(正则表达式)
-- White_Space(空白字符)
-- Punctuation(标点符号)
-- Quotation_Mark(引号)
+- Pattern_Syntax (regular expression)
+- White_Space (whitespace character)
+- Punctuation (punctuation mark)
+- Quotation_Mark (quotation mark)
 
 search language
 

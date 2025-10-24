@@ -1,3 +1,3 @@
-# 函数重载
+# Function Overloading
 
-- 形参数量或形参类型上有所不同
+- The number or types of parameters are different

@@ -1,14 +1,14 @@
 # Cpp - Function Declaration
 
-- 返回**类型，函数名，形参类型**描述了函数接口
-- 预处理的时候会处理函数声明？函数声明发生在链接文件之前?
-- 函数声明中，形参名称不是必须的
-- 建议在**头文件**中声明，在**源文件**中定义
-- Declaration without definition is called **forward declaration**, its allowed
+- The **return type, function name, and parameter types** describe the function interface
+- During preprocessing, function declarations are processed; do function declarations occur before linking?
+- In a function declaration, parameter names are not required
+- It is recommended to declare in the **header file** and define in the **source file**
+- Declaration without definition is called **forward declaration**, and it is allowed
 - Declaration can be simplified by [typedef](c++-handle-type.md#typedef) and [decltype](c++-handle-type.md#decltype)
 
 ```c++
-// func0, func1, func2为相同函数类型
+// func0, func1, func2 are the same function type
 bool func0(const string&, const string&);
 typedef bool func1(const string&, const string&);
 typedef decltype(func1) func2;

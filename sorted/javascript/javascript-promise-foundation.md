@@ -87,7 +87,6 @@ const promise = new Promise((resolve, reject) => {
 - the `value` can be parsed by `then(onFullfilled, onRejected)` method as [`onFullfilled`](javascript-promise-then.md#parameters) callback function argument
 - in ts, type of `value` can be restricted by generic type `T`
 
-
 ## reject
 
 `reject: (message: any) => void`

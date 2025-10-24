@@ -1,13 +1,13 @@
 # CSS - Best Practicas
 
-## Center an Element
+## Center An Element
 
-1. use [flex layout](css-flex.md)
+1. Use [flex layout](css-flex.md)
 
-2. use margin and transform
+2. Margin and transform
 
 ```css
-.foo {
+.center{
   position: absolute;
   top: 50%;
   left: 50%;
@@ -52,8 +52,6 @@
     /* 8. pseudo-classes */
     /* 8.1 hover, focus, active, visited */
 }
-
-
 ```
 
 ## When `width` and `height` are ignored

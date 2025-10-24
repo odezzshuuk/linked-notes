@@ -115,6 +115,15 @@ type TodoPreviewEql = {
 
 > contrasts to [`Pick<Type, Keys>`](#picktype-keys)
 
+```ts
+interface Todo {
+  title: string;
+  description: string;
+  completed: boolean;
+}
+type TodoPreview = Omit<Todo, "description">;
+```
+
 ## Exclude
 
 `Exclude<unionType, ExcludeMembers>`

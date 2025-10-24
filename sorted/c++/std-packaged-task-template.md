@@ -1,18 +1,18 @@
 # std::packaged_task
 
-- 包装[[cpp-callable-type]]对象，使被包装对象能够异步调用，返回值存储在[[std_future类模板]]对象中
+- Wraps a [[cpp-callable-type]] object, allowing the wrapped object to be called asynchronously, with the return value stored in a [[std_future class template]] object.
 
 ```c++
 template<class R, class ...Args>
 class packaged_task<R(Args...)>
 ```
-- `std::packaged_task<T> task(fn)`: 用fn构造一个`std::packaged_task<T>`对象 , T对应fn的类型
-- `T`: 模板的类型参数, 包括:
-  - R: 可调用类型的返回类型
-  - Args: 可调用类型的参数类型
-  - 以 *参数类型Args* 调用 *返回类型为R* 的可调用类型
+- `std::packaged_task<T> task(fn)`: Constructs a `std::packaged_task<T>` object with fn, where T corresponds to the type of fn.
+- `T`: Template type parameter, including:
+  - R: Return type of the callable type
+  - Args: Parameter types of the callable type
+  - A callable type that takes *parameter types Args* and returns *type R*
 
-## 构造函数
+## Constructors
 
 ```c++
 packaged_task() noexcept;
@@ -28,15 +28,15 @@ packaged_task (packaged_task&) = delete;
 packaged_task (packaged_task&& rhs) noexcept;
 ```
 
--  函数参数
-  - fn: 可调用对象
-  - a: 分配器
-  - rhs: 要移动的packaged_task对象
+-  Function parameters:
+   - fn: Callable object
+   - a: Allocator
+   - rhs: The packaged_task object to move
 
-## 其他成员
+## Other Members
 
-- `get_future`: 返回异步调用结果至[[std_future类模板]]对象
-- `operator()`: 执行std::packaged_task对象包装的函数
+- `get_future`: Returns the asynchronous result to a [[std_future class template]] object
+- `operator()`: Executes the function wrapped by the std::packaged_task object
 - `valid`
 - `swap`
 - `make_ready_at_thread_exit`

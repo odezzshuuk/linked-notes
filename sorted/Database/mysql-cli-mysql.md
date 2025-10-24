@@ -1,7 +1,7 @@
 # MySql Command Line Tool
 
-- MySql都会自带一个命令行程序
-- 命令输入在mysql>之后
-- 命令用`;`结束, 或`\g`结束，Enter不能结束命令
-- help或`\h`获得帮助
-- quit或exit退出命令行程序
+- MySql comes with a command line program by default
+- Commands are entered after the mysql> prompt
+- Commands are ended with `;` or `\g`, pressing Enter does not end the command
+- Use help or `\h` to get help
+- Use quit or exit to exit the command line program

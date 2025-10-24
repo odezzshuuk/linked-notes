@@ -51,14 +51,13 @@ git restore hello.c
 
 - `git stash apply --index <index>`: apply specific file snapshot in temporary directory by index
 - through `git stash list` you can check `index` value
-- `git stash apply --index 0`: 应用最近一次临时目录中的文件快照
+- `git stash apply --index 0`: apply the most recent file snapshot in the temporary directory
 
 `git stash pop`: apply the most recent file snapshot in the temporary directory, and delete the snapshot
 
 ## git merge
 
 [merge](git-merge.md)
-
 
 ## git revert
 

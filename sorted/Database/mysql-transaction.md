@@ -1,9 +1,9 @@
-# 事务
+# Transaction
 
-- 多条sql语句, 作为一个整体, 一起执行, 一起回滚
-- 应用于多个写(update, insert)操作
-- 事务的四个特性: 原子性, 一致性, 隔离性, 持久性
-- 实现事务处理的用到的概念
-  - 开启事务: BEGIN
-  - 提交事务: COMMIT
-  - 回滚事务: ROLLBACK
+- Multiple SQL statements, executed as a whole, either all succeed or all rollback together
+- Used for multiple write (update, insert) operations
+- Four properties of a transaction: Atomicity, Consistency, Isolation, Durability
+- Concepts used in transaction processing:
+  - Start transaction: BEGIN
+  - Commit transaction: COMMIT
+  - Rollback transaction: ROLLBACK

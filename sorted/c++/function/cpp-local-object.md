@@ -1,20 +1,20 @@
 # Cpp - Local Object
 
-- 函数的形参和函数内部定义的变量统称为局部变量
-- 自动对象：只存在于块执行期间的对象
-  - 形参是一种自动对象:形参作用范围在函数体作用域内
-- 某些时候需要变量的生命周期贯穿调用及之后的时间
+- Function parameters and variables defined inside a function are collectively called local variables
+- Automatic objects: objects that exist only during the execution of a block
+  - Parameters are a kind of automatic object: their scope is within the function body
+- Sometimes you need the lifetime of a variable to extend beyond the function call
 
-## 局部静态对象
+## Local Static Object
 
-- 需要局部变量的生命周期贯穿函数调用之后的时间，将变量定义为static
-- 第一次经过对象是初始化，直到程序终止时销毁
-- 如果静态变量没有显示初始值，它将执行[值初始化](c++-initialize.md)
+- When you need the lifetime of a local variable to extend beyond the function call, define the variable as static
+- The object is initialized the first time it is encountered, and destroyed when the program ends
+- If a static variable does not have an explicit initial value, it will be [value-initialized](c++-initialize.md)
 
   ```c++
   size_t count_calls()
   {
-      static size_t ctr = 0;  // 调用结束后ctr仍然有效
+      static size_t ctr = 0;  // ctr remains valid after the call ends
       return ++ctr;
   }
   ```

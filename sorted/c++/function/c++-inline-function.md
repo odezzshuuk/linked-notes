@@ -1,11 +1,11 @@
-# 内联函数
+# Inline Function
 
 - `inline func(x)`
 
-> 是c++为提高程序运行速度所做的一项改进
-> 是对编译器的建议
+> An optimization in C++ to improve program runtime speed
+> It is a suggestion to the compiler
 
-- 定义在类内的成员函数默认内联
-- 特点：运行效率提高，编译效率降低，占用内存增大
-- 使用条件：函数内容简单，比如类的存取
-- 由内联函数组成的源文件格式为`.inl`, 头文件中内联函数过多时, 在头文件的 **末尾** 使用`#include`引入inl文件
+- Member functions defined inside a class are inline by default
+- Features: improves runtime efficiency, reduces compile-time efficiency, increases memory usage
+- Usage conditions: function content is simple, such as class accessors
+- Source files composed of inline functions use the `.inl` extension; when there are too many inline functions in a header file, include the inl file at the **end** of the header file using `#include`

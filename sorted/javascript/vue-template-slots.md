@@ -1,5 +1,9 @@
 # Vue - Template Slots
 
+* [Slot Definition](#slot-definition)
+* [Slot Usage](#slot-usage)
+* [Render A Slot Based On Slot Properties](#render-a-slot-based-on-slot-properties)
+
 ## Slot Definition
 
 ```vue
@@ -58,4 +62,13 @@ Fill slot content based on slot properties
 - `text` is value returned from `greetingMessage` in `ComponentA` 
 - `count` is 1
 
+## Slot Fallback
+
+```vue
+<template>
+    <button>
+        <slot>Fallback Here</slot>
+    </button>
+</template>
+```
 

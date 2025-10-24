@@ -25,7 +25,7 @@ export default function() { ... }
 
 ## named export
 
-- one module can have multiple named exports
+- One module can have multiple named exports
 
 ```js
 export { myfunction, myVariable }
@@ -33,7 +33,7 @@ export { myfunction, myVariable }
 
 - must use export name when import
 
-## re-export/aggregation export
+## Re-export/Aggregation export
 
 - to increase the modularity of your code, you can re-export in an parent module
 

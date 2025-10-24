@@ -1,18 +1,18 @@
-# 返回类型
+# Return Type
 
-## 返回数组指针
+## Returning Array Pointers
 
-- 返回的是指向[数组](c++-array.md)的指针
-- 因为**数组不能被拷贝**，所以函数不能返回数组, 可以返回数组的指针或引用
-- 函数形式: `Type (*function(parameter)) [dimension]`
-  - Type:表示**元素**类型
-  - dimension: 表示数组维度大小
-- 函数声明分解
-  - `func (int i)`  &nbsp  函数名，形参类型和名称
-  - `(*func (int i))`&nbsp  对调用函数的**返回值**解引用
-  - `(*func(int i))[10]`&nbsp 得到一个大小是10的数组
-  - `int (*func(int i))[10]` &nbsp 声明元素类型
-  
-## 尾置返回类型
-- `auto func(int i) -> int(*)[10];`返回一个指针指向含有10个元素数组
-- 任何函数都可以定义成尾置返回, 但尤其适用于复杂返回类型
+- The return value is a pointer to an [array](c++-array.md)
+- Since **arrays cannot be copied**, a function cannot return an array, but it can return a pointer or reference to an array
+- Function format: `Type (*function(parameter)) [dimension]`
+  - Type: indicates the **element** type
+  - dimension: indicates the size of the array dimension
+- Function declaration breakdown:
+  - `func (int i)`  &nbsp; function name, parameter type and name
+  - `(*func (int i))` &nbsp; dereference the **return value** of the function call
+  - `(*func(int i))[10]` &nbsp; gets an array of size 10
+  - `int (*func(int i))[10]` &nbsp; declares the element type
+
+## Trailing Return Type
+- `auto func(int i) -> int(*)[10];` returns a pointer to an array of 10 elements
+- Any function can be defined with a trailing return type, but it is especially suitable for complex return types

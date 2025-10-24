@@ -5,7 +5,7 @@
 
 ## Cooperation With CancellationToken
 
-Cancel need **Cooperation**: 
+Cancelling need **Cooperation**: 
 
 1. Call `CancellationTokenSource.Cancel()` to toggle `CancellationToken.IsCancellationRequested` to `true`
 2. Check `CancellationToken.IsCancellationRequested` cancel flag in wrapped function

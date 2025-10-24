@@ -4,10 +4,10 @@
 
 integer
 
-- TINYINT: 1 byte，-128~127
-- SMALLINT: 2 byte，-32768~32767
-- MEDIUMINT: 3 byte，-8388608~8388607 
-- INT: 4字节
+- TINYINT: 1 byte, -128~127
+- SMALLINT: 2 byte, -32768~32767
+- MEDIUMINT: 3 byte, -8388608~8388607 
+- INT: 4 bytes
 - BIGINT(m): equilavant Java primitive type [long](java-primitray-type.md)
   - m: length of    
   - zerofill: whether fill with 0
@@ -22,13 +22,13 @@ integer
 - CHAR(m)
   - Fixed length, m is the length
 - VARCHAR(m)
-  - 可变长度, m参数表示最大可用长度
-  - m取值0 ~ 65535
-  - 占用字节数: 
+  - Variable length, m parameter indicates the maximum available length
+  - m can be 0 ~ 65535
+  - Bytes used: 
     - 1 + m: m <= 255
     - 2 + m: 256 <= m <= 65535
-  - 可以是[索引]的一部分
-  - 节省空间
+  - Can be part of an [index]
+  - Saves space
 - BLOB
 - TEXT
   - fixed length is 65535 characters
