@@ -1,29 +1,29 @@
 # Template std::future
 
-- 通过[[std_async函数模板]]， [[std_promise类模板]]或[[std_packaged_task类模板]]异步操作提供一个std::future对象给该异步操作的创建者
-- 模板类型参数`T`表示异步操作的返回值的类型
-- 模板声明
+- Provides a std::future object to the creator of an asynchronous operation via [[std_async function template]], [[std_promise class template]], or [[std_packaged_task class template]].
+- The template type parameter `T` represents the type of the return value of the asynchronous operation.
+- Template declaration:
 ```c++
 template<class T> class future;
 template<class T> class future<T&>;
 template<> class future<void>;
 ```
 
-## 构造函数
+## Constructors
 
-- 默认构造函数:`future() noexcept;`
-- 移动构造函数:`future(future && x) noexcept;`
-- 拷贝构造函数:`future (const future&) = delete;`(不可用)
+- Default constructor: `future() noexcept;`
+- Move constructor: `future(future && x) noexcept;`
+- Copy constructor: `future (const future&) = delete;` (not available)
 
-## 成员函数
+## Member Functions
 
-- `get` : 获取结果
-  - 有返回之前阻塞
-  - 返回存储于共享状态的值val，同std::move(val)
-  - 返回存储于共享状态的值的引用，同std::move(val)
-- `wait`:等待结果变得可用
-  - 有返回结果前阻塞
-  - 无返回值
-- `wait_for` : 等待结果，超过时间间隔，返回
-- `wait_until`: 等待结果，到某个时间点仍未得到结构，返回
--`valid`: 检查future是否由共享状态
+- `get`: Retrieve the result
+  - Blocks until a result is available
+  - Returns the value stored in the shared state, equivalent to std::move(val)
+  - Returns a reference to the value stored in the shared state, equivalent to std::move(val)
+- `wait`: Wait for the result to become available
+  - Blocks until a result is available
+  - No return value
+- `wait_for`: Wait for the result, returns after a specified time interval
+- `wait_until`: Wait for the result, returns if the result is not available by a specified time point
+- `valid`: Checks whether the future has a shared state

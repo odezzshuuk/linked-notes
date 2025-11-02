@@ -421,15 +421,18 @@ Flatten<Type> = Type extends Array<infer Item> ? Item : Type;
 
 ## Mapped Types
 
-- build on [index signature](typescript-interface.md#index-signatures)
-- generate a new type from another type, to avoid repeat
+- Build on [index signature](typescript-interface.md#index-signatures)
+- Generate a new type from another type, to avoid repeat
 
 For example, combine with [keyof operator](#keyof-operator) to generate a new type, can use a little code to **modify the type of all property's values of a type**
 
 ```ts
+// OnlyBoolsAndHorses is a type with property values either boolean or Horse
+// fields names is not fixed, can be any string
 type OnlyBoolsAndHorses = {
     [key: string]: boolean | Horse;
 };
+// OptionsFlags<Type> takes an <Type> and makes all its properties boolean
 type OptionsFlags<Type> = {
     [Property in keyof Type]: boolean;
 }

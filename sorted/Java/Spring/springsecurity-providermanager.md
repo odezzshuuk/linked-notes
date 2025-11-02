@@ -1,25 +1,24 @@
-# ProviderManager
+# Java - Spring Security - ProviderManager
 
-- 最常用的[AuthenticationManager](springsecurity-authenticationmanager-interface.md)实现类
-- ProviderManager将认证委托给**多个**的`AuthenticationProvider`
-  - 每种`AuthenticationProvider`都可以指示验证结果, 成功, 失败
-  - Authentication可以指示验证类型不支持, 并允许下游Provider继续验证, 如果没有`Provider`支持, 则抛出`ProviderNotFoundException`
-- 通过多种`AuthenticationProvider`实现, 可以实现多种认证方式, 并只暴露一个`AuthenticationManager`实例
-- ProviderManager会清除被返回对象中敏感信息, 如密码
+- The most commonly used implementation of [AuthenticationManager](springsecurity-authenticationmanager-interface.md)
+- ProviderManager delegates authentication to **multiple** `AuthenticationProvider`s
+  - Each `AuthenticationProvider` can indicate the result: success or failure
+  - Authentication can indicate that the authentication type is not supported, allowing downstream Providers to continue authentication. If no `Provider` supports it, a `ProviderNotFoundException` is thrown
+- By implementing multiple `AuthenticationProvider`s, various authentication methods can be supported, while exposing only a single `AuthenticationManager` instance
+- ProviderManager will clear sensitive information (such as passwords) from returned objects
 
 ## AuthenticationProvider
 
-- 完成具体的认证
-- 多个`AuthenticationProvider`可以注入到`ProviderManager`中
-- 每种`AuthenticationProvider`都有一个特定的认证类型, 比如:
-  - DaoAuthenticationProvider: **username/password验证**
-  - JwtAuthenticationProvider: **JWT验证**
+- Performs the actual authentication
+- Multiple `AuthenticationProvider`s can be injected into the `ProviderManager`
+- Each `AuthenticationProvider` has a specific authentication type, for example:
+  - DaoAuthenticationProvider: **username/password authentication**
+  - JwtAuthenticationProvider: **JWT authentication**
 
-DaoAuthenticationProvider
+### DaoAuthenticationProvider
 
-1. Filter传递Authenctication到AuthenticationManager
-2. ProviderManager选择DaoAuthenticationProvider
-3. DaoAuthenticationProvider调用[UserDetailsService].loadUserByUsername()方法, 获取UserDetails对象
-4. DaoAuthenticationProvider使用[PasswordEncoder]对密码进行验证
-5. 如果验证成功, 则返回一个Authentication对象, 一个UsernamepasswordAuthenticationToken实例被设置到SecurityContextHolder中
-
+1. The filter passes the Authentication to the AuthenticationManager
+2. ProviderManager selects DaoAuthenticationProvider
+3. DaoAuthenticationProvider calls [UserDetailsService].loadUserByUsername() to obtain a UserDetails object
+4. DaoAuthenticationProvider uses [PasswordEncoder] to verify the password
+5. If authentication succeeds, an Authentication object is returned, and a UsernamePasswordAuthenticationToken instance is set in the SecurityContextHolder

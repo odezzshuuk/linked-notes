@@ -1,14 +1,13 @@
-# 枚举类型
-
+# Enum Type
 
 ## Feature
 
-- 包含有限个命名值
-- 定义一个类型，包含有限个实例
-- 可以在其中添加一些构造器，**方法**, **属性**
-- 构造器修饰符只能是private
+- Contains a limited number of named values
+- Defines a type with a finite set of instances
+- You can add constructors, **methods**, and **properties** to an enum
+- The constructor modifier can only be private
 
-## Declare A Enum Type
+## Declare An Enum Type
 
 ```java
 public enum Size
@@ -20,16 +19,16 @@ public enum Size
 }
 ```
 
-- 所有枚举类型都是Enum类的子类
+- All enum types are subclasses of the Enum class
 - toString()
-  - 如`Size.SMALL.toString()`返回字符串`"SMALL"`
+  - For example, `Size.SMALL.toString()` returns the string `"SMALL"`
 - valueOf()
-  - 如`Size s = Enum.valueOf(Size.class, "SMALL");`: 表示将s设置成Size.SMALL
+  - For example, `Size s = Enum.valueOf(Size.class, "SMALL");` sets s to Size.SMALL
 - values()
 
-## use
+## Usage
 
 ```java
-enum Size {SMALL, MEDIUM, LARGE, EXTRA};
-Size s = Size.MUDIUM;
+enum Size {SMALL, MEDIUM, LARGE, EXTRA;}
+Size s = Size.MEDIUM;
 ```

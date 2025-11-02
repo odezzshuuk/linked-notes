@@ -2,11 +2,8 @@
 
 - CSRF: cross site request forgery
 - Tricks a user's browser into visiting a previously [authenticated](springsecurity-authentication.md) website and performing certain operations; because the user is authenticated, the website will consider this request to be the user's own operation
-- Different from [xss](web-xss.md):
-  - xss exploits **user's trust in the website**
-  - csrf exploits **website's trust in the user**
 
-## take a look
+## Take A Look
 
 - nodejs express framework
 

@@ -4,9 +4,9 @@
 
 - API: Application Programming Interface
 
-## they are API
+## They Are API
 
 - `localhost:3000/api/hello`
 - `app.method()`
 
-## api will return what caller need
+## Api Will Return What Caller Need

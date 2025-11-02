@@ -53,11 +53,12 @@ For example, if execute command `lua script.lua` at the root of following direct
 
 ## Search Paths
 
-If a search path: `?;?.lua;c:\windows\?;/usr/local/lua/?/?.lua`
+If a search path value is: `?;?.lua;c:\windows\?;/usr/local/lua/?/?.lua`
 
 `require "foo"` will try to open the following files:
 
 - `foo/`
+- `foo/init.lua
 - `foo.lua`
 - `c:\windows\foo`
 - `/usr/local/lua/foo.lua`

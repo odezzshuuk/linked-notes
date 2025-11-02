@@ -15,3 +15,9 @@
 ## traffic
 
 - the flow of data packets
+
+## IoT
+
+- Internet of Things
+- Such as smart bulb, temperature sensor, smart watch
+

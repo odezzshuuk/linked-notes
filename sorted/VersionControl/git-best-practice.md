@@ -208,3 +208,7 @@ Format: `<type>(<scope>): <description>`
 - scope: optional, such as auth, ui, api
 - description: short description of the change
 
+## Squash Last N Commits
+
+[git rebase](git-rebase.md#squash-last-n-commits)
+
