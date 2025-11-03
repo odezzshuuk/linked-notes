@@ -10,7 +10,7 @@
 ## Other Magic Characters
 
 - `()`: capture
-- `.`
+- `.`: any character
 - `[]`: characters set
 - `^`: line start, in `[]` represents not
 - `$`

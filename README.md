@@ -17,4 +17,5 @@ The notes are organized by topic and are intended to be a living document, conti
 ## Life Changer
 
 - neovim keymap: ctrl + o & ctrl + i
+- neovim command: `:windo difft`, make each focusable window part of diff windows 
 
