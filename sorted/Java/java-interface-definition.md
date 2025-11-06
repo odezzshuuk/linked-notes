@@ -1,9 +1,9 @@
-# 定义接口
+# Defining Interfaces
 
-- 如果接口修饰符不指定public, 则认为只有相同的package拥有接口的访问权限
-- 接口可以扩展(extends)其他接口, 接口可以扩展任意数量的接口
+- If the interface modifier doesn't specify public, it's considered that only the same package has access permission to the interface
+- Interfaces can extend other interfaces, and an interface can extend any number of interfaces
 
-以Comparable为例
+Taking Comparable as an example
 
 ```java
 public interface Comparable
@@ -12,11 +12,11 @@ public interface Comparable
 }
 ```
 
-> 也就是说，任何实现Comparable接口的类都需要包含compareTo()方法
+> That is, any class that implements the Comparable interface needs to include the compareTo() method
 
-## 接口中的方法声明
+## Method Declarations in Interfaces
 
-- 所有方法都是隐式public
-- 可以包含[抽象方法](), [默认方法](), [静态方法]()
-- 接口中以 `;` 结尾的方法是抽象方法
-- 可以包含[常量声明], 接口中field声明默认`public static final`
+- All methods are implicitly public
+- Can contain [abstract methods](), [default methods](), [static methods]()
+- Methods in interfaces ending with `;` are abstract methods
+- Can contain [constant declarations], field declarations in interfaces default to `public static final`

@@ -35,7 +35,7 @@ git commit -m "<message_after_remove_submodule_path>"  # optional
 git submodule add <submodule_url> <submodule_local_path>
 ```
 
-Then file `.gitmodules` created, and looks like
+Then file `.gitmodules` created, and content may like
 
 ```ini
 [submodule "<submodule_local_path>"]

@@ -1,29 +1,29 @@
-# 注释
+# Comments
 
-- 注释放在所描述结构前
-- 被抽取的注释放在`/**...*/`之间
+- Comments are placed before the structure they describe
+- Extracted comments are placed between `/**...*/`
 
-从注释中抽取信息, 主要从以下几个结构
+Information is mainly extracted from comments in the following structures
 
-- 包
-- 公有类和接口
-- 公有的和受保护的构造器及方法
-- 公有的和受保护的域
+- Packages
+- Public classes and interfaces
+- Public and protected constructors and methods
+- Public and protected fields
 
-## 类注释
+## Class Comments
 
-## 注释提取
+## Comment Extraction
 
-单个包
+Single package
 
 ```shell
 javadoc -d docDirectory package_name
 ```
 
-多个包
+Multiple packages
 
 ```shell
 javadoc -d docDirectory package_name1 package_name2
 ```
 
-> docDirectory为提取的文档的保存目录
+> docDirectory is the directory where extracted documentation is saved

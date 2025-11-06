@@ -58,7 +58,7 @@ Date:   Mon May 30 09:12:14 2022 +0800
 
 commit id: d590a26b3b988f24842d433d4b64708ff545d399
 
-## Undo commit
+## Undo Stage/Commit
 
 ```bash
 git reset [--soft | --mixed [-N] | --hard |--merge | --keep] [-q] <commitid>

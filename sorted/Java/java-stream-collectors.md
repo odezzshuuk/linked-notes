@@ -2,8 +2,6 @@
 
 - prefined collectors for most common operations
 
->  比如将元素收集到一个集合
-
 ## toSet()
 
 ```java

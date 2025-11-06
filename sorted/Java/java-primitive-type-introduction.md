@@ -1,88 +1,88 @@
-# 八种基本类型信息
+# Eight Primitive Types Information
 
 ## byte
 
-- 8bits, 1字节
-- 取值范围: -128~127
+- 8bits, 1 byte
+- Value range: -128~127
   - `-1`:   11111111
   - `-128`: 10000000
   - `127`:  01111111
 
-## 整数类型
+## Integer Types
 
-- 字面量
-  - 十六进制字面量前缀0x
-  - 八进制字面量前缀0
-  - 二进制前缀0b
+- Literals
+  - Hexadecimal literals prefix 0x
+  - Octal literals prefix 0
+  - Binary prefix 0b
 
 short
 
-- 16bits, 2字节
+- 16bits, 2 bytes
 
-int: 整形
+int: Integer
 
-- 32bits, 4字节
-- 范围: -2^31 ~ 2^31-1
+- 32bits, 4 bytes
+- Range: -2^31 ~ 2^31-1
   - `-2^31`:  10000000000000000000000000000000
   - `2^31-1`: 01111111111111111111111111111111
   - `-1`:     11111111111111111111111111111111
-- int负值公式: `-n = ~n + 1`
+- int negative value formula: `-n = ~n + 1`
 
 ```java
-int a = 5;  // 5是整数量
+int a = 5;  // 5 is an integer literal
 double b = 5 / 2; // b = 2.0
 ```
 
-long: 长整形
+long: Long Integer
 
-- 64bits, 8字节
-- 数值后缀L
+- 64bits, 8 bytes
+- Numeric suffix L
 
-混合整数类型，短类型向长类型转换
+Mixed integer types, short type converts to long type
 
 ```java
 long l1 = 1000000000 * 2 * 10L;  // 10000000000 * 2 int to long
-long l2 = 1000000000 * 3 * 10L;  // 10000000000 * 3 int溢出
-long l3 = 1000000000L * 3 * 10;  // 始终是long
+long l2 = 1000000000 * 3 * 10L;  // 10000000000 * 3 int overflow
+long l3 = 1000000000L * 3 * 10;  // Always long
 ```
 
-> c和c++中，int和long等类型的大小与目标平台有关，如8086这样的16为处理器上整形数值占2字节
+> In C and C++, the size of types like int and long depends on the target platform, such as integer values occupying 2 bytes on 16-bit processors like 8086
 
-## 浮点类型
+## Floating Point Types
 
 float
 
-- 32bits, 4字节
-- 小数点 加 后缀 f, 如`float f = 624.424f;`
+- 32bits, 4 bytes
+- Decimal point plus suffix f, like `float f = 624.424f;`
 
 double
 
-- 64bits, 8字节
+- 64bits, 8 bytes
 - `double d = 1.0;`
-- 双精度格式浮点数
-- 存在误差
+- Double precision format floating point number
+- Has errors
 
 ```java
 double c = 2.0, d = 1.9
 System.out.println(c - d);
-// 输出0.1000000000000009
+// Output 0.1000000000000009
 ```
 
 ## boolean
 
-- 只能用true或false赋值
-- 大小没有被精确定义
+- Can only be assigned true or false
+- Size is not precisely defined
 
-> c++中数值和指针可以代替boolean, 值0相当于boolean值
+> In C++, numerics and pointers can substitute for boolean, value 0 is equivalent to boolean value
 
-## char : 字符
+## char : Character
 
-- java中的char, 2个字节, 范围0~65535
-- 用单引号括起来
-- 16位[Unicode]()字符
-- min: \\u0000, min: \\uffff 
-- 本质是int
-- ASCII码
+- char in Java, 2 bytes, range 0~65535
+- Enclosed in single quotes
+- 16-bit [Unicode]() character
+- min: \\u0000, max: \\uffff 
+- Essentially an int
+- ASCII code
   - a: 97
   - A: 65
   - 0: 48
@@ -90,13 +90,13 @@ System.out.println(c - d);
 ```java
 char a1 = 'A';
 char a2 = 65;
-// a1 等于 a2;
+// a1 equals a2;
 
-// Unicode编码 to characters
-int code = 0x41;  // Unicode编码
+// Unicode encoding to characters
+int code = 0x41;  // Unicode encoding
 char c = (int)code;  // c = 'A'
 ```
 
-码点
+Code points
 
 - 与编码表的某个字符对应的代码值

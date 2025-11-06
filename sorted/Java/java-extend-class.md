@@ -1,62 +1,62 @@
-# 扩展超类
+# Extending Superclasses
 
-- Java中子类只能是单一类的扩展
-- 已存在的类：超类,  基类，父类
-- 新类： 子类, 派生类
+- In Java, a subclass can only extend a single class
+- Existing class: superclass, base class, parent class
+- New class: subclass, derived class
 
-## 定义子类
+## Defining Subclasses
 
-extends关键字
+extends keyword
 
-- 定义Manager类, 继承自Employee类的子类
+- Define Manager class, a subclass inherited from Employee class
 
 ```java
 public class Manager extends Employee {}
 ```
 
-## 调用超类
+## Calling Superclass
 
-关键字super
+Keyword super
 
-- 调用超类方法`super.method()`
-- 调用超类构造器`super(arg1, arg2,....);`
+- Call superclass method `super.method()`
+- Call superclass constructor `super(arg1, arg2,....);`
 
-## 构造子类
+## Constructing Subclasses
 
-- 若派生类的构造方法没有调用父类的构造方法，则默认在首句调用超类构造方法super()
+- If the derived class's constructor doesn't call the parent class's constructor, it defaults to calling the superclass constructor super() as the first statement
 
-## 覆盖方法
+## Overriding Methods
 
-- 子类方法的[返回类型]小于或等于超类方法
+- The [return type] of the subclass method is less than or equal to that of the superclass method
 
-  > 超类中返回 **某派生体系中超类** 的方法，在子类重写方法可以返回相同**派生体系中子类**
+  > A method in the superclass that returns **a superclass in a certain derived hierarchy**, when overridden in a subclass, can return **a subclass in the same derived hierarchy**
   
-- 子类方法抛出的[异常]小于或等于(不抛出或少抛出)超类方法
-- 子类方法可见性不能低于超类
+- The [exceptions] thrown by the subclass method are less than or equal to (not throwing or throwing fewer) those of the superclass method
+- The visibility of the subclass method cannot be lower than the superclass
 
-  > 超类为public, 子类方法一定为public
+  > If superclass is public, the subclass method must be public
   
-- @Override标记
+- @Override annotation
 
-[参考c++中的override](c++-virtual-function.md#override关键字)
+[Refer to override in C++](c++-virtual-function.md#override关键字)
 
-## 方法调用
+## Method Invocation
 
-- 静态绑定: private方法，static方法， final方法或者构造器
-- 动态绑定: 
+- Static binding: private methods, static methods, final methods or constructors
+- Dynamic binding: 
 
-调用`e.getSalary()`的解析过程
+Resolution process for calling `e.getSalary()`
 
-1. 提取e的**实际类型**的方法表
-2. 搜索getSalary()方法签名
+1. Extract the method table of the **actual type** of e
+2. Search for the getSalary() method signature
 
-## 方法表
+## Method Table
 
-- 列出了所有方法的签名和实际调用的方法
+- Lists all method signatures and the methods actually invoked
 
-## 阻止继承
+## Preventing Inheritance
 
-- 将类声明为final来阻止继承
-  - 其方法自动声明为final
-  - field不会声明为final
-- 将方法声明为final, 子类就不能覆盖这个方法
+- Declare a class as final to prevent inheritance
+  - Its methods are automatically declared as final
+  - Fields are not declared as final
+- Declare a method as final, and subclasses cannot override this method

@@ -3,8 +3,8 @@
 ## Introduction
 
 - execute when build a project
-- Lifecycle 由不同的[build phase](#build-phase)构成
-- 一个build phase代表Life cycle的一个阶段
+- Lifecycle consists of different [build phases](#build-phase)
+- A build phase represents a stage of the lifecycle
 
 ## Three Built-in Lifecycles
 
@@ -17,11 +17,11 @@ mvn verify
 ```
 
 > `verify` is a build phase
-> 这条命令会按顺序运行所有default lifecycle 中的 phase 直到 verify phase
+> This command will run all phases in the default lifecycle in order until the verify phase
 
 - phase are executed **sequentially**
-- 如果一个Build Phase没有绑定[goals](#mojogoal), 这个build phase不会被执行
-- build phase会执行所有绑定的goals
+- If a Build Phase doesn't bind [goals](#mojogoal), this build phase won't be executed
+- build phase will execute all bound goals
 - ~~build phase 是一个 core [plugin](maven-plugin.md)~~
 
 ## Phase List
@@ -83,12 +83,12 @@ why is `<executions/>`
 
 - bind to a `process-test-resources` phase
 
-## 组合插件(plugin)和build phase
+## Combining Plugins and Build Phases
 
 ```shell
 mvn clean dependency:copy-dependencies package
 ```
 
-1. 这条命令先执行到`clean` phase
-2. 然后运行插件`dependency:copy-dependencies`
-3. 最后运行 `package` phase
+1. This command first executes to the `clean` phase
+2. Then runs the plugin `dependency:copy-dependencies`
+3. Finally runs the `package` phase

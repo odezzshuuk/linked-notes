@@ -1,4 +1,4 @@
-# 网络编程
+# Network Programming
 
 ## Socket
 
@@ -6,11 +6,11 @@
 
 ## URI, URL, URN
 
-- URI实例只不过是一个结构化的字符串, 支持语法，规范化，解析和相对化操作
-- URL实例代表语法意义上的组件
-  - 支持解析语法
-  - 查找主机
-  - 打开到指定资源的网络IO操作
+- A URI instance is just a structured string that supports syntax, canonicalization, parsing, and relativization operations
+- A URL instance represents syntactic components
+  - Supports parsing syntax
+  - Looking up hosts
+  - Opening network IO operations to specified resources
 
 ## URL类
 
@@ -19,20 +19,20 @@
 
 URLDecoder: HTML解码工具类
 
-- 用来解码application/x-www-form-urlencoded格式的字符串
+- Used to decode strings in application/x-www-form-urlencoded format
 
 ***
 
 > [URL](http-url-and-uri): Uniform Resource Locator
 
-## URI类
+## URI Class
 
 [URI](network-uri.md)
 
-- 应用**不应该**试图从File或Path实例的直接字符串构造, 解析URI
-- 使用Path.toUri()和File.toURI()创造URI
-- 语法: `[scheme:]scheme-specific-part[#fragment]`
-- URI实例由以下9部分组成:
+- Applications **should not** attempt to construct or parse URIs directly from the string of a File or Path instance
+- Use Path.toUri() and File.toURI() to create URIs
+- Syntax: `[scheme:]scheme-specific-part[#fragment]`
+- A URI instance consists of the following 9 parts:
   - scheme: String
   - scheme-specific-part: String
   - authority: String
@@ -43,11 +43,11 @@ URLDecoder: HTML解码工具类
   - query: String
   - fragment: String
 
-方法
+Methods
 
-1. 信息
+1. Information
 
-解码后的信息
+Decoded information
 
 - `String getAuthority()`
 - `String getFragment()`

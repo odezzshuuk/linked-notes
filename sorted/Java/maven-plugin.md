@@ -10,10 +10,10 @@
 ## Introduction
 
 - plugin is a group of [goals](maven-terms.md#mojogoal)
-- maven实际上是一组maven plugin的核心框架
-- 换句话说, plugin执行大部分的实际操作
+- Maven is actually a core framework for a collection of maven plugins
+- In other words, plugins execute most of the actual operations
 
-插件分为两种
+Plugins are divided into two types
 
 - build plugin
   - executed during the build lifecycle
@@ -24,7 +24,7 @@
 
 ## Custom A Plugin
 
-[自定义插件](maven-custom-plugin.md)
+[](maven-custom-plugin.md)
 
 ## core plugin
 

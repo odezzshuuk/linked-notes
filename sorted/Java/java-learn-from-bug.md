@@ -10,31 +10,31 @@ Can load library: libawt_xawt.so
 
 ## No.3 
 
-- 加载主类...时出现LinkageError
+- LinkageError when loading main class...
 
 `java.lang.UnsupportedClassVersionError: Preview features are not enabled for sample/Sample (class file version 62.65535). Try running with '--enable-preview'`
 
-可能的原因
+Possible causes
 
-- 编译所用JDk版本与运行所用JDK版本不匹配
+- JDK version used for compilation doesn't match JDK version used for runtime
 
 ## No.4
 
  `module java.base does not "opens java.util" to unnamed module @5305068a`
 
-- 不要通过反射来提高访问权限
-- 当你必须使用反射时，确保<font color="red">直接调用者(方法)</font>与恶意代码隔离
-  - 通过声明调用为private或final
+- Don't use reflection to escalate access permissions
+- When you must use reflection, ensure the <font color="red">direct caller (method)</font> is isolated from malicious code
+  - By declaring the caller as private or final
 
 ## No.5
 
 `The import javax.servlet cannot be resolved`
 
-- 要使用servlet, 需要先下载tomcat
+- To use servlet, you need to download tomcat first
 
-方案一:
+Solution 1:
 
-- 使用javac -cp指定servlet-api.jar类文件搜索路径, 连接源文件完成编译
+- Use javac -cp to specify servlet-api.jar class file search path, link source files to complete compilation
 
 ```shell
 javac -cp /usr/share/tomcat/lib/servlet-api.jar sample.java
@@ -42,9 +42,9 @@ javac -cp /usr/share/tomcat/lib/servlet-api.jar sample.java
 
 ## No.6
 
-只读取一行的原因
+Reason for only reading one line
 
-- BufferedReader中有buffer数组, readLine()方法, 会将
+- BufferedReader has a buffer array, the readLine() method will
 
 ```java
 public class Sample {
@@ -62,12 +62,12 @@ public class Sample {
 
 ## No.7
 
-用反射调用可变参数方法时，抛出IllegalArgumentException
+IllegalArgumentException thrown when calling varargs method via reflection
 
-bug发生条件:
+Bug occurrence conditions:
 
-1. 对象方法的参数为可变参数
-2. 使用[Method对象](java-reflect-accessibleobject.md)的invoke()方法调用对象方法, 传入方法的数组实参时, 数组为具体类型
+1. Object method parameter is varargs
+2. When using [Method object](java-reflect-accessibleobject.md)'s invoke() method to call object method, when passing array arguments to the method, the array is of a specific type
 
 ```java
 public class Application {
@@ -75,12 +75,12 @@ public class Application {
 
         Class cls = Student.class;
         Student stu = new Student();
-        Method m = cls.getMethod("fx", String[].class);  // 可以正确的到Method对象
+        Method m = cls.getMethod("fx", String[].class);  // Can correctly get Method object
 
         String[] strs = {"a", "b", "c"};
-        m.invoke(stu, new Object[]{"a", "b", "c"});  // 抛出IllegalArgumentException
-        m.invoke(stu, new String[]{"a", "b", "c"});  // 会抛出IllegalArgumentException异常
-        m.invoke(stu, (Object)strs)  // 正常调用
+        m.invoke(stu, new Object[]{"a", "b", "c"});  // Throws IllegalArgumentException
+        m.invoke(stu, new String[]{"a", "b", "c"});  // Will throw IllegalArgumentException
+        m.invoke(stu, (Object)strs)  // Normal call
     }
 
 }

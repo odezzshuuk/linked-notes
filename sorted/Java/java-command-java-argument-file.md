@@ -5,7 +5,7 @@
 - Simplify the java command by specifying an argument file,
 - Use the @ symbol prefix to indicate an argument file containing java options and class names
 - When the --disable-@files option is encountered, stop expanding argument files
-  - 可以在命令行的任何地方使用--disable-@files选项
+  - Can use the --disable-@files option anywhere on the command line
   - Including in the argument file itself, to stop @file expansion.
 
 ## Argument File Syntax
@@ -25,7 +25,7 @@
 
 ## Example
 
-参数文件
+Argument file
 
 ```
 -cp "lib/

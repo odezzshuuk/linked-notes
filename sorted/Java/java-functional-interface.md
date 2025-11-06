@@ -1,16 +1,16 @@
-# 函数式接口
+# Functional Interface
 
-## 定义
+## Definition
 
-[定义](java-functional-interface-definition.md)
+[Definition](java-functional-interface-definition.md)
 
-## 函数式接口的实例
+## Instances of Functional Interfaces
 
-1. [lambda表达式](java-lambda.md)
+1. [Lambda Expression](java-lambda.md)
 
-2. 方法引用
+2. Method Reference
 
-- `ClassName::MethodName` 通过类名调用
+- `ClassName::MethodName` Called via class name
 - `this::instanceMethod`
 - `super::instanceMethod`
 
@@ -32,6 +32,6 @@ public class MethodReference {
 
 - `ClassName::new`
 
-## 预定义的函数式接口
+## Predefined Functional Interfaces
 
-[预定义函数式接口](java-funcitonal-interface-preimplement.md)
+[Predefined Functional Interfaces](java-funcitonal-interface-preimplement.md)

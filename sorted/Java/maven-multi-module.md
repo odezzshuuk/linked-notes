@@ -1,20 +1,20 @@
-# 组织多模块项目
+# Organizing Multi-Module Projects
 
-## 创建多模块项目
+## Creating Multi-Module Projects
 
-1. 生成Parent POM
+1. Generate Parent POM
 
 ```bash
 mvn archetype:generate -DgroupId=com.baeldung -DartifactId=parent-project
 ```
 
-打开pom.xml, 添加如下内容
+Open pom.xml and add the following content
 
 ```xml
 <packaging>pom</packaging>
 ```
 
-2. 生成子模块
+2. Generate sub-modules
 
 ```bash
 cd parent-project
@@ -23,7 +23,7 @@ mvn archetype:generate -DgroupId=com.baeldung -DartifactId=service
 mvn archetype:generate -DgroupId=com.baeldung -DartifactId=webapp
 ```
 
-3. 在parent pom.xml 添加modules部分
+3. Add the modules section to parent pom.xml
 
 ```xml
 <modules>
@@ -33,7 +33,7 @@ mvn archetype:generate -DgroupId=com.baeldung -DartifactId=webapp
 </modules>
 ```
 
-4. 在子模块的pom.xml中添加parent部分
+4. Add the parent section to the sub-module's pom.xml
 
 ```xml
 <parent>
@@ -43,15 +43,15 @@ mvn archetype:generate -DgroupId=com.baeldung -DartifactId=webapp
 </parent>
 ```
 
-## 构建
+## Build
 
 ```bash
 mvn package
 ```
 
-## 在父项目中添加依赖管理
+## Add Dependency Management to Parent Project
 
-- 用于统一依赖
+- Used to unify dependencies
 
 pom.xml
 
@@ -67,7 +67,7 @@ pom.xml
 </dependencyManagement>
 ```
 
-## `<relativepath>`的作用
+## The Role of `<relativepath>`
 
 ```
 super
@@ -96,10 +96,10 @@ submodule pom.xml
 </parent>
 ```
 
-没有<relativepath>的子pom.xml
+Child pom.xml without <relativepath>
 
-- 不需要在仓库中安装super POM
-- 甚至不需要super POM中声明module1
+- No need to install super POM in repository
+- Don't even need to declare module1 in super POM
 
 ***
 
@@ -113,11 +113,11 @@ submodule pom.xml
 </parent>
 ```
 
-这样是将设置modoel2的parent为module1
+This sets module2's parent to module1
 
 ***
 
-跳过在目录搜索, 搜索maven仓库
+Skip directory search, search maven repository
 
 ```xml
 <parent>

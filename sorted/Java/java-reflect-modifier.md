@@ -36,7 +36,7 @@ private
 
 ## get Modifier
 
-- foo.getModifiers(): 返回int, 表示Class实例的修饰符
+- foo.getModifiers(): Returns int, representing the modifier of the Class instance
 
 > foo is instance of Class, Field, Method
-> 静态方法: Modifier.toString()将代表Modifier的整数转为字符串;
+> Static method: Modifier.toString() converts the integer representing Modifier to a string;
