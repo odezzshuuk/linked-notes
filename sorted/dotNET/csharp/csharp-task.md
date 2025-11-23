@@ -42,10 +42,6 @@
 
 ## TaskFactory
 
-what's the difference between declare async method return `Task` and `void`?
-
-public async Task ExampleMethod();
-public async void ExampleMethod();
 
 ## Wait A Task
 

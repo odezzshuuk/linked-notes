@@ -102,6 +102,3 @@ Rpc as event listener
 public override void OnNetworkSpawn() { }
 ```
 
-
-
-

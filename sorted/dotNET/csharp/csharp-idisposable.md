@@ -20,6 +20,10 @@
 
 - Such as file handles, network sockets, database connections, COM objects
 
+## How To Implement Dispose()
+
+
+
 ## using Statment
 
 ```c

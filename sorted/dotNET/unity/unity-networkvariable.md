@@ -41,7 +41,6 @@ public NetworkVariable<int> myInt = new NetworkVariable<int>(
 - Mostly same as [multiplayer serialization type](unity-multiplayer-serialization.md#who-can-be-serialized) for supported types
 - Except that `string` is not support
 
-
 ## INetworkSerializable
 
 ## INetworkSerializeByMemcpy

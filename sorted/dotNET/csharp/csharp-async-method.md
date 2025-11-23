@@ -1,17 +1,17 @@
 # CSharp - Async Method
 
-* [Features](#features)
-* [await expression](#await-expression)
-* [Return Type](#return-type)
-* [Any type has a `GetAwaiter` method](#any-type-has-a-`getawaiter`-method)
-* [`IAsyncEnumerable<T>`](#`iasyncenumerable<t>`)
-* [Wait A Async Value In A Sync Method](#wait-a-async-value-in-a-sync-method)
+- [Features](#features)
+- [await expression](#await-expression)
+- [Return Type](#return-type)
+- [Any type has a `GetAwaiter` method](#any-type-has-a-`getawaiter`-method)
+- [`IAsyncEnumerable<T>`](#`iasyncenumerable<t>`)
+- [Wait A Async Value In A Sync Method](#wait-a-async-value-in-a-sync-method)
 
 ## Features
 
 - `async` modifier
 - Contains await expression
-- return `void`, `Task`,  `Task<T>`
+- return `void`, `Task`, `Task<T>`
 - parameter can not be `out`, `ref`
 - Name convention: `Async` suffix
 
@@ -40,20 +40,20 @@ public class AwaitOperator
     public static async Task Main()
     {
         Task<int> downloading = DownloadDocsMainPageAsync();
-        Console.WriteLine($"{nameof(Main)}: Launched downloading.");  // ② 
+        Console.WriteLine($"{nameof(Main)}: Launched downloading.");  // ②
 
         int bytesLoaded = await downloading;
-        Console.WriteLine($"{nameof(Main)}: Downloaded {bytesLoaded} bytes.");  // ④ 
+        Console.WriteLine($"{nameof(Main)}: Downloaded {bytesLoaded} bytes.");  // ④
     }
 
     private static async Task<int> DownloadDocsMainPageAsync()
     {
-        Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: About to start downloading.");  // ① 
+        Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: About to start downloading.");  // ①
 
         var client = new HttpClient();
         byte[] content = await client.GetByteArrayAsync("https://learn.microsoft.com/en-us/");  // return to main
 
-        Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: Finished downloading.");  // ③ 
+        Console.WriteLine($"{nameof(DownloadDocsMainPageAsync)}: Finished downloading.");  // ③
         return content.Length;
     }
 }
@@ -75,6 +75,19 @@ Main: Downloaded 27700 bytes.
 1. [`Task<T>`](csharp-task.md)
 2. [Any type has a `GetAwaiter` method](#any-type-has-a-getawaiter-method)
 3. [`IAsyncEnumerable<T>`](#iasyncenumerablet)
+
+## Return void VS Return Task
+
+what's the difference between declare async method return `Task` and `void`?
+
+|                      |   async Task   |          async void          |
+| :------------------- | :------------: | :--------------------------: |
+| awaitable            | Can be awaited |       Fire and forget        |
+| Exceptions propagate |     ✅ Yes     | ❌ No (go to global handler) |
+
+When to use `async void`?
+
+- Only used when event handlers, such as button click event
 
 ## Any type has a `GetAwaiter` method
 
@@ -128,4 +141,3 @@ Blocking the execution by:
 
 - Get the returned value: By `GetAwaiter().GetResult()` or `Result` property
 - Fire and forget: use `Wait()` method
-

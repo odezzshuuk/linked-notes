@@ -10,7 +10,7 @@
 - An abstract class derives from [MonoBehaviour](unity-monobehaviour.md)
 - Where user add netcode logic
 - Receive or send netcode-aware properties
-- NetworkBehaviour component need a [NetworkObject]() component to do network-related tasks, such as Rpc
+- NetworkBehaviour component need a [NetworkObject](unity-networkobject.md) component to do network-related tasks, such as Rpc
 
 ```cs
 public class Example : NetworkBehaviour {

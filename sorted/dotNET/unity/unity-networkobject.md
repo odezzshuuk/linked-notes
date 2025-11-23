@@ -1,5 +1,7 @@
 # Unity Multiplayer - NetworkObject
 
+## What It Is
+
 - A GameObject with a [NetworkObject component](unity-multiplayer-concepts.md#networkobject-component) and at least one [NetworkBehaviour](unity-networkbehaviour.md)
 
 ## Fields And Properties

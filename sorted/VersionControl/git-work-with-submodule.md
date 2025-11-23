@@ -43,9 +43,11 @@ Then file `.gitmodules` created, and content may like
     url = <submodule_url>
 ```
 
-## Can I Commit Submodule From Parent Module?
+## Can I Commit Submodule From Parent Module? No
 
 - No, submodule is a separate repository, commit submodule separately.
 - If there is a new commit in submodule. Parent module should decide whether to follow the new commit or not.
 
 ## Remove Submodule
+
+

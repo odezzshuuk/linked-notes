@@ -44,12 +44,21 @@ public class ExampleUI : NetworkBehaviour {
 
 ## Syncharizing Field
 
-Use [`NetworkVariable<T>`](unity-networkvariable.md) to synchronize field between server and client
+Using [`NetworkVariable<T>`](unity-networkvariable.md) to synchronize field between server and client
+
+- Default permissions: read by everyone, write by server only
 
 ```cs
 publc class Example : NetworkBehaviour {
-    // Declare a NetworkVariable
-    public NetworkVariable<int> count = new NetworkVariable<int>();
+    // Declare a NetworkVariable with default arguments
+    public NetworkVariable<int> count = new NetworkVariable<int>(
+        0,
+        NetworkVariableReadPermission.Everyone,
+        NetworkVariableWritePermission.Server
+
+    );
+    // Declare a NetworkVariable with permission arguments
+    public NetworkVariable<int> count = new NetworkVariable<int>(
 
     public override void OnNetworkSpawn() {
         // listen on the value changed event
@@ -67,9 +76,10 @@ publc class Example : NetworkBehaviour {
 }
 ```
 
-## Change Client GameObject Field That Not NetworkVariable Type(Use NetworkObjectReference)
 
-check [unsupported serialization types](unity-multiplayer-serialization.md#unsupported-serialization-types)
+## Changing Client GameObject Field That Not NetworkVariable Type(Use NetworkObjectReference)
+
+Check [unsupported serialization types](unity-multiplayer-serialization.md#unsupported-serialization-types)
 
 ```cs
 public class Example : NetworkBehaviour {
