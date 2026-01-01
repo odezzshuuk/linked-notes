@@ -114,9 +114,9 @@ multiple assignment appear in another 3 places
 a, b = unpack{10, 20, 30}  -- a=10, b=20, 30 is discarded
 ```
 
-## variable number of arguments
+## various number of arguments
 
-- `...` to receive a variable number of arguments
+- `...` to receive a various number of arguments
 
 ```lua
 function foo(...)

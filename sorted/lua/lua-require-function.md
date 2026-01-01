@@ -39,7 +39,7 @@ $ print(package.path)
 **Caveat**:
 
 - `.` is **not the relative path of the script who call `require` function**
-- `.` in relative path `./?.lua` or `./?/init.lua` represent the directory of the entry script of program, that is where the `lua` command is executed
+- `.` in relative path `./?.lua` or `./?/init.lua` represent the directory of the entry script of program, whose path is where the `lua` command is executed
 
 For example, if execute command `lua script.lua` at the root of following directory structure, for `require('add')` in `/mod/init.lua` will cause module not found error
 

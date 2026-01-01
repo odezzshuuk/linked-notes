@@ -8,3 +8,9 @@
 
 - not recommend Setting fish shell as login shell
 
+## Reload Config
+
+```fish
+source ~/.config/fish/config.fish
+```
+

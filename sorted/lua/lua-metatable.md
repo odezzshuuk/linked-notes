@@ -8,6 +8,8 @@
 
 ## What It Is
 
+## What's For
+
 - With Metatable, you can change the behavior of a table, include
   - add tables
   - compare tables

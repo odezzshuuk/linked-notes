@@ -77,7 +77,7 @@ git rm --cached [<file>...]
 git rm --cached -r [<dir>...] # recursive remove
 ```
 
-remove files that new add to `.gitignore` from stage that already add by previous commit 
+## Remove File that already added to previous commit but added to .gitignore
 
 1. remove a file from stage
 2. then git add back again

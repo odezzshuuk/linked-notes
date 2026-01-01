@@ -21,3 +21,4 @@ gh repo create my-project --private --source=. --remote=origin --push
 ```sh
 gh secret set -f .env
 ```
+

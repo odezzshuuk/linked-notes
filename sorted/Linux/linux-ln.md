@@ -23,7 +23,7 @@ SYNOPSIS
 
 ## What Should be Target Argument
 
-for example target file is `~/dotfiles/.vimrc`
+for example target file is `~/.dotfiles/.vimrc`
 
 ```sh
 cd ~/dotfiles
@@ -37,7 +37,7 @@ lrwxrwxrwx 1 username group 7 2019-01-01 00:00 $HOME/.vimrc -> .vimrc
 ```
 
 - it instructs that `.vimrc` is a symbolic link to `.vimrc`
-- not the file `~/dotfiles/.vimrc` what I expect
+- not the file `~/.dotfiles/.vimrc` what I expect
 
 **conclusion**
 
