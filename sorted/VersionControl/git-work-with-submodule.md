@@ -50,4 +50,7 @@ Then file `.gitmodules` created, and content may like
 
 ## Remove Submodule
 
+```sh
+git submodule deinit -f <submodule_local_path>
+```
 

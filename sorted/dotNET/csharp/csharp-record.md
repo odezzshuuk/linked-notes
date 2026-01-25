@@ -30,3 +30,11 @@ var person = new Person("John", "Doe");
 var (firstName, lastName) = person; // Deconstructing
 ```
 
+## VS struct
+
+```cs
+public struct Point {
+    public int X = 5
+    public int Y = 10;
+}
+```
