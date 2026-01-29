@@ -17,13 +17,14 @@ Provide numerous features for handling **humanoid characters**
 - Which giving the ability to retarget animation to character model
 - This Feature Provides by [Avatar](#avatar) System
 
-## 5 Key Parts of Unity Animation System
+## 6 Key Parts of Unity Animation System
 
-1. [Animator](#animator)
-2. [Controller](unity-animation-controller.md)
-3. [Animation Clips](#animation-clips)
-4. [Avatar](#avatar)
-5. [Script(Optional)]()
+1. [Rig](#rig)
+2. [Avatar](#avatar)
+3. [Animator](#animator)
+4. [Controller](unity-animation-controller.md)
+5. [Animation Clips](#animation-clips)
+6. [Script(Optional)]()
 
 Relationship between these 5 parts
 
@@ -35,6 +36,8 @@ Relationship between these 5 parts
 - **When Controller And Animation Clips are created, they are independent of the GameObject**, which means:
   - You can use the same Controller and Animation Clips on different GameObjects
   - For example, A Cube animation clips can be used on a Sphere 
+
+## Rig
 
 ## Animator
 

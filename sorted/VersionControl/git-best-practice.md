@@ -4,7 +4,7 @@
 * [Track A file Changes History](#track-a-file-changes-history)
 * [print merges commit log](#print-merges-commit-log)
 * [Check Commit Log](#check-commit-log)
-* [Undo commit](#undo-commit)
+* [Undo commit](#undo-stage/commit)
 * [Remove File From Stage](#remove-file-from-stage)
 * [Discard All Local Changes](#discard-all-local-changes)
 * [check staged files](#check-staged-files)
@@ -211,4 +211,10 @@ Format: `<type>(<scope>): <description>`
 ## Squash Last N Commits
 
 [git rebase](git-rebase.md#squash-last-n-commits)
+
+## Restore File Or Directory That Deleted In Head But Undeleted In Another Commit
+
+```sh
+git restore --source=<commitid> <path/to/file_or_directory>
+```
 

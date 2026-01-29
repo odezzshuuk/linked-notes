@@ -43,6 +43,12 @@ Then file `.gitmodules` created, and content may like
     url = <submodule_url>
 ```
 
+## Initialize Submodule After Clone Parent Module
+
+```sh
+git submodule update --init --recursive
+```
+
 ## Can I Commit Submodule From Parent Module? No
 
 - No, submodule is a separate repository, commit submodule separately.

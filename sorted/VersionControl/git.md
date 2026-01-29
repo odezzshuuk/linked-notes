@@ -36,6 +36,8 @@
 
 [Work With Submodule](git-work-with-submodule.md)
 
+[Git Worktree](git-worktree.md)
+
 ## Github
 
 [Github Issues](github-issues.md)

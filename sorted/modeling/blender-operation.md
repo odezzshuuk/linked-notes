@@ -58,6 +58,17 @@
 | :---------: | -------------------- |
 | shift + tab | toggle snapping mode |
 
+## Numpad Period 
+
+Frame Selected
+
+- Changes the view so that you can see the selected objects
+- Or focus on selected object
+
+In Outliner Editor
+
+- Show active
+
 ## Set Parent
 
 1. select multiple objects
@@ -81,3 +92,4 @@
 ## extrude
 
 ## vertical split
+
