@@ -58,7 +58,7 @@ Relationship between these 5 parts
 
 ## Avatar
 
-- bones
+- **Data Structure** that map bone to 3D model's transform hierarchy
 
 ## Simple Animation Workflow
 

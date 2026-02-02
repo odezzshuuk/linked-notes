@@ -8,3 +8,25 @@
 - Most commonly used for armatures
 
 How To Create
+
+## Active Object
+
+What It Is
+
+- Active object is the last selected object in multiple selection
+- Object selected as Active has outline **yellow(#F59A35)** color, the other are orange(#E4571B)
+
+Features
+
+- Many operations use Active Object as reference
+
+## Data-block
+
+What It Is
+
+- The named items that serve as the base unit of data in a blend file
+
+Features
+
+- Can be linked into other blend files
+

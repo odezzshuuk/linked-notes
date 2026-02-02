@@ -11,6 +11,8 @@
 
 - Animation data container
 
+## Action Slot
+
 ## Keyframes
 
 - for interpolated animation
@@ -31,13 +33,26 @@ Extrapolatoin
 
 - Defines the behavior of a curve **before the first** and **after the last** keyframes
 
+
+## Armature
+
+When talk about armature, it means:
+
+- A collection of bones
+- Used to rig
+
 ## Bones
 
-IK: Inverse Kinematics
+- base element of armature
 
 ## Rigging
 
-## Normal Character Animation Workflow
+What's For
+
+- Adding control to object
+- Effectively define a user interface for animator to use
+
+## Workflow
 
 1. Creating body, mostly a group of meshes(cube, cylinder, sphere, etc.)
 
@@ -46,13 +61,13 @@ Included Operations:
 - `subdivision surface`
 - ...
 
-2. Creating armature, mostly a group of bones
+2. Creating [armature](#armature), mostly a group of bones
 
 options in this steps:
 
 - `infront`
 
-3. Parenting **Armature(bones)** to **Meshes(body)** with automatic weights
+3. [Parenting]() [**Armature(bones)**](#armature) to **Meshes(body)** with automatic weights
 
 - this step will generate vertex groups based on bones
 
@@ -84,4 +99,14 @@ options in this steps
 - Graph Editor: Edit Curves
 - NLA Editor: non-linear animation editor, transition between actions
 - Drivers
+
+## Related Editors
+
+Dope Sheet: 
+
+- Overview of all animation in scene
+
+Action Editor
+
+- Focus on single action
 

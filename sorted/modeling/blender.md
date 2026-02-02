@@ -12,8 +12,6 @@
 
 [sculpt]()
 
-[Armature](blender-armature.md)
-
 [Posing](blender-posing.md)
 
 [Animation](blender-animation.md)

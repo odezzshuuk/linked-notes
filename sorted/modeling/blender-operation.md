@@ -69,13 +69,13 @@ In Outliner Editor
 
 - Show active
 
-## Set Parent
+## Parenting
 
 1. select multiple objects
 2. key `ctrl-p`
 3. select `object` in popup menu
 
-- the last selected object will be the parent of the others
+- [the last selected object](blender-glossary#active-object) will be the parent of the others
 - In step 3, when change the parent, the scale of the child object will be changed
 - select `object(keep transform)` to keep the child object's transform
 
@@ -85,11 +85,20 @@ In Outliner Editor
 2. select handlers and target bone
 3. In pose mode: `shift-i` to set IK constraint
 
-## Glossary
+## Transform 3D Cursor 
 
-- subvision
+- Press `N` -> `View` -> `3D Cursor` -> `Location`
+- `shift + s` -> `cursor to world origin` / `cursor to selected` / `cursor to grid`
 
-## extrude
+## Change Object Pivot
+
+1. Menu `Object` -> `Set Origin` -> `Origin to 3D Cursor`
+
+> Moving [cursor](#transform-3d-cursor)
+
+2. Top-right corner `options` -> Check `Origins`
+
+## Extrude
 
 ## vertical split
 
