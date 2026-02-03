@@ -63,21 +63,25 @@ Included Operations:
 
 2. Creating [armature](#armature), mostly a group of bones
 
-options in this steps:
+optional in this steps:
 
-- `infront`
+- In armature properties: Viewport -> check `infront` for better visibility
 
-3. [Parenting]() [**Armature(bones)**](#armature) to **Meshes(body)** with automatic weights
+3. [Parenting](blender-operation#parenting) [**Armature(bones)**](#armature) to **Meshes(body)** with automatic weights
+
+> Set Armature as Object Parent
 
 - this step will generate vertex groups based on bones
 
-4. Adjusting weight paint
+4. Weight Paint
+
+[Weight Paint](blender-weight-paint)
 
 options in this steps:
 
 - `auto normalize`
 
-5. Adding [IK Constraint](blender-operation.md#set-ik-constraint) to bones
+5. (Optional)Adding [IK Constraint](blender-operation.md#set-ik-constraint) to bones
 
 options in this steps
 

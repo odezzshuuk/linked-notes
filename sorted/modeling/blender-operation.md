@@ -8,9 +8,10 @@
 - g, s, r, x, f: grab, scale, rotate, remove, fill/connect
 - Shift + S
 
-| Key | Description                                                   |
-| :-: | ------------------------------------------------------------- |
-|  n  | toggle context(usually about transformation, rotation, scale) |
+|    Key    | Description                                                   |
+| :-------: | ------------------------------------------------------------- |
+|     n     | toggle context(usually about transformation, rotation, scale) |
+| shift + r | repeat last action                                            |
 
 ## Viewport
 
@@ -32,6 +33,7 @@
 |         sx         | scale on x axis               |
 |        `/`         | local view or focus on select |
 |         n          | 3D view properties            |
+|         x          | delete                        |
 | shift + left click | select multiple objects       |
 |      alt + p       | clear parent                  |
 |      ctrl + j      | join objects                  |
@@ -50,6 +52,8 @@
 |        h         | hide                                   |
 |     alt - h      | unhide                                 |
 | alt + left click | select edge loop                       |
+| ctrl + numpad +  | select more                            |
+| ctrl + numpad -  | select less                            |
 |    shift + s     | snap cursor or selected or interaction |
 
 ## Moving
@@ -58,7 +62,7 @@
 | :---------: | -------------------- |
 | shift + tab | toggle snapping mode |
 
-## Numpad Period 
+## Numpad Period
 
 Frame Selected
 
@@ -85,7 +89,7 @@ In Outliner Editor
 2. select handlers and target bone
 3. In pose mode: `shift-i` to set IK constraint
 
-## Transform 3D Cursor 
+## Transform 3D Cursor
 
 - Press `N` -> `View` -> `3D Cursor` -> `Location`
 - `shift + s` -> `cursor to world origin` / `cursor to selected` / `cursor to grid`
@@ -101,4 +105,3 @@ In Outliner Editor
 ## Extrude
 
 ## vertical split
-

@@ -14,7 +14,7 @@ How To Create
 What It Is
 
 - Active object is the last selected object in multiple selection
-- Object selected as Active has outline **yellow(#F59A35)** color, the other are orange(#E4571B)
+- Object selected as Active default has outline **yellow(#FFA802)** color, the other are orange(#ED5700)
 
 Features
 
