@@ -37,7 +37,6 @@ Relationship between these 5 parts
   - You can use the same Controller and Animation Clips on different GameObjects
   - For example, A Cube animation clips can be used on a Sphere 
 
-## Rig
 
 ## Animator
 
@@ -56,9 +55,22 @@ Relationship between these 5 parts
 - Import from external source
 - Create in scratch
 
-## Avatar
+## Rig Tab
+
+What's Avatar
 
 - **Data Structure** that map bone to 3D model's transform hierarchy
+- Suppose it is corresponding to the [vertex groups](blender-glossary#vertex-groups) in Blender
+
+Skin Weights
+
+- Define how much influence each bone has on the vertices in the mesh
+- Default limit to 4 bones
+- The other bones influence will be ignored
+
+Export Mesh And Animation Separately
+
+- Because several animation usually perform on the same model and bone structure
 
 ## Simple Animation Workflow
 

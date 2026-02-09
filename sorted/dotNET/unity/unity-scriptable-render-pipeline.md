@@ -23,7 +23,7 @@
 
 [Class RTHandle](unity-class-rthandle.md)
 
-[Sruct RenderTextureDescriptor](unity-struct-rendertexturedescriptor.md)
+[Struct RenderTextureDescriptor](unity-struct-rendertexturedescriptor.md)
 
 [Struct UniversalCameraData]()
 

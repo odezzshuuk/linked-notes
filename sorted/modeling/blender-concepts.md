@@ -1,4 +1,4 @@
-# Blender - Glossary
+# Blender - Concepts
 
 ## Vertex Groups
 
@@ -22,11 +22,5 @@ Features
 
 ## Data-block
 
-What It Is
-
-- The named items that serve as the base unit of data in a blend file
-
-Features
-
-- Can be linked into other blend files
+[Data Block](blender-data-block.md)
 

@@ -62,7 +62,7 @@
 | :---------: | -------------------- |
 | shift + tab | toggle snapping mode |
 
-## Numpad Period
+## Numpad Period(.)
 
 Frame Selected
 

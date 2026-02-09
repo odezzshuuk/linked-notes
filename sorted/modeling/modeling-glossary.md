@@ -17,7 +17,11 @@
 
 ## Material
 
-- define the basic substance of an object
+- Define how the surface handles the textures and interacts with light
+- Languages for createing materials: 
+  - GLSL
+  - HLSL(unity)
+  - Shader Graph(unity)
 
 ## Texture
 

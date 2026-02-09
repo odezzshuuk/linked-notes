@@ -1,17 +1,29 @@
 # Blender - Animation
 
+* [Actions](#actions)
+* [Action Slot](#action-slot)
 * [Keyframes](#keyframes)
+* [Armature](#armature)
 * [Bones](#bones)
+* [Vertex Group](#vertex-group)
 * [Rigging](#rigging)
-* [Normal Character Animation Workflow](#normal-character-animation-workflow)
+* [Workflow](#workflow)
 * [Object Constraints](#object-constraints)
 * [Bone Constraints](#bone-constraints)
+* [Animation Related Editors](#animation-related-editors)
+* [Animation Editors](#related-editors)
 
 ## Actions
 
 - Animation data container
+- An action can has multiple [action slots](#action-slot)
+- A [data-blocks](blender-concepts#data-block)
 
 ## Action Slot
+
+- Where the animation data actually stored
+- A group of evoluted properties
+- For example, An action has two action slots: One for transformation, one for material
 
 ## Keyframes
 
@@ -33,7 +45,6 @@ Extrapolatoin
 
 - Defines the behavior of a curve **before the first** and **after the last** keyframes
 
-
 ## Armature
 
 When talk about armature, it means:
@@ -44,6 +55,10 @@ When talk about armature, it means:
 ## Bones
 
 - base element of armature
+
+## Vertex Group
+
+- muscle of the body
 
 ## Rigging
 
@@ -71,7 +86,7 @@ optional in this steps:
 
 > Set Armature as Object Parent
 
-- this step will generate vertex groups based on bones
+- this step will generate [vertex groups](blender-concepts#vertex-groups) based on bones
 
 4. Weight Paint
 
@@ -104,7 +119,7 @@ options in this steps
 - NLA Editor: non-linear animation editor, transition between actions
 - Drivers
 
-## Related Editors
+## Animation Editors
 
 Dope Sheet: 
 
@@ -113,4 +128,9 @@ Dope Sheet:
 Action Editor
 
 - Focus on single action
+
+## F-Curve
+
+- Blender animation almost any property
+- The evolution of a property's value over time is represented by F-Curve(Function Curve)
 
