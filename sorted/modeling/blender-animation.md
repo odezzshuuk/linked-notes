@@ -21,9 +21,13 @@
 
 ## Action Slot
 
-- Where the animation data actually stored
+- Where the animation data **Actually** stored
+
+> Link action to object without Specifying Action Slot, the animation won't take effect
+
 - A group of evoluted properties
 - For example, An action has two action slots: One for transformation, one for material
+- Action Slot is **NOT** a data-block, so I can't link one action slot to multiple actions
 
 ## Keyframes
 

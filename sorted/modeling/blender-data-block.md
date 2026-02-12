@@ -1,6 +1,11 @@
 # Blender - Data Block
 
-## What It Is
+## Key Concepts
+
+- Data-block
+- Link Data
+
+## What Is Data-Block
 
 - The named items that serve as the base unit of data in a blend **file**
 
@@ -9,7 +14,6 @@
 Blender organizes data essentially by link data
 
 - **When two objects linking to the same data-block, changing on one will appear in the other**
-- To manually remove a data-block on an object, usually refers to unlink operation
 
 Linked Data-block has some characteristics:
 
@@ -17,6 +21,19 @@ Linked Data-block has some characteristics:
 - Every data-block has its usage counted, when there is more than one, you can see the number of current users of a data-block
 - When a data-block has zero users, Blender will remove it when the file is saved or purge operation
 - Data-blocks can be marked as protected(fake user)
+
+Copy Data
+
+- Since data-blocks are linked, you may want to make some changes without affecting other objects using the same data-block
+- Clicking on the user count button will create a single-user copy of the data-block for the active object
+
+Remove Data, generally shortcut X
+
+- Removing a data-block on an object, 
+  - when there still other objects using it, removing operation usually refers to unlink operation
+  - when there is no other user, Blender will eventually delete the data-block
+- Data-blocks can be **Deleted** even there are other objects using it, right click on the data-block in Oultiner
+  - which will make other objects using the same data-block invalid(Not recommended)
 
 ## Data Type
 

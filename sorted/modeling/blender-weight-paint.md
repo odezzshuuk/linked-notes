@@ -11,7 +11,7 @@
 
 ## Manual Weights(Or What Auto Weights Do)
 
-1. Adding empty [Vertex Groups] whose name must exactly match the bone names
+1. Adding empty [Vertex Groups] whose name must exactly match the bone's names
 2. Selecting and assigning verteices in edit mode to the [vertex groups](blender-glossary#vertex-groups)
 3. Adding Armature Modifier to the mesh object
 

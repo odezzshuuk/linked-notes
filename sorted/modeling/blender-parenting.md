@@ -1,5 +1,11 @@
 # Blender - Parenting
 
+## Parenting Options
+
+- Object
+- Object(Keep Transform): when object already has parent and being transformed, transform will be kept when parent to new parent
+- Object(Without Inverse): child transform will immediately relative to the parent origin
+
 ## When Parenting, Which Object Should be selected as DIRECT child
 
 Conclusions
@@ -15,7 +21,8 @@ For Object Tree, like that
 ```
 
 - When Set Object A as Parent of Object B
-- Object C should not be selected
+  - Only select Object A and B
+  - Object C should **Not** be selected
 
 All Object Set As Child, will be flattened
 
