@@ -1,13 +1,5 @@
 # nm
 
-- 用于列出 object 文件中的 变量符号
-- 显示内容包j括
-  - 符号值: 默认十六进制，可通过选项参数设置
-  - 符号类型: 小写字母通常表示局部符号，大写字母通常表示全局符号
-  - 符号名称
-
-## 符号类型含义
-
 - "A" The symbol's value is absolute, and will not be changed by further linking.
 - "b" The symbol is in the BSS data section.  This section typically contains zero-initialized or uninitialized data, although the exact behavior is system dependent.
 - "C" The symbol is common.  Common symbols are uninitialized data.  When linking, multiple common symbols may appear with the same name.  If the symbol is defined anywhere, the common symbols are treated as undefined references.

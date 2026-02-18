@@ -15,7 +15,6 @@
 
 - Can not be accessed through index like `iter[1]`
 - [Array](lua-types.md#array) and [table](lua-table.md) is not iterator
-- Stop when the return value is `nil`
 
 ## Take A Look
 
@@ -40,9 +39,10 @@ end
 
 ## ipairs
 
-traverse array-like collection return **index** and **value**
+Traverse array-like collection return **index** and **value**
 
 - Used for `{"apple", "banana", "cherry"}`
+- Stop when the return value is `nil`
 
 ## pairs
 

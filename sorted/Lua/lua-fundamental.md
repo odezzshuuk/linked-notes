@@ -23,3 +23,5 @@ global variable
 ```lua
 a, b = 1, 2
 ```
+
+## Statement
