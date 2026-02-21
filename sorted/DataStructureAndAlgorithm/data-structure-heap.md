@@ -2,7 +2,7 @@
 
 ## What It Is
 
-- Can be looked at as a [complete tree]()
+- Can be looked at as a [complete tree](data-structure-tree#binary-tree-concepts)
 - Max Heap: the value of each node is **greater than or equal to** its left and right child nodes
 - Min Heap: the value of each node is **less than or equal to** its left and right child nodes
 

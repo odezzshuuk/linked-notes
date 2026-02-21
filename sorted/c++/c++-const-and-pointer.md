@@ -1,31 +1,32 @@
 # C++ - Pointer And Const
 
-- `int *ptr` **normal pointer** points to **normal object**
+- `int *ptr` — a normal pointer that points to a non-const object.
 
-## Pointer points to const object
+## Pointer to a const object
 
 - `const int *ptr`
-- <font color="red">没有规定所指对象必须是一个常量</font>, 可以指向常量,也可以指向普通对象
-- 仅仅是**不能通过该指针改变所指对象**
-- ptr的类型是const int*
-- 指向const引用和指针，**不能**修改指向或引用对象的值，修改**普通对象**的值**可以**修改const引用或const指针指向的值,属于底层const
+- There is no requirement that the pointed-to object must be const; the pointer can point to either a const object or a non-const object.
+- It only means you cannot modify the pointed-to object through that pointer.
+- The type of `ptr` is `const int*`.
+- For pointers or references to const, you cannot modify the value via the const pointer/reference. If the underlying object is non-const, it can still be modified through other means — this is known as low-level const (the const applies to the pointer/reference, not necessarily to the object itself).
 
-```c++
+```cpp
 const double pi = 3.14;
 double *ptr = &pr;
 const double *cptr = &pi;
-*cptr = 42;
+*cptr = 42; // error: cannot assign through a pointer-to-const
 ```
 
 ## Const Pointer
 
-- 指针本身是个常量，属于顶层const
-- `int *const ptr;`表示一个指向**普通**int对象的const指针
-- `const int *const ptr`表示一个指向**const** int对象的const指针
+- The pointer itself is constant — this is a top-level const.
+- `int *const ptr;` declares `ptr` as a const pointer to a (non-const) `int` object.
+- `const int *const ptr;` declares `ptr` as a const pointer to a `const int` object.
 
-```c++
+```cpp
 const double pi = 3.14159;
-const double *const piptr = &pi;  // piptr是一个const指针，指向const double(双精度浮点常量)类型的对象
+const double *const piptr = &pi;  // piptr is a const pointer point to a const double
 ```
 
-- 表示ptr是一个const指针,指向一个int对象
+- Indicates `ptr` is a const pointer that points to an `int` object.
+

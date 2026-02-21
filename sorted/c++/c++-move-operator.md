@@ -1,6 +1,6 @@
-# 移动赋值运算符
+# c++ - move assignment operator
 
-```c++
+```cpp
 StrVec &StrVec::operator=(StrVec &&rhs) noexcept
 {
     if (this != &rhs)

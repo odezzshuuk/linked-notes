@@ -2,60 +2,13 @@
 
 [Concepts](rust-concepts.md)
 
-## Ownership Model
+[Fundamental](rust-fundamental.md)
 
-Example:
+[Struct](rust-struct.md)
 
-- this rust code will not compile
+[Modules](rust-modules.md)
 
-```rust
-fn main() {
-    let s = String::from("hello");
-    let t = s; // s1 is moved to s2, s1 is no longer valid
-    println!("{}", s); // This would cause a compile-time error
-    println!("{}", t); // This works fine
-}
-```
+[Std Library](rust-std-library.md)
 
-- Similar behavior in c++
-- This c++ code will compile without any errors
-- But when executed,  
-
-```cpp
-#include <iostream>
-#include <string>
-using namespace std;
-int main() {
-    string* s = new string("hello");
-    string* t = s;
-    delete s;  // s is deleted, t is now a dangling pointer
-    cout << *s << endl;  // Compiler do nothing here, but compiled program will crash here.
-
-    // cout << *t << endl;  // This causes undefined behavior, generally a non-stop output
-}
-```
-
-Why Rust is designed this way:
-
-- Enforces memory safety at compile time without a garbage collector
-
-## Borrowing Checker
-
-## Lifetimes
-
-## Zero-cost Abstractions
-
-## Algebraic Data Types
-
-## No Null
-
-## Error Handling Via Types(not exceptions)
-
-## Fearless Concurrency(Data-race freedom)
-
-## `unsafe` Is Explicit And Contained
-
-## Trait System(Different from OOP)
-
-
+[What Make Rust Unique](what-make-rust-unique.md)
 

@@ -1,42 +1,42 @@
-# const引用
+# C++ - Const Reference
 
-- <font color="red">const引用，是一种操作限定，即不允许通过const引用修改绑定对象</font>
-- const引用对于引用本身是不是常量未作限定
-  - 可以绑定**非常量对象**
-  - 可以绑定**字面值**
-  - 可以绑定**表达式**
+- A const reference is an operation qualifier: it prohibits modifying the bound object through the const reference.
+- The constness applies to what the reference refers to, not to the reference itself
+  - Can bind to non-const objects
+  - Can bind to literals
+  - Can bind to expressions
 
-```c++
+```cpp
 const int ci = 1024;
-const int &r1 = ci;  // 正确
-r1 = 42;  // 错误：r1是对常量的引用
-int &r2 = ci;  // 错误：试图让一个非常量的引用指向一个常量对象 
+const int &r1 = ci;  // OK
+r1 = 42;  // Error: r1 is a reference to a const
+int &r2 = ci;  // Error: trying to make a non-const reference refer to a const object 
 ```
 
-对以上代码的理解：
+Understanding the code above:
 
-- r1是对常量的引用，所以不能通过引用去改变ci,常量引用可以
-- 最后一行代码中，r2是非常量引用，ci是常量引用所以不能赋值
+- `r1` is a reference to a const, so you cannot change `ci` through the reference — that's what a const reference enforces.
+- In the last line, `r2` is a non-const reference and `ci` is const, so the binding is not allowed.
 
-```c++
+```cpp
 double dval = 3.14;
-const int &r1 = dval;  // 引用类型与引用不一致的特殊情况
+const int &r1 = dval;  // Special case: reference type differs from the referenced object type
 ```
 
-引用类型通常与引用对象一致，以上代码为**例外**情况,这种情况编译器创建一个**int临时量**对象 **temp**，**r1**引用**temp**。  
+Normally the reference type matches the referenced object; the above is an exception. In this case the compiler creates an `int` temporary object `temp`, and `r1` refers to `temp`.
 
 ```mermaid
 graph LR
 id1[dval] --> id2[temp] --> id3[r1]
-id4[double] --> id5[const int] --> id6[const int引用]
+id4[double] --> id5[const int] --> id6[const int reference]
 ```
 
-当ri不是const引用时，按照引用的原理，**int** 类型的ri可以改变 **double**类型的dval的值，c++将这种行为归为**非法**
+If `r1` were not a const reference, by reference semantics an `int`-typed `r1` could attempt to modify the `double`-typed `dval` value — C++ treats that as illegal.
 
-```c++
+```cpp
 int i = 42;
-int &r1 = i;  // 定义r1为i的普通引用
-const int &r2 = i;  // 定义r2为i的const引用
-r1 = 0;  // r1相当于i的别名
-r2 = 0;  // 错误
+int &r1 = i;  // Define r1 as a normal reference to i
+const int &r2 = i;  // Define r2 as a const reference to i
+r1 = 0;  // r1 is an alias for i
+r2 = 0;  // Error
 ```

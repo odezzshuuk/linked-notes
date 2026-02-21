@@ -17,26 +17,30 @@
 
 ## Binary Tree Concepts
 
-- **Full Binary Tree**:  
-  If a binary tree of depth `K` contains \( 2^K - 1 \) nodes, it is called a **full binary tree**.  
-  - A single node is considered a full binary tree.  
+**Full Binary Tree**: If a binary tree of depth `K` contains \( 2^K - 1 \) nodes, it is called a **full binary tree**.  
 
-- **Complete Binary Tree**:  
-  A binary tree of depth `h` with `n` nodes is a **complete binary tree** if:  
-  - The nodes of a full binary tree of the same depth are numbered **top to bottom, left to right**.  
-  - Each node in the binary tree corresponds to nodes numbered **1 to n** in the full binary tree.  
+- A single node is considered a full binary tree.  
 
-- **Balanced Binary Tree**:  
-  A binary tree where the absolute difference in height between the left and right subtrees is at most **1**, and both subtrees are also balanced binary trees.  
-  - In **C++**, the underlying implementation of `map`, `set`, `multimap`, and `multiset` is a balanced binary tree.  
+**Complete Binary Tree**:  A binary tree of depth `h` with `n` nodes is a **complete binary tree** if:  
 
-- **Binary Search Tree (BST)**:  
-  A **sorted** tree with ordered values:  
-  - **Left Subtree is Smaller**  
-    > If the left subtree is non-empty, all nodes in the left subtree have values **less than** the root node.  
-  - **Right Subtree is Larger**  
-    > If the right subtree is non-empty, all nodes in the right subtree have values **greater than** the root node.  
-  - **Left and right subtrees are also binary search trees.**  
+- The nodes of a full binary tree of the same depth are numbered **top to bottom, left to right**.  
+- Each node in the binary tree corresponds to nodes numbered **1 to n** in the full binary tree.  
+
+**Balanced Binary Tree**: A binary tree where the absolute difference in height between the left and right subtrees is at most **1**, and both subtrees are also balanced binary trees.  
+
+- In **C++**, the underlying implementation of `map`, `set`, `multimap`, and `multiset` is a balanced binary tree.  
+
+**Binary Search Tree(BST)**: A **sorted** tree with ordered values:  
+
+- **Left Subtree is Smaller**  
+
+> If the left subtree is non-empty, all nodes in the left subtree have values **less than** the root node.  
+
+- **Right Subtree is Larger**  
+
+> If the right subtree is non-empty, all nodes in the right subtree have values **greater than** the root node.  
+
+- **Left and right subtrees are also binary search trees.**  
 
 ### Properties of Binary Trees
 

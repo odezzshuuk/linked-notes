@@ -1,13 +1,11 @@
-# variable, expression, statment
-
-变量, 表达式, 语句
+# Variable, Expression, Statment
 
 ```c
 int a = 1;
 a = a + 1;
 ```
 
-- `a` is variable
-- `a + 1` is expression
-- `int a = 1`, `a = a + 1` is statement
+- variable: `a`
+- expression: `a + 1`
+- statement: `int a = 1`, `a = a + 1`
 
