@@ -15,7 +15,6 @@
 
 [Ownership](rust-ownership.md)
 
-
 ## Lifetimes
 
 ## Zero-cost Abstractions

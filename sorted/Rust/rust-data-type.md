@@ -11,7 +11,10 @@
 
 ## Compound Type
 
-Tuple Type
+- [Tuple](#tuple)
+- [Array](#array)
+
+## Tuple
 
 ```rust
 fn main() {
@@ -21,7 +24,12 @@ fn main() {
 }
 ```
 
-Array Type
+## Unit
+
+- A special [tuple](#tuple) without any value
+- Unit type value: `()`
+
+## Array
 
 - Normal Declaration
 
@@ -34,3 +42,5 @@ let a: [i32; 5] = [1, 2, 3, 4, 5];
 ```rust
 let a = [3; 5]; // [3, 3, 3, 3, 3]
 ```
+
+

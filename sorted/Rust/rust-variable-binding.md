@@ -1,6 +1,6 @@
 # Rust - Variable
 
-## Immutable 
+## Declaration Default Immutable
 
 - Variable bindings are immutable by default in Rust
 

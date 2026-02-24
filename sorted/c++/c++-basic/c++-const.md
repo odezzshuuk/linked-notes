@@ -2,10 +2,10 @@
 
 ## const Object
 
-- `const` object can not be modified after created, so `const` object **must be initialized**
-- initial value can be any complex expression
-- with `extern` keyword, `const` object can be defined in one file and declared in other files
-- `const` identifier can not be used on function
+- A `const` object cannot be modified after creation, so a `const` object **must be initialized**.
+- The initializer can be any valid expression.
+- With the `extern` keyword, a `const` object can be defined in one translation unit and declared in others.
+- You cannot apply `const` to a function itself (functions cannot be `const` objects).
 
 ## const expression
 
@@ -19,20 +19,21 @@
 
 [pointer and const](c++-const-and-pointer.md)
 
-## 顶层const和底层const
+## Top-level const vs Low-level const
 
-> 区分顶层const和底层const的问题:**指针本身是不是常量和指针所指是不是常量的问题**
+> The distinction between top-level const and low-level const is: does the `const` qualify the object (the pointer) itself, or the type the pointer/reference refers to?
 
-- **顶层const**：
-  - 可以是任意对象的常量
-  - <font color="red">指针本身是个常量</font>
-  - `const int a = i;`中的const是一个顶层const
-- **底层const**：
-  - 一般是复合类型
-  - <font color="red">指针所指可以是常量，也可以是普通对象</font>
-  - 指针和引用类型的const，可以通过修改指向的对象或引用对象的值被改变
-  - ```const int &a = i;``` 中的const是一个底层const
-  
+- **Top-level const**:
+  - Applies to the object itself (it makes the object a constant).
+  - Example: in `const int a = i;` the `const` on `a` is a top-level const.
+  - For pointers, a top-level const means the pointer itself is constant (you cannot change which object it points to): `int *const p`.
+
+- **Low-level const**:
+  - Applies to the pointed-to or referenced type (most common for compound types like pointers and references).
+  - For pointers/references, a low-level const means the object being pointed to or referenced is const: `const int *p` or `const int &r`.
+  - If the underlying object is non-const, it may still be modified through other means; the low-level const only prevents modification via that particular pointer/reference.
+  - Example: in `const int &a = i;` the `const` is a low-level const.
+
 ## keywords
 
 [mutable](c++-keyword-mutable.md)
