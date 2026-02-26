@@ -10,13 +10,13 @@
 - There can only be one owner at a time
 - When the owner goes out of scope, the value will be dropped
 
-Example that cause ownership transfer
+## Take A Look At Ownership Moving case
 
 ```rust
 fn main() {
     let s = String::from("hello");
     let t = s; // s1 is moved to s2, s1 is no longer valid
-    println!("{}", s); // This would cause a compile-time error
+    println!("{}", s); // Error
     println!("{}", t); // This works fine
 }
 ```
@@ -62,10 +62,10 @@ fig.04 ![ownership-model-04](img/rust-ownership-model-04.svg)
 
 Here is what Rust do
 
-- when `let s2 = s1;` happens, Rust considers `s1`  as no longer valid
+- When `let s2 = s1;` happens, Rust considers `s1`  as no longer valid
 - Known as [move](c++-move-constructor)
 
-## When Ownership Transfer Happens
+## When Ownership Moving Happens
 
 Variable type must be [moveable](rust-concepts.md#move-type)
 

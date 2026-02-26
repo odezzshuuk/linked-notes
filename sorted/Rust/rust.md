@@ -18,7 +18,13 @@
 
 [Trait](rust-trait.md): Interface
 
+[Error Handling](rust-error-handling.md)
+
 [Pattern Matching](rust-pattern.md)
+
+[Drop Trait](rust-drop.md)
+
+[Closure](rust-closure.md)
 
 ## What Make Rust Unique
 
@@ -28,9 +34,9 @@
 
 [Lifetimes](rust-reference-lifetime.md)
 
-[Algebraic Data Types](rust-algebraic-data-type.md)
+[Algebraic Data Types](rust-enum#usage)
 
-[No Null](rust-no-null.md)
+[No Null](rust-enum#option)
 
 [Error Handling Via Types](rust-error-handling.md)
 

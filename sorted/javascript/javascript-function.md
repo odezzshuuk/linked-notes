@@ -22,7 +22,7 @@
 
 [Arrow Function](javascript-arrow-function.md)
 
-[Closures](javascript-closures.md)
+[Closures](javascript-closure.md)
 
 ## Execution Procedure
 

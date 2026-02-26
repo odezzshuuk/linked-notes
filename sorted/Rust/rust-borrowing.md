@@ -1,11 +1,21 @@
 # Rust - Borrowing
 
+* [What's Borrowing](#what's-borrowing)
 * [Why Borrowing](#why-borrowing)
-* [Borrow Checkers](#borrow-checkers)
+* [What's Borrow Checker](#what's-borrow-checker)
+* [Why Borrow Checker](#why-borrow-checker)
+* [Borrow Checker check rules](#borrow-checker-check-rules)
 * [Mutable borrow can only borrow once ](#mutable-borrow-can-only-borrow-once-)
 * [Mutable borrow can't borrow immutable declared variable ](#mutable-borrow-can't-borrow-immutable-declared-variable-)
 * [Immutable borrowing can borrow multiple times](#immutable-borrowing-can-borrow-multiple-times)
-* [Mutable and immutable can exist in same code block(`{}`) ](#mutable-and-immutable-can-exist-in-same-code-block(`{}`)-)
+* [Original variable can't be used while borrowing reference is in lifetime](#original-variable-can't-be-used-while-borrowing-reference-is-in-lifetime)
+* [Mutable and immutable can exist in same code block(`{}`)](#mutable-and-immutable-can-exist-in-same-code-block(`{}`))
+
+## What's Borrowing
+
+- Variable being borrowed can be access from its borrowers
+- During a variable is borrowed:
+  - Original va
 
 ## Why Borrowing
 
@@ -41,7 +51,7 @@ fig.05 ![borrowing-01](img/rust-borrowing-01.svg)
 2. [Mutable borrow can't borrow immutable declared variable](#mutable-borrow-cant-borrow-immutable-declared-variable)
 3. [Immutable borrowing can borrow multiple times](#immutable-borrowing-can-borrow-multiple-times)
 4. [Mutable and immutable can exist in same code block(`{}`)](#mutable-and-immutable-can-exist-in-same-code-block(`{}`))
-
+5. [Original variable can't be used while borrowing reference is in lifetime](#original-variable-can't-be-used-while-borrowing-reference-is-in-lifetime)
 
 ## Mutable borrow can only borrow once 
 
@@ -105,9 +115,41 @@ int main() {
 }
 ```
 
+## Original variable can't be used while borrowing reference is in lifetime
+
+- `x` can't be reassigned while `a` is still in scope, because `a` is a mutable reference to `x`
+
+```rust
+let mut x = 10;
+let a = &mut x;
+println!("{a}");  // a is used here, a's lifetime starts here
+x = 15;  // Error: cannot assign to `x` because it is borrowed
+println!("{a}");
+```
+
+- But `x` value can be changed via `a` because `a` is a mutable reference to `x`
+
+```rust 
+let mut x = 10;
+let a = &mut x;
+println!("{a}");  // a is used here, a's lifetime starts here
+*a = 15; 
+println!("{a}");
+```
+
+- Or `x` can be changed after `a` goes out of scope
+
+```rust
+let mut x = 10;
+let a = &mut x;
+println!("{a}");  // a is used here, a's lifetime starts here
+x = 15;
+println!("{x}");
+```
+
 ## Mutable and immutable can exist in same code block(`{}`)
 
-- **when there are no [lifetime](#reference-lifetime) overlap borrowing is allowed**
+- **When there are no [lifetime](#reference-lifetime) overlap borrowing is allowed**
 - [Last-use analysis](rust-concepts#last-use-analysis) allows non-overlapping borrows to coexist
 
 ```rust

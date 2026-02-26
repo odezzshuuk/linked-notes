@@ -44,7 +44,7 @@ function throttle(fn, delay) {
 
 ## partially applied function
 
-- an application of [closure](javascript-closures.md)
+- an application of [closure](javascript-closure.md)
 - useful when working with callback, for example create a new function to handle paritcular use case
 
 what it looks like

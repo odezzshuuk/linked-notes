@@ -67,7 +67,7 @@ var bar = foo.bind(o0, 2);
 
 ## This In Closure
 
-[here is closeure](javascript-closures.md)
+[here is closeure](javascript-closure.md)
 
 ## This In Arrow Function
 
