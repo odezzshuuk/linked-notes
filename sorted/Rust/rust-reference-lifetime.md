@@ -128,4 +128,18 @@ struct B {
 }
 ```
 
+## Method Lifetime Annotation
+
+```rust
+impl<'a> ImportantExcerpt<'a> {
+    fn announce_and_return_part(&self, announcement: &str) -> &str {
+        println!("Attention please: {announcement}");
+        self.part
+    }
+}
+```
+
+- first `<'a>` is the declaration of the lifetime parameter  
+- second `<'a>` is the using
+
 

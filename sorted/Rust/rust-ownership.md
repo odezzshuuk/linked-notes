@@ -3,6 +3,7 @@
 ## What is Ownership
 
 - Rust core mechanism for memory management
+- Owner is pointer-like variable
 
 ## Rules
 

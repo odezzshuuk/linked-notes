@@ -14,6 +14,10 @@
 - [Move](#move-value)
 - [Borrow](#borrow-value)
 
+## Immutable
+
+## Mutable
+
 ## Copy Value
 
 ```rust
@@ -76,7 +80,59 @@ fn main() {
 
 - [Pointer-like] value: &T, &mut T, *const T, *mut T
 
-## Last-use Analysis
+## Stack-stored variable
+
+> Data structure: [stack](data-structure-stack)
+
+- known size at compile time
+- Fast allocation and deallocation
+
+Example
+
+```rust
+let a: i32 = 10;
+let b: bool = true;
+let c: f64 = 3.13;
+let arr: [i32; 3] = [1, 2, 3];
+
+struct Point {
+    x: f64,
+    y: f64,
+}
+let p = Point { x: 1.0, y: 2.0 };
+let tuple: (i32, f64, bool) = (42, 3.14, false);
+```
+
+## Heap-stored variable
+
+> Data structure: [stack](data-structure-heap)
+
+- Size known only at runtime
+- Dynamic growth
+- Requires explicit allocation and deallocation (managed by ownership)
+- Data on heap, pointer on stack
+- Access via pointer-like owner
+
+Examples:
+
+```rust
+let v = Vec::new();
+let s = String::from("hello");
+let b = Box::new(42);
+let m = HashMap::new();
+let rc = Rc::new(String::from("shared data"));
+```
+
+## Mixed Storage
+
+```rust
+struct Node {
+    value: i32, // stored on stack
+    next: Option<Box<Node>>, // Box<Node> is a pointer to heap
+}
+let node1 = Node { value: 1, next: None };
+```
+
 
 ## Unit
 

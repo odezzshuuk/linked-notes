@@ -1,5 +1,19 @@
 # Rust - Error Handling
 
+* [Best Practice](#best-practice)
+* [Error Handling](#error-handling)
+* [Panic](#panic)
+* [Unrecoverable Error ](#unrecoverable-error-)
+* [Behavior On Panic](#behavior-on-panic)
+* [Debug Panic](#debug-panic)
+* [Recoverable Error](#recoverable-error)
+* [Result](#result)
+* [Handle `Result`](#handle-`result`)
+* [match](#match)
+* [? Operator](#?-operator)
+* [unwrap and expect](#unwrap-and-expect)
+* [unwrap_or_else](#unwrap_or_else)
+
 ## Best Practice
 
 - Use `panic!` in library when you want to force caller to fix their mistake

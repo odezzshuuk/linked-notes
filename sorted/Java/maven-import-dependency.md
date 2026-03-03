@@ -4,7 +4,7 @@
 
 ## scope
 
-`<scope>compile</scope>`: default scope, 类路径可用, 会传播到其它依赖
+`<scope>compile</scope>`: default scope
 
 - Can be import by `import`
 
@@ -34,11 +34,11 @@
 </dependency>
 ```
 
-`<scope>test</scope>`: 测试时依赖
+`<scope>test</scope>`: 
 
 `<scope>system</scope>`:
 
-- 类似provided, 但是需要显式指定jar文件的位置
+- like provided, but requires explicit path to the jar file
 
 ```xml
 <dependency>

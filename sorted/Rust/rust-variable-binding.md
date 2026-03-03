@@ -14,6 +14,22 @@ fn main() {
 }
 ```
 
+- Immutable in Rust is deep immutable(fields of instance also immutable)
+
+> which is different from const in [javascript](javascript-variable-declaration#const-declaration)
+
+```rust
+struct Point {
+    x: i32,
+    y: i32,
+}
+
+fn main() {
+    let p = Point { x: 1, y: 2 }; // p is immutable
+    // p.x = 3; // This would cause a compile-time error
+}
+```
+
 ## Immutable VS Const
 
 `const` data type must annotated

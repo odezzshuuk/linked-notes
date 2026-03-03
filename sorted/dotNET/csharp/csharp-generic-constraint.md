@@ -14,7 +14,7 @@ public void PrintData<S, T>(S p, T t) where S: Person
 
 method
 
-```c
+```cs
 void Foo<T>() where T : type1, type2 { }
 ```
 

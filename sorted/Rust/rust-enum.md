@@ -3,6 +3,8 @@
 ## What's It
 
 - Enum but not on enum
+- Rust enum is not tagged integer
+- Enum members can have data
 
 ## Declaration
 

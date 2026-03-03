@@ -6,6 +6,10 @@
 
 [Fundamental](rust-fundamental.md)
 
+[Packages](rust-packages.md)
+
+[Crates](rust-crates.md)
+
 [Modules](rust-modules.md)
 
 [Std Library](rust-std-library.md)
@@ -25,6 +29,10 @@
 [Drop Trait](rust-drop.md)
 
 [Closure](rust-closure.md)
+
+[Unsafe](rust-unsafe.md)
+
+[Smart Pointers](rust-smart-pointers.md)
 
 ## What Make Rust Unique
 

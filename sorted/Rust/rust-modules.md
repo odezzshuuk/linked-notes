@@ -29,10 +29,13 @@ mod mod_a {
 }
 ```
 
-- import mod
+- import mod and use functions
 
 ```rust
 mod mod_a;
+fn main() {
+  mod_a::public_function();
+}
 ```
 
 ## File hierarchy
@@ -73,4 +76,23 @@ Directory structure that support import mod `modules_10` with `mod modules_10;`
 └── rustfmt.toml
 ```
 
+## use `super` to refer parent mod
+
+```rust
+mod modules_10 {
+  pub fn func() {
+    println!("This is func in modules_10");
+  }
+
+  mod nested_mod {
+    pub fn nested_func() {
+      println!("This is nested_func in nested_mod");
+    }
+
+    pub fn call_parent_func() {
+      super::func();
+    }
+  }
+}
+```
 
