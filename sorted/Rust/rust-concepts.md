@@ -133,7 +133,6 @@ struct Node {
 let node1 = Node { value: 1, next: None };
 ```
 
-
 ## Unit
 
 [Unit](rust-data-type#unit)

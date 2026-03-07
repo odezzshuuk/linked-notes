@@ -38,6 +38,12 @@
 
 [Git Worktree](git-worktree.md)
 
+[Git refs](git-references.md)
+
+[Git refspec](git-refspec.md)
+
+[Git LFS](git-lfs.md)
+
 ## Github
 
 [Github Issues](github-issues.md)
@@ -52,7 +58,7 @@
 
 [Hooks](git-hooks.md)
 
-## Blog
+## Articles
 
 [Best Practice](git-best-practice.md)
 
@@ -67,10 +73,4 @@
 [Detached head](git-detached-head.md)
 
 [Get Stuck](git-get-stuck.md)
-
-## Git Internals
-
-[Git Internals](git-internals.md)
-
-
 

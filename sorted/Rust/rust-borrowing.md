@@ -47,7 +47,7 @@ fig.05 ![borrowing-01](img/rust-borrowing-01.svg)
 
 ## Borrow Checker check rules
 
-1. [Mutable borrow can only borrow one at a time](#mutable-borrow-can-only-borrow-once)
+1. [Mutable borrow can only borrow **One** at a time](#mutable-borrow-can-only-borrow-once)
 2. [Mutable borrow can't borrow immutable declared variable](#mutable-borrow-cant-borrow-immutable-declared-variable)
 3. [Immutable borrowing can borrow multiple times](#immutable-borrowing-can-borrow-multiple-times)
 4. [Mutable and immutable can exist in same code block(`{}`)](#mutable-and-immutable-can-exist-in-same-code-block(`{}`))

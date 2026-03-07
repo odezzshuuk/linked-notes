@@ -30,6 +30,11 @@ fn main() {
 }
 ```
 
+Keyword `let`, Use JavaScript Variable Declaration as contrast 
+
+- `let` like `const`
+- `let mut` like `let`
+
 ## Immutable VS Const
 
 `const` data type must annotated

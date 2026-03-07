@@ -1,4 +1,4 @@
-# 关键字
+# Cpp - Keyword
 
 [explicit](c++-keyword-explicit.md)
 
@@ -8,14 +8,12 @@
 
 ## nodiscard
 
-- 表示函数的返回值不能不使用
-
-```c++
+```cpp
 [[nodiscard]] int func()
 {
     int a = 0;
     return a;
 }
 
-func();  // 编译成功, 但警告
+func();
 ```

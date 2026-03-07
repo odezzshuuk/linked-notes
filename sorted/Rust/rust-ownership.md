@@ -8,10 +8,10 @@
 ## Rules
 
 - Every value has an owner
-- There can only be one owner at a time
+- There can **only be one** owner at a time
 - When the owner goes out of scope, the value will be dropped
 
-## Take A Look At Ownership Moving case
+## Single Ownership Demonstration
 
 ```rust
 fn main() {
@@ -21,6 +21,8 @@ fn main() {
     println!("{}", t); // This works fine
 }
 ```
+
+- Ownership moved
 
 ## Why Ownership Model
 

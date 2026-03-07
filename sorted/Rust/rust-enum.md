@@ -4,7 +4,7 @@
 
 - Enum but not on enum
 - Rust enum is not tagged integer
-- Enum members can have data
+- Enum members can have data, members with data called variant
 
 ## Declaration
 

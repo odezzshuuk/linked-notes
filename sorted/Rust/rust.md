@@ -34,6 +34,12 @@
 
 [Smart Pointers](rust-smart-pointers.md)
 
+[Macro](rust-macro.md)
+
+[Organizing Rust Project](rust-organizing-project.md)
+
+[Test](rust-test.md)
+
 ## What Make Rust Unique
 
 [Ownership Model](rust-ownership-model.md)

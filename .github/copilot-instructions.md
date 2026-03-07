@@ -16,15 +16,13 @@
   - Detail sections
 - For tool usage content, prefer structured sections like:
   - What It Is
-  - What's It For
+  - What's It For(Use examples to illustrate why to use it)
   - How to Use
-  - Examples
   - Tips & Tricks
 - For best practices or workflows, prefer structured sections like:
   - Overview
   - Prerequisites
   - Step-by-Step Workflow
-  - Tips & Tricks
 
 ## Note organization & linking conventions
 

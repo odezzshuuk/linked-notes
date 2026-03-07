@@ -1,10 +1,14 @@
 # Rust - Crates
 
+## What It Is
+
 - Smallest amount of code that the Rust compilter considers at a time
 - Crate can come in one of two forms:
   - Binary crate: produces an executable program
   - Library crate: produces a library that can be used by other crates
     - Library Crate doesn't have a `main()` function
+
+> Not always binary file
 
 ## `use` keyword
 

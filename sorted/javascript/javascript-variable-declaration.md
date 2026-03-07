@@ -55,8 +55,7 @@ if (true) let a = 1; // Syntax error
 
 - const variables must be assigned a value at declaration
 - Assigning a [primitive value](javascript-variable-copy-and-reference.md) to a const variable means the value cannot be changed
-- You can change the properties of a const object, but cannot reassign the object itself
-- A const array can be modified, but cannot be reassigned
+- Assigning an [object](javascript-object)/array value, its properties can be changed, but cannot reassign new object
 
 ## Non-identifier Names
 

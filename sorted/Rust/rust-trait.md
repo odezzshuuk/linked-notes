@@ -104,3 +104,5 @@ where T: Summary + Display,
 { }
 ```
 
+## Trait Object
+

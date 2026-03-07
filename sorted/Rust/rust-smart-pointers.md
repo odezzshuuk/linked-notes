@@ -16,7 +16,9 @@
 | Mutex<T>               | —                  | —              | ✓ (via .lock())          | ✓            | No (can be on stack) | small + T        |
 | RwLock<T>              | —                  | —              | ✓ (read/write locks)     | ✓            | No (can be on stack) | small + T        |
 
+
 > Type that implements `Deref` trait can be treated like a reference
+> Type that implements `Drop` trait can be cleaned up when goes out of scope
 
 ## Use Case
 
@@ -39,9 +41,26 @@ When to use
 - Generally say an unknown size type 
 - Rank use case by frequency
   - recursive data structure, e.g. `enum List { Cons(i32, Box<List>), Nil }`
-  - [trait object](), e.g. `Box<dyn Trait>`
+  - [trait object](rust-trait#trait-object), e.g. `Box<dyn Trait>`
   - large structs array, e.g. `Box<[u8; 1_000_000]>`
+  - ...
+- recursive type and trait object take 60%~70% use case of `Box<T>`
 
-When not to use
+## `Rc<T>`
 
+[`Rc<T>`](rust-smart-pointer_rc_t.md): Ownership sharing smart pointer
+
+## `RefCell<T>`
+
+[`RefCell<T>`](rust-smart-pointer_refcell_t.md): Interior mutability smart pointer
+
+## `Rc<RefCell<T>>`
+
+> value wrapped by `Rc` and `RefCell` has the similar mechanism as [JavaScript object](javascript-object.md)
+
+- `Rc<RefCell<T>>` is a common combination to achieve
+  - shared ownership, heap allocation
+  - interior mutability
+
+## Arc<Mutex<T>>
 
