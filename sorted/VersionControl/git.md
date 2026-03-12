@@ -8,11 +8,11 @@
 
 [Git Configuration](git-configuration.md)
 
-[Add](git-add.md)
+[Git Add](git-add.md)
 
-[Commit](git-commit.md)
+[Git Commit](git-commit.md)
 
-[.gitignore](git-ignore.md)
+[.gitignore file](git-ignore.md)
 
 [Branch](git-branch.md)
 

@@ -84,3 +84,11 @@ git push -u origin main
 [my pull request on a github example repository](https://github.com/octocat/spoon-knife/pull/29038)
 [another pull request on a github example repository](https://github.com/octocat/spoon-knife/pull/29039)
 
+## Branch Naming Recommendation
+
+- Features: `feature/add-login-system`, `feat/new-payment-method`
+- Bug Fixes: `bugfix/fix-header-alignment`, `fix/issue-1234`
+- Documentation: `docs/update-readme`, `docs/add-api-docs`
+- Refactoring: `refactor/optimize-auth-module`, `refactor/cleanup-code`
+- Chores: `chore/update-dependencies`, `chore/cleanup-unused-code`
+

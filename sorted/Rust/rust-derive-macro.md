@@ -102,5 +102,8 @@ Packages for create derive macro:
 - `syn`: parsing Rust code into a data structure/syntax tree
 - `quote`: turns `syn` data back into Rust code
 
+## Built-in
+
+[Built-in Derive Macros](rust-built-in-derives.md)
 
 

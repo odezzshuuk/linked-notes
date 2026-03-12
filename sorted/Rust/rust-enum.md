@@ -1,5 +1,10 @@
 # Rust - Enum
 
+* [What's It](#what's-it)
+* [Declaration](#declaration)
+* [Usage](#usage)
+* [Option](#option)
+
 ## What's It
 
 - Enum but not on enum

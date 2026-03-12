@@ -129,6 +129,10 @@ fn main() {
 }
 ```
 
+Why Result
+
+- ...
+
 ## Handle `Result`
 
 1. [match `Result`](#match)

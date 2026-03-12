@@ -207,6 +207,41 @@ For in-file anchors:
 See the [Examples](#examples) section below.
 ```
 
+### Navigation Section for Order-Independent Sections
+
+When a note contains multiple sibling sections where reading order doesn't matter (e.g. a list of derive macros, HTML elements, CLI flags), add a dedicated navigation section with anchor links immediately before those sections:
+
+```markdown
+## <GroupName>
+
+- [Section A](#section-a)
+- [Section B](#section-b)
+- [Section C](#section-c)
+
+## Section A
+...
+
+## Section B
+...
+```
+
+- The navigation section title should name the group (e.g. `## Derives`, `## Elements`, `## Flags`)
+- Anchor slugs follow GitLab-style heading IDs: lowercase, spaces replaced with `-`, special characters stripped
+- Place the navigation section directly before the first section it lists, not at the top of the note
+
+### Intra-Note Cross-Reference Links
+
+When a section's content references or depends on another section within the same note, link the referenced term to its section anchor:
+
+```markdown
+- `Ord` requires [`Eq`](#partialeq-and-eq) to also be derived
+- [`Clone`](#clone) must also be derived alongside `Copy`
+```
+
+- Wrap the referenced term in backtick + link syntax `` [`Term`](#anchor) `` when it is a code symbol
+- Use plain link syntax `[Term](#anchor)` for non-code terms
+- Apply this whenever the relationship is a hard requirement or strong dependency, not just a casual mention
+
 ## Quality Checklist
 
 Before completing a note, verify:
@@ -217,6 +252,8 @@ Before completing a note, verify:
 - [ ] Examples demonstrate WHY the technique is necessary (not just HOW)
 - [ ] No redundant examples that could use simpler alternatives
 - [ ] Related notes are linked with relative paths
+- [ ] Order-independent section groups have a navigation section with anchor links
+- [ ] Intra-note dependencies and requirements are linked to their target section
 - [ ] Bullet lists are used for multi-point explanations
 - [ ] Filename is kebab-case and lowercase
 - [ ] Note is focused on a single topic
