@@ -45,7 +45,7 @@ impl Rectangle {
 - Declaration funtion that return `Self` is a common pattern for constructor-like method in Rust
 - `new()` is nothing special in Rust, just like a convention for constructor method
 
-## Calling method
+## Method Auto-Deref
 
 In c++
 

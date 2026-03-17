@@ -9,7 +9,7 @@ let x = 10;
 let f = |y: i32| x + y;  // `f` is a closure that captures `x` from the environment
 ```
 
-## What's Captured Variable
+## Captured Variable
 
 - varible outside the closure
 

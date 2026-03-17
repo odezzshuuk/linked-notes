@@ -7,7 +7,7 @@
 * [Behavior On Panic](#behavior-on-panic)
 * [Debug Panic](#debug-panic)
 * [Recoverable Error](#recoverable-error)
-* [Result](#result)
+* [Result<T, E>](#result<t,-e>)
 * [Handle `Result`](#handle-`result`)
 * [match](#match)
 * [? Operator](#?-operator)
@@ -101,7 +101,7 @@ fn main() {
 }
 ```
 
-## Result
+## Result<T, E>
 
 > Many std library functions return `Result`
 
@@ -138,7 +138,7 @@ Why Result
 1. [match `Result`](#match)
 2. [unwrap and expect]()
 3. `?` operator
-4. unwrap_or_else()
+4. [unwrap_or_else()](#unwrap_or_else)
 
 Which To Use:
 
@@ -204,7 +204,19 @@ fn main() {
 
 ## unwrap_or_else
 
+> Another `unwrap_or_else` of two is [here](rust-handle-null#unwrap_or_else)
+
 - just do the same thing as [`match`](#match)
+
+Method Signature
+
+```rust
+pub fn unwrap_or_else<F>(self, f: F) -> T
+where
+    F: FnOnce() -> T
+```
+
+Use Case
 
 ```rust
 use std::fs::File;

@@ -25,12 +25,37 @@ struct Point {
 }
 ```
 
+## Instantiate a struct
+
+Specify field values
+
+```rust
+struct Point {
+  x: f32,
+  y: f32,
+}
+
+let p = Point {
+  x: 3.0,
+  y: 4.0,
+};
+```
+
+Shorthand
+
+```rust
+fn create_point(x: f32, y: f32) -> Point {
+  Point { x, y }
+}
+```
+
 ## Unit Structure
+
+What It Is
+
+- Doesn't have any fields
 
 Declaration
 
 - `struct Marker;`
 
-Features
-
-- Doesn't have any fields

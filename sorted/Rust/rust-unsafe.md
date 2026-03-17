@@ -2,7 +2,7 @@
 
 ## What's `unsafe`
 
-- create a locally scoped to perform operations that the Rust compiler can't guarantee to be safe
+- Create a locally scoped to perform operations that the Rust compiler can't guarantee to be safe
 - So programmer takes responsibility for safety
 
 ## Why `unsafe`

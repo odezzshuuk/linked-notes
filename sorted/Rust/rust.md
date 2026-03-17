@@ -40,6 +40,8 @@
 
 [Test](rust-test.md)
 
+[Std](rust-std.md)
+
 ## What Make Rust Unique
 
 [Ownership Model](rust-ownership-model.md)
@@ -50,9 +52,9 @@
 
 [Algebraic Data Types](rust-enum#usage)
 
-[No Null](rust-enum#option)
+[No Null](rust-enum#optiont): `Option<T>`
 
-[Error Handling Via Types](rust-error-handling.md)
+[Error Handling Via Types](rust-error-handling.md#result<t,-e>): `Result<T, E>`
 
 [Fearless Concurrency](rust-fearless-concurrency.md)
 

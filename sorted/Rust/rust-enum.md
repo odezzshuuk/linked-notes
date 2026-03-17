@@ -65,45 +65,8 @@ if let Message::Move { x, y } = msg {
 }
 ```
 
-## Option
+## Option<T>
 
-- A special enum in Rust std library
-- Rust doesn't have `null`
-- Rust use `Option<T>` to represent a value that can be either something or nothing
+[`Option<T>`](rust-handle-null.md)
 
-```rust
-enum Option<T> {
-    None,
-    Some(T),
-}
-```
-
-Usage
-
-1. Return value that might not exist
-
-```rust
-fn find_user_by_id(id: u64) -> Option<User> { ... }
-fn get_config_value(key: &str) -> Option<String> { ... }
-fn parse_number(s: &str) -> Option<i32> { s.parse().ok() }
-```
-
-2. Handle optional parameters
-
-- Rust use `Option<T>` to represent optional parameters, must explicitly pass into
-- 
-
-```rust
-let title = String::from("Dr.");
-fn greet(name: &str, title: Option<&str>) {
-    match title {
-        Some(t) => println!("Hello, {} {}!", t, name),
-        None => println!("Hello, {}!", name),
-    }
-}
-
-greet("Alice", Some(&title));
-greet("Bob", None);
-greet("Charlie");   // Error
-```
 

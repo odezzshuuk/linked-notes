@@ -60,8 +60,10 @@ Debug assertions (set by build profile):
 fn validate() { assert!(self.is_valid()); }
 ```
 
+- command
+
 ```bash
-cargo build              # debug_assertions = true
+cargo build             # debug_assertions = true
 cargo build --release   # debug_assertions = false
 ```
 

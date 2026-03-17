@@ -20,6 +20,13 @@
 > Type that implements `Deref` trait can be treated like a reference
 > Type that implements `Drop` trait can be cleaned up when goes out of scope
 
+## Deref Trait
+
+
+```rust
+
+```
+
 ## Use Case
 
 - `Box<T>`
@@ -64,9 +71,11 @@ When to use
 
 ## Arc<T>
 
+- `Arc<T>` is the thread-safe version of [`Rc<T>`](#rct)
+
 ## Mutex<T>
 
-
+[`Mutex<T>`](rust-smart-pointer_mutex_t.md): Mute inside `Arc<T>`
 
 ## Arc<Mutex<T>>
 

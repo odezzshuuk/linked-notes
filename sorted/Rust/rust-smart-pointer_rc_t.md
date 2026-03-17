@@ -13,8 +13,10 @@
 
 ## Features
 
-- `Rc<T>` is NOT thread safe
-- Use `Rc::clone(&value)` to create a new reference
+- `Rc<T>` is NOT thread safe, 
+- `Arc<T>` is the thread-safe version of `Rc<T>`
+- `Rc::clone(&value)`: create a new reference
+- `Rc::strong_count(&value)`: get the reference count of the value
 
 ## Why `Rc<T>`
 
