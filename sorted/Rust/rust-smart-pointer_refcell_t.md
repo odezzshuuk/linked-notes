@@ -1,14 +1,21 @@
 # Rust Smart Pointer - RefCell<T>
 
+* [What It Is](#what-it-is)
+* [Key feature](#key-feature)
+* [What's It For](#what's-it-for)
+* [borrow_mut() and borrow()](#borrow_mut()-and-borrow())
+* [Dynamically Enforced Borrow Rules](#dynamically-enforced-borrow-rules)
+* [Tips & Tricks](#tips-&-tricks)
+
 ## What It Is
 
-`RefCell<T>` is a smart pointer that enforces **borrow rules at runtime** rather than at compile time.
+- `RefCell<T>` is a smart pointer that enforces **borrow rules at runtime** rather than at compile time.
 
 ## Key feature
 
 - Allows you to mutate contents through an immutable reference
 - Uses **interior mutability** pattern for runtime borrow checking
-- Tracks borrows dynamically and panics if rules are violated
+- [Tracks borrows dynamically and panics if rules are violated](#dynamically-enforced-borrow-rules)
 - Useful when the compiler can't prove correctness but you know the code is safe
 
 ## What's It For
@@ -25,66 +32,67 @@ Limitations:
 - **Not thread-safe** — single-threaded only
 - Use [`Mutex<T>`](rust-smart-pointer_mutex_t.md) for multi-threaded scenarios
 
-## Examples
-
-**The problem without RefCell:**
-
-```rust
-struct Cache {
-    data: Vec<String>,  // ❌ Can't mutate this through &self
-}
-
-impl Cache {
-    fn get_or_insert(&self, key: &str) -> String {
-        // ❌ Won't compile: can't modify through &self
-        // self.data.push(key.to_string());
-        key.to_string()
-    }
-}
-```
-
-**Solution with RefCell - caching pattern:**
-
-RefCell is necessary here because caching requires mutation but APIs typically expose `&self` methods:
+## borrow_mut() and borrow()
 
 ```rust
 use std::cell::RefCell;
 
-struct Cache {
-    data: RefCell<Vec<String>>,  // ✅ Interior mutability
+struct Point {
+  x: i32,
+  y: i32,
 }
 
-impl Cache {
-    fn new() -> Self {
-        Cache { data: RefCell::new(Vec::new()) }
-    }
+impl Point {
+  fn new(x: i32, y: i32) -> Self {
+    Point { x, y }
+  }
 
-    fn get_or_insert(&self, key: &str) -> String {
-        // ✅ Can mutate cache through &self
-        let mut cache = self.data.borrow_mut();
-        
-        if let Some(value) = cache.iter().find(|s| s == &key) {
-            return value.clone();
-        }
-        
-        cache.push(key.to_string());
-        key.to_string()
-    }
+  pub fn move_point(&mut self, x: i32, y: i32) {
+    self.x += x;
+    self.y += y;
+  }
+
+  pub fn print(&self) {
+    println!("Point({}, {})", self.x, self.y);
+  }
 }
 
-fn main() {
-    let cache = Cache::new();
-    cache.get_or_insert("hello");  // &self, not &mut self
-    cache.get_or_insert("world");
-    
-    println!("Cached: {:?}", cache.data.borrow());
+fn func() {
+  let p_cell = RefCell::new(Point::new(0, 0));
+
+  {
+    let mut p_m = p_cell.borrow_mut();
+    p_m.move_point(3, 4);  // Ok
+  }
+
+  {
+    let p_r = p_cell.borrow();
+    p_r.print();  // Ok
+    p_r.move_point(1, 2);  // Error: cannot borrow `*p_r` as mutable, as it is behind a `Ref`
+  }
 }
 ```
 
-Why RefCell is necessary:
-- Caching is logically immutable from the caller's perspective
-- Internal state needs to change for performance optimization
-- Cannot change API to require `&mut self` without breaking the abstraction
+## Dynamically Enforced Borrow Rules
+
+For code in previous section
+
+```rust
+fn func() {
+    let p_cell = RefCell::new(Point::new(0, 0));
+
+    let mut p_m = p_cell.borrow_mut();
+    p_m.move_point(3, 4);  // Ok
+
+    let p_r = p_cell.borrow();  // Panic will occur here
+    p_r.print();
+    p_r.move_point(1, 2);  // Error: cannot borrow `*p_r` as mutable, as it is behind a `Ref`
+}
+```
+
+- At line `let p_r = p_cell.borrow();`, panic will occur, and no compile error raised
+- Panic say: RefCell already mutably borrowed
+- Which indicates that RefCell check [borrow rules](rust-borrowing#borrow-checker-check-rules) at runtime not compile time
 
 ## Tips & Tricks
 

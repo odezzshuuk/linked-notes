@@ -22,10 +22,7 @@
 
 ## Deref Trait
 
-
-```rust
-
-```
+[Deref trait](rust-deref-trait.md)
 
 ## Use Case
 
@@ -71,11 +68,12 @@ When to use
 
 ## Arc<T>
 
-- `Arc<T>` is the thread-safe version of [`Rc<T>`](#rct)
+- `Arc<T>` provides thread-safe shared ownership
+- thread-safe version of [`Rc<T>`](#rct)
 
 ## Mutex<T>
 
-[`Mutex<T>`](rust-smart-pointer_mutex_t.md): Mute inside `Arc<T>`
+[`Mutex<T>`](rust-smart-pointer_mutex_t.md): Ensures mutual exclusion for shared data
 
 ## Arc<Mutex<T>>
 

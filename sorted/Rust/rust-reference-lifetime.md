@@ -1,6 +1,20 @@
 # Rust - Lifetime
 
+* [What's Lifetime](#what's-lifetime)
+* [How To Annotate Lifetime](#how-to-annotate-lifetime)
+* [Why Lifetime Annotation](#why-lifetime-annotation)
+* [Static lfietime](#static-lfietime)
+* [Struct Lifetime Annotation](#struct-lifetime-annotation)
+* [Method Lifetime Annotation](#method-lifetime-annotation)
+
 ## What's Lifetime
+
+- Also called Non-Lexical Lifetime
+- Lifetime is another kind of generic type parameter
+- Lifetime is apply to compile-time borrow(`&,` `&mut`)
+- Not runtime borrow, such [`RefCell<T>`](rust-smart-pointer_refcell_t.md#borrow_mut()-and-borrow())
+
+Take A Look
 
 - `x` does not live long enough to be referenced by `r`
 
@@ -141,5 +155,24 @@ impl<'a> ImportantExcerpt<'a> {
 
 - first `<'a>` is the declaration of the lifetime parameter  
 - second `<'a>` is the using
+
+## Generic Type Parameter Syntax With Lifetime
+
+- just another generic type parameter
+
+```rust
+use std::fmt::Display;
+fn longest_with_an_announcement<'a, T>(x: &'a str, y: &'a str, ann: T) -> &'a str
+where
+    T: Display,
+{
+    println!("Announcement! {}", ann);
+    if x.len() > y.len() {
+        x
+    } else {
+        y
+    }
+}
+```
 
 

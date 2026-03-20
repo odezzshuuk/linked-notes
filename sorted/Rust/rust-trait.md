@@ -1,5 +1,14 @@
 # Rust - Trait
 
+* [What's Trait](#what's-trait)
+* [Declaration](#declaration)
+* [Implementing A Trait](#implementing-a-trait)
+* [Trait As Parameter Type Annotation ](#trait-as-parameter-type-annotation-)
+* [Trait As Return Type Annotation](#trait-as-return-type-annotation)
+* [Trait As Generic type parameter](#trait-as-generic-type-parameter)
+* [Trait Bound with Multiple Traits](#trait-bound-with-multiple-traits)
+* [Trait Object](#trait-object)
+
 ## What's Trait
 
 - A trait define shared method signatures that types can implement

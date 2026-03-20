@@ -17,14 +17,13 @@ Why `Option<T>`?
 - Rust doesn't have `null`
 - Rust use `Option<T>` to represent a value that can be either something or nothing
 
-Usage
+## Use Cases
 
 1. Return value that might not exist
 
 ```rust
 fn find_user_by_id(id: u64) -> Option<User> { ... }
 fn get_config_value(key: &str) -> Option<String> { ... }
-fn parse_number(s: &str) -> Option<i32> { s.parse().ok() }
 ```
 
 2. Handle optional parameters
@@ -68,7 +67,7 @@ impl<T> Option<T> {
 
 - `F`: the [closure](rust-closure.md) type
 
-Use case
+Use cases
 
 ```rust
 let some_val = Some("hello");

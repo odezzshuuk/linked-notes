@@ -27,7 +27,6 @@ Why `Rc<T>` when Rust normally allows [single owner](rust-ownership#single-owner
 - Multiple struct referencing same data
 
 ## Use Cases
-
 - Here are two data that both want to own the same data
 
 ![smart-pointer](img/rust-smart-pointer-01.svg)
@@ -108,3 +107,7 @@ fn main() {
     println!("count after c goes out of scope = {}", Rc::strong_count(&a));
 }
 ```
+
+## Clone Method Return A Temporary Value
+
+

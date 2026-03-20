@@ -1,5 +1,11 @@
 # Rust - Method
 
+* [Method Declaration](#method-declaration)
+* [3 Kinds of `self` in method](#3-kinds-of-`self`-in-method)
+* [Associated Function](#associated-function)
+* [Method Auto-Deref](#method-auto-deref)
+* [Method Call Resolution](#method-call-resolution)
+
 ## Method Declaration
 
 - Method are function defined in the context of a struct, enum, or trait object
@@ -26,6 +32,17 @@ impl Rectangle {
 - `self`: [taking ownership]
   - Consume the instance
   - Usually used when the when [transforming]/[destroying] the instance
+
+```rust
+fn method(self);
+fn method(&self);
+fn method(&mut self);
+```
+
+- all the method are called with `value.method()`, but under the hood, what actually are called:
+  - `value.method()`
+  - `(&value).method()`
+  - `(&mut value).method()`
 
 ## Associated Function
 
@@ -56,4 +73,63 @@ In Rust
 
 - Rust automatically adds `&`, `&mut`, or `*` as needed when calling a method
 - `ptr.distance()` is equivalent to `(*ptr).distance()`
+
+## Method Call Resolution
+
+Rust not just deref, but performs step-by-step search, for variable `p` as instance:
+
+1. method on `p`
+2. method on `&p`
+3. method on `&mut p`
+4. method on `*p`
+5. if not found, repeat the 1-3 on `*p` 
+
+For example:
+
+- An instance of type `A` who can deref to `B`, and `B` can deref to `C`
+- Method on `B` and `C` can be accessed by one dot(`.`) operator. For instance `let value = A(B(C))`
+  - `value.method_on_b()`
+  - `value.method_on_c()`
+  - both ok
+
+```rust
+use std::ops::Deref;
+
+struct C;
+impl C {
+    fn method_on_c(&self) {
+        println!("C method");
+    }
+}
+
+struct B(C);
+impl B {
+    fn method_on_b(&self) {
+        println!("B method");
+    }
+}
+impl Deref for B {
+    type Target = C;
+
+    fn deref(&self) -> &C {
+        &self.0
+    }
+}
+
+struct A(B);
+impl Deref for A {
+    type Target = B;
+
+    fn deref(&self) -> &B {
+        &self.0
+    }
+}
+
+pub fn func() {
+    let value = A(B(C));
+
+    value.method_on_b(); // works
+    value.method_on_c(); // also works
+}
+```
 

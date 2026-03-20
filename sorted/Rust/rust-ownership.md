@@ -61,16 +61,16 @@ fig.03 ![ownership-model-03](img/rust-ownership-model-03.svg)
 - if Rust performs a deep copy, 
 - it could be very expensive when heap data is large
 
-fig.04 ![ownership-model-04](img/rust-ownership-model-04.svg)
-
 Here is what Rust do
 
 - When `let s2 = s1;` happens, Rust considers `s1`  as no longer valid
 - Known as [move](c++-move-constructor)
 
+fig.04 ![ownership-model-04](img/rust-ownership-model-04.svg)
+
 ## When Ownership Moving Happens
 
-Variable type must be [moveable](rust-concepts.md#move-type)
+Variable type must be [moveable](rust-concepts.md#move-value)
 
 1. Assignment
 2. Function call
@@ -79,3 +79,27 @@ Variable type must be [moveable](rust-concepts.md#move-type)
 5. Pattern matching
 6. Container Extraction
 
+## Ownership For Copy Types
+
+When matters: reference to a variable
+
+```rust
+fn main() {
+    let mut x = 10;
+
+    let m = &mut x;
+    let y = x; // ❌ ERROR: cannot use `x` while mutably borrowed
+
+    println!("{m}");
+}
+```
+
+When doesn't matter: assignment to a new variable
+
+```rust
+fn main() {
+    let x = 10; // i32 is a copy type
+    let y = x; // ✅ OK: `x` is copied, not moved
+    println!("x: {}, y: {}", x, y); // x: 10, y: 10
+}
+```

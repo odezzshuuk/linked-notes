@@ -26,6 +26,8 @@
 
 ## Panic
 
+- unrecoverable error
+
 Call `panic!` manually to trigger a panic:
 
 ```rust
@@ -136,7 +138,7 @@ Why Result
 ## Handle `Result`
 
 1. [match `Result`](#match)
-2. [unwrap and expect]()
+2. [unwrap and expect](#unwrap-and-expect)
 3. `?` operator
 4. [unwrap_or_else()](#unwrap_or_else)
 
@@ -188,6 +190,8 @@ fn read_username_from_file(path: &str) -> Result<String, io::Error> {
 
 ## unwrap and expect
 
+- `unwrap()` will return `T` type value if `Result` is `Ok(T)`
+- `unwrap()` will into [`panic`](#panic) if `Result` is `Err(E)`
 - `unwrap()` will convert [recoverable error](#recoverable-error) into [`panic`](#panic) 
 - `expect("msg")` is similar to `unwrap()`, but with custom panic message
 

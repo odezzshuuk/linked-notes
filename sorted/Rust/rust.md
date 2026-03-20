@@ -42,6 +42,8 @@
 
 [Std](rust-std.md)
 
+[Thread](rust-thread.md)
+
 ## What Make Rust Unique
 
 [Ownership Model](rust-ownership-model.md)

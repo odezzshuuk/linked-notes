@@ -7,8 +7,7 @@ mutual exclusion for shared data.
 
 - `Mutex` stands for mutual exclusion
 - Only one thread can access the protected value at a time
-- Locking returns a guard object (`MutexGuard<T>`) that unlocks automatically
-  when it is dropped
+- Locking returns a guard object (`MutexGuard<T>`) that unlocks automatically when it is dropped
 
 ## Key Features
 
@@ -17,31 +16,19 @@ mutual exclusion for shared data.
 - Poisoning support: if a thread panics while holding the lock, later lock attempts return a `PoisonError`
 - Usually combined with `Arc<T>` for shared ownership across threads
 
-## What's It For
+## What's For
 
 - Use `Mutex<T>` when multiple threads must read and write the same value, and you need correctness before raw throughput.
 
-Typical use cases:
+## Get The Lock
 
-- Shared counters and metrics
-- Shared in-memory state in servers
-- Shared caches or maps with simple access patterns
+Call `lock()` to get a guard
 
-Prefer alternatives when possible:
-
-- Use channels (`std::sync::mpsc`) for message passing
-- Use atomics (`AtomicUsize`, etc.) for simple numeric state
-- Use `RwLock<T>` when reads are much more frequent than writes
-
-## How To Use
-
-Basic pattern:
-
-- Wrap state in `Mutex<T>`
-- Wrap that mutex in `Arc<T>` if multiple threads own it
-- Call `lock()` to get a guard
-- Access data through the guard
-- Let guard go out of scope quickly to reduce contention
+- `lock()` method blocks the local thread until it can acquire the lock
+- `lock()` will not return on second call, it might panic or deadlock
+- Return a `LockResult<MutexGuard<'_, T>>` type value
+- An RAII guard is returned
+- When the guard goes out of scope, the mutex will be unlocked
 
 ```rust
 use std::sync::{Arc, Mutex};
@@ -67,12 +54,51 @@ fn main() {
 }
 ```
 
-Run:
+## Poisoning
 
-```bash
-cargo run
+What Is Poisoning?
+
+- Mutex get poisoned when a thread [panics](rust-error-handling#panic) while holding the lock
+  - `lock()` will return an error when acquired
+  - But The mutex still can be acquired
+  - Acquired mutex will be contained in the returned error
+
+> This means `lock()` and `try_lock()` will return a `Result`
+
+```rust
+fn func() {
+  let mutex = Arc::new(Mutex::new(0));
+  let mutex_clone = Arc::clone(&mutex);
+
+  let handle = thread::spawn(move || {
+    let mut data = mutex_clone.lock().unwrap();
+    *data += 1;
+
+    println!("Thread 1: Holding lock and about to panic...");
+    panic!("Intentional panic to poison the mutex");
+  });
+
+  let _ = handle.join();
+
+  match mutex.lock() {
+    Ok(_) => println!("Successfully locked!"),
+    Err(poison_err) => {
+      println!("Error: The mutex is poisoned! {}", poison_err);
+
+      let data = poison_err.into_inner();
+      println!("Recovered data value: {}", *data);
+    }
+  }
+}
 ```
 
-## Why Mutex<T>
+- use `PoisonError.into_inner()` to get the data out of the poisoned mutex
+
+## Prefer alternatives when possible
+
+- Use channels (`std::sync::mpsc`) for message passing
+- Use atomics (`AtomicUsize`, etc.) for simple numeric state
+- Use `RwLock<T>` when reads are much more frequent than writes
+
 
 

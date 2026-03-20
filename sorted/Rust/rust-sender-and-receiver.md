@@ -23,7 +23,7 @@ They are commonly created with `std::sync::mpsc::channel()`.
 
 ## What's It For
 
-Use sender/receiver when you want **threads** to communicate with messages,
+Use sender/receiver when you want [**threads**](rust-thread) to communicate with messages,
 instead of sharing memory directly.
 
 Typical cases:

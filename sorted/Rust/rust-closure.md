@@ -74,7 +74,7 @@ Ownership Moved
 
 ```rust
 let s = String::from("hello");
-let t = String::new();
+let mut t = String::new();
 let move_s_to_t = || t = s;
 move_s_to_t(); // `s` is moved into the closure and can no longer be used
 move_s_to_t(); // Error: closure can only be called once because it moves the captured variable `s`
@@ -128,7 +128,6 @@ fn main() {
 - Can be called more than once
 - Can't move captured value out of the closure
 - Can't mutate captured variable
-
 
 ```rust
 let mut x = 5;
