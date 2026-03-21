@@ -1,5 +1,35 @@
 # Rust - Deref Trait
 
+## Dereference operator `*`
+
+```rust
+let mut n = 5;
+let ptr = &mut n;
+*ptr = 10;
+```
+
+`*` doesn't recursively dereference `ptr` to get the value of `n`
+
+```rust
+use std::rc::Rc;
+
+let x = Rc::new(Box::new(5));
+let a = &*x;  // &Box<i32>
+let b = **x;  // i32
+```
+
+`*` operator apply to the entire method chain
+
+```rust
+*p.method_one().method_two()
+```
+
+- equivalent to `*(p.method_one().method_two())`
+
+`*` operator implicitly add when method call
+
+- [method call](rust-method#method-auto-deref)
+
 ## What's Deref Trait
 
 ```rust
@@ -8,9 +38,7 @@ fn main() {
     let y = &x;
 
     assert_eq!(5, x);
-    assert_eq!(5, *y);
-}
-```
+    assert_eq!(5, *y); } ```
 
 Use `Box<T>` which implements `Deref` trait
 
@@ -74,9 +102,9 @@ What's It
 
 When It Happens
 
-- when pass a reference to a particular type's value as an argument to a function or method
+- When pass a reference to a particular type's value as an ARGUMENT to a **FUNCTION** or **METHOD CALL**
 
-Chained Deref Coercion
+Deref Corecion is recursive
 
 ```rust
 fn hello(name: &str) {
@@ -89,7 +117,7 @@ fn func() {
 }
 ```
 
-- `&Arc<String>` → `&String` → `&str`
+- Chained Deref Coercion: `&Arc<String>` → `&String` → `&str`
 
 ## Mutable Deref Coercion
 

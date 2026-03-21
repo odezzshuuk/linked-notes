@@ -5,7 +5,7 @@
 * [What's Borrow Checker](#what's-borrow-checker)
 * [Why Borrow Checker](#why-borrow-checker)
 * [Borrow Checker check rules](#borrow-checker-check-rules)
-* [](#)
+* [When Borrowed Value Back To Owner](#when-borrowed-value-back-to-owner)
 
 ## What's Borrowing
 
@@ -13,6 +13,27 @@
 - During a variable is borrowed:
   - Original variable can't be used
 
+immutable borrow
+
+```rust
+let x = 10;
+let r = &x; // r borrows x, r is a reference to x
+```
+
+mutable borrow
+
+```rust
+let mut x = 10;
+let r = &mut x; // r mutably borrows x, r is a mutable
+```
+
+Assignment to a mutable reference with `*` operator
+
+```rust
+let mut x = 10;
+let r = &mut x; // r mutably borrows x
+*r += 1; // r is a mutable reference to x, so we can change x
+```
 ## Why Borrowing
 
 - Provide a way to reference a value without taking [ownership](#what-is-ownership) of it

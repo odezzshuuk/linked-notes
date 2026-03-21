@@ -64,15 +64,16 @@ impl Rectangle {
 
 ## Method Auto-Deref
 
+In Rust
+
+- Rust automatically adds `&`, `&mut`, or `*` as needed when calling a method
+- `ptr.distance()` is equivalent to `(*ptr).distance()`
+
 In c++
 
 - if object is a pointer, use `->`
 - `ptr->method()` is equivalent to `(*ptr).method()`
 
-In Rust
-
-- Rust automatically adds `&`, `&mut`, or `*` as needed when calling a method
-- `ptr.distance()` is equivalent to `(*ptr).distance()`
 
 ## Method Call Resolution
 

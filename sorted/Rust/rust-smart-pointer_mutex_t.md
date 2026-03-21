@@ -27,7 +27,7 @@ Call `lock()` to get a guard
 - `lock()` method blocks the local thread until it can acquire the lock
 - `lock()` will not return on second call, it might panic or deadlock
 - Return a `LockResult<MutexGuard<'_, T>>` type value
-- An RAII guard is returned
+- An [RAII] guard is returned
 - When the guard goes out of scope, the mutex will be unlocked
 
 ```rust
@@ -41,7 +41,7 @@ fn main() {
 	for _ in 0..10 {
 		let shared = Arc::clone(&counter);
 		handles.push(thread::spawn(move || {
-			let mut n = shared.lock().expect("mutex poisoned");
+			let mut n = shared.lock().unwrap();
 			*n += 1;
 		}));
 	}
@@ -53,6 +53,10 @@ fn main() {
 	println!("counter = {}", *counter.lock().expect("mutex poisoned"));
 }
 ```
+
+- Commonly used pattern `mutex.lock().unwrap()`
+  - `lock()` return `LockResult<MutexGuard<'_, T>>`
+  - `unwrap()` return `MutexGuard<'_, T>` or panic if the lock is poisoned
 
 ## Poisoning
 
@@ -93,6 +97,8 @@ fn func() {
 ```
 
 - use `PoisonError.into_inner()` to get the data out of the poisoned mutex
+
+## MutexGuard<T>
 
 ## Prefer alternatives when possible
 

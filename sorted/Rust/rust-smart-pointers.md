@@ -20,9 +20,9 @@
 > Type that implements `Deref` trait can be treated like a reference
 > Type that implements `Drop` trait can be cleaned up when goes out of scope
 
-## Deref Trait
+## Deref
 
-[Deref trait](rust-deref-trait.md)
+[`Deref` trait](rust-deref-trait.md)
 
 ## Use Case
 
