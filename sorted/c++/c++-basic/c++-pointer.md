@@ -1,4 +1,4 @@
-# Pointer
+# C++ - Pointer
 
 - Pointer store the **address** of an object
 - type of a Pointer is `Foo*`

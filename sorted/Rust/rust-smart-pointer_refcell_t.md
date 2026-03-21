@@ -9,28 +9,19 @@
 
 ## What It Is
 
-- `RefCell<T>` is a smart pointer that enforces **borrow rules at runtime** rather than at compile time.
+- Interior mutability smart pointer
+
+What's It For
+
+- You have a single owner but need mutable access from an immutable reference
+- You're implementing patterns like shared state in event handlers or testing
+- You need interior mutability without the overhead of [locking](rust-smart-pointer_mutex_t) (like `Mutex<T>`)
+- The single-threaded constraint is acceptable for your use case
 
 ## Key feature
 
 - Allows you to mutate contents through an immutable reference
-- Uses **interior mutability** pattern for runtime borrow checking
-- [Tracks borrows dynamically and panics if rules are violated](#dynamically-enforced-borrow-rules)
-- Useful when the compiler can't prove correctness but you know the code is safe
-
-## What's It For
-
-Use `RefCell<T>` when:
-
-- You have a single owner but need mutable access from an immutable reference
-- You're implementing patterns like shared state in event handlers or testing
-- You need interior mutability without the overhead of locking (like `Mutex<T>`)
-- The single-threaded constraint is acceptable for your use case
-
-Limitations:
-
-- **Not thread-safe** — single-threaded only
-- Use [`Mutex<T>`](rust-smart-pointer_mutex_t.md) for multi-threaded scenarios
+- [Enforces **borrow rules at runtime** rather than at compile time](#enforced-borrow-rules-at-runtime)
 
 ## borrow_mut() and borrow()
 
@@ -73,7 +64,7 @@ fn func() {
 }
 ```
 
-## Dynamically Enforced Borrow Rules
+## Enforced Borrow Rules At Runtime
 
 For code in previous section
 
@@ -93,6 +84,11 @@ fn func() {
 - At line `let p_r = p_cell.borrow();`, panic will occur, and no compile error raised
 - Panic say: RefCell already mutably borrowed
 - Which indicates that RefCell check [borrow rules](rust-borrowing#borrow-checker-check-rules) at runtime not compile time
+
+## Limitations
+
+- **Not thread-safe** — single-threaded only
+- Use [`Mutex<T>`](rust-smart-pointer_mutex_t.md) for multi-threaded scenarios
 
 ## Tips & Tricks
 

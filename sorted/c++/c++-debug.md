@@ -1,5 +1,4 @@
-# 调试c++
+# C++ - Debug
 
 [GDB](unix-gdb.md)
 
-[linux命令nm](linux-command-nm.md)

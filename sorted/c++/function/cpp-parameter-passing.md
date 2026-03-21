@@ -10,7 +10,7 @@ int f(int a);
 
 ## Parameter is a Reference Type
 
-```c++
+```cpp
 int f(int &a);
 ```
 - It is an alias for its corresponding argument
@@ -21,18 +21,18 @@ int f(int &a);
   - **When copying large objects is inefficient**, consider using reference parameters
 - [const reference](c++-const.md#const引用) parameter
 
-  ```c++
-  const int &a
-  ```
+```cpp
+const int &a
+```
 
-  > <font color= "red">If the function does not need to modify the value of the reference parameter, it is best to declare it as a const reference</font>
+> If the function does not need to modify the value of the reference parameter, it is best to declare it as a const reference
 
 ## initializer_list Parameter
 
 - Usage: When the number of parameters is unknown but all arguments are of the same type
 - initializer_list is a template
 - To pass a sequence of values to an initializer_list, they must be enclosed in braces
-- For related operations, see [[C++ Manual#Operations on initializer_list Parameters]]
+- For related operations, see [C++ Manual#Operations on initializer_list Parameters]
 
 ## Other Parameters
 
