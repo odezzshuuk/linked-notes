@@ -1,42 +1,28 @@
 # Rust - Smart Pointers
 
-## Summary
+## What's Smart Pointer
 
-| Smart Pointer          | Main Trait(s) impl | Can be shared? | Can mutate through it?   | Thread-safe? | Heap allocation?     | Size on stack    |
-| ---------------------- | ------------------ | -------------- | ------------------------ | ------------ | -------------------- | ---------------- |
-| Box<T>                 | "Deref, DerefMut"  | ✗              | ✓                        | ✗            | Yes                  | usize (pointer)  |
-| Rc<T>                  | Deref              | ✓              | ✗                        | ✗            | Yes                  | usize × 2        |
-| Rc<RefCell<T>>         | Deref              | ✓              | ✓ (runtime check)        | ✗            | single-threaded"     | Yes,usize × 3–4  |
-| Arc<T>                 | Deref              | ✓              | ✗                        | ✓            | Yes                  | usize × 2        |
-| Arc<Mutex<T>>          | Deref              | ✓              | ✓ (mutex lock)           | ✓            | Yes                  | usize × 3–4      |
-| Arc<RwLock<T>>         | Deref              | ✓              | ✓ (read or write lock)   | ✓            | Yes                  | similar to Mutex |
-| Weak<T> / Weak<Arc<T>> | —                  | ✓ (but weak)   | ✗                        | ✓ / ✗        | —                    | usize × 2–3      |
-| Cell<T>                | —                  | ✓              | ✓ (no borrow)            | ✗ (mostly)   | No (usually)         | same as T        |
-| RefCell<T>             | Deref (via borrow) | ✓              | ✓ (runtime borrow check) | ✗            | Usually inside Rc    | usize × 3        |
-| Mutex<T>               | —                  | —              | ✓ (via .lock())          | ✓            | No (can be on stack) | small + T        |
-| RwLock<T>              | —                  | —              | ✓ (read/write locks)     | ✓            | No (can be on stack) | small + T        |
+- Pointer is a general concept for a variable that contains an address in memory
+- Pointer dont have any special capabilities other than referring to data
+- Smart Pointers are data structures that act like a pointer but also have additional metadata and capabilities
 
+## Features
 
-> Type that implements `Deref` trait can be treated like a reference
-> Type that implements `Drop` trait can be cleaned up when goes out of scope
+Smart pointers that implement [`Deref` trait](rust-deref-trait.md) can be treated like a regular reference
 
-## Deref
+- Deref with operator `*`
 
-[`Deref` trait](rust-deref-trait.md)
+```rust
+fn main() {
+    let x = 5;
+    let y = Box::new(x);
 
-## Use Case
+    assert_eq!(5, x);
+    assert_eq!(5, *y);
+}
+```
 
-- `Box<T>`
-- `Rc<T>`
-- `Rc<RefCell<T>>`
-- `Arc<T>`
-- `Arc<Mutex<T>>`
-- `Arc<RwLock<T>>`
-- `Weak<T> / Weak<Arc<T>>`
-- `Cell<T>`
-- `RefCell<T>`
-- `Mutex<T>`
-- `RwLock<T>`
+Type that implements `Drop` trait can be cleaned up when goes out of scope
 
 ## `Box<T>`
 
@@ -77,3 +63,18 @@ When to use
 
 ## Arc<Mutex<T>>
 
+## Smart Pointers Collection
+
+| Smart Pointer          | Main Trait(s) impl | Can be shared? | Can mutate through it?   | Thread-safe? | Heap allocation?     | Size on stack    |
+| ---------------------- | ------------------ | -------------- | ------------------------ | ------------ | -------------------- | ---------------- |
+| Box<T>                 | "Deref, DerefMut"  | ✗              | ✓                        | ✗            | Yes                  | usize (pointer)  |
+| Rc<T>                  | Deref              | ✓              | ✗                        | ✗            | Yes                  | usize × 2        |
+| Rc<RefCell<T>>         | Deref              | ✓              | ✓ (runtime check)        | ✗            | single-threaded"     | Yes,usize × 3–4  |
+| Arc<T>                 | Deref              | ✓              | ✗                        | ✓            | Yes                  | usize × 2        |
+| Arc<Mutex<T>>          | Deref              | ✓              | ✓ (mutex lock)           | ✓            | Yes                  | usize × 3–4      |
+| Arc<RwLock<T>>         | Deref              | ✓              | ✓ (read or write lock)   | ✓            | Yes                  | similar to Mutex |
+| Weak<T> / Weak<Arc<T>> | —                  | ✓ (but weak)   | ✗                        | ✓ / ✗        | —                    | usize × 2–3      |
+| Cell<T>                | —                  | ✓              | ✓ (no borrow)            | ✗ (mostly)   | No (usually)         | same as T        |
+| RefCell<T>             | Deref (via borrow) | ✓              | ✓ (runtime borrow check) | ✗            | Usually inside Rc    | usize × 3        |
+| Mutex<T>               | —                  | —              | ✓ (via .lock())          | ✓            | No (can be on stack) | small + T        |
+| RwLock<T>              | —                  | —              | ✓ (read/write locks)     | ✓            | No (can be on stack) | small + T        |

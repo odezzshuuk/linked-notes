@@ -42,28 +42,7 @@ fn add(x: i32, y: i32) -> i32 {
 
 > [unit type definition here](rust-data-type#unit)
 
-
-## Statement
-
-Not value
-
-```rust
-let x = 5;
-```
-
-## Expression
-
-- evaluate to a value
-- remove last semicolon `;` to represent a expression with `{}` block, 
-
-```rust
-let x = {
-    let y = 6;
-    y + 1
-}
-```
-
-`if let` statement
+## `if let` statement
 
 - A way to handle `match` statement when you only care about one pattern
 
@@ -92,6 +71,15 @@ match some_value {
 }
 ```
 
+- Analogous to null check in other languages
+
+```ts
+// typescript
+let someValue: number | null = 5;
+if (someValue !== null) {
+  console.log(`The value is: ${someValue}`);
+}
+```
 
 ## Flow Control
 
@@ -128,4 +116,78 @@ let green_2 = get_green_2(color);
 println!("Green color: {:?}", green);
 ```
 
+## Dereference operator `*`
+
+[* Operator](rust-deref-operator.md)
+
+## Deref Trait
+
+[`Deref` trait](rust-deref-trait.md)
+
+## loop keyword
+
+- a loop
+
+```rust
+fn func() {
+  loop {
+    println!("loop last forever until ctrl+c");
+  }
+}
+```
+
+- break a loop with `break`
+
+```rust
+fn func() {
+  let mut count = 0;
+  loop {
+    count += 1;
+    if count == 5 {
+      break;
+    }
+  }
+}
+```
+
+- break a loop with value
+
+```rust
+fn main() {
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2;
+        }
+    };
+    println!("The result is {result}");  // The result is 20
+}
+```
+
+- break in nest loop, use label to specify which loop to break
+  - `break` apply to the current loop
+  - `break 'label` apply to the loop with the specified label
+
+```rust
+fn func() {
+  let mut count = 0;
+  'outer: loop {
+    let mut remaining = 10;
+    loop {
+       println!("remaining = {}", remaining);
+      if remaining == 9 {
+        break; 
+      }
+
+      if count == 2 {
+        break 'outer; // break outer loop
+      } 
+      remaining -= 1;
+    }
+    count += 1;
+  }
+}
+```
 

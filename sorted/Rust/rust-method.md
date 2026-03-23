@@ -77,13 +77,13 @@ In c++
 
 ## Method Call Resolution
 
-Rust not just deref, but performs step-by-step search, for variable `p` as instance:
+Rust not just [auto-deref](#method-auto-deref), but performs step-by-step search, for variable `p` as instance:
 
 1. method on `p`
 2. method on `&p`
 3. method on `&mut p`
 4. method on `*p`
-5. if not found, repeat the 1-3 on `*p` 
+5. if not found, repeat the 1-4 on `*p` 
 
 For example:
 

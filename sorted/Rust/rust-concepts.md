@@ -139,3 +139,22 @@ let node1 = Node { value: 1, next: None };
 
 [Unit](rust-data-type#unit)
 
+## Statement
+
+Not a value
+
+```rust
+let x = 5;
+```
+
+## Expression
+
+- evaluate to a value
+- remove last semicolon `;` to represent a expression with `{}` block, 
+
+```rust
+let x = {
+    let y = 6;
+    y + 1
+}
+```
