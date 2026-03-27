@@ -22,6 +22,8 @@
 
 [Trait](rust-trait.md): Interface
 
+[Generics](rust-generic.md)
+
 [Error Handling](rust-error-handling.md)
 
 [Pattern Matching](rust-pattern.md)

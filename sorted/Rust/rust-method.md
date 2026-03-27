@@ -24,7 +24,14 @@ impl Rectangle {
 }
 ```
 
-## 3 Kinds of `self` in method
+## 2 Kinds Of Method In Rust
+
+- [Instance method](#instance-methods)
+- [Associated function](#associated-functions)
+
+## Instance Methods
+
+3 kinds of instance method
 
 - `&self`: [immutable borrow]
 - `&mut self`: [mutable borrow]: 
@@ -44,12 +51,10 @@ fn method(&mut self);
   - `(&value).method()`
   - `(&mut value).method()`
 
-## Associated Function
+## Associated Functions
 
 - Defined in `impl` block but without `self` parameter
 - Called by `::`, `Rectangle::square(3)`
-
-Constructor-like method in other languages
 
 ```rust
 impl Rectangle {
@@ -60,6 +65,16 @@ impl Rectangle {
 ```
 
 - Declaration funtion that return `Self` is a common pattern for constructor-like method in Rust
+
+```rust
+impl Rectangle {
+  fn new(width: u32, height: u32) -> Self {
+    Rectangle { width, height }
+  }
+}
+```
+
+- this is a constructor-like behavior method in other languages
 - `new()` is nothing special in Rust, just like a convention for constructor method
 
 ## Method Auto-Deref
