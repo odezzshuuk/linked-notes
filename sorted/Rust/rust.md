@@ -66,5 +66,12 @@
 
 [Trait](rust-trait.md)
 
+## Rust Design Pattern
+
+[Idioms](rust-idioms.md)
+
+[Design Patterns](rust-design-patterns.md)
+
+[Anti Patterns]()
 
 

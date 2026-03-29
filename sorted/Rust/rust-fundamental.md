@@ -51,7 +51,7 @@ let some_value = Some(5);
 fn func() -> Option<i32> {
   Some(5)
 }
-  
+
 if let Some(x) = some_value { 
   println!("The value is: {}", x);
 }

@@ -31,7 +31,7 @@ impl Rectangle {
 
 ## Instance Methods
 
-3 kinds of instance method
+4 kinds of instance method
 
 - `&self`: [immutable borrow]
 - `&mut self`: [mutable borrow]: 
@@ -39,11 +39,13 @@ impl Rectangle {
 - `self`: [taking ownership]
   - Consume the instance
   - Usually used when the when [transforming]/[destroying] the instance
+- `mut self`: A [receiver](rust-trait#trait-receiver) used in [builder design pattern](rust-design-patterns-builder.md)
 
 ```rust
 fn method(self);
 fn method(&self);
 fn method(&mut self);
+fn method(mut self);  // in builder pattern
 ```
 
 - all the method are called with `value.method()`, but under the hood, what actually are called:
