@@ -36,13 +36,37 @@ borrows_mutably(); // works
 
 Taking Ownership And Keep
 
-- use `move` keyword
+- using `move` keyword
 
 ```rust
 let list = vec![1, 2, 3];
-thread::spawn(move || println!("{:?}", list)); // `move` forces the closure to take ownership of `list`
-println!("{:?}", list); // Error: `list` has been moved into the closure
+// `move` forces the closure to take ownership of `list`
+// event though mutate nothing 
+let print_list = move || println!("{:?}", list);
+print_list();
+// println!("list: {:?}", list); // Error: `list` has been moved into the closure
 ```
+
+- `move` perform a copy for [copy type](rust-concepts#copy-value)
+
+```rust
+pub fn func() {
+  let mut counter = 0;
+  let mut increment_counter = move || {
+    for _ in 0..10 {
+      counter += 1;
+    }
+    println!("closure counter: {}", counter);
+  };
+  increment_counter();
+  println!("outside counter: {}", counter);
+  // closure counter: 10
+  // outside counter: 0
+}
+```
+
+- `counter` is copied into each thread and the main thread, 
+- So the closure and the main thread have their own separate `counter` variable 
 
 ## Move Captured Values Out of Closure
 

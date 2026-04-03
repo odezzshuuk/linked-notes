@@ -141,6 +141,38 @@ where T: Summary + Display,
 { }
 ```
 
+`'static` trait bound, `T: 'static`
+
+- Reprensent the type `T` must not contain any non-static reference
+- For following function signature
+
+```rust
+fn func<T: 'static>(p: &T) { }
+```
+
+- both `ExampleA`, `ExampleB` type value can be passed to `func`
+- `ExampleC` is not fit the function
+
+```rust
+struct ExampleA {
+  x: i32,
+  y: i32,
+}
+
+struct ExampleB {
+  x: i32,
+  y: i32,
+  name: &'static str,
+}
+
+struct ExampleC<'a> {
+  x: i32,
+  y: i32,
+  name: &'static str,
+  desc: &'a str,
+}
+```
+
 ## Trait Members
 
 [Methods](rust-method.md)
@@ -148,7 +180,6 @@ where T: Summary + Display,
 [Associated Types](rust-associated-types.md)
 
 [Associated Constants]
-
 
 ## Supertrait
 

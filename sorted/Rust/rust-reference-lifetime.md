@@ -55,7 +55,7 @@ struct Point<'a> { }
 
 - `<'a>` is the definition of a lifetime parameter named `'a`
 
-annotate parameters and return type
+Annotate parameters and return type
 
 ```rust
 &'a i32  // a reference with an explicit lifetime
@@ -126,17 +126,21 @@ fn longest<'a, 'b>(x: &'a str, y: &'b str) -> &'a str {
 - Incorrectly return `y` whose lifetime is `'b` will be avoid
 - Lifetime annotation does not change the lifetime of the reference
 
-## Static lfietime
-
-- A reference is valid for the entire program
-
 ## Struct Lifetime Annotation
 
 ```rust
 struct A<'a> {
   data: &'a str,
 }
+```
 
+## Static lfietime
+
+> like [static member in c#](csharp-class#members), or typescript
+
+- A reference is valid for the entire program
+
+```rust
 struct B {
   data: &'static str,
 }

@@ -124,7 +124,7 @@ println!("Green color: {:?}", green);
 
 [`Deref` trait](rust-deref-trait.md)
 
-## loop keyword
+## `loop` keyword
 
 - a loop
 
