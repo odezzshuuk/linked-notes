@@ -9,7 +9,7 @@
 
 ## Script Like This
 
-give a `script.sh` as example
+Given `script.sh` as example
 
 ```sh
 # export variable
@@ -47,10 +47,10 @@ echo $0
 
 `source script.sh` and `. ./script.sh`
 
-- execute the script like 
+- Execute the script like 
   - type command in current shell
   - or add the file content at current script
-- so the variable in the script is exported as a shell variable
+- So the variable in the script is exported as a shell variable
 
 ## ./script.sh
 

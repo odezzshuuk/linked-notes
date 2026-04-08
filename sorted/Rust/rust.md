@@ -1,5 +1,15 @@
 # Rust
 
+## Reference
+
+[The Rust Programming Language](https://doc.rust-lang.org/book/)
+
+[Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
+
+[Rust By Example](https://doc.rust-lang.org/rust-by-example/)
+
+[The Rustonomicon](https://doc.rust-lang.org/nomicon/)
+
 ## I
 
 [Concepts](rust-concepts.md)
@@ -46,6 +56,8 @@
 
 [Thread](rust-thread.md)
 
+[Conversion](rust-conversion.md)
+
 ## What Make Rust Unique
 
 [Ownership Model](rust-ownership-model.md)
@@ -73,5 +85,9 @@
 [Design Patterns](rust-design-patterns.md)
 
 [Anti Patterns]()
+
+## Rustonomicon
+
+[Higher-Ranked Trait Bounds(HRTBs)](rust-higher-ranked-trait-bounds.md)
 
 

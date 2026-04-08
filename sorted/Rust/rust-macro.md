@@ -38,7 +38,10 @@ macro_rules! vec {
       temp_vec
     }
   };
+}
 ```
+
+- $x
 
 call a declarative macro
 

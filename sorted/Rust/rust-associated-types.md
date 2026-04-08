@@ -1,12 +1,22 @@
 # Rust - Associated Types
 
-## Definition
+## Declaration
 
-- `type Item;` is the associated type
 
 ```rust
 trait Iterator {
   type Item;
+  fn next(&mut self) -> Option<Self::Item>;
+}
+```
+
+- `type Item;` is the associated type
+
+Declaring with [Trait Bound]()
+
+```rust
+trait Iterator {
+  type Item: Clone;
   fn next(&mut self) -> Option<Self::Item>;
 }
 ```
@@ -17,29 +27,37 @@ trait Iterator {
 struct Counter;
 impl Iterator for Counter {
   type Item = u32;
-  fn next(&mut self) -> Option<Self::Item> {
-    // ...
-  }
+  fn next(&mut self) -> Option<Self::Item> {  }
+  fn get_current_count(&self) -> Self::Item {
 }
 ```
 
-## Why not just generic `Iterator<T>`
+## Why not just generic type parameter
 
-- Rust allow implement same trait for different types
+- Most cases, associated type and [generic type parameter](rust-generic.md) can be used interchangeably
+
+But, for generic trait
+
+- Implementing trait for a type multiple times with different generic type parameter is allowed
+
+```rust
 
 ```rust
 impl Iterator<u32> for Counter { ... }
 impl Iterator<String> for Counter { ... }  // both allowed
 ```
 
-- associated type avoid this
+Associated type avoid this
 
-[Trait Bound]() on associated type
+- Because rust cant implement a trait on a type multiple times
 
 ```rust
-trait Iterator {
-  type Item: Clone;
-  fn next(&mut self) -> Option<Self::Item>;
+impl Iterator for Counter {
+  type Item = u32;
+}
+
+impl Iterator for Counter {  // Error: conflicting implementations of trait `Iterator` for type `Counter`
+  type Item = String;
 }
 ```
 
