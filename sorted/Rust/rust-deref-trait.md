@@ -1,6 +1,21 @@
 # Rust - Deref Trait
 
-## What's Deref Trait
+## Overview
+
+- Type that implements `Deref` trait: 
+  - Can be dereferenced with the [`*` operator](rust-deref-operator.md)
+  - Can take advantage of [deref coercion](#deref-coercion)
+
+## Declaration in std
+
+```rust
+pub trait Deref {
+  type Target: ?Sized;
+  fn deref(&self) -> &Self::Target;
+}
+```
+
+## Work With Deref 
 
 ```rust
 fn main() {
@@ -8,7 +23,8 @@ fn main() {
     let y = &x;
 
     assert_eq!(5, x);
-    assert_eq!(5, *y); } ```
+    assert_eq!(5, *y); }
+```
 
 Use `Box<T>` which implements `Deref` trait
 
@@ -24,7 +40,7 @@ fn main() {
 
 - when `*y` is evaluated, Rust actually performs `*(y.deref())`
 
-## As contrast
+As Contrast
 
 - define `MyBox<T>`, a tuple struct, without implementing `Deref` trait
 
@@ -47,7 +63,38 @@ fn main() {
 
 - without `deref` trait, Rust can only dereference `&` references
 
-## Implementing `Deref` trait
+## Deref Coercion
+
+What's It
+
+- Convert references that implement `Deref` trait into references of another type
+
+When It Happens
+
+- When pass a [reference/borrow type(&)](rust-borrowing.md) to a particular type's value as an ARGUMENT to a **FUNCTION** or **METHOD CALL**
+
+Deref Corecion is recursive
+
+```rust
+fn hello(name: &str) {
+    println!("Hello, {}!", name);
+}
+
+fn func() {
+    let name = Arc::new(String::from("Rust"));  // type of name is Arc<String>
+    hello(&name);
+}
+```
+
+- Chained Deref Coercion: `&Arc<String>` → `&String` → `&str`
+
+## Mutable Deref Coercion
+
+1. From `&T` to `&U` when T: `Deref<Target=U>`
+2. From `&mut` `T` to `&mut U` when T: `DerefMut<Target=U>`
+3. From `&mut T` to `&U` when T: `Deref<Target=U>`
+
+## A Simple Implementing of `Deref` trait
 
 ```rust
 use std::ops::Deref;
@@ -64,36 +111,6 @@ impl<T> Deref for MyBox<T> {
 - `Target` defines an associated type
 - `.0` access the first field of the [tuple](rust-struct#tuple-struct) struct `MyBox<T>`
 
-## Deref Coercion
-
-What's It
-
-- Convert references that implement `Deref` trait into references of another type
-
-When It Happens
-
-- When pass a reference to a particular type's value as an ARGUMENT to a **FUNCTION** or **METHOD CALL**
-
-Deref Corecion is recursive
-
-```rust
-fn hello(name: &str) {
-    println!("Hello, {}!", name);
-}
-
-fn func() {
-    let name = Arc::new(String::from("Rust"));
-    hello(&name);
-}
-```
-
-- Chained Deref Coercion: `&Arc<String>` → `&String` → `&str`
-
-## Mutable Deref Coercion
-
-1. From `&T` to `&U` when T: `Deref<Target=U>`
-2. From `&mut` `T` to `&mut U` when T: `DerefMut<Target=U>`
-3. From `&mut T` to `&U` when T: `Deref<Target=U>`
 
 ## Deref In dot operator method access
 

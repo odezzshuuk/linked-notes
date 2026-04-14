@@ -13,9 +13,14 @@
 - loading and run libraries
 - Doing the same job as [`dofile`](lua-built-in-functions.md) function, but has different mechanism and more features
 
-## Feature
+## Features
 
-- controls whether a library has already been run to avoid running it twice
+- Controls whether a library has already been run to avoid running it twice
+- For the first time a file is loaded
+  - Running the file
+  - Storing the result in a global table `package.loaded`
+- For the second time and later a file is loaded
+  - Get the result in table `package.loaded` without running the file again
 
 ## LUA_PATH
 
@@ -41,7 +46,7 @@ $ print(package.path)
 - `.` is **not the relative path of the script who call `require` function**
 - `.` in relative path `./?.lua` or `./?/init.lua` represent the directory of the entry script of program, whose path is where the `lua` command is executed
 
-For example, if execute command `lua script.lua` at the root of following directory structure, for `require('add')` in `/mod/init.lua` will cause module not found error
+For example, if execute command `lua script.lua` at the root of following directory structure, for `require('add')` in `./mod/init.lua` will cause module not found error
 
 ```
 .
@@ -58,7 +63,7 @@ If a search path value is: `?;?.lua;c:\windows\?;/usr/local/lua/?/?.lua`
 `require "foo"` will try to open the following files:
 
 - `foo/`
-- `foo/init.lua
+- `foo/init.lua`
 - `foo.lua`
 - `c:\windows\foo`
 - `/usr/local/lua/foo.lua`

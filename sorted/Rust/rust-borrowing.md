@@ -13,14 +13,14 @@
 - During a variable is borrowed:
   - Original variable can't be used
 
-immutable borrow
+Immutable borrow
 
 ```rust
 let x = 10;
 let r = &x; // r borrows x, r is a reference to x
 ```
 
-mutable borrow
+Mutable borrow
 
 ```rust
 let mut x = 10;

@@ -1,5 +1,12 @@
 # Rust - Type
 
+* [Scalar Type](#scalar-type)
+* [Compound Type](#compound-type)
+* [Tuple](#tuple)
+* [Unit](#unit)
+* [String](#string)
+* [Slice/Array](#slice/array)
+
 ## Scalar Type
 
 - The type represents a single value. 
@@ -38,39 +45,7 @@ fn main() {
 
 [String](rust-string.md)
 
+## Collections
 
-## Slice/Array
-
-- Slice type is `&[T]`, `[T]` represents a sequence of `T` values
-- For string slice, it is `&str`
-- Slice reference stores: 
-  - a pointer to the first element of the slice
-  - the length of the slice
-
-String Slice
-
-```rust
-let s = String::from("hello world");
-
-let hello = &s[0..5];
-let world = &s[6..11];
-```
-
-Other Slice
-
-```rust
-let a = [1, 2, 3, 4, 5]; // type of a: [i32; 5]
-let slice = &a[1..3]; // type of slice: &[i32]
-```
-
-- Syntax Sugar
-
-```rust
-let a = [3; 5]; // [3, 3, 3, 3, 3]
-```
-
-When use slice as generic type parameter
-
-- `&[T]` is slice type, it has a pointer and a length, and it is sized type
-- `[T]` is the value of slice type point to, it is unsized type
+[Collections](rust-collections.md)
 

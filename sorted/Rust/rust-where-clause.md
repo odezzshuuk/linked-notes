@@ -51,8 +51,9 @@ pub fn notify<T: Summary + Display, U: Clone + Debug>(item: &T, other: &U) -> i3
 2. [Associated types](#associated-types)
 3. [Higher-ranked trait bounds](#higher-ranked-trait-bounds)
 
-
 ## Blanket impls
+
+For example
 
 - Add method to every type that satisfies constraints defined by where clause
 
@@ -78,6 +79,31 @@ fn main() {
 
 - Add method to every type that satisfies the condition [`Option<T>: Debug`](rust-built-in-derives.md#debug)
 
+Even more expressive way
+
+```rust
+fn build_stream<T>(
+    device: &cpal::Device,
+    config: &cpal::SupportedStreamConfig,
+    sample_tx: mpsc::Sender<Vec<f32>>,
+    channels: usize,
+) -> Result<cpal::Stream, cpal::BuildStreamError>
+where
+    T: Sample + SizedSample + Send + 'static,
+    f32: cpal::FromSample<T>,
+{
+    // ...
+}
+```
+
+- The trait bound defined in function signature where clause `f32: cpal::FromSample<T>` means:
+  - For sample type `T`, `f32` must implement the trait `cpal::FromSample<T>`
+  - Which means there must a valid conversion existing from `cpal::FromSample<T>` to `f32`
+
+> About [conversion](rust-conversion.md) 
+> About crate [cpal](rust-cpal.md)
+
 ## Higher Ranked Trait Bounds(HRTBs)
 
+[HRTBs](rust-higher-ranked-trait-bounds.md)
 

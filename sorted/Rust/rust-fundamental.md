@@ -116,11 +116,9 @@ let green_2 = get_green_2(color);
 println!("Green color: {:?}", green);
 ```
 
-## Dereference operator `*`
+## Deref
 
-[* Operator](rust-deref-operator.md)
-
-## Deref Trait
+[* Operator](rust-deref-operator.md): Dereference operator `*`
 
 [`Deref` trait](rust-deref-trait.md)
 

@@ -4,6 +4,8 @@
 
 [The Rust Programming Language](https://doc.rust-lang.org/book/)
 
+[Rust std](https://doc.rust-lang.org/std/)
+
 [Rust Design Patterns](https://rust-unofficial.github.io/patterns/)
 
 [Rust By Example](https://doc.rust-lang.org/rust-by-example/)
@@ -89,5 +91,9 @@
 ## Rustonomicon
 
 [Higher-Ranked Trait Bounds(HRTBs)](rust-higher-ranked-trait-bounds.md)
+
+## Crate
+
+[cpal](rust-cpal.md)
 
 

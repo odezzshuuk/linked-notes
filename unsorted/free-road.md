@@ -30,3 +30,8 @@ Settings $\rightarrow$ network and Internet $\rightarrow$ proxy $\rightarrow$ pr
 
 freeman105@gmail.com
 
+## Reality Domain Test
+
+```sh
+for d in statici.icloud.com amd.com www.xilinx.com download.amd.com images.nvidia.com go.microsoft.com aws.com www.intel.com beacon.gtv-pub.com b.6sc.co ; do t1=$(date +%s%3N); timeout 1 openssl s_client -connect $d:443 -servername $d </dev/null &>/dev/null && t2=$(date +%s%3N) && echo "$d: $((t2 - t1)) ms" || echo "$d: timeout"; done
+```
