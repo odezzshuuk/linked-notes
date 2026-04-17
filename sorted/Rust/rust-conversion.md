@@ -8,5 +8,12 @@
 
 [`AsRef<T>`](rust-asref.md)
 
+## AsMut<T>
+
+## AsRef VS Deref
+
+[`AsRef<T>` VS `Deref`](rust-asref-vs-deref.md)
+
+
 
 

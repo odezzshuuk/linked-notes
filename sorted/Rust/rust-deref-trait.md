@@ -94,11 +94,12 @@ fn func() {
 2. From `&mut` `T` to `&mut U` when T: `DerefMut<Target=U>`
 3. From `&mut T` to `&U` when T: `Deref<Target=U>`
 
-## A Simple Implementing of `Deref` trait
+## A Minimal Implementing of `Deref` trait
 
 ```rust
 use std::ops::Deref;
 
+struct MyBox<T>(T);
 impl<T> Deref for MyBox<T> {
     type Target = T;
 
@@ -111,8 +112,32 @@ impl<T> Deref for MyBox<T> {
 - `Target` defines an associated type
 - `.0` access the first field of the [tuple](rust-struct#tuple-struct) struct `MyBox<T>`
 
-
 ## Deref In dot operator method access
 
 [deref in method](rust-method#method-call-resolution)
+
+### When Deref Is Appropriate
+
+1. Smart Pointer
+
+- `Box<T>`, `Arc<T>`, `RefCell<T>`, `MutexGuard<T>`, etc.
+
+2. Transparent "thin" wrapper
+
+- Such as `String` -> `str`, `Vec<T>` -> `[T]`, `PathBuf` -> `Path`
+
+3. New type geneuinely is the inner type
+
+- `struct Hostname(String);`
+
+### When Deref Is An Anti-Pattern
+
+1. Domain types with invariant
+
+- For example `Email` deref to `&str`, method `.split_at()`, `.trim()` can be called on `Email` text which may break the email format, such as missing `@` symbol, etc.
+- Because of `Deref`, all `str` methods become available on `Email` value 
+
+2. Types where you want to restricted API
+3. Fake inheritance
+
 

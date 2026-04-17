@@ -11,7 +11,7 @@ let f = |y: i32| x + y;  // `f` is a closure that captures `x` from the environm
 
 ## Captured Variable
 
-- varible outside the closure
+- Varible outside the closure
 
 ## Closure Ownership and Borrow Rules
 

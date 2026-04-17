@@ -5,7 +5,7 @@
 * [Tuple](#tuple)
 * [Unit](#unit)
 * [String](#string)
-* [Slice/Array](#slice/array)
+* [Collections](#collections)
 
 ## Scalar Type
 
