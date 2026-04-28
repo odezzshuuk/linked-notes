@@ -147,6 +147,8 @@ Useful files in this directory
 ## /tmp
 
 - Abbreviation of temporary, so this directory is used to store temporary files
+- Such as sockets, PID files
+- Files can be deleted at any time, especially on REBOOT
 
 ## /var
 
@@ -158,8 +160,6 @@ Useful files in this directory
 ## Some other directory may have
 
 /run
-
-- 是一个临时文件系统，存储系统启动以来的信息。当系统重启时，这个目录下的文件应该被删掉或清除。如果你的系统上有 /var/run 目录，应该让它指向 run。
 
 - /selinux
 - /lost+found

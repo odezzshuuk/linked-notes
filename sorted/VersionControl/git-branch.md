@@ -101,3 +101,9 @@ Topic Branch - Work Flow
 ## HEAD Pointer
 
 [Head Pointer](git-reference-head.md)
+
+## Branch Name Best Practice
+
+[Name Convention](git-best-practice.md#branch-name-convention)
+
+

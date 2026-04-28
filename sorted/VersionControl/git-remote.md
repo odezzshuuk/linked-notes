@@ -30,11 +30,11 @@ this command will add following to `.git/config` file
 
 ## push to remote repository
 
-`git push -u origin master/main`: push master branch to remote repository
+`git push -u origin main`: push local branch `main` to remote repository
 
 - `-u`: set default remote repository and branch
 - `origin`: remote repository **alias**
-- `master`: local branch that want to push
+- `main`: local branch that want to push
 
 ## pull from remote repository
 

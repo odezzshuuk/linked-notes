@@ -6,7 +6,7 @@
 
 ## What It Is
 
-- A series jobs trigger by events running on corresponding runner
+- A series jobs trigger by [events] running on corresponding runner
 
 Running Logic
 
@@ -17,31 +17,29 @@ Running Logic
   - Runner B
     - Job 1, Job 2, Job 3
 
-## Components
+## Concepts
 
-Jobs
+Main Components
 
-- By default, each job runs in parallel.
-- Jobs can be configured to run dependent on other jobs
+- [Actions](github-actions-workflow-files.md#actions)
+- [Jobs](github-actions-workflow-files-keys#jobs)
+- [Events](github-actions-workflow-files-keys#on)
+- [Runner]()
 
-Events
+Glossary
 
-- pull request
-- push
-- opens an issue
-- ...
+- Artifact: a file or collection of files generated during a workflow run 
 
-Actions
 
-- A set of [jobs](#jobs)
-- Reusable
+## Workflow Files
 
-Runner
+[Workflow Files](github-actions-workflow-files.md)
 
-- Virtual machine or container, such as [docker container](docker-glossary.md#container)
+## Job's Output
 
-## Github Actions Core
+[Passing Information Between Jobs](github-actions-job-outputs.md)
 
-[Jobs](github-actions-jobs.md)
+## Reusable Workflow
 
+[Reusable Workflow](github-actions-reusable-workflow.md)
 

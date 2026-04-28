@@ -4,8 +4,9 @@
 * [Track A file Changes History](#track-a-file-changes-history)
 * [print merges commit log](#print-merges-commit-log)
 * [Check Commit Log](#check-commit-log)
-* [Undo commit](#undo-stage/commit)
+* [Undo Stage/Commit](#undo-stage/commit)
 * [Remove File From Stage](#remove-file-from-stage)
+* [Remove File that already added to previous commit but added to .gitignore](#remove-file-that-already-added-to-previous-commit-but-added-to-.gitignore)
 * [Discard All Local Changes](#discard-all-local-changes)
 * [check staged files](#check-staged-files)
 * [Set HEAD to specified status](#set-head-to-specified-status)
@@ -18,6 +19,9 @@
 * [Copy Files Or Directory From Another Commit](#copy-files-or-directory-from-another-commit)
 * [Check Ignored Files](#check-ignored-files)
 * [Filter Commit History By Specified File](#filter-commit-history-by-specified-file)
+* [Writing Git Commit Message](#writing-git-commit-message)
+* [Squash Last N Commits](#squash-last-n-commits)
+* [Restore File Or Directory That Deleted In Head But Undeleted In Another Commit](#restore-file-or-directory-that-deleted-in-head-but-undeleted-in-another-commit)
 
 ## Output Git Log In Stdout
 
@@ -218,3 +222,45 @@ Format: `<type>(<scope>): <description>`
 git restore --source=<commitid> <path/to/file_or_directory>
 ```
 
+## Branch Name Convention
+
+prefix/short-description
+
+```sh
+feature/user-authentication
+bugfix/login-error-handling
+hotfix/critical-security-patch
+release/v2.3.0
+docs/api-readme-update
+chore/update-dependencies
+refactor/payment-service
+test/add-unit-tests-for-auth
+```
+
+prefix/issue-number-short-description
+
+```sh
+feature/JIRA-1234-add-password-reset
+bugfix/GH-56-fix-navbar-overflow
+hotfix/INC-89-database-timeout
+```
+
+username/experimental-work
+
+```sh
+username/experiment-new-cache
+username/wip-refactor-config
+```
+
+Common prefix
+
+- feature:	New features or enhancements
+- bugfix:	Fixing a non-critical bug
+- hotfix:	Urgent production fix (often from main)
+- release:	Preparing a new release
+- docs:	Documentation only changes
+- chore:	Maintenance, config, build, or tooling
+- refactor:	Code restructuring without behavior change
+- test:	Adding or fixing tests
+- experiment:	Exploratory or throwaway work
+- wip:	Work in progress (temporary)
