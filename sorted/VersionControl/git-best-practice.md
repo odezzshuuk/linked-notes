@@ -204,13 +204,6 @@ specified line number
 git log -L 1,1:<file>
 ```
 
-## Writing Git Commit Message
-
-Format: `<type>(<scope>): <description>`
-
-- type: feat, fix, docs, style, refactor, test, chore
-- scope: optional, such as auth, ui, api
-- description: short description of the change
 
 ## Squash Last N Commits
 
@@ -264,3 +257,11 @@ Common prefix
 - test:	Adding or fixing tests
 - experiment:	Exploratory or throwaway work
 - wip:	Work in progress (temporary)
+
+## Commit Message Conventions
+
+Format: `<type>(<scope>): <description>`
+
+- type: WIP(work in progress), feat, fix, docs, style, refactor, test, chore
+- scope: optional, such as auth, ui, api
+- description: short description of the change

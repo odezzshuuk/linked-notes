@@ -1,20 +1,2 @@
-# 共享存储
+# Linux - Shared Memory Segment
 
-- 共享存储段可以像malloc分配的空间一样访问
-- malloc分配的空间随着进程退出而删除 
-- 通过[gcc](gcc.md)编译参数-lrt链接library文件
-- 共享存储一直存在直到
-  1. 共享存储标识符被删除
-  2. 没有任何进程连接于它
-  3. 系统重启
-- 共享存储和[存储映射](linux-io-api-mmap.md)都是映射到地址空间的方式, 区别在于前者没有相关文件
-
-[[shmid_ds结构体]]
-
-[[shmget()函数]]
-
-[[shmctl()函数]]
-
-[[shmat()函数]]
-
-[[shmdt()函数]]

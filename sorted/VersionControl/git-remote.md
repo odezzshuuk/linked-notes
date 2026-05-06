@@ -28,7 +28,13 @@ this command will add following to `.git/config` file
 
 - the value of `fetch` is a [refspec](git-refspec.md)
 
-## push to remote repository
+## Set Difference Remote Repo For Specific Branch
+
+```sh
+git remote 
+```
+
+## Push to remote repository
 
 `git push -u origin main`: push local branch `main` to remote repository
 
@@ -36,14 +42,14 @@ this command will add following to `.git/config` file
 - `origin`: remote repository **alias**
 - `main`: local branch that want to push
 
-## pull from remote repository
+## Pull from remote repository
 
 `git pull origin master`: pull remote repository's master branch to local
 
 - master: remote branch
 - origin: **remote repository alias**, not local branch
 
-## delete remote branch
+## Delete remote branch
 
 `git push origin --delete <branch_name>`: delete remote branch
 

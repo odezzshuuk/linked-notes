@@ -16,7 +16,7 @@ int getchar(void);
 int ungetc(int c, FILE *stream);
 ```
 
-- fgetc()读下一个字符，并将unsigned char 转换为 int 返回
+- fgetc()
 
 ## put 
 
@@ -34,5 +34,3 @@ int putchar(int c);
 int puts(const char *s);
 
 ```
-
-- 把`c`转换为unsigned char 写入stream 

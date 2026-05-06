@@ -144,8 +144,11 @@ Why Result
 
 Which To Use:
 
-- `unwrap`/`expect`: prototypes/examples/tests
-- `? operator`: propagate error to caller
+- `unwrap`/`expect`
+  - When `Result` cannot be `Err` in normal operation
+  - So normally in prototypes/examples/tests
+- `? operator`
+  - propagate error to caller
 
 ## match
 

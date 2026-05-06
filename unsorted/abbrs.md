@@ -7,3 +7,7 @@
 ## UB
 
 - Undefined Behavior
+
+# IPC
+
+- inter process communication
