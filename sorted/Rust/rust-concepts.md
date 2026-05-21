@@ -66,9 +66,11 @@ Features
 
 - Ownership should be aware
 
-## Borrow Value
+## Borrow/Reference Value
 
 > Neither copy nor move, but borrow
+
+- Copy and move both can be borrowed
 
 ```rust
 fn main() {

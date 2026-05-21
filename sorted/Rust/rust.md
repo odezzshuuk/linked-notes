@@ -58,6 +58,8 @@
 
 [Thread](rust-thread.md)
 
+[Async](rust-async.md)
+
 [Conversion](rust-conversion.md)
 
 ## What Make Rust Unique

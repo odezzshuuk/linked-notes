@@ -13,7 +13,7 @@ let f = |y: i32| x + y;  // `f` is a closure that captures `x` from the environm
 
 - Varible outside the closure
 
-## Closure Ownership and Borrow Rules
+## Closure Borrow Rules
 
 Borrowing immutably
 
@@ -34,9 +34,12 @@ let mut borrows_mutably = || list.push(4);
 borrows_mutably(); // works
 ```
 
-Taking Ownership And Keep
+## Closure Taking OwnerShip
 
-- using `move` keyword
+Using `move` keyword to take the `Ownership` And Won't Give It Back
+
+- `move` perform a move for [Move type](rust-concepts#move-value)
+  - Variable outside the closure can't be reused
 
 ```rust
 let list = vec![1, 2, 3];
@@ -48,6 +51,8 @@ print_list();
 ```
 
 - `move` perform a copy for [copy type](rust-concepts#copy-value)
+  - use can still use the variable outside the closure
+  - but outside variable and closure variable are separate variable, they don't share the same value
 
 ```rust
 pub fn func() {
@@ -65,6 +70,7 @@ pub fn func() {
 }
 ```
 
+
 - `counter` is copied into each thread and the main thread, 
 - So the closure and the main thread have their own separate `counter` variable 
 
@@ -76,10 +82,10 @@ pub fn func() {
 - [FnMut](#fnmut)
 - [Fn](#fn)
 
-**Closures automatically implement one, two, all the 3**
+**Closures automatically implement One, Two, all the Three**
 
 1. **Every** closure implements at least `FnOnce`
-2. I can't explicitly specify which closure trait a closure implements
+2. Programmer can't explicitly specify which closure trait a closure implements
 
 ```rust
 fn func_1() {

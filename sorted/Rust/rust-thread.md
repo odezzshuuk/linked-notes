@@ -12,10 +12,8 @@ fn func() {
 
 ## Closure In Thread
 
-- keyword [`move`](rust-closure#closure-ownership-and-borrow-rules)
-
 ```rust
-pub fn func_3() {
+pub fn func() {
   let v = vec![1, 2, 3];
   let print_v = || println!("Here's a vector: {v:?}");
   let handle = thread::spawn(move || {
@@ -23,4 +21,24 @@ pub fn func_3() {
   });
 }
 ```
+
+- Keyword [`move`](rust-closure#closure-taking-ownership) is required for taking the ownership of the variable outside the closure
+
+Why needs `move`? 
+
+- look at the signature of `thread::spawn()`
+
+```rust
+pub fn spawn<F, T>(f: F) -> JoinHandle<T>
+where
+    F: FnOnce() -> T,
+    F: Send + 'static,
+    T: Send + 'static,
+{
+    Builder::new().spawn(f).expect("failed to spawn thread")
+}
+```
+
+- `'static` the closure cannot borrow anything with a shorter lifetime
+- `Send` the closure()
 
