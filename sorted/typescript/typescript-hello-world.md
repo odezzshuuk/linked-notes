@@ -21,6 +21,8 @@ npm install -D typescript
 
 ## tsc
 
+> deprecated
+
 [tsc](typescript-cli-tsc.md)
 
 ## Third Party Tools

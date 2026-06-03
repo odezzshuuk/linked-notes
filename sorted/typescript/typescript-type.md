@@ -135,6 +135,16 @@ function fn(x: string | number) {
 - you can call it like a funtion
 - assign it to a value of any type
 
+## null and undefined
+
+- `undefined` indicates a variable has been declared but not assigned a value
+- `null` represents an intentional absence of any object value
+
+```ts
+undefined == null // true
+undefined === null // false
+```
+
 ## type statement
 
 [type statement](typescript-type-statement.md)

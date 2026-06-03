@@ -33,7 +33,11 @@ Duration
 
 - A scale is a set of musical notes **ordered** by fundamental frequency or pitch.
 
-**Related Knowledge**: 
+They Are Scale
+
+- Starting on C: C, D, E, F, G, A, B, C
+
+About Scales
 
 - A scale ordered by increasing pitch is an ascending scale,
 - A scale ordered by decreasing pitch is a descending scale.
@@ -100,26 +104,33 @@ Duration
 
 What It Is
 
-A chord, in music, is any harmonic set of pitches consisting of multiple notes that are heard as if sounding simultaneously.
+- A chord, in music, is any harmonic set of pitches consisting of multiple notes that are heard as if sounding simultaneously.
+- Chords are the foundation of harmony in music. The most common type of chord is a triad, which consists of three notes. 
+- Chords are built from [scales](#scale), 
+- And their quality (major, minor, etc.) is determined by the intervals between the notes.
 
-Related Knowledge
+They Are
 
-- Chords are the foundation of harmony in music. The most common type of chord is a triad, which consists of three notes. Chords are built from [scales](#scale), and their quality (major, minor, etc.) is determined by the intervals between the notes.
+C major: C - E - G
+C minor: C - Eb - G
+C diminished: C - Eb - Gb
+C augmented: C - E - G#
 
-Major Chord
+## Major Chord
 
 - A major chord is a triad consisting of a root, a major third, and a perfect fifth.
 - Related Knowledge**: Major chords are known for their bright and happy sound. For example, a C major chord consists of the notes C, E, and G.
 
-Minor Chord
+## Minor Chord
   **Definition**: A minor chord is a triad consisting of a root, a minor third, and a perfect fifth.
   **Related Knowledge**: Minor chords are known for their sad or melancholic sound. For example, an A minor chord consists of the notes A, C, and E.
-Diminished Chord
+
+## Diminished Chord
 
 - A diminished chord is a triad consisting of a root, a minor third, and a diminished fifth.
 - Diminished chords have a dissonant and tense sound. They are often used to create tension and lead to other [chords](#chord). For example, a B diminished chord consists of the notes B, D, and F.
 
-Augmented Chord
+## Augmented Chord
 
 - An augmented chord is a triad consisting of a root, a major third, and an augmented fifth.
 - Augmented chords have a strange, unsettling sound. They are less common than [major](#major-chord) or [minor chords](#minor-chord). For example, a C augmented chord consists of the notes C, E, and G#.
