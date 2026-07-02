@@ -19,7 +19,7 @@
 * [Copy Files Or Directory From Another Commit](#copy-files-or-directory-from-another-commit)
 * [Check Ignored Files](#check-ignored-files)
 * [Filter Commit History By Specified File](#filter-commit-history-by-specified-file)
-* [Writing Git Commit Message](#writing-git-commit-message)
+* [Rewriting Git Commit Message](#Rewriting-commit-message)
 * [Squash Last N Commits](#squash-last-n-commits)
 * [Restore File Or Directory That Deleted In Head But Undeleted In Another Commit](#restore-file-or-directory-that-deleted-in-head-but-undeleted-in-another-commit)
 
@@ -81,7 +81,7 @@ git rm --cached [<file>...]
 git rm --cached -r [<dir>...] # recursive remove
 ```
 
-## Remove File that already added to previous commit but added to .gitignore
+## Remove File In Next Commit Which Already Commit But Added To .gitignore 
 
 1. remove a file from stage
 2. then git add back again
@@ -89,6 +89,30 @@ git rm --cached -r [<dir>...] # recursive remove
 ```sh
 git rm --cached -r . # remove all files from stage 
 git add . # add all files to stage
+```
+
+## Remove File From A History Commit
+
+1. rebase
+
+```sh
+git rebase - HEAD~N 
+# N is the number of commits
+# Choose the commit one before the commit you want to remove the file from
+```
+
+2. mark the target commit(the commit you want to remove the file from) as `edit` in the editor
+3. Remove from stage 
+
+```sh
+git rm --cached <path_to_file> # remove the file from stage
+```
+
+4. Amend the commit
+5. Continue rebase
+
+```sh
+git rebase --continue
 ```
 
 ## Discard All Local Changes
@@ -108,6 +132,13 @@ git ls-files
 
 ```bash
 git reset --hard <commitid>
+```
+
+## Change Last Commit Message
+
+```sh
+git commit --amend -m "new commit message" # or
+git commit --amend # open editor to edit commit message
 ```
 
 ## Append new modification to the last commit
@@ -203,6 +234,11 @@ specified line number
 ```sh
 git log -L 1,1:<file>
 ```
+## Rewriting commit message
+
+```sh
+
+```
 
 
 ## Squash Last N Commits
@@ -213,6 +249,24 @@ git log -L 1,1:<file>
 
 ```sh
 git restore --source=<commitid> <path/to/file_or_directory>
+```
+
+## Add HEAD detached status commit to a branch
+
+To a new branch
+
+```sh
+git switch -C new_branch
+```
+
+To an existing branch
+
+1. create a new branch first
+2. merge to existing branch
+
+```sh
+git switch existing_branch
+git merge new_branch
 ```
 
 ## Branch Name Convention

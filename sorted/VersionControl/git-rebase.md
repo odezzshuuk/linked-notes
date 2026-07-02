@@ -28,7 +28,6 @@ git rebase -i --root
 
 ```sh
 $ git rebase -i HEAD~n
-fatal: Invalid Upstream 'HEAD~n'
 ```
 
 ## Squash last n commits
@@ -36,6 +35,8 @@ fatal: Invalid Upstream 'HEAD~n'
 ```sh
 git rebase -i HEAD~n
 ```
+
+Enter [interactive mode](#interactive-mode)
 
 ## Removed A Range Of Commit
 
@@ -84,8 +85,10 @@ D---E---F---G  master
 
 Interactive rebase allows to ______ commit
 
-- squash
-- drop
+- squash: 
+  - the changes will be merged into the previous commit
+  - the commit message will be merged together
+- drop: the change in this commit will be lost
 - pick
 
 enter interactive mode

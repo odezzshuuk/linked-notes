@@ -61,7 +61,7 @@ bar = 1;
 [`setImmediate()`](nodejs-timers.md#setimmediate)
 
 - `process.nextTick()` is more immediate `setImmediate()`
-- 互换名称会更符合函数的功能
+- Exchanging the names would be more consistent with their functionality
 - However, swapping the names would affect most npm packages
 - it is recommended to use `setImmediate()` instead of `process.nextTick()`
 
