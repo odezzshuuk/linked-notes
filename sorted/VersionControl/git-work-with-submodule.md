@@ -32,7 +32,7 @@ Run commands In parent module repository directory
 ```bash
 git rm -r --cached <submodule_local_path>
 git commit -m "<message_after_remove_submodule_path>"  # optional
-git submodule add <submodule_url> <submodule_local_path>
+git submodule add <submodule_remote_url> <submodule_local_path>
 ```
 
 Then file `.gitmodules` created, and content may like
